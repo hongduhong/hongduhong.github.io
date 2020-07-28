@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://duhong.blog.cn/"/>
-  <updated>2020-07-28T01:55:49.995Z</updated>
+  <updated>2020-07-28T09:02:11.892Z</updated>
   <id>http://duhong.blog.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://duhong.blog.cn/2015/01/19/hello-world/"/>
-    <id>http://duhong.blog.cn/2015/01/19/hello-world/</id>
-    <published>2015-01-18T16:00:00.000Z</published>
-    <updated>2020-07-28T01:55:49.995Z</updated>
+    <title>python+selenium自动化测试</title>
+    <link href="http://duhong.blog.cn/2016/01/19/shou-ba-shou-jiao-ni-xi-lie-ji-chu-pian-zhi-1-python-selenium-zi-dong-hua-ce-shi-huan-jing-da-jian-xiang-xi/"/>
+    <id>http://duhong.blog.cn/2016/01/19/shou-ba-shou-jiao-ni-xi-lie-ji-chu-pian-zhi-1-python-selenium-zi-dong-hua-ce-shi-huan-jing-da-jian-xiang-xi/</id>
+    <published>2016-01-18T16:00:00.000Z</published>
+    <updated>2020-07-28T09:02:11.892Z</updated>
     
     <summary type="html">
     
@@ -29,12 +29,16 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;h2 id=&quot;《手把手教你》系列基础篇之1-python-selenium自动化测试-环境搭建（详细）&quot;&gt;&lt;a href=&quot;#《手把手教你》系列基础篇之1-python-selenium自动化测试-环境搭建（详细）&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
     
+    
+      <category term="Python" scheme="http://duhong.blog.cn/tags/Python/"/>
+    
+      <category term="Selenium" scheme="http://duhong.blog.cn/tags/Selenium/"/>
     
   </entry>
   

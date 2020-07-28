@@ -870,11 +870,52 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             </div>
             <div class="tag-chips">
                 
+                
+                <a href="/tags/Python/" title="Python: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Python" style="background-color: #F9EBEA;">Python
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Selenium/" title="Selenium: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Selenium" style="background-color: #F5EEF8;">Selenium
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
             </div>
         </div>
     </div>
 </div>
 
+    
+    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
+<style type="text/css">
+    #tag-wordcloud {
+        width: 100%;
+        height: 300px;
+    }
+</style>
+
+<div class="container" data-aos="fade-up">
+    <div class="card">
+        <div id="tag-wordcloud" class="card-content"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
+<script type="text/javascript">
+    
+
+    $('#tag-wordcloud').jQCloud([{"text":"Python","weight":1,"link":"http://duhong.blog.cn/tags/Python/"},{"text":"Selenium","weight":1,"link":"http://duhong.blog.cn/tags/Selenium/"}], {
+        autoResize: true
+    });
+</script>
     
 
 </main>
@@ -961,7 +1002,7 @@ $(document).ready(function(){
 			
 			
                 <i class="fa fa-area-chart"></i>站点总字数:
-                <span class="white-color">73</span>
+                <span class="white-color">1k</span>
             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			本站由&copy;<a href="https://github.com/Five-great/Five-great.github.io" target="_blank">LHL</a>基于
             <a href="https://hexo.io/" target="_blank">Hexo</a> 搭建.
