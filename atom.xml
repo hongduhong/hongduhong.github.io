@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>杜宏的博客</title>
+  <title>北京-宏哥</title>
   
-  <subtitle>杜宏的博客</subtitle>
+  <subtitle>北京-宏哥</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hongduhong.github.io/"/>
@@ -10,7 +10,7 @@
   <id>http://hongduhong.github.io/</id>
   
   <author>
-    <name>杜宏的博客</name>
+    <name>北京-宏哥</name>
     
   </author>
   
