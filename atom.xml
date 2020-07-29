@@ -5,9 +5,9 @@
   <subtitle>北京-宏哥</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://duhong.blog.cn/"/>
+  <link href="https://hongduhong.github.io/"/>
   <updated>2020-07-28T09:02:11.892Z</updated>
-  <id>http://duhong.blog.cn/</id>
+  <id>https://hongduhong.github.io/</id>
   
   <author>
     <name>北京-宏哥</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>python+selenium自动化测试</title>
-    <link href="http://duhong.blog.cn/2016/01/19/shou-ba-shou-jiao-ni-xi-lie-ji-chu-pian-zhi-1-python-selenium-zi-dong-hua-ce-shi-huan-jing-da-jian-xiang-xi/"/>
-    <id>http://duhong.blog.cn/2016/01/19/shou-ba-shou-jiao-ni-xi-lie-ji-chu-pian-zhi-1-python-selenium-zi-dong-hua-ce-shi-huan-jing-da-jian-xiang-xi/</id>
+    <link href="https://hongduhong.github.io/2016/01/19/undefined/python-selenium-zi-dong-hua-ce-shi-huan-jing-da-jian-1-xiang-xi/"/>
+    <id>https://hongduhong.github.io/2016/01/19/undefined/python-selenium-zi-dong-hua-ce-shi-huan-jing-da-jian-1-xiang-xi/</id>
     <published>2016-01-18T16:00:00.000Z</published>
     <updated>2020-07-28T09:02:11.892Z</updated>
     
@@ -36,9 +36,9 @@
     </summary>
     
     
-      <category term="Python" scheme="http://duhong.blog.cn/tags/Python/"/>
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
     
-      <category term="Selenium" scheme="http://duhong.blog.cn/tags/Selenium/"/>
+      <category term="Selenium" scheme="https://hongduhong.github.io/tags/Selenium/"/>
     
   </entry>
   
