@@ -4,6 +4,180 @@
   
     
     <entry>
+      <title>python接口自动化16</title>
+      <link href="/2016/02/29/interface/"/>
+      <url>/2016/02/29/interface/</url>
+      
+        <content type="html"><![CDATA[<p><strong>🔥 python接口自动化（十六）–参数关联接口后传（详解）</strong></p><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　大家对前边的自动化新建任务之后，接着对这个新建任务操作了解之后，希望带小伙伴进一步巩固胜利的果实，夯实基础。因此再在沙场实例演练一下博客园的相关接口。我们用自动化发随笔之后，要想接着对这篇随笔操作，不用说就需</p><p>要用参数关联了，发随笔之后会有一个随笔的 id，获取到这个 id，继续操作传这个随笔 id 就可以了（博客园的登录机制已经变了，不能用账号和密码登录了，这里用 cookie 登录）</p><p>大致流程步骤：web界面操作登录抓包查看cookie—&gt;代码模拟cookie登录—&gt;web界面操作新建随笔和保存随笔—&gt;抓包查看新建随笔和保存随笔的url和参数等—&gt;代码模拟新建随笔并保存编辑内容—&gt;web界面操作删除随笔—&gt;抓取删除操作请求—&gt;提取参数—&gt;传参—&gt;代码实现。</p><h4 id="2-删除随笔"><a href="#2-删除随笔" class="headerlink" title="2.删除随笔"></a>2.删除随笔</h4><p>1、我们前面讲过登录后新建随笔和保存随笔后，不记得可以点击传送门那可以继续接着操作：删除刚才新建的随笔</p><p><img src="https://i.loli.net/2020/08/05/Kl4VQPvTULDZ156.png" alt="1232840-20190416112854202-1863970122.png"> </p><p>2、用fiddler抓包，抓到删除新建随笔的请求，从抓包结果可以看出，传的json参数是postId</p><p><img src="https://i.loli.net/2020/08/05/flLhsj4maUR9QXi.png" alt="1232840-20190416114809493-773371217.png"></p><p>3.这个postId哪里来的呢？可以看上个请求的url地址</p><p><img src="https://i.loli.net/2020/08/05/JVGbsYjEgaQU2dM.png" alt="1232840-20190416114627706-1999908725.png"></p><p>4、也就是说保存草稿箱成功之后，重定向一个 url 地址，里面带有 postId 这个参数。那我们想办法将这个参数提取出来就可以了</p><h4 id="3-提取参数"><a href="#3-提取参数" class="headerlink" title="3.提取参数"></a>3.提取参数</h4><p>1、我们需要的参数 postId 是在保存成功后 url 地址，这时候从 url 地址提出对应的参数值就行了，先获取保存成功后 url</p><p>2、通过正则表达式从保存的url提取需要的字符串，这个参数值前面（postid=）和后面（&amp;）字符串都是固定的</p><p>3、这里正则提出来的是 list 类型，取第一个值就可以是字符串了（注意：每次保存需要修改内容，不能重复）</p><p><img src="https://i.loli.net/2020/08/05/o1IOeJt5wXl9kxi.png" alt="1232840-20190416132226901-2016326895.png"></p><h4 id="4-传参"><a href="#4-传参" class="headerlink" title="4.传参"></a>4.传参</h4><p>1、删除草稿箱的 json 参数传上面取到的参数：{“postId”: postid[0]}</p><p>2、json 数据类型 post 里面填 json 就行，会自动转 json</p><p>3、接着前面的保存随笔的操作，就可以删除成功了</p><p>注意：同理和jenkins一样，如果想看清楚，可以在删除新建随笔出打断点，看到新建的随笔后，再次执行下边的代码 看看是不是可以删掉新建随笔</p><p><img src="https://i.loli.net/2020/08/05/92TbOkPqmGwH5JX.png" alt="1232840-20190416132335249-1213273111.png"></p><h4 id="5-参考代码"><a href="#5-参考代码" class="headerlink" title="5.参考代码"></a>5.参考代码</h4><pre><code> 1 # coding:utf-8 2 import requests 3 # 先打开登录首页，获取部分cookie 4 url = &quot;https://passport.cnblogs.com/user/signin&quot; 5 headers = { 6             &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0&quot; 7            }  # get方法其它加个ser-Agent就可以了 8 s = requests.session() 9 r = s.get(url, headers=headers,verify=False)10 print (s.cookies)11 # 添加登录需要的两个cookie12 c = requests.cookies.RequestsCookieJar()13 c.set(&#39;.CNBlogsCookie&#39;, &#39;XXX&#39;)  # 填上面抓包内容14 c.set(&#39;.Cnblogs.AspNetCore.Cookies&#39;,&#39;XXX&#39;)  # 填上面抓包内容15 c.set(&#39;AlwaysCreateItemsAsActive&#39;,&quot;True&quot;)16 c.set(&#39;AdminCookieAlwaysExpandAdvanced&#39;,&quot;True&quot;)17 s.cookies.update(c)18 print (s.cookies)19 # 登录成功后保存编辑内容20 url2= &quot;https://i.cnblogs.com/EditPosts.aspx?opt=1&quot;21 body = {&quot;__VIEWSTATE&quot;: &quot;&quot;,22         &quot;__VIEWSTATEGENERATOR&quot;:&quot;FE27D343&quot;,23         &quot;Editor$Edit$txbTitle&quot;:&quot;这是绕过登录的标题：北京-宏哥&quot;,24         &quot;Editor$Edit$EditorBody&quot;:&quot;&lt;p&gt;这里是中文内容：http://www.cnblogs.com/duhong/&lt;/p&gt;&quot;,25         &quot;Editor$Edit$Advanced$ckbPublished&quot;:&quot;on&quot;,26         &quot;Editor$Edit$Advanced$chkDisplayHomePage&quot;:&quot;on&quot;,27         &quot;Editor$Edit$Advanced$chkComments&quot;:&quot;on&quot;,28         &quot;Editor$Edit$Advanced$chkMainSyndication&quot;:&quot;on&quot;,29         &quot;Editor$Edit$lkbDraft&quot;:&quot;存为草稿&quot;,30          }31 r2 = s.post(url2, data=body, verify=False)32 #print (r.content.decode(&#39;utf-8&#39;))33 34 # 第三步：正则提取需要的参数值35 import re36 postid = re.findall(r&quot;postid=(.+?)&amp;&quot;, r2.url)37 print(type(postid))38 print (postid) # 这里是 list39 # 提取为字符串40 print (postid[0])41 # 第四步：删除草稿箱42 url3 = &quot;https://i.cnblogs.com/post/delete&quot;43 json3 = {&quot;postId&quot;: postid[0]}44 r3 = s.post(url3, json=json3, verify=False)45 print (r3.json())</code></pre><h4 id="6-小结"><a href="#6-小结" class="headerlink" title="6.小结"></a>6.小结</h4><p>1、好了，参数关联接口就是这么简单，相信各位小伙伴下回遇到此种类似的问题，不会慌了，应该是十拿九稳的把它KO掉。</p><p>2、有兴趣的自己可以向上一篇一样，自己练习一下打断点，自己可以体验一下其中的乐趣和神奇。</p><p>最后欢迎各位小伙伴探讨和留言！！！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> Interface </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Interface </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python接口自动化15</title>
+      <link href="/2016/02/28/interface/"/>
+      <url>/2016/02/28/interface/</url>
+      
+        <content type="html"><![CDATA[<p><strong>🔥 python接口自动化（十五）–参数关联接口（详解）</strong></p><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　我们用自动化新建任务之后，要想接着对这个新建任务操作，那就需要用参数关联了，新建任务之后会有一个任务的Jenkins-Crumb，获取到这个Jenkins-Crumb，就可以通过传这个任务Jenkins-Crumb继续操作这个新建的任务。</p><p>大致流程步骤：登录—&gt;新建任务—&gt;web界面操作删除—&gt;抓取删除操作请求—&gt;提取参数—&gt;传参—&gt;代码实现。</p><h4 id="2-删除新建任务"><a href="#2-删除新建任务" class="headerlink" title="2.删除新建任务"></a>2.删除新建任务</h4><p>1、我们前面讲过登录后新建任务后，那可以继续接着操作：删除刚才新建的任务</p><p><img src="https://i.loli.net/2020/08/05/2z4AmT6wPotfuUY.png" alt="1232840-20190410100142473-890749140.png"> </p><p>2、用fiddler抓包，抓到删除新建任务的请求，从抓包结果可以看出，传的data参数是Jenkins-Crumb</p><p><img src="https://i.loli.net/2020/08/05/1DFjHhAWeg43QX2.png" alt="1232840-20190410100833406-1133193107.png"> </p><p>3.这个Jenkins-Crumb哪里来的呢？可以看上个请求的body</p><p><img src="https://i.loli.net/2020/08/05/HM9y5fd831RSsIY.png" alt="1232840-20190410101314596-1293215964.png"></p><p>4、也就是说在新建任务的时候，系统随机生成一个Jenkins-Crumb参数的值，body里面带有Jenkins-Crumb这个参数。那接下来我们提取出来就可以了 </p><h4 id="3-提取参数"><a href="#3-提取参数" class="headerlink" title="3.提取参数"></a>3.提取参数</h4><p>1、我们需要的参数Jenkins-Crumb是在新建任务是body里Jenkins-Crumb的值，这时候从body里提出对应的参数值就行了（注意：每次保存需要修改内容，不能重复）</p><p><img src="https://i.loli.net/2020/08/05/o4kXQaqpnyju8Ve.png" alt="1232840-20190410102243835-275675165.png"></p><h4 id="4-传参"><a href="#4-传参" class="headerlink" title="4.传参"></a>4.传参</h4><p>1、删除新建任务的data参数传上面取到的参数：{“Jenkins-Crumb”: Jenkins_Crumb}</p><p>2、data数据类型post里面填data就行</p><p>3、接着前面的新建任务操作，就可以删除成功了</p><p>注意：如果想看清楚，可以在删除新建任务出打断点，看到新建的任务后，再次执行下边的代码 看看是不是可以删掉新建任务</p><p><img src="https://i.loli.net/2020/08/05/SuawDTAt874CEbZ.png" alt="1232840-20190410103226878-1130583889.png"></p><p>4、302重定向</p><p><img src="https://i.loli.net/2020/08/05/qsLVQ38Sfo1thKW.png" alt="1232840-20190410103106417-321307515.png"></p><p>5、content内容复制到记事本，修改后缀以后，浏览器查看有“欢迎来到Jenkins”</p><p><img src="https://i.loli.net/2020/08/05/GnD54YRTp2KjEhf.png" alt="1232840-20190410103459932-438816878.png"></p><h4 id="5-参考代码"><a href="#5-参考代码" class="headerlink" title="5.参考代码"></a>5.参考代码</h4><pre><code> 1 # coding:utf-8 2 import requests 3 # 先打开登录首页，获取部分session 4 url = &quot;http://localhost:8080/jenkins/j_acegi_security_check&quot; 5 headers = { 6             &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0&quot; 7            }  # get方法其它加个ser-Agent就可以了 8 d = {&quot;j_username&quot;: &quot;admin&quot;, 9      &quot;j_password&quot;: &quot;111111&quot;,10      &quot;from&quot;: &quot;&quot;,11      &quot;Submit&quot;: u&quot;登录&quot;,12      &quot;remember_me&quot;: &quot;on&quot;13      }14 15 s = requests.session()16 r = s.post(url, headers=headers, data=d)17 #print (r.content.decode(&#39;utf-8&#39;))18 # 正则表达式提取账号和登录按钮19 import re20 t = re.findall(r&#39;&lt;b&gt;(.+?)&lt;/b&gt;&#39;, r.content.decode(&#39;utf-8&#39;))   # 用python3的这里r.content需要解码21 print (t[0])22 print (t[1])23 #新建任务24 url1 = &quot;http://localhost:8080/jenkins/createItem&quot;25 body = {&quot;name&quot;:&quot;6666&quot;,26         &quot;mode&quot;: &quot;hudson.model.FreeStyleProject&quot;,27         &quot;Jenkins-Crumb&quot;:&quot;51a97fc7fbf3792823230d9bdd7ec906&quot;,28         &quot;json&quot;:{&quot;name&quot;:&quot;6666&quot;,29                 &quot;mode&quot;: &quot;hudson.model.FreeStyleProject&quot;,30                 &quot;Jenkins-Crumb&quot;:&quot;51a97fc7fbf3792823230d9bdd7ec906&quot;31 32         }33 }34 print(type (body))35 import urllib36 import sys37 #获取name的值38 name = body[&#39;name&#39;]39 print(&#39;name:&#39;+name)40 #获取body的值41 Jenkins_Crumb = body[&#39;Jenkins-Crumb&#39;]42 print(&#39;body的值是：&#39;,body[&#39;Jenkins-Crumb&#39;])43 r2 = s.post(url1, data=body, verify=False)44 #print (r2.content.decode(&#39;utf-8&#39;))45 #删除新建任务46 url2 = &quot;http://localhost:8080/jenkins/job/&quot;+name+&quot;/doDelete&quot;47 body1 = {48             &quot;Jenkins-Crumb&quot;: Jenkins_Crumb49 }50 51 r3 = s.post(url2, data=body1, verify=False)52 print (r3.content.decode(&#39;utf-8&#39;))53 #删除成功重定向到主界面（由于抓包没有看到response的结果，只知道重定向主界面）54 print(r3.url)</code></pre><h4 id="6-小结"><a href="#6-小结" class="headerlink" title="6.小结"></a>6.小结</h4><p> 1、细心地、认真的小伙伴一定会发现我代码请求的name的值是6666，或者英文，而不是“北京-宏哥”的中文，原因是中文出现的url中有时候会报错。解决办法：</p><pre><code>1 from urllib.parse import quote2 import urllib.request3 name = quote(name)4 url2 = &quot;http://localhost:8080/jenkins/job/&quot;+name+&quot;/doDelete&quot;</code></pre><p>2、给小伙伴们演示一下，打断点</p><p>（1）在删除新建任务出打上断点,双击前边即可出现一个红色的大圆点</p><p><img src="https://i.loli.net/2020/08/05/XN7yWrupABwjk3Q.png" alt="1232840-20190410151411971-729052573.png"></p><p>（2）查看jenkins主界面，没有新建任务</p><p><img src="https://i.loli.net/2020/08/05/jzBEN7vXfQJcU8b.png" alt="1232840-20190410151819124-1886457889.png"> </p><p>（3）点击右上方的昆虫图标</p><p><img src="https://i.loli.net/2020/08/05/Fy43odrzgXLvUBu.png" alt="1232840-20190410151619234-957694967.png"></p><p>（4）进入debug模式，代码运行到断点处停止运行</p><p><img src="https://i.loli.net/2020/08/05/VbPu6v3jXrEFUmk.png" alt="1232840-20190410151903262-329092371.png"> </p><p>（5）刷新主界面，再次查看jenkins主界面，有新建任务-北京-宏哥</p><p><img src="https://i.loli.net/2020/08/05/pjlytHCT6b8axMg.png" alt="1232840-20190410152051748-1639698550.png"></p><p>（6）点击右边的绿色图标一次性执行完后边的代码，或者是上边拐弯蓝色图标，一步一步执行完后边的代码</p><p><img src="https://i.loli.net/2020/08/05/o8Yi2vV5NhrbJzA.png" alt="1232840-20190410152454855-780685709.png"> </p><p>（7）刷新主界面，再次查看jenkins主界面，你会看到：新建任务-北京-宏哥  神奇的消失了，他就这样被你神不知鬼不觉的干掉了</p><p><img src="https://i.loli.net/2020/08/05/PH46qLwXc3DlbeT.png" alt="1232840-20190410152953831-1349312086.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> Interface </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Interface </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python接口自动化14</title>
+      <link href="/2016/02/27/interface/"/>
+      <url>/2016/02/27/interface/</url>
+      
+        <content type="html"><![CDATA[<p><strong>🔥 python接口自动化（十四）–session关联接口（详解）</strong></p><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　上一篇cookie绕过验证码模拟登录博客园，但这只是第一步，一般登录后，还会有其它的操作，如发帖，评论等等，这时候如何保持会话呢？这里我以jenkins平台为例，给小伙伴们在沙场演练一下。</p><h4 id="2-session简介"><a href="#2-session简介" class="headerlink" title="2.session简介"></a>2.session简介</h4><p>1、通过help方法查看帮助文档,截图一部分，后面省略了，有兴趣的自己可以敲一下看看</p><p><img src="https://i.loli.net/2020/08/05/sdn14afOhyTKilR.png" alt="1232840-20190403162623701-1650488720.png"></p><p>2、参考代码</p><pre><code>1 # coding:utf-82 import requests3 help(requests.session())</code></pre><h4 id="3-使用session登录"><a href="#3-使用session登录" class="headerlink" title="3.使用session登录"></a>3.使用session登录</h4><p>1、使用session登录只需在登录的基础上稍做修改，即可</p><p><img src="https://i.loli.net/2020/08/05/P9U3fC7xRkj1Qns.png" alt="1232840-20190409113139413-1149291392.png"> </p><p>2、参考代码</p><pre><code># coding:utf-8import requests# 先打开登录首页，获取部分sessionurl = &quot;http://localhost:8080/jenkins/j_acegi_security_check&quot;headers = {            &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0&quot;           }  # get方法其它加个ser-Agent就可以了d = {&quot;j_username&quot;: &quot;admin&quot;,     &quot;j_password&quot;: &quot;111111&quot;,     &quot;from&quot;: &quot;&quot;,     &quot;Submit&quot;: u&quot;登录&quot;,     &quot;remember_me&quot;: &quot;on&quot;     }s = requests.session()r = s.post(url, headers=headers, data=d)#print (r.content.decode(&#39;utf-8&#39;))</code></pre><h4 id="4-保存编辑"><a href="#4-保存编辑" class="headerlink" title="4.保存编辑"></a>4.保存编辑</h4><p>1、先打开新建任务，手动输入任务名称和选择下边选项后，打开fiddler抓包，然后点击“确定”</p><p><img src="https://i.loli.net/2020/08/05/ArRs7xjVBGMtyue.png" alt="1232840-20190409112640867-1436217274.png"></p><p>fiddler抓包</p><p><img src="https://i.loli.net/2020/08/05/hJ8nGBzAdZrDtOk.png" alt="1232840-20190409112939013-755978808.png"></p><p>2、把body的参数内容写成字典格式</p><p><img src="https://i.loli.net/2020/08/05/fvQsbGYZK5T1zHF.png" alt="1232840-20190409132923437-1230626099.png"> </p><p>参考代码：</p><pre><code>1 body = {&quot;name&quot;:&quot;北京-宏哥1&quot;,2         &quot;mode&quot;: &quot;hudson.model.FreeStyleProject&quot;,3         &quot;Jenkins-Crumb&quot;:&quot;51a97fc7fbf3792823230d9bdd7ec906&quot;,4         &quot;json&quot;:{&quot;name&quot;:&quot;北京-宏哥1&quot;,5                 &quot;mode&quot;: &quot;hudson.model.FreeStyleProject&quot;,6                 &quot;Jenkins-Crumb&quot;:&quot;51a97fc7fbf3792823230d9bdd7ec906&quot;7 8         }9 }</code></pre><p>3、用上面登录保存的session继续发送post请求，来新建任务</p><p><img src="https://i.loli.net/2020/08/05/9EifdWGaHjYFoUc.png" alt="1232840-20190409133031677-6251901.png"> </p><p>4、执行后，查看所有任务就多了一条新增的了</p><p><img src="https://i.loli.net/2020/08/05/DZjVKuXBiHqC58b.png" alt="1232840-20190409132752754-1308665219.png"> </p><p>5、运行结果部分截图：</p><p><img src="https://i.loli.net/2020/08/05/qS8oyFUHukbiKvz.png" alt="1232840-20190409135811981-1266307704.png"></p><p>6、粘贴到记事本修改后缀查看：</p><p><img src="https://i.loli.net/2020/08/05/TWuNFDmlp9oR31S.png" alt="1232840-20190409135849947-1352095135.png"></p><h4 id="7-参考代码"><a href="#7-参考代码" class="headerlink" title="7.参考代码"></a>7.参考代码</h4><pre><code> 1 # coding:utf-8 2 import requests 3 # 先打开登录首页，获取部分session 4 url = &quot;http://localhost:8080/jenkins/j_acegi_security_check&quot; 5 headers = { 6             &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0&quot; 7            }  # get方法其它加个ser-Agent就可以了 8 d = {&quot;j_username&quot;: &quot;admin&quot;, 9      &quot;j_password&quot;: &quot;111111&quot;,10      &quot;from&quot;: &quot;&quot;,11      &quot;Submit&quot;: u&quot;登录&quot;,12      &quot;remember_me&quot;: &quot;on&quot;13      }14 15 s = requests.session()16 r = s.post(url, headers=headers, data=d)17 #print (r.content.decode(&#39;utf-8&#39;))18 # 正则表达式提取账号和登录按钮19 import re20 t = re.findall(r&#39;&lt;b&gt;(.+?)&lt;/b&gt;&#39;, r.content.decode(&#39;utf-8&#39;))   # 用python3的这里r.content需要解码21 print (t[0])22 print (t[1])23 #新建任务24 url1 = &quot;http://localhost:8080/jenkins/createItem&quot;25 body = {&quot;name&quot;:&quot;北京-宏哥1&quot;,26         &quot;mode&quot;: &quot;hudson.model.FreeStyleProject&quot;,27         &quot;Jenkins-Crumb&quot;:&quot;51a97fc7fbf3792823230d9bdd7ec906&quot;,28         &quot;json&quot;:{&quot;name&quot;:&quot;北京-宏哥1&quot;,29                 &quot;mode&quot;: &quot;hudson.model.FreeStyleProject&quot;,30                 &quot;Jenkins-Crumb&quot;:&quot;51a97fc7fbf3792823230d9bdd7ec906&quot;31 32         }33 }34 35 r2 = s.post(url1, data=body, verify=False)36 print (r2.content.decode(&#39;utf-8&#39;))</code></pre><p>这里我是用新建任务写的案例，小伙伴可以试下Jenkins里边其他的关联接口</p><h4 id="8-小结"><a href="#8-小结" class="headerlink" title="8.小结"></a>8.小结</h4><p>小伙伴都看到了吧，session关联接口就是这么简单！！！赶快动起来吧。想要学习的小伙伴可以用博客园来练习一下，遇到问题欢迎打扰和沟通！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> Interface </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Interface </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python接口自动化13</title>
+      <link href="/2016/02/26/interface/"/>
+      <url>/2016/02/26/interface/</url>
+      
+        <content type="html"><![CDATA[<p><strong>🔥 python接口自动化（十三）–cookie绕过验证码登录（详解）</strong></p><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　有些登录的接口会有验证码：短信验证码，图形验证码等，这种登录的话验证码参数可以从后台获取的（或者查数据库最直接）。获取不到也没关系，可以通过添加cookie的方式绕过验证码。（注意：并不是所有的登录都是用cookie来保持登录的，有些是用token登录）</p><h4 id="2-抓登录cookie"><a href="#2-抓登录cookie" class="headerlink" title="2.抓登录cookie"></a>2.抓登录cookie</h4><p>1、如博客园登录后会生成一个已登录状态的cookie，那么只需要直接把这个值添加到cookies里面就可以了。</p><p>2、可以先手动登录一次，然后抓取这个cookie，这里就需要用抓包工具fiddler了</p><p>3、先打开博客园登录界面，手动输入账号和密码（勾选下次自动登录）</p><p><img src="https://i.loli.net/2020/08/05/PbU3VBQZJ4pkLt2.png" alt="1232840-20190401154817598-2029649734.png"></p><p>4、打开fiddler抓包工具，刷新下登录首页，就是登录前的cookie了</p><p><img src="https://i.loli.net/2020/08/05/LnNRMCdqhvbgjFH.png" alt="1232840-20190416090612960-199035741.png"></p><p>5、登录成功后，再查看cookie变化，发现多了两组参数，多的这两组参数就是我们想要的，copy出来，一会有用</p><p><img src="https://i.loli.net/2020/08/05/92XGCINvmfwPRBK.png" alt="1232840-20190416091134168-1983444868.png"></p><h4 id="3-cookie组成结构"><a href="#3-cookie组成结构" class="headerlink" title="3.cookie组成结构"></a>3.cookie组成结构</h4><p>1、用抓包工具fidller只能看到cookie的name和value两个参数，实际上cookie还有其它参数</p><p>2、以下是一个完整的cookie组成结构</p><pre><code>1 cookie ={u&#39;domain&#39;: u&#39;.cnblogs.com&#39;,2            u&#39;name&#39;: u&#39;.CNBlogsCookie&#39;,3            u&#39;value&#39;: u&#39;xxxx&#39;,4           u&#39;expiry&#39;: 1491887887,5            u&#39;path&#39;: u&#39;/&#39;,6            u&#39;httpOnly&#39;: True,7           u&#39;secure&#39;: False}</code></pre><p>name：cookie的名称</p><p>value：cookie对应的值，动态生成的</p><p>domain：服务器域名</p><p>expiry：Cookie有效终止日期</p><p>path：Path属性定义了Web服务器上哪些路径下的页面可获取服务器设置的Cookie</p><p>httpOnly：防脚本攻击</p><p>secure:在Cookie中标记该变量，表明只有当浏览器和Web Server之间的通信协议为加密认证协议时，</p><p>浏览器才向服务器提交相应的Cookie。当前这种协议只有一种，即为HTTPS。</p><h4 id="5-添加cookie"><a href="#5-添加cookie" class="headerlink" title="5.添加cookie"></a>5.添加cookie</h4><p>1、往session里面添加cookie可以用以下方式</p><p>2、set里面参数按括号里面的参数格式</p><pre><code>1 coo = requests.cookies.RequestsCookieJar() 2 coo.set(&#39;cookie-name&#39;, &#39;cookie-value&#39;, path=&#39;/&#39;, domain=&#39;.xxx.com&#39;) 3 s.cookies.update(c)</code></pre><p>3、于是添加登录的cookie，把第一步fiddler抓到的内容填进去就可以了</p><pre><code>1 c = requests.cookies.RequestsCookieJar()2 c.set(&#39;.CNBlogsCookie&#39;, &#39;xxx&#39;)3 c.set(&#39;.Cnblogs.AspNetCore.Cookies&#39;,&#39;xxx&#39;)4 s.cookies.update(c)5 print(s.cookies)</code></pre><p><img src="https://i.loli.net/2020/08/05/BUfiZ9t2qKbmPIW.png" alt="1232840-20190401155020777-888861529.png"></p><h4 id="6-代码运行，刷新随笔"><a href="#6-代码运行，刷新随笔" class="headerlink" title="6.代码运行，刷新随笔"></a>6.代码运行，刷新随笔</h4><p>1、看到刚刚添加的随笔</p><p><img src="https://i.loli.net/2020/08/05/OVjdfp8Q3xIR1Yo.png" alt="1232840-20190416101553901-426176631.png"></p><h4 id="7-参考代码"><a href="#7-参考代码" class="headerlink" title="7.参考代码"></a>7.参考代码</h4><p>1、由于登录时候是多加2个cookie，我们可以先用get方法打开登录首页，获取部分cookie</p><p>2、再把登录需要的cookie添加到session里</p><p>3、添加成功后，随便编辑正文和标题保存到草稿箱</p><pre><code> 1 # coding:utf-8 2 import requests 3 # 先打开登录首页，获取部分cookie 4 url = &quot;https://passport.cnblogs.com/user/signin&quot; 5 headers = { 6             &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0&quot; 7            }  # get方法其它加个ser-Agent就可以了 8 s = requests.session() 9 r = s.get(url, headers=headers,verify=False)10 print s.cookies11 # 添加登录需要的两个cookie12 c = requests.cookies.RequestsCookieJar()13 c.set(&#39;.CNBlogsCookie&#39;, &#39;xxx&#39;)  # 填上面抓包内容14 c.set(&#39;.Cnblogs.AspNetCore.Cookies&#39;,&#39;xxx&#39;)  # 填上面抓包内容15 s.cookies.update(c)16 print s.cookies17 # 登录成功后保存编辑内容18 url2= &quot;https://i.cnblogs.com/EditPosts.aspx?opt=1&quot;19 body = {&quot;__VIEWSTATE&quot;: &quot;&quot;,20         &quot;__VIEWSTATEGENERATOR&quot;:&quot;FE27D343&quot;,21         &quot;Editor$Edit$txbTitle&quot;:&quot;这是绕过登录的标题：北京-宏哥&quot;,22         &quot;Editor$Edit$EditorBody&quot;:&quot;&lt;p&gt;这里是中文内容：http://www.cnblogs.com/duhong/&lt;/p&gt;&quot;,23         &quot;Editor$Edit$Advanced$ckbPublished&quot;:&quot;on&quot;,24         &quot;Editor$Edit$Advanced$chkDisplayHomePage&quot;:&quot;on&quot;,25         &quot;Editor$Edit$Advanced$chkComments&quot;:&quot;on&quot;,26         &quot;Editor$Edit$Advanced$chkMainSyndication&quot;:&quot;on&quot;,27         &quot;Editor$Edit$lkbDraft&quot;:&quot;存为草稿&quot;,28          }29 r2 = s.post(url2, data=body, verify=False)30 print r.content</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> Interface </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Interface </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python接口自动化11</title>
+      <link href="/2016/02/24/interface/"/>
+      <url>/2016/02/24/interface/</url>
+      
+        <content type="html"><![CDATA[<p><strong>🔥 python接口自动化（十一）–发送post【data】（详解）</strong></p><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　前面登录博客园的是传 json 参数，由于其登录机制的改变没办法演示，然而在工作中有些登录不是传 json 的，如 jenkins 的登录，这里小编就以jenkins 登录为案例，传 data 参数，给各位童鞋详细演练一下。</p><h4 id="2-登录jenkins抓包"><a href="#2-登录jenkins抓包" class="headerlink" title="2.登录jenkins抓包"></a>2.登录jenkins抓包</h4><p>1、浏览器上登录jenkins，输入账号和密码，点击登录</p><p><img src="https://i.loli.net/2020/08/05/4hWvVAFIzXSunkT.png" alt="1232840-20190409104912554-2057818411.png"> </p><p>2、fiddler抓包工具抓取jenkins登录的过程</p><p><img src="https://i.loli.net/2020/08/05/4sJqKzDIu8GR7jf.png" alt="1232840-20190409104957864-1906678021.png"></p><p>3、可以清楚地看到这个body参数并不是json格式，是key=value格式，也就是前面介绍post请求四种数据类型里面的第一种</p><p><img src="https://i.loli.net/2020/08/05/TLNejRviOBM7KzC.png" alt="1232840-20190326153546758-1080778198.png"></p><h4 id="3-请求头部"><a href="#3-请求头部" class="headerlink" title="3.请求头部"></a>3.请求头部</h4><p>1.上面抓包已经知道body的数据类型了，那么头部里面Content-Type类型也需要填写对应的参数类型</p><p><img src="https://i.loli.net/2020/08/05/aUb7ARCr6IE89H4.png" alt="614655-20170904220738929-1796950581.png"></p><h4 id="4-实现登录"><a href="#4-实现登录" class="headerlink" title="4.实现登录"></a>4.实现登录</h4><p>1、登录实例代码如下：</p><p>注意：此处的登录URL是fiddler抓包抓到的，而并非是浏览器的URL地址，如果你复制的是浏览器的地址，就会报错了</p><pre><code> 1 # coding:utf-8 2 import requests 3 # 先打开登录首页，获取部分session 4 url = &quot;http://localhost:8080/jenkins/j_acegi_security_check&quot; 5 headers = { 6             &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0&quot; 7            }  # get方法其它加个ser-Agent就可以了 8 d = {&quot;j_username&quot;: &quot;admin&quot;, 9      &quot;j_password&quot;: &quot;111111&quot;,10      &quot;from&quot;: &quot;&quot;,11      &quot;Submit&quot;: u&quot;登录&quot;,12      &quot;remember_me&quot;: &quot;on&quot;13      }14 s = requests.session()15 r = s.post(url, headers=headers, data=d)16 print (r.content.decode(&#39;utf-8&#39;))</code></pre><p>2、运行后的结果如下：</p><p><img src="https://i.loli.net/2020/08/05/BbDUyXsdoNMjEuS.png" alt="1232840-20190409110231035-1632164720.png"></p><p>3、为了更好地查看你可以将其拷贝到记事本，保存，然后将文件后缀名修改成.html或者.htm，用浏览器打开查看</p><p><img src="https://i.loli.net/2020/08/05/HTatYKpSfDhGuqn.png" alt="1232840-20190409111957961-1617125551.png"></p><h4 id="5-判断登录是否成功"><a href="#5-判断登录是否成功" class="headerlink" title="5.判断登录是否成功"></a>5.判断登录是否成功</h4><p>1.首先这个登录接口有重定向，看左边会话框302，那登录成功的结果看最后一个200就行</p><p><img src="https://i.loli.net/2020/08/05/InjqYdM1WpFx4gH.png" alt="614655-20170904220819194-218604847.png"></p><p>2.返回的结果并不是跟博客园一样的json格式，返回的是一个html页面 </p><h4 id="6-判断登录成功"><a href="#6-判断登录成功" class="headerlink" title="6.判断登录成功"></a>6.判断登录成功</h4><p>1.判断登录成功，可以抓取页面上的关键元素，比如：账号名称admin，注销按钮</p><p><img src="https://i.loli.net/2020/08/05/t9wkcpHgZMmd84f.png" alt="1232840-20190326155254663-1114019940.png"></p><p>2.通过正则表达式提出这2个关键字</p><p><img src="https://i.loli.net/2020/08/05/MB3U4wSO2Xpsznu.png" alt="1232840-20190409110411277-2010459.png"></p><h4 id="7-参考代码"><a href="#7-参考代码" class="headerlink" title="7.参考代码"></a>7.参考代码</h4><pre><code> 1 # coding:utf-8 2 import requests 3 # 先打开登录首页，获取部分session 4 url = &quot;http://localhost:8080/jenkins/j_acegi_security_check&quot; 5 headers = { 6             &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0&quot; 7            }  # get方法其它加个ser-Agent就可以了 8 d = {&quot;j_username&quot;: &quot;admin&quot;, 9      &quot;j_password&quot;: &quot;111111&quot;,10      &quot;from&quot;: &quot;&quot;,11      &quot;Submit&quot;: u&quot;登录&quot;,12      &quot;remember_me&quot;: &quot;on&quot;13      }14 s = requests.session()15 r = s.post(url, headers=headers, data=d)16 #print (r.content.decode(&#39;utf-8&#39;))17 # 正则表达式提取账号和登录按钮18 import re19 t = re.findall(r&#39;&lt;b&gt;(.+?)&lt;/b&gt;&#39;, r.content.decode(&#39;utf-8&#39;))   # 用python3的这里r.content需要解码20 print (t[0])21 print (t[1])</code></pre><h4 id="8-遇到问题可解决方法"><a href="#8-遇到问题可解决方法" class="headerlink" title="8.遇到问题可解决方法"></a>8.遇到问题可解决方法</h4><p>注意这里边遇到的问题python3遇到的问题，或许python2没有这些问题，笔者没有实践，有兴趣的自己可以试一下<br>1、如果打印content，没有加后边的.decode(‘utf-8’)，会出现乱码，解决方法加上即可。</p><p><img src="https://i.loli.net/2020/08/05/V2icILTuw6YeO5B.png" alt="1232840-20190409111050605-2065451392.png"></p><p>2、如果正则提取没有加.decode(‘utf-8’)，会报如下错误，解决方案也是加上即可</p><p><img src="https://i.loli.net/2020/08/05/xVmzNuehAZIOpwt.png" alt="1232840-20190409110820571-1290410890.png"></p><h4 id="9-小结"><a href="#9-小结" class="headerlink" title="9.小结"></a>9.小结</h4><p>　　jenkins 代码模拟登陆到这里就结束，实际工作中的登录接口也就是这些，记住万变不离其宗，举一反三。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> Interface </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Interface </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python接口自动化10</title>
+      <link href="/2016/02/23/interface/"/>
+      <url>/2016/02/23/interface/</url>
+      
+        <content type="html"><![CDATA[<p><strong>🔥 python接口自动化（十二）–https请求（SSL）（详解）</strong></p><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　本来最新的requests库V2.13.0是支持https请求的，但是一般写脚本时候，我们会用抓包工具fiddler，这时候会 报：requests.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)</p><h4 id="2-小编环境"><a href="#2-小编环境" class="headerlink" title="2.小编环境"></a>2.小编环境</h4><p>python：3.7</p><p>requests：2.21.0</p><p>fiddler：v5.0.20</p><p>python &amp; requests:</p><p><img src="https://i.loli.net/2020/08/05/wgeNd8srChMxqIz.png" alt="1232840-20190326160238512-197745863.png"> </p><p>Fiddler:</p><p><img src="https://i.loli.net/2020/08/05/OxR8KUBMtve4Ddm.png" alt="1232840-20190326160435033-311365508.png"></p><h4 id="3-SSL问题"><a href="#3-SSL问题" class="headerlink" title="3.SSL问题"></a>3.SSL问题</h4><p>1、在你不启用fiddler时，python代码直接发送https请求，不会有SSL问题（也就是说不想看到SSL问题，关掉fiddler就行）</p><p><img src="https://i.loli.net/2020/08/05/s1hKtE2qXDNYwPB.png" alt="614655-20170904221144272-1517438496.png"></p><p>2、启动fiddler抓包，会出现这个错误：</p><pre><code>requests.exceptions.SSLError: HTTPSConnectionPool(host=&#39;passport.cnblogs.com&#39;, port=443): Max retries exceeded with url: /user/signin (Caused by SSLError(SSLError(&quot;bad handshake: Error([(&#39;SSL routines&#39;, &#39;tls_process_server_certificate&#39;, &#39;certificate verify failed&#39;)])&quot;)))</code></pre><p><img src="https://i.loli.net/2020/08/05/IaB7rbANDL41PVp.png" alt="1232840-20190326161745213-1774559635.png"></p><h4 id="4-verify参数设置"><a href="#4-verify参数设置" class="headerlink" title="4.verify参数设置"></a>4.verify参数设置</h4><p>1、Requests的请求默认verify=True</p><p>2、如果你将 verify设置为 False，Requests 也能忽略对 SSL 证书的验证</p><p>3、但是依然会出现两行Warning,可以不用管</p><p><img src="https://i.loli.net/2020/08/05/AKvZNsgraWCD7lc.png" alt="614655-20170904221204210-796418385.png"></p><h4 id="5-忽略Warning"><a href="#5-忽略Warning" class="headerlink" title="5.忽略Warning"></a>5.忽略Warning</h4><p>　　有些小伙伴有强迫症看到红色的心里就发慌，这里加两行代码可以忽略掉警告，眼不见为净！</p><p> Python2添加如下代码即可解决：</p><pre><code>1 from requests.packages.urllib3.exceptions import InsecureRequestWarning2 # 禁用安全请求警告3 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)</code></pre><p>Python3添加如下三种任意一种代码即可解决：</p><pre><code>1 1、requests.packages.urllib3.disable_warnings()2 3 2、import warnings4 　  warnings.filterwarnings(&quot;ignore&quot;)5 6 3、import urllib37 　　urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)</code></pre><p><img src="https://i.loli.net/2020/08/05/2I18dvUzSVAYlMG.png" alt="1232840-20190326163022014-1212806683.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> Interface </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Interface </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python接口自动化10</title>
       <link href="/2016/02/23/interface/"/>
       <url>/2016/02/23/interface/</url>
