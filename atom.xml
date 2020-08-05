@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hongduhong.github.io/"/>
-  <updated>2020-07-28T09:02:11.892Z</updated>
+  <updated>2020-08-04T09:37:09.383Z</updated>
   <id>https://hongduhong.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>python+selenium自动化测试</title>
-    <link href="https://hongduhong.github.io/2016/01/19/undefined/python-selenium-zi-dong-hua-ce-shi-huan-jing-da-jian-1-xiang-xi/"/>
-    <id>https://hongduhong.github.io/2016/01/19/undefined/python-selenium-zi-dong-hua-ce-shi-huan-jing-da-jian-1-xiang-xi/</id>
-    <published>2016-01-18T16:00:00.000Z</published>
-    <updated>2020-07-28T09:02:11.892Z</updated>
+    <title>python接口自动化10</title>
+    <link href="https://hongduhong.github.io/2016/02/23/interface/"/>
+    <id>https://hongduhong.github.io/2016/02/23/interface/</id>
+    <published>2016-02-22T16:00:00.000Z</published>
+    <updated>2020-08-04T09:37:09.383Z</updated>
     
     <summary type="html">
     
@@ -29,11 +29,609 @@
       
         
         
-          &lt;h2 id=&quot;《手把手教你》系列基础篇之1-python-selenium自动化测试-环境搭建（详细）&quot;&gt;&lt;a href=&quot;#《手把手教你》系列基础篇之1-python-selenium自动化测试-环境搭建（详细）&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;&lt;strong&gt;🔥 python接口自动化（十）–post请求四种传送正文方式（详解）&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/categories/Python/Interface/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/tags/Interface/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python接口自动化8</title>
+    <link href="https://hongduhong.github.io/2016/02/21/interface/"/>
+    <id>https://hongduhong.github.io/2016/02/21/interface/</id>
+    <published>2016-02-20T16:00:00.000Z</published>
+    <updated>2020-08-04T07:30:00.779Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥 python接口自动化（八）–发送post请求的接口（详解）&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/categories/Python/Interface/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/tags/Interface/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python接口自动化9</title>
+    <link href="https://hongduhong.github.io/2016/02/21/interface/"/>
+    <id>https://hongduhong.github.io/2016/02/21/interface/</id>
+    <published>2016-02-20T16:00:00.000Z</published>
+    <updated>2020-08-04T09:16:38.645Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥 python接口自动化（九）–python中字典和json的区别（详解）&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/categories/Python/Interface/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/tags/Interface/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python接口自动化7</title>
+    <link href="https://hongduhong.github.io/2016/02/20/interface/"/>
+    <id>https://hongduhong.github.io/2016/02/20/interface/</id>
+    <published>2016-02-19T16:00:00.000Z</published>
+    <updated>2020-08-04T07:15:32.972Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥 python接口自动化（七）–状态码详解对照表（详解）&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/categories/Python/Interface/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/tags/Interface/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python接口自动化6</title>
+    <link href="https://hongduhong.github.io/2016/02/19/interface/"/>
+    <id>https://hongduhong.github.io/2016/02/19/interface/</id>
+    <published>2016-02-18T16:00:00.000Z</published>
+    <updated>2020-08-04T05:42:44.611Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥 python接口自动化（六）–发送get请求接口（详解）&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/categories/Python/Interface/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/tags/Interface/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python接口自动化5</title>
+    <link href="https://hongduhong.github.io/2016/02/18/interface/"/>
+    <id>https://hongduhong.github.io/2016/02/18/interface/</id>
+    <published>2016-02-17T16:00:00.000Z</published>
+    <updated>2020-08-04T05:22:19.623Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥 python接口自动化（五）–接口测试用例和接口测试报告模板（详解）&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/categories/Python/Interface/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/tags/Interface/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python接口自动化4</title>
+    <link href="https://hongduhong.github.io/2016/02/17/interface/"/>
+    <id>https://hongduhong.github.io/2016/02/17/interface/</id>
+    <published>2016-02-16T16:00:00.000Z</published>
+    <updated>2020-08-04T04:59:07.030Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥 python接口自动化（四）–接口测试工具介绍（详解）&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/categories/Python/Interface/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/tags/Interface/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python接口自动化3</title>
+    <link href="https://hongduhong.github.io/2016/02/16/interface/"/>
+    <id>https://hongduhong.github.io/2016/02/16/interface/</id>
+    <published>2016-02-15T16:00:00.000Z</published>
+    <updated>2020-08-04T03:55:06.087Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥 python接口自动化（三）–如何设计接口测试用例（详解）&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/categories/Python/Interface/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/tags/Interface/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python接口自动化2</title>
+    <link href="https://hongduhong.github.io/2016/02/15/interface/"/>
+    <id>https://hongduhong.github.io/2016/02/15/interface/</id>
+    <published>2016-02-14T16:00:00.000Z</published>
+    <updated>2020-08-04T03:36:51.879Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥 python接口自动化（二）–什么是接口测试、为什么要做接口测试（详解）&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/categories/Python/Interface/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/tags/Interface/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python接口自动化1</title>
+    <link href="https://hongduhong.github.io/2016/02/14/interface/"/>
+    <id>https://hongduhong.github.io/2016/02/14/interface/</id>
+    <published>2016-02-13T16:00:00.000Z</published>
+    <updated>2020-08-04T03:36:43.096Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥 python接口自动化（一）–什么是接口、接口优势、类型（详解）&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/categories/Python/Interface/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Interface" scheme="https://hongduhong.github.io/tags/Interface/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python+selenium自动化测试26</title>
+    <link href="https://hongduhong.github.io/2016/02/13/selenium/"/>
+    <id>https://hongduhong.github.io/2016/02/13/selenium/</id>
+    <published>2016-02-12T16:00:00.000Z</published>
+    <updated>2020-08-04T03:11:38.032Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥《一头扎进》系列之Python+Selenium框架实战篇9-最新的chromedriver与chrome的对应关系表&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/categories/Python/Selenium/"/>
+    
+      <category term="Chrome" scheme="https://hongduhong.github.io/categories/Python/Selenium/Chrome/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/tags/Selenium/"/>
+    
+      <category term="Chrome" scheme="https://hongduhong.github.io/tags/Chrome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python+selenium自动化测试25</title>
+    <link href="https://hongduhong.github.io/2016/02/12/selenium/"/>
+    <id>https://hongduhong.github.io/2016/02/12/selenium/</id>
+    <published>2016-02-11T16:00:00.000Z</published>
+    <updated>2020-08-04T02:43:16.587Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥《一头扎进》系列之Python+Selenium框架实战篇8-年底升职加薪，年终奖就差最后这一步你知道不？？？&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/categories/Python/Selenium/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/tags/Selenium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python+selenium自动化测试24</title>
+    <link href="https://hongduhong.github.io/2016/02/11/selenium/"/>
+    <id>https://hongduhong.github.io/2016/02/11/selenium/</id>
+    <published>2016-02-10T16:00:00.000Z</published>
+    <updated>2020-08-04T02:34:06.795Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥《一头扎进》系列之Python+Selenium框架实战篇7-年底升职加薪，年终奖全靠它！&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/categories/Python/Selenium/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/tags/Selenium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python+selenium自动化测试23</title>
+    <link href="https://hongduhong.github.io/2016/02/10/selenium/"/>
+    <id>https://hongduhong.github.io/2016/02/10/selenium/</id>
+    <published>2016-02-09T16:00:00.000Z</published>
+    <updated>2020-08-04T02:25:21.708Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥《一头扎进》系列之Python+Selenium自动化测试框架实战篇6 - 价值好几K的框架，呦！这个框架还真牛叉哦！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/categories/Python/Selenium/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/tags/Selenium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python+selenium自动化测试22</title>
+    <link href="https://hongduhong.github.io/2016/02/09/selenium/"/>
+    <id>https://hongduhong.github.io/2016/02/09/selenium/</id>
+    <published>2016-02-08T16:00:00.000Z</published>
+    <updated>2020-08-04T02:09:04.510Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥《一头扎进》系列之Python+Selenium框架设计篇5 - 价值好几K的框架，哎呦！这个框架还真有点料啊！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/categories/Python/Selenium/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/tags/Selenium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python+selenium自动化测试21</title>
+    <link href="https://hongduhong.github.io/2016/02/08/selenium/"/>
+    <id>https://hongduhong.github.io/2016/02/08/selenium/</id>
+    <published>2016-02-07T16:00:00.000Z</published>
+    <updated>2020-08-04T01:53:43.358Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥《一头扎进》系列之Python+Selenium框架实战篇4-价值好几K的框架，呵！这个框架有点意思啊！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/categories/Python/Selenium/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/tags/Selenium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python+selenium自动化测试20</title>
+    <link href="https://hongduhong.github.io/2016/02/07/selenium/"/>
+    <id>https://hongduhong.github.io/2016/02/07/selenium/</id>
+    <published>2016-02-06T16:00:00.000Z</published>
+    <updated>2020-08-04T01:49:49.906Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥《一头扎进》系列之Python+Selenium框架设计篇3-价值好几K的框架，狼来了，狼来了….，狼没来，框架真的来了&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/categories/Python/Selenium/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/tags/Selenium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python+selenium自动化测试19</title>
+    <link href="https://hongduhong.github.io/2016/02/06/selenium/"/>
+    <id>https://hongduhong.github.io/2016/02/06/selenium/</id>
+    <published>2016-02-05T16:00:00.000Z</published>
+    <updated>2020-08-04T01:53:15.070Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥《一头扎进》系列之Python+Selenium框架设计篇2- 价值好几K的框架，不看白不看，看了还想看&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/categories/Python/Selenium/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/tags/Selenium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python+selenium自动化测试18</title>
+    <link href="https://hongduhong.github.io/2016/02/05/selenium/"/>
+    <id>https://hongduhong.github.io/2016/02/05/selenium/</id>
+    <published>2016-02-04T16:00:00.000Z</published>
+    <updated>2020-08-04T01:30:57.438Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥《一头扎进》系列之Python+Selenium框架设计篇1-价值好几K的框架，不看别后悔，过时不候&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-什么是自动化测试框架&quot;&gt;&lt;a href=&quot;#1-什么是自动化测试框架&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/categories/Python/Selenium/"/>
+    
+    
+      <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/tags/Selenium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python+selenium自动化测试17</title>
+    <link href="https://hongduhong.github.io/2016/02/04/selenium/"/>
+    <id>https://hongduhong.github.io/2016/02/04/selenium/</id>
+    <published>2016-02-03T16:00:00.000Z</published>
+    <updated>2020-08-04T00:48:07.057Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;🔥《手把手教你》系列进阶篇之4-python+selenium自动化测试-python几种神操作你都知道吗？（详细教程）&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://hongduhong.github.io/categories/Python/"/>
+    
+      <category term="Selenium" scheme="https://hongduhong.github.io/categories/Python/Selenium/"/>
     
     
       <category term="Python" scheme="https://hongduhong.github.io/tags/Python/"/>

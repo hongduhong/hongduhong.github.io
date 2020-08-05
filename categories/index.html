@@ -30,7 +30,6 @@
 
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>	
-	
 <!--百度统计代码-->	
 <script>
 var _hmt = _hmt || [];
@@ -870,13 +869,105 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             </div>
             <div class="tag-chips">
                 
-                你目前还没有对文章进行分类.
+                
+                
+                <a href="/categories/Python/" title="Python: 36">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F9EBEA;">Python
+                        <span class="tag-length">36</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/Python/Selenium/" title="Selenium: 26">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F5EEF8;">Selenium
+                        <span class="tag-length">26</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/Python/Selenium/Chrome/" title="Chrome: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">Chrome
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/Python/Interface/" title="Interface: 10">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #E8F8F5;">Interface
+                        <span class="tag-length">10</span>
+                    </span>
+                </a>
+                
                 
             </div>
         </div>
     </div>
 </div>
 
+    
+    <style type="text/css">
+    #category-radar {
+        width: 100%;
+        height: 360px;
+    }
+</style>
+
+<div class="container" data-aos="fade-up">
+    <div class="card">
+        <div id="category-radar" class="card-content"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
+<script type="text/javascript">
+    let radarChart = echarts.init(document.getElementById('category-radar'));
+
+    
+
+    let option = {
+        title: {
+            left: 'center',
+            text: '文章分类雷达图',
+            textStyle: {
+                fontWeight: 500,
+                fontSize: 22
+            }
+        },
+        tooltip: {},
+        radar: {
+            name: {
+                textStyle: {
+                    color: '#3C4858'
+                }
+            },
+            indicator: [{"name":"Python","max":37},{"name":"Selenium","max":37},{"name":"Chrome","max":37},{"name":"Interface","max":37}],
+            nameGap: 5,
+            center: ['50%','55%'],
+            radius: '66%'
+        },
+        series: [{
+            type: 'radar',
+            color: ['#3ecf8e'],
+            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+            data : [
+                {
+                    value : [36,26,1,10],
+                    name : '文章分类数量'
+                }
+            ]
+        }]
+    };
+
+    radarChart.setOption(option);
+</script>
     
 
 </main>
@@ -971,7 +1062,7 @@ $(document).ready(function(){
 			
 			
                 <i class="fa fa-area-chart"></i>站点总字数:
-                <span class="white-color">1k</span>
+                <span class="white-color">80.7k</span>
             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			本站由&copy;<a href="https://hongduhong.github.io" target="_blank">北京-宏哥</a>基于
             <a href="https://hexo.io/" target="_blank">Hexo</a> 搭建.

@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="python+selenium自动化测试, 北京-宏哥">
-    <meta name="description" content="《手把手教你》系列基础篇之1-python+selenium自动化测试-环境搭建（详细）1.环境搭建基于python3和">
+    <meta name="keywords" content="标签: Interface, 北京-宏哥">
+    <meta name="description" content="标签: Interface | 北京-宏哥">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>python+selenium自动化测试 | 北京-宏哥</title>
+    <title>标签: Interface | 北京-宏哥</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -30,7 +30,6 @@
 
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>	
-	
 <!--百度统计代码-->	
 <script>
 var _hmt = _hmt || [];
@@ -831,860 +830,262 @@ window.Canvas= new Universe(element);</script>
 
 </body>
 
+<div class="bg-cover pd-header about-cover">
+  
+   <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                    北京-宏哥
+                
+            </div>
 
-<script src="/libs/cryptojs/crypto-js.min.js"></script>
-<script>
-    (function() {
-        let pwd = '';
-        if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
-                alert('密码错误，将返回主页！');
-                location.href = '/';
-            }
-        }
-    })();
-</script>
-
-
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <div class="description center-align post-title">
-                        python+selenium自动化测试
-                    </div>
-                </div>
+            <div class="description center-align">
+                
+                  不积跬步无以至千里，不积小流无以成江海。 
+                
             </div>
         </div>
     </div>
 </div>
-
-
-
-<main class="post-container content">
-
-    
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        margin: 35px 0 15px 0;
-        padding-left: 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #toc-content .is-active-link::before {
-        background-color: #42b983;
-    }
-</style>
-<div class="row">
-    <div class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
-
-<div id="artDetail">
-    <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Python/" target="_blank">
-                                <span class="chip bg-color">Python</span>
-                            </a>
-                        
-                            <a href="/tags/Selenium/" target="_blank">
-                                <span class="chip bg-color">Selenium</span>
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                </div>
-            </div>
-
-            <div class="post-info">
-                <div class="post-date info-break-policy">
-                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    <span id="page__date">2016-01-19</sapn>
-                </div>
-
-                
-                    
-                    <div class="info-break-policy">
-                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1k
-                    </div>
-                    
-
-                    
-                    <div class="info-break-policy">
-                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
-                    </div>
-                    
-                
-				
-				
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
-            </div>
-        </div>
-        <hr class="clearfix">
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h2 id="《手把手教你》系列基础篇之1-python-selenium自动化测试-环境搭建（详细）"><a href="#《手把手教你》系列基础篇之1-python-selenium自动化测试-环境搭建（详细）" class="headerlink" title="《手把手教你》系列基础篇之1-python+selenium自动化测试-环境搭建（详细）"></a>《手把手教你》系列基础篇之1-python+selenium自动化测试-环境搭建（详细）</h2><h4 id="1-环境搭建"><a href="#1-环境搭建" class="headerlink" title="1.环境搭建"></a>1.环境搭建</h4><p>基于python3和selenium3做自动化测试，俗话说：工欲善其事必先利其器；没有金刚钻就不揽那瓷器活，磨刀不误砍柴工，因此你必须会搭建基本的开发环境，掌握python基本的语法和一个IDE来进行开发，这里通过详细的讲解，介绍怎么搭建python3和selenium3开发环境，并提供一个基本入门的代码，后续逐步提供系列实践文章。</p>
-<h4 id="2-安装包"><a href="#2-安装包" class="headerlink" title="2.安装包"></a>2.安装包</h4><h5 id="2-1python"><a href="#2-1python" class="headerlink" title="2.1python"></a>2.1python</h5><p>笔者使用python3.6.4，请根据机器是64位还是32位来选择对应的python版本。（相信绝大部分人都可以很从容的来查看自己机器的位数，在这里就不赘述了，如果不清楚自己可以百度一下就可以）</p>
-<p>可以去python官网：<a href="https://www.python.org/下载对应机器的安装包。" target="_blank" rel="noopener">https://www.python.org/下载对应机器的安装包。</a></p>
-<h5 id="2-2安装包下载"><a href="#2-2安装包下载" class="headerlink" title="2.2安装包下载"></a>2.2安装包下载</h5><p>第一步：进入python官网，点击download，如下图所示：</p>
-<p><img src="https://i.loli.net/2020/07/28/TlYDRcL6zuZJCSe.png" alt="1232840-20180122184511350-1226324994.png"></p>
-<p>第二步：选择对应的操作系统和python版本，如下图所示：</p>
-<p><img src="https://i.loli.net/2020/07/28/MfQ6oJaLtBZEhqV.png" alt="20200728134233.png"></p>
-<p>第三步：点击要下载的python版本，即可下载安装包，如下图所示：</p>
-<p><img src="https://i.loli.net/2020/07/28/W87paxquvHeKAiZ.png" alt="1232840-20180122184938053-209714012.png"></p>
-<h4 id="3-开发工具"><a href="#3-开发工具" class="headerlink" title="3.开发工具"></a>3.开发工具</h4><h5 id="3-1笔者使用pyCharm开源版本"><a href="#3-1笔者使用pyCharm开源版本" class="headerlink" title="3.1笔者使用pyCharm开源版本"></a>3.1笔者使用pyCharm开源版本</h5><p><a href="https://download.jetbrains.com/python/pycharm-community-2017.3.2.exe" target="_blank" rel="noopener">https://download.jetbrains.com/python/pycharm-community-2017.3.2.exe</a></p>
-<h5 id="3-2python安装过程"><a href="#3-2python安装过程" class="headerlink" title="3.2python安装过程"></a>3.2python安装过程</h5><p>第一步：双击已下载的python安装包，出现如下图所示的界面，点击运行</p>
-<p><img src="https://i.loli.net/2020/07/28/VtjJcSOofzFnxvQ.png" alt="1232840-20180125081923959-820008667.png"></p>
-<p>第二步：然后出现如下界面：</p>
-<p><img src="https://i.loli.net/2020/07/28/ip5RMkcHGOeYnaF.png" alt="1232840-20180125081947522-576250013.png"></p>
-<p>第三步：在这里我选择的是自定义安装（Customize installation）,一定要勾选Add_Python 3.6 to PATH,防止手工添加环境变量 ，添加到环境变量也可以等安装完成之后手动添加到环境变量中，如果不添加环境变量运行python时则会出现如下界面：</p>
-<p><img src="https://i.loli.net/2020/07/28/3b8Y1ZAqRJj4CSM.png" alt="1232840-20180125082242600-913202133.png"> </p>
-<p>第四步：在这里我没有选择添加到环境变量中，后面会手动配置继续下一步界面如下：</p>
-<p><img src="https://i.loli.net/2020/07/28/hx35TDX6WCReKIO.png" alt="1232840-20180125082347334-519542621.png"> </p>
-<p>第五步：选择安装的属性，Documentation、pip、tcl/tk and IDLE 必须安装，tcl/tk and IDLE是Python环境的开发环境窗口，pip用来安装numpy等package。 我选择的是全部安装继续下一步</p>
-<p><img src="https://i.loli.net/2020/07/28/IFNQjPE17sXbulT.png" alt="1232840-20180125082415600-1532368620.png"></p>
-<p>第六步：ok了，点击install进行安装，在这里我安装的目录是D盘，D:\Python36  目录名可以自定义</p>
-<p>注意我在这里依旧没有选择添加到环境变量，不想麻烦的话，可以直接选择添加到环境变量中</p>
-<p>第七步：安装中</p>
-<p><img src="https://i.loli.net/2020/07/28/UyrAwOIkpejDoiY.png" alt="1232840-20180125082501475-844336595.png"></p>
-<p>第八步：安装成功：</p>
-<p><img src="https://i.loli.net/2020/07/28/vHXF3AdWhTk47nf.png" alt="1232840-20180125082519694-720723869.png"></p>
-<p>第九步：验证是否安装成功，使用系统的cmd命令：</p>
-<p><img src="https://i.loli.net/2020/07/28/dDBXGAzmqUr2CZH.png" alt="1232840-20180125082535647-2065919964.png"></p>
-<p>第十步：验证失败，如果在安装的过程你选择了添加到环境变量中，输入python就会直接进入python的环境中，现在开始演示手动添加到环境变量：</p>
-<p>第十一步：首先，点击计算机-&gt;属性-&gt;高级系统设置</p>
-<p><img src="https://i.loli.net/2020/07/28/Azp7krclQd8B9Wt.png" alt="1232840-20180125082606944-1472431185.png"><br><img src="https://i.loli.net/2020/07/28/PrCnxc5qFsyTBlm.png" alt="1232840-20180125082557522-658702405.png"></p>
-<p>第十二步：选择环境变量</p>
-<p><img src="https://i.loli.net/2020/07/28/7wy8C5eLZa4x1MB.png" alt="1232840-20180125082626022-2002003945.png"></p>
-<p>第十三步：新建 PATH </p>
-<p><img src="https://i.loli.net/2020/07/28/g8QH1acnhTGvZRB.png" alt="1232840-20180125082658662-41383109.png"></p>
-<p>第十四步：点击确定，接下来进行验证python是否安装成功：</p>
-<p>依然是cmd命令下输入python，效果如下：</p>
-<p><img src="https://i.loli.net/2020/07/28/C4IQVtBW3z1RmxO.png" alt="1232840-20180125082719537-789506861.png"></p>
-<p>当你输入python出现如下命令时则表示python环境已经安装好了，就可以进行python之旅了。</p>
-<h5 id="3-2下载Selenium-for-python"><a href="#3-2下载Selenium-for-python" class="headerlink" title="3.2下载Selenium for python"></a>3.2下载Selenium for python</h5><p>1） 下载 Selenium for python<br>到 <a href="https://pypi.python.org/pypi/selenium#downloads" target="_blank" rel="noopener">https://pypi.python.org/pypi/selenium#downloads</a> 下载最新版本，当前是3.0.2</p>
-<p>下载tar.gz的包</p>
-<p><img src="https://i.loli.net/2020/07/28/jL1MmZNOrGUSwTJ.png" alt="1232840-20191125092123429-102402650.png"> </p>
-<p>下载完解压：</p>
-<p><img src="https://i.loli.net/2020/07/28/8BzQ2JPnqr61kag.png" alt="1232840-20191125092139868-1937955939.png"></p>
-<p>2） 安装Selenium<br>打开cmd，然后cd到解压包当前路径，输入 python setup.py install ，cmd窗口会出现解压滚动屏幕，直到安装完成。如下图。</p>
-<p><img src="https://i.loli.net/2020/07/28/zZKXksIwYx4NvB9.png" alt="1232840-20191125092158909-574405322.png"> </p>
-<p>验证selenium安装成功办法：</p>
-<p>在cmd输入python进入python环境，然后输入 from selenium import webdriver，如果不报错就代表selenium安装成功。</p>
-<p><img src="https://i.loli.net/2020/07/28/Xu5STilMtUq9vxk.png" alt="1232840-20191125092213199-461961242.png"></p>
-<p>3） 第二个安装selenium方式</p>
-<p>还有一种安装方式，在线安装，在cmd输入 python -m pip install selenium，然后回车，自动安装。</p>
-<h4 id="4-小结"><a href="#4-小结" class="headerlink" title="4.小结"></a>4.小结</h4><p>好了，还是那句老话，好多人都死在环境搭建的路上，幸运的你是否已经搭建成功，跟着宏哥的脚步继续砥砺前行。</p>
-
-            </div>
-            <hr/>
-
-            
-            <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.88rem;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fa fa-close"></i></a>
-            <h4 class="reward-title">博主不易，靠赏过日！！！</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
+<script>
+// 每天切换 banner 图.  Switch banner image every day.
+$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+</script>
     </div>
 </div>
 
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-            
+<main class="content">
 
-            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-
-<div id="article-share">
     
-    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
-    
-</div>
 
-<script src="/libs/share/js/social-share.min.js"></script>
-
-            <div class="reprint">
-                <p>
-                    <span class="reprint-tip">
-                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+<div id="tags" class="container chip-container">
+    <div class="card" style="opacity: 1;">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fa fa-tags"></i>&nbsp;&nbsp;文章标签
+            </div>
+            <div class="tag-chips">
+                
+                
+                <a href="/tags/Python/" title="Python: 36">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Python" style="background-color: #F9EBEA;">Python
+                        <span class="tag-length">36</span>
                     </span>
-                    <a href="https://hongduhong.github.io" class="b-link-green">北京-宏哥</a>
-                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2016/01/19/undefined/python-selenium-zi-dong-hua-ce-shi-huan-jing-da-jian-1-xiang-xi/" class="b-link-green">python+selenium自动化测试</a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    
-        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
-
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
-</div>
-
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: 'f198ff3418cff1b4beb1',
-        clientSecret: '4381fdcb7742eb697e6214ca4ccacbbc78620722',
-        repo: 'hongduhong.github.io',
-        owner: 'hongduhong',
-        admin: "hongduhong",
-        id: '2016-01-19T00-00-00',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
-    
-
-    
-
-    
-
-    
-
-    
-        <style>
-    .valine-card {
-        margin: 1.5rem auto;
-    }
-
-    .valine-card .card-content {
-        padding: 20px 20px 5px 20px;
-    }
-
-    #vcomments input[type=text],
-    #vcomments input[type=email],
-    #vcomments input[type=url],
-    #vcomments textarea {
-        box-sizing: border-box;
-    }
-
-    #vcomments p {
-        margin: 2px 2px 10px;
-        font-size: 1.05rem;
-        line-height: 1.78rem;
-    }
-
-    #vcomments blockquote p {
-        text-indent: 0.2rem;
-    }
-
-    #vcomments a {
-        padding: 0 2px;
-        color: #42b983;
-        font-weight: 500;
-        text-decoration: underline;
-    }
-
-    #vcomments img {
-        max-width: 100%;
-        height: auto;
-        cursor: pointer;
-    }
-
-    #vcomments ol li {
-        list-style-type: decimal;
-    }
-
-    #vcomments ol,
-    ul {
-        display: block;
-        padding-left: 2em;
-        word-spacing: 0.05rem;
-    }
-
-    #vcomments ul li,
-    ol li {
-        display: list-item;
-        line-height: 1.8rem;
-        font-size: 1rem;
-    }
-
-    #vcomments ul li {
-        list-style-type: disc;
-    }
-
-    #vcomments ul ul li {
-        list-style-type: circle;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    #vcomments table, th, td {
-        border: 0;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments h1 {
-        font-size: 1.85rem;
-        font-weight: bold;
-        line-height: 2.2rem;
-    }
-
-    #vcomments h2 {
-        font-size: 1.65rem;
-        font-weight: bold;
-        line-height: 1.9rem;
-    }
-
-    #vcomments h3 {
-        font-size: 1.45rem;
-        font-weight: bold;
-        line-height: 1.7rem;
-    }
-
-    #vcomments h4 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    #vcomments h5 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        line-height: 1.4rem;
-    }
-
-    #vcomments h6 {
-        font-size: 1rem;
-        line-height: 1.3rem;
-    }
-
-    #vcomments p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-
-    #vcomments hr {
-        margin: 12px 0;
-        border: 0;
-        border-top: 1px solid #ccc;
-    }
-
-    #vcomments blockquote {
-        margin: 15px 0;
-        border-left: 5px solid #42b983;
-        padding: 1rem 0.8rem 0.3rem 0.8rem;
-        color: #666;
-        background-color: rgba(66, 185, 131, .1);
-    }
-
-    #vcomments pre {
-        font-family: monospace, monospace;
-        padding: 1.2em;
-        margin: .5em 0;
-        background: #272822;
-        overflow: auto;
-        border-radius: 0.3em;
-        tab-size: 4;
-    }
-
-    #vcomments code {
-        font-family: monospace, monospace;
-        padding: 1px 3px;
-        font-size: 0.92rem;
-        color: #e96900;
-        background-color: #f8f8f8;
-        border-radius: 2px;
-    }
-
-    #vcomments pre code {
-        font-family: monospace, monospace;
-        padding: 0;
-        color: #e8eaf6;
-        background-color: #272822;
-    }
-
-    #vcomments pre[class*="language-"] {
-        padding: 1.2em;
-        margin: .5em 0;
-    }
-
-    #vcomments code[class*="language-"],
-    pre[class*="language-"] {
-        color: #e8eaf6;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-
-    #vcomments b,
-    strong {
-        font-weight: bold;
-    }
-
-    #vcomments dfn {
-        font-style: italic;
-    }
-
-    #vcomments small {
-        font-size: 85%;
-    }
-
-    #vcomments cite {
-        font-style: normal;
-    }
-
-    #vcomments mark {
-        background-color: #fcf8e3;
-        padding: .2em;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-	.v .txt-right{ display: none;}
-
-</style>
-
-<div class="card valine-card" data-aos="fade-up">
- <div id="vcomments" class="card-content"></div>
-</div>
-
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
-<script>
-    new Valine({
-        el: '#vcomments',
-        appId: 'QTjhAL7gTPGjIK1RQM2TlxDR-gzGzoHsz',
-        appKey: 'aBlfRinOLK3x6GKoYWr02qWj',
-        notify: 'true' === 'true',
-        verify: 'false' === 'true',
-        visitor: 'true' === 'true',
-        avatar: 'wavatar',
-        pageSize: '10',
-        lang: 'zh-cn',
-        placeholder: '留下你足迹吧O(∩_∩)O\n各位站长也留下你的交友申请 \n(申请格式：网站链接 + 一句话简介站点;)\n(如：five-great.coding.me + 互联网爱好者,撸代码,技术交流。)\n( ╯□╰ )建议不要匿名评论,建议填写邮箱便于接收回复信息'
-    });
-</script>
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
-            <div class="card">
-                <a href="/2016/01/19/undefined/python-selenium-zi-dong-hua-ce-shi-huan-jing-da-jian-1-xiang-xi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="python+selenium自动化测试">
-                        
-                        <span class="card-title">python+selenium自动化测试</span>
-                    </div>
                 </a>
-                <div class="card-content article-content">
-                    <div class="summary">《手把手教你》系列基础篇之1-python+selenium自动化测试-环境搭建（详细）1.环境搭建基于python3和</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-01-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            北京-宏哥
-                            
-                        </span>
-                    </div>
-                </div>
-
                 
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python/" target="_blank">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/Selenium/" target="_blank">
-                        <span class="chip bg-color">Selenium</span>
-                    </a>
-                    
-                </div>
                 
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/2016/01/19/undefined/python-selenium-zi-dong-hua-ce-shi-huan-jing-da-jian-1-xiang-xi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="python+selenium自动化测试">
-                        
-                        <span class="card-title">python+selenium自动化测试</span>
-                    </div>
+                <a href="/tags/Selenium/" title="Selenium: 26">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Selenium" style="background-color: #F5EEF8;">Selenium
+                        <span class="tag-length">26</span>
+                    </span>
                 </a>
-                <div class="card-content article-content">
-                    <div class="summary">《手把手教你》系列基础篇之1-python+selenium自动化测试-环境搭建（详细）1.环境搭建基于python3和</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-01-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            北京-宏哥
-                            
-                        </span>
-                    </div>
-                </div>
-
                 
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python/" target="_blank">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/Selenium/" target="_blank">
-                        <span class="chip bg-color">Selenium</span>
-                    </a>
-                    
-                </div>
+                
+                <a href="/tags/Chrome/" title="Chrome: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Chrome" style="background-color: #D5F5E3;">Chrome
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Interface/" title="Interface: 10">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="Interface" style="background-color: #E8F8F5;">Interface
+                        <span class="tag-length">10</span>
+                    </span>
+                </a>
                 
             </div>
         </div>
-        
-    </div>
-</article>
-
-
-
-</div>
-
-
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + '来源: 北京-宏哥<br />'
-            + '作者: 北京-宏哥<br />'
-            + '链接: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
-
-    </div>
-    <div class="col l3 hide-on-med-and-down">
-        <div class="toc-widget">
-            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
     </div>
 </div>
 
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            // headingsOffset: -205,
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-    });
-</script>
     
 
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Python, Interface" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2016/02/17/interface/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="python接口自动化4">
+                            
+                            <span class="card-title">python接口自动化4</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-02-17
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Python/" class="post-category" target="_blank">
+                                Python
+                                </a>
+                                
+                                <a href="/categories/Python/Interface/" class="post-category" target="_blank">
+                                Interface
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Python, Interface" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2016/02/16/interface/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="python接口自动化3">
+                            
+                            <span class="card-title">python接口自动化3</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-02-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Python/" class="post-category" target="_blank">
+                                Python
+                                </a>
+                                
+                                <a href="/categories/Python/Interface/" class="post-category" target="_blank">
+                                Interface
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Python, Interface" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2016/02/15/interface/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="python接口自动化2">
+                            
+                            <span class="card-title">python接口自动化2</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-02-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Python/" class="post-category" target="_blank">
+                                Python
+                                </a>
+                                
+                                <a href="/categories/Python/Interface/" class="post-category" target="_blank">
+                                Interface
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Python, Interface" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2016/02/14/interface/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="python接口自动化1">
+                            
+                            <span class="card-title">python接口自动化1</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-02-14
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Python/" class="post-category" target="_blank">
+                                Python
+                                </a>
+                                
+                                <a href="/categories/Python/Interface/" class="post-category" target="_blank">
+                                Interface
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
+<div class="container paging">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            
+            <a href="/tags/Interface/"
+               class="left btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">2 / 2</div>
+        </div>
+        <div class="col s6 m4 l4">
+            
+            <a class="right btn-floating btn-large disabled">
+                <i class="fa fa-angle-right"></i>
+            </a>
+            
+        </div>
+    </div>
+</div>
 
 
 
@@ -1775,7 +1176,7 @@ $(document).ready(function(){
 			
 			
                 <i class="fa fa-area-chart"></i>站点总字数:
-                <span class="white-color">1k</span>
+                <span class="white-color">80.7k</span>
             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			本站由&copy;<a href="https://hongduhong.github.io" target="_blank">北京-宏哥</a>基于
             <a href="https://hexo.io/" target="_blank">Hexo</a> 搭建.
