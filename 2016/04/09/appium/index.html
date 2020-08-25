@@ -1,0 +1,2483 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="python+appium自动化测试14, 北京-宏哥">
+    <meta name="description" content="🔥 Appium+python自动化（十四）- 与Capability完美懈垢之解读（超详解）
+1.简介　　Capab">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>python+appium自动化测试14 | 北京-宏哥</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>	
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d62256055258ddb12716821c285aadab";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?716046d3a903bfe6a910f6b68a93271d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!--推送-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!--广告-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3736773013312638",
+    enable_page_level_ads: true
+  });
+</script>
+<!--onlinetk-->
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/011b3025.js","daovoice")</script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+
+<style>
+  @media only screen and (max-width: 422px){
+    nav .brand-logo {left: 41%;}
+    nav a {margin: 0px -38px 0px 0px;}
+    nav ul a {padding: 0px; margin-left: -42px;}
+    .bg-cover .title{fone-size:3rem;}
+  }
+ </style>
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo" >
+                <a  href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                     <span class="logo-span">北京-宏哥</span>
+                </a>
+				
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/lyb" class="waves-effect waves-light">
+            
+            <i class="fa fa-paper-plane-o"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">北京-宏哥</div>
+        <div class="logo-desc">
+            
+            不积跬步无以至千里，不积小流无以成江海。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/lyb" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-paper-plane-o"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+ 
+
+
+</header>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #canvas111{
+		 position: fixed;
+         background: #ccc;
+		 overflow: auto;
+		 z-index: -1;
+    }
+    </style> 
+
+	<canvas id="canvas111"></canvas>
+	
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<body>
+    
+</body>
+<script>
+    window.requestAnimationFrame = (function(){
+        return window.requestAnimationFrame ||
+               window.webkitRequestAnimationFrame ||
+               window.mozRequestAnimationFrame ||
+               function( callback ){
+                    window.setTimeout( callback, 1000/2 );
+               };
+    })();
+    var myCanvas = document.getElementById("canvas111");
+    var ctx = myCanvas.getContext("2d");//getContext 设置画笔
+    var num;
+    var w,h;
+    var duixiang = [];
+    var move = {};
+    function widthheight(){
+        w = myCanvas.width = window.innerWidth;
+        h = myCanvas.height = window.innerHeight;
+		num= Math.floor(w*h*0.0001);
+        for(var i = 0;i < num;i++){
+            duixiang[i] = {
+                x:Math.random()*w,
+                y:Math.random()*h,
+                cX:Math.random()*0.6-0.3,
+                cY:Math.random()*0.6-0.3,
+				R:Math.floor(Math.random()*5)+2,
+				//CC:Math.floor(Math.random()*3)+2,
+			    r: Math.floor(Math.random() * 254),   
+                g: Math.floor(Math.random() * 254),  
+                b:Math.floor(Math.random() * 254)   
+            } 
+           // console.log(duixiang[i])
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+			 //Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].CC);
+        }
+    };widthheight();//获取浏览器的等宽度等高
+
+    function Cricle(x,y,R,r,g,b){
+        ctx.save();//保存路径
+       if(Math.random()>0.991) {ctx.globalAlpha= 0.9;}//ctx.fillStyle = "#CCC";}//填充的背景颜色
+	    else { ctx.globalAlpha=0.47;}
+		 
+		ctx.fillStyle = "rgb("+ r +","+ g +","+ b +")";
+        ctx.beginPath();//开始绘画
+		ctx.arc(x,y,R,Math.PI*2,0);//绘画圆 x y 半径（大小） 角度  一个PI 是180 * 2 = 360    真假 0/1 true/false
+        ctx.closePath();//结束绘画
+        ctx.fill();//填充背景颜色
+        ctx.restore();//回复路径
+    };Cricle();
+
+
+    !function draw(){
+        ctx.clearRect(0,0,w,h)//先清除画布上的点
+        for(var i = 0;i < num;i++){
+            duixiang[i].x += duixiang[i].cX;
+            duixiang[i].y += duixiang[i].cY;
+            if(duixiang[i].x>w || duixiang[i].x<0){
+                duixiang[i].cX = -duixiang[i].cX;
+            }
+            if(duixiang[i].y>h || duixiang[i].y<0){
+                duixiang[i].cY = -duixiang[i].cY;
+            }
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+            //勾股定理判断两点是否连线
+            for(var j = i + 1;j < num;j++){
+                if( (duixiang[i].x-duixiang[j].x)*(duixiang[i].x-duixiang[j].x)+(duixiang[i].y-duixiang[j].y)*(duixiang[i].y-duixiang[j].y) <= 55*55 ){
+                    line(duixiang[i].x,duixiang[i].y,duixiang[j].x,duixiang[j].y,0,i,j)
+                }
+                if(move.x){
+                    if( (duixiang[i].x-move.x)*(duixiang[i].x-move.x)+(duixiang[i].y-move.y)*(duixiang[i].y-move.y) <= 100*100 ){
+                        line(duixiang[i].x,duixiang[i].y,move.x,move.y,1,i,1)
+                    }
+                }
+            }
+        }
+        window.requestAnimationFrame(draw)
+    }();
+
+    //绘制线条
+    function line(x1,y1,x2,y2,flag,i,j){
+        
+		if (flag){var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.5;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(0.8,"#019ee5");
+		        }
+				else
+				{
+				
+				var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.9;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(1,"rgb("+ duixiang[j].r +","+ duixiang[j].g +","+ duixiang[j].b +")");
+				}
+        ctx.save();
+        ctx.strokeStyle = color;
+		ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        ctx.stroke();
+        //ctx.restore();
+    }
+
+
+    //document.onmousemove = function(e){
+     //   move.x = e.clientX;
+      //  move.y = e.clientY;
+    //}
+    //console.log(move)
+
+    /*window.onresize = function(){
+        location.reload();
+    }*/
+</script>
+
+
+
+
+
+
+
+
+
+
+<style>
+		#canvas1 {
+ position: fixed;
+ pointer-events:none;//鼠标多层响应事件
+        // background: 	#ccc;
+		 /*透明度*/
+		 width: 100%;
+        height: 100%;
+     // opacity: 0;
+		 overflow: auto;
+		 z-index: 999;
+
+    }
+</style>
+<body>
+<canvas id="canvas1" style="whdth: 100%;height: 100%"></canvas>
+
+<script>
+var _createClass = function () {function defineProperties(target, props) 
+{ for (var i = 0; i < props.length; i++) 
+ {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) 
+ descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}
+ return function (Constructor, protoProps, staticProps) 
+ {if (protoProps) defineProperties(Constructor.prototype, protoProps);
+ if (staticProps) defineProperties(Constructor, staticProps);
+ return Constructor;};}();function _classCallCheck(instance, Constructor) 
+ {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}
+ var getRandom = function getRandom(min, max) {
+  return Math.random() * (max - min) + min;
+};
+
+var getRandomInt = function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
+var getRandomColor = function getRandomColor() {
+  var colors = [
+  'rgba(231, 76, 60, 1)', // red
+  'rgba(241, 196, 15, 1)', // yellow
+  'rgba(46, 204, 113, 1)', // green
+  'rgba(52, 152, 219, 1)', // blue
+  'rgba(155, 89, 182, 1)' // purple
+  ];
+
+  return colors[getRandomInt(0, colors.length)];
+};
+
+// Particle//粒子模块
+var
+Particle = function () {
+
+  function Particle(system, x, y) {_classCallCheck(this, Particle);
+    this.system = system;
+    this.universe = this.system.world.universe;
+    this.x = x;
+    this.y = y;
+    this.color = getRandomColor();
+    this.life = 1;
+    this.aging = getRandom(0.990, 0.999); // 0.99, 0.999 || 0.999, 0.9999
+
+    this.r = getRandomInt(12, 16);//初始粒子半径范围
+    this.speed = getRandom(18, 18.5);//粒子爆炸速度范围
+    this.velocity = [
+    getRandom(-this.speed, this.speed),
+    getRandom(-this.speed, this.speed)];
+
+  }_createClass(Particle, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (
+      this.r < 0.1 ||
+      this.life === 0 ||
+      this.x + this.r < 0 ||
+      this.x - this.r > this.universe.width ||
+      this.y + this.r < 0 ||
+      this.y - this.r > this.universe.height)
+      {
+        this.system.removeObject(this);
+      }
+
+      this.r *= this.life;
+      this.x += this.velocity[0];
+      this.y += this.velocity[1];
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      // Main circle //亮圈模块
+
+      ctx.fillStyle = this.color;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r*1.2, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+
+      var r = this.color.match(/([0-9]+)/g)[0];
+      var g = this.color.match(/([0-9]+)/g)[1];
+      var b = this.color.match(/([0-9]+)/g)[2];
+
+      // Gradient//梯度变化曲线
+
+      var spread = 1.5;
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r,
+      this.x, this.y, this.r * spread);
+
+      gradient.addColorStop(0, 'rgba(' + r + ', ' + g + ', ' + b + ', 0.5)');
+      gradient.addColorStop(1, 'rgba(' + r + ', ' + g + ', ' + b + ', 0)');
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r * spread, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+
+      // Aberration//偏差
+
+      var offset = this.r * 0.5;
+      var color = 'rgba(' + g + ', ' + b + ', ' + r + ', 0.5)';
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(this.x + offset, this.y + offset, this.r, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+    } }]);return Particle;}();
+
+
+
+// Crown //水波纹圈模块
+var
+Crown = function () {
+
+  function Crown(system, x, y) {_classCallCheck(this, Crown);
+    this.system = system;
+    this.x = x;
+    this.y = y;
+    this.r = getRandomInt(5, 15); // 5, 20  水波纹圈半径范围
+    this.mod = 1.1;
+    this.life = 0.5; //水波纹线
+    this.aging = getRandom(0.830, 0.899);
+    this.speed = getRandom(8, 9);
+    this.color = {
+      r: getRandomInt(236, 242),
+      g: getRandomInt(70, 80),
+      b: getRandomInt(50, 70) };
+
+
+    this.angle1 = Math.PI * getRandom(0, 2);
+    this.angle2 = this.angle1 + Math.PI * getRandom(0.3, 0.4);//水波纹圈完整度
+  }_createClass(Crown, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (this.life <= 0.0001) this.system.removeObject(this);
+
+      this.r += Math.abs(1 - this.life) * this.speed;
+
+      this.x1 = this.x + this.r * Math.cos(this.angle1);
+      this.y1 = this.y + this.r * Math.sin(this.angle1);
+
+      this.angle3 = this.angle1 + (this.angle2 - this.angle1) / 2;
+      this.x2 = this.x + this.r * this.mod * Math.cos(this.angle3);
+      this.y2 = this.y + this.r * this.mod * Math.sin(this.angle3);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r * 0.9,
+      this.x, this.y, this.r);
+
+      gradient.addColorStop(0, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life + ')');
+      gradient.addColorStop(1, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life * 0.5 + ')');
+
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, this.angle1, this.angle2, false);
+      ctx.quadraticCurveTo(this.x2, this.y2, this.x1, this.y1);
+      ctx.fill();
+      ctx.closePath();
+    } }]);return Crown;}();
+
+
+
+// Explosion //爆炸模块
+var
+Explosion = function () {
+
+  function Explosion(world, x, y) {_classCallCheck(this, Explosion);
+    this.world = world;
+    this.x = x;
+    this.y = y;
+    this.objects = [];
+
+    var particles = getRandomInt(10, 30); // 10, 30 amount of particles//爆炸 粒子数量
+    var crowns = particles * getRandom(0.4, 0.5);
+
+    while (crowns-- > 0) {this.addCrown();}
+    while (particles-- > 0) {this.addParticle();}
+  }_createClass(Explosion, [{ key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      if (this.objects.length <= 0) {
+        this.world.clearExplosion(this);
+      }
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'addCrown', value: function addCrown()
+
+    {
+      this.objects.push(new Crown(this, this.x, this.y));
+    } }, { key: 'addParticle', value: function addParticle()
+
+    {
+      this.objects.push(new Particle(this, this.x, this.y));
+    } }, { key: 'removeObject', value: function removeObject(
+
+    obj) {
+      var index = this.objects.indexOf(obj);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return Explosion;}();
+
+
+
+// World 
+var
+ConfettiWorld = function () {function ConfettiWorld() 
+{_classCallCheck(this, ConfettiWorld);}_createClass(ConfettiWorld, [{ key: 'init', value: function init()
+
+    {
+      this.objects = [];
+      window.addEventListener('click', this.explode.bind(this));
+
+      // Initial explosion //初始爆炸
+      var counter = 0;
+      while (counter-- > 0) {
+        this.explode({
+          clientX: window.event.clientX, //getRandomInt(10, this.universe.width) ,          //this.universe.width / 2,
+          clientY: window.event.clientY //getRandomInt(10, 50) //this.universe.height / 2 
+		  });
+
+      }
+    } }, { key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      var amount = this.objects.reduce(function (sum, explosion) {
+        return sum += explosion.objects.length;
+      }, 0);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'explode', value: function explode(
+
+    event) {
+      var x = event.clientX;
+      var y = event.clientY;
+
+      this.objects.push(new Explosion(this, x, y));
+    } }, { key: 'clearExplosion', value: function clearExplosion(
+
+    explosion) {
+      var index = this.objects.indexOf(explosion);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return ConfettiWorld;}();
+
+
+
+// Time
+var
+Time = function () {
+
+  function Time() {_classCallCheck(this, Time);
+    this.now = 0; // current tick time
+    this.prev = 0; // prev tick time
+    this.elapsed = 0; // elapsed time from last tick
+    this.delta = 0; // time from last update
+    this.fps = 60; // desired fps
+    this.step = 1 / 60; // step duration
+  }_createClass(Time, [{ key: 'update', value: function update(
+
+    time) {
+      this.now = time;
+      this.elapsed = (this.now - this.prev) / 1000;
+      this.prev = this.now;
+      this.delta += this.elapsed;
+    } }, { key: 'raf', value: function raf(
+
+    func) {
+      window.requestAnimationFrame(func);
+    } }, { key: 'hasFrames', value: function hasFrames()
+
+    {
+      return this.delta >= this.step;
+    } }, { key: 'processFrame', value: function processFrame()
+
+    {
+      this.delta -= this.step;
+    } }]);return Time;}();
+
+
+
+// Canvas
+var
+Universe = function () {
+
+  function Universe(element) {_classCallCheck(this, Universe);
+    this.el = element;
+    this.ctx = this.el.getContext('2d');
+    this.pixelRatio = window.devicePixelRatio;
+    this.time = new Time();
+
+    this.worlds = {};
+    this.world = null; // current state
+
+    this.updateSize();
+    window.addEventListener('resize', this.updateSize.bind(this));
+
+    this.addWorld('confetti', ConfettiWorld);
+    this.setWorld('confetti');
+
+    this.start();
+  }_createClass(Universe, [{ key: 'start', value: function start()
+
+    {
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'tick', value: function tick(
+
+    time) {
+      this.time.update(time);
+
+      if (this.time.hasFrames()) {
+        this.update();
+        this.time.processFrame();
+      }
+
+      this.render();
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'update', value: function update()
+
+    {
+      this.world.update(this.time.step);
+    } }, { key: 'render', value: function render()
+
+    {
+      var gradient = this.ctx.createLinearGradient(0, 0, this.width, this.height);
+     // gradient.addColorStop(0, '#34495e');
+      //gradient.addColorStop(1, '#2c3e50');
+
+      this.ctx.clearRect(0, 0, this.width, this.height);
+      // this.ctx.fillStyle = '#2c3e50'
+     // //this.ctx.fillStyle = gradient;
+    // // this.ctx.fillRect(0, 0, this.width, this.height);
+      this.world.render(this.ctx);
+    }
+
+    // Helpers 库
+  }, { key: 'updateSize', value: function updateSize()
+    {
+      this.width = window.innerWidth;
+      this.height = window.innerHeight;
+      this.el.width = this.width * this.pixelRatio;
+      this.el.height = this.height * this.pixelRatio;
+      this.el.style.width = window.innerWidth + 'px';
+      this.el.style.height = window.innerHeight + 'px';
+      this.ctx.scale(this.pixelRatio, this.pixelRatio);
+    } }, { key: 'addWorld', value: function addWorld(
+
+    worldName, World) {
+      this.worlds[worldName] = new World();
+      this.worlds[worldName].universe = this;
+      this.worlds[worldName].init();
+    } }, { key: 'setWorld', value: function setWorld(
+
+    worldName) {
+      this.world = this.worlds[worldName];
+    } }]);return Universe;}();
+
+
+
+// Main
+
+console.clear();
+var element = document.querySelector('#canvas1');
+window.Canvas= new Universe(element);</script>
+
+</body>
+
+
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        python+appium自动化测试14
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Python/" target="_blank">
+                                <span class="chip bg-color">Python</span>
+                            </a>
+                        
+                            <a href="/tags/Appium/" target="_blank">
+                                <span class="chip bg-color">Appium</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                Python
+                            </a>
+                        
+                            <a href="/categories/Python/Appium/" class="post-category" target="_blank">
+                                Appium
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    <span id="page__date">2016-04-09</sapn>
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        4.6k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        17 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><strong>🔥 Appium+python自动化（十四）- 与Capability完美懈垢之解读（超详解）</strong></p>
+<h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　Capability又叫Appium Desired Capabilities，前边写了那么多实例代码，小伙伴可以发现一些规律，就是有一部分代码总是重复的出现在你的视线中。这部分就是对Capability的配置。那么今天给小伙伴们分享、介绍和讲解一下Capability。让你知道她的来龙去脉，知道为什么代码里那么写。</p>
+<h4 id="2-什么是Capability"><a href="#2-什么是Capability" class="headerlink" title="2.什么是Capability"></a>2.什么是Capability</h4><p>　　在讲capability之前大家是否还记得在讲log时给大家看过的启动时的日志？在我们的整个启动日志中会出现一些配置信息，其实那些信息就是capability携带的配置信息，如果我们通过代码来启动我们能够看见的配置信息如下：</p>
+<p><img src="https://i.loli.net/2020/08/10/PCLapms45UAMIgO.png" alt="1232840-20190705143514452-1793124471.png"></p>
+<p>　　通过上面的配置信息大家可以看出，在python里面我们所讲的capability其实就是一个字典（我们这里暂且这么说，因为每个语言叫法不一样）。</p>
+<h4 id="3-Capability的作用"><a href="#3-Capability的作用" class="headerlink" title="3.Capability的作用"></a>3.Capability的作用</h4><p>　　我们知道Capability是一个字典之后我们是否需要知道他的作用呢？我们在appium中配置app后我们能够通过log看出里面的信息都是启动的一些必要配置，通过上面的配置信息我么也能够看出capability配置的就是我们做自动化的一些必要信息。他主要是告诉server我们本次测试是浏览器还是app，是ios还是android以及android的版本信息等。如果capability不告诉server，那么server就不认识你，也就无法完成我们的自动化测试。</p>
+<h4 id="4-常用Capability配置讲解"><a href="#4-常用Capability配置讲解" class="headerlink" title="4.常用Capability配置讲解"></a>4.常用Capability配置讲解</h4><h5 id="4-1公用Capability"><a href="#4-1公用Capability" class="headerlink" title="4.1公用Capability"></a>4.1公用Capability</h5><p>　　如果有了解过Capability的人会发现一个问题，其实他主要分成了三部分：公共部分、ios部分、android部分，如果你android想用ios的那是不可能的，so，老老实实去了解每个平台有哪些，他们的作用是什么。下面我们介绍一些公用常用的</p>
+<table>
+<thead>
+<tr>
+<th align="center">能力</th>
+<th align="left">描述</th>
+<th align="left">值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>automationName</strong></td>
+<td align="left">使用哪个自动化引擎</td>
+<td align="left">Appium（默认）或Selendroid或者UiAutomator2或者Espresso对于Android或XCUITestiOS或者YouiEngine使用You.i引擎构建的应用程序</td>
+</tr>
+<tr>
+<td align="center"><strong>platformName</strong></td>
+<td align="left">使用哪个移动操作系统平台</td>
+<td align="left">iOS，Android或FirefoxOS</td>
+</tr>
+<tr>
+<td align="center"><strong>platformVersion</strong></td>
+<td align="left">移动操作系统版本</td>
+<td align="left">例如7.1，4.4</td>
+</tr>
+<tr>
+<td align="center"><strong>deviceName</strong></td>
+<td align="left">使用的移动设备或模拟器的种类</td>
+<td align="left">iPhone Simulator，iPad Simulator，iPhone Retina 4-inch，Android Emulator，Galaxy S4，等….在iOS上，这应该是与仪器返回的有效设备之一instruments -s devices。在Android上，这个功能目前被忽略，尽管它仍然是必需的。</td>
+</tr>
+<tr>
+<td align="center"><strong>app</strong></td>
+<td align="left">一个或一个文件的绝对本地路径<em>或</em>远程http URL ，或者包含其中的一个。Appium将首先尝试在适当的设备上安装这个应用程序二进制文件。请注意，如果您指定和功能（请参阅下文），则此功能对于Android不是必需的。与…不兼容。.ipa.apk.zipappPackageappActivitybrowserName</td>
+<td align="left">/abs/path/to/my.apk 要么<a href="http://myapp.com/app.ipa" target="_blank" rel="noopener">http://myapp.com/app.ipa</a></td>
+</tr>
+<tr>
+<td align="center"><strong>browserName</strong></td>
+<td align="left">移动网页浏览器的名称自动化。应该是一个空字符串，而不是自动化应用程序。</td>
+<td align="left">适用于iOS的“Safari”，适用于Android的“Chrome”，“Chromium”或“浏览器”</td>
+</tr>
+<tr>
+<td align="center"><strong>newCommandTimeout</strong></td>
+<td align="left">在假定客户端退出并结束会话之前，Appium将等待来自客户端的新命令（以秒为单位）</td>
+<td align="left">例如 60</td>
+</tr>
+<tr>
+<td align="center"><strong>language</strong></td>
+<td align="left">（Sim / Emu-only）为模拟器/仿真器设置的语言</td>
+<td align="left">例如 fr</td>
+</tr>
+<tr>
+<td align="center"><strong>locale</strong></td>
+<td align="left">（Sim / Emu-only）为模拟器/仿真器设置的语言环境</td>
+<td align="left">例如 fr_CA</td>
+</tr>
+<tr>
+<td align="center"><strong>udid</strong></td>
+<td align="left">连接的物理设备的唯一设备标识符</td>
+<td align="left">例如 1ae203187fc012g</td>
+</tr>
+<tr>
+<td align="center"><strong>orientation</strong></td>
+<td align="left">（Sim / Emu-only）从某个方向开始</td>
+<td align="left">LANDSCAPE 要么 PORTRAIT</td>
+</tr>
+<tr>
+<td align="center"><strong>autoWebview</strong></td>
+<td align="left">直接进入Webview上下文。默认false</td>
+<td align="left">true， false</td>
+</tr>
+<tr>
+<td align="center"><strong>noReset</strong></td>
+<td align="left">在此会话之前不要重置应用程序状态。<a href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/other/reset-strategies.md" target="_blank" rel="noopener">在这里</a>看到更多的细节</td>
+<td align="left">true， false</td>
+</tr>
+<tr>
+<td align="center"><strong>fullReset</strong></td>
+<td align="left">执行完整的重置。<a href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/other/reset-strategies.md" target="_blank" rel="noopener">在这里</a>看到更多的细节</td>
+<td align="left">true， false</td>
+</tr>
+<tr>
+<td align="center"><strong>eventTimings</strong></td>
+<td align="left">启用或禁用各种Appium内部事件的时间报告（例如，每个命令的开始和结束等）。默认为false。启用，使用true。然后将这些时间作为events回应查询当前会话的财产报告。请参阅<a href="https://github.com/appium/appium/blob/master/docs/en/advanced-concepts/event-timings.md" target="_blank" rel="noopener">事件时间文档</a>了解此响应的结构。</td>
+<td align="left">例如， true</td>
+</tr>
+<tr>
+<td align="center"><strong>enablePerformanceLogging</strong></td>
+<td align="left">（仅限Web和webview）启用Chromedriver（在Android上）或Safari（在iOS上）性能记录（默认false）</td>
+<td align="left">true， false</td>
+</tr>
+</tbody></table>
+<p>&lt;最常用的：</p>
+<table>
+<thead>
+<tr>
+<th align="center">能力</th>
+<th>描述</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>automationName</strong></td>
+<td>使用哪个自动化引擎</td>
+<td>Appium（默认）或Selendroid或者UiAutomator2或者Espresso对于Android或XCUITestiOS或者YouiEngine使用You.i引擎构建的应用程序</td>
+</tr>
+<tr>
+<td align="center"><strong>platformName</strong></td>
+<td>使用哪个移动操作系统平台(你要测试手机的操作系统)</td>
+<td>iOS，Android或FirefoxOS</td>
+</tr>
+<tr>
+<td align="center"><strong>platformVersion</strong></td>
+<td>移动操作系统版本（手机操作系统版本）</td>
+<td>android或者ios版本，例如7.1，4.4</td>
+</tr>
+<tr>
+<td align="center"><strong>deviceName</strong></td>
+<td>使用的移动设备或模拟器的种类</td>
+<td>iPhone Simulator，iPad Simulator，iPhone Retina 4-inch，Android Emulator，Galaxy S4，等….在iOS上，这应该是与仪器返回的有效设备之一instruments -s devices。在Android上，这个功能目前被忽略，尽管它仍然是必需的。</td>
+</tr>
+<tr>
+<td align="center"><strong>app</strong></td>
+<td>apk或者ipa文件所在的路径</td>
+<td>xxx/xxx.apk</td>
+</tr>
+<tr>
+<td align="center"><strong>browserName</strong></td>
+<td>浏览器名称</td>
+<td>Chrome</td>
+</tr>
+<tr>
+<td align="center"><strong>newCommandTimeout</strong></td>
+<td>超时时间</td>
+<td>60</td>
+</tr>
+<tr>
+<td align="center"><strong>language</strong></td>
+<td>手机或者模拟器语言</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>udid</strong></td>
+<td>连接设备的uid</td>
+<td>1essd2fd3</td>
+</tr>
+<tr>
+<td align="center"><strong>noReset</strong></td>
+<td>不要在会话前重置应用状态，默认false</td>
+<td>true/false</td>
+</tr>
+</tbody></table>
+<p>在自动化测试过程中这些公用的Capability用的时间比较多，大家需要记住，去熟悉他的用法。</p>
+<h5 id="4-2-Android独有Capability"><a href="#4-2-Android独有Capability" class="headerlink" title="4.2 Android独有Capability"></a>4.2 Android独有Capability</h5><p>　　在自动化测试过程中如果你只知道常用的一些参数配置，这个是远远达不到要求，因为你不知道什么时候有什么样的突发情况发生，所以你需要了解appium所有最常用的配置参数，当然你可以掌握所有，那样更好，熟能生巧。下面我们看一下android的Capability。</p>
+<p>这些功能仅适用于基于Android的驱动程序（例如 <a href="https://github.com/appium/appium/blob/master/docs/en/drivers/android-uiautomator2.md" target="_blank" rel="noopener">UiAutomator2</a>）。</p>
+<table>
+<thead>
+<tr>
+<th align="center">能力</th>
+<th>描述</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>appActivity</strong></td>
+<td>要从包中启动的Android活动的活动名称。这往往需要在一个.（例如，.MainActivity而不是MainActivity）</td>
+<td>MainActivity， .Settings</td>
+</tr>
+<tr>
+<td align="center"><strong>appPackage</strong></td>
+<td>你想运行的Android应用程序的Java包</td>
+<td>com.example.android.myApp， com.android.settings</td>
+</tr>
+<tr>
+<td align="center"><strong>appWaitActivity</strong></td>
+<td>活动名称/名称，逗号分隔，您想要等待的Android活动</td>
+<td>SplashActivity，SplashActivity,OtherActivity， *， *.SplashActivity</td>
+</tr>
+<tr>
+<td align="center"><strong>appWaitPackage</strong></td>
+<td>您想等待的Android应用程序的Java包</td>
+<td>com.example.android.myApp， com.android.settings</td>
+</tr>
+<tr>
+<td align="center"><strong>appWaitDuration</strong></td>
+<td>用于等待appWaitActivity启动的超时（以毫秒为单位20000）（默认）</td>
+<td>30000</td>
+</tr>
+<tr>
+<td align="center"><strong>deviceReadyTimeout</strong></td>
+<td>在等待设备准备就绪的几秒钟内超时</td>
+<td>5</td>
+</tr>
+<tr>
+<td align="center"><strong>androidCoverage</strong></td>
+<td>完全合格的仪器类。通过-w在adb shell中，仪器-e覆盖率为true -w</td>
+<td>com.my.Pkg / com.my.Pkg.instrumentation.MyInstrumentation</td>
+</tr>
+<tr>
+<td align="center"><strong>androidCoverageEndIntent</strong></td>
+<td>由您自己执行的广播操作，用于将覆盖转储到文件系统。传递到-a在adb外壳广播-a</td>
+<td>com.example.pkg.END_EMMA</td>
+</tr>
+<tr>
+<td align="center"><strong>androidDeviceReadyTimeout</strong></td>
+<td>用于等待设备在启动后准备就绪的秒数</td>
+<td>例如， 30</td>
+</tr>
+<tr>
+<td align="center"><strong>androidInstallTimeout</strong></td>
+<td>用于等待apk安装到设备的超时（以毫秒为单位）。默认为90000</td>
+<td>例如， 90000</td>
+</tr>
+<tr>
+<td align="center"><strong>androidInstallPath</strong></td>
+<td>安装前将在其中安装apk的设备上的目录名称。默认为/data/local/tmp</td>
+<td>例如/sdcard/Downloads/</td>
+</tr>
+<tr>
+<td align="center"><strong>adbPort</strong></td>
+<td>用于连接到ADB服务器的端口（默认5037）</td>
+<td>5037</td>
+</tr>
+<tr>
+<td align="center"><strong>remoteAdbHost</strong></td>
+<td>可选的远程ADB服务器主机</td>
+<td>例如：192.168.0.101</td>
+</tr>
+<tr>
+<td align="center"><strong>androidDeviceSocket</strong></td>
+<td>Devtools套接字名称。只有当测试的应用程序是Chromium嵌入式浏览器时才需要。套接字由浏览器打开，并且Chromedriver作为devtools客户端连接到它。</td>
+<td>例如， chrome_devtools_remote</td>
+</tr>
+<tr>
+<td align="center"><strong>avd</strong></td>
+<td>avd的名称发射</td>
+<td>例如， api19</td>
+</tr>
+<tr>
+<td align="center"><strong>avdLaunchTimeout</strong></td>
+<td>avd启动并连接到ADB需要多长时间（默认值120000）</td>
+<td>300000</td>
+</tr>
+<tr>
+<td align="center"><strong>avdReadyTimeout</strong></td>
+<td>avd完成启动动画需要多长时间（默认120000）</td>
+<td>300000</td>
+</tr>
+<tr>
+<td align="center"><strong>avdArgs</strong></td>
+<td>启动avd时使用的其他仿真器参数</td>
+<td>例如， -netfast</td>
+</tr>
+<tr>
+<td align="center"><strong>useKeystore</strong></td>
+<td>使用自定义密钥库来签署apks，默认 false</td>
+<td>例如， -netfast</td>
+</tr>
+<tr>
+<td align="center"><strong>keystorePath</strong></td>
+<td>自定义密钥库路径，默认〜/ .android / debug.keystore</td>
+<td>例如，/path/to.keystore</td>
+</tr>
+<tr>
+<td align="center"><strong>keystorePassword</strong></td>
+<td>自定义密钥库的密码</td>
+<td>例如， foo</td>
+</tr>
+<tr>
+<td align="center"><strong>keyAlias</strong></td>
+<td>密钥的别名</td>
+<td>例如， androiddebugkey</td>
+</tr>
+<tr>
+<td align="center"><strong>keyPassword</strong></td>
+<td>密钥的密钥</td>
+<td>例如， foo</td>
+</tr>
+<tr>
+<td align="center"><strong>chromedriverExecutable</strong></td>
+<td>webdriver可执行文件的绝对本地路径（如果Chromium embedder提供了自己的webdriver，则应该使用它来代替与Appium捆绑在一起的原始chromedriver）</td>
+<td>/abs/path/to/webdriver</td>
+</tr>
+<tr>
+<td align="center"><strong>autoWebviewTimeout</strong></td>
+<td>等待Webview上下文激活的时间（以毫秒为单位）。默认为2000</td>
+<td>例如 4</td>
+</tr>
+<tr>
+<td align="center"><strong>intentAction</strong></td>
+<td>意图操作将用于启动活动（默认android.intent.action.MAIN）</td>
+<td>例如 android.intent.action.MAIN， android.intent.action.VIEW</td>
+</tr>
+<tr>
+<td align="center"><strong>intentCategory</strong></td>
+<td>意图类别，将用于启动活动（默认android.intent.category.LAUNCHER）</td>
+<td>例如android.intent.category.LAUNCHER，android.intent.category.APP_CONTACTS</td>
+</tr>
+<tr>
+<td align="center"><strong>intentFlags</strong></td>
+<td>将用于启动活动的标志（默认0x10200000）</td>
+<td>例如 0x10200000</td>
+</tr>
+<tr>
+<td align="center"><strong>optionalIntentArguments</strong></td>
+<td>将用于启动活动的其他意图参数。请参阅 <a href="http://developer.android.com/reference/android/content/Intent.html" target="_blank" rel="noopener">意向参数</a></td>
+<td>例如–esn <extra_key>，–ez <extra_key> <extra_boolean_value>等等。</extra_boolean_value></extra_key></extra_key></td>
+</tr>
+<tr>
+<td align="center"><strong>dontStopAppOnReset</strong></td>
+<td>在使用adb启动应用程序之前，不要停止被测试的应用程序的进程。如果被测试的应用程序是由另一个定位应用程序创建的，那么将其设置为false将允许在使用adb的测试应用程序启动过程中定位应用程序的过程仍然存在。换句话说，在dontStopAppOnReset设置的时候true，我们不会-S在adb shell am start通话中包含标志。有了这个能力被省略或设置为false，我们包括-S标志。默认false</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>unicodeKeyboard</strong></td>
+<td>启用Unicode输入，默认 false</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>resetKeyboard</strong></td>
+<td>使用unicodeKeyboard功能运行Unicode测试后，将键盘重置为原始状态。如果单独使用，则忽略。默认false</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>noSig</strong></td>
+<td>使用调试键跳过检查和签名应用程序，只能使用UiAutomator，而不能使用selendroid，默认false</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>ignoreUnimportantViews</strong></td>
+<td>调用setCompressedLayoutHierarchy()uiautomator函数。此功能可以加快测试执行速度，因为辅助功能命令将更快地忽略某些元素。被忽略的元素是不可能找到的，这就是为什么这个功能也被实现为可切换的<em>设置</em>以及功能。默认为false</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>disableAndroidWatchers</strong></td>
+<td>禁用观察应用程序没有响应和应用程序崩溃的android观察者，这将减少Android设备/模拟器上的CPU使用率。这个功能只能用于UiAutomator，而不能用于selendroid，默认false</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>chromeOptions</strong></td>
+<td>允许ChromeDriver传递chromeOptions功能。有关更多信息，请参阅<a href="https://sites.google.com/a/chromium.org/chromedriver/capabilities" target="_blank" rel="noopener">chromeOptions</a></td>
+<td>chromeOptions: {args: [‘–disable-popup-blocking’]}</td>
+</tr>
+<tr>
+<td align="center"><strong>recreateChromeDriverSessions</strong></td>
+<td>在移至非ChromeDriver网页浏览的情况下杀死ChromeDriver会话。默认为false</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>nativeWebScreenshot</strong></td>
+<td>在Web上下文中，使用本地（adb）方法截取屏幕截图，而不是代理ChromeDriver。默认为false</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>androidScreenshotPath</strong></td>
+<td>将要放置屏幕截图的设备上的目录名称。默认为/data/local/tmp</td>
+<td>例如/sdcard/screenshots/</td>
+</tr>
+<tr>
+<td align="center"><strong>autoGrantPermissions</strong></td>
+<td>让Appium自动确定您的应用程序需要哪些权限，并在安装时将其授予应用程序。默认为false</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>networkSpeed</strong></td>
+<td>设置网络速度模拟。指定最大的网络上传和下载速度。默认为full</td>
+<td>[‘full’,’gsm’, ‘edge’, ‘hscsd’, ‘gprs’, ‘umts’, ‘hsdpa’, ‘lte’, ‘evdo’] 检查 <a href="https://developer.android.com/studio/run/emulator-commandline.html" target="_blank" rel="noopener">-netspeed选项</a> 有关avds速度仿真的更多信息</td>
+</tr>
+<tr>
+<td align="center"><strong>gpsEnabled</strong></td>
+<td>在开始会话之前，切换模拟器的gps位置提供程序。默认情况下，仿真器将根据设置的方式启用或不启用此选项。</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>isHeadless</strong></td>
+<td>true当不需要显示设备显示时，将此功能设置为无运行模拟器。false是默认值。<em>isHeadless</em>也支持iOS，请检查XCUITest的具体功能。</td>
+<td>例如， true</td>
+</tr>
+</tbody></table>
+<h5 id="4-3-ios独有Capability"><a href="#4-3-ios独有Capability" class="headerlink" title="4.3 ios独有Capability"></a>4.3 ios独有Capability</h5><p>　　在我选择appium时，最主要是因为他能够同时支持ios和android，在基础参数配置中ios也有他自己的独一份，不和android一样，下面我们大概介绍一下：</p>
+<p>　　BoundleId：这个是必须的，如果不配置就无法启动ios app，这个是该app的唯一标示。eg：caps.setCapability(“boundleId”,”ios.mooc.test”),这个只是一个简单的例子。</p>
+<p>　　autoAcceptAlerts: 这个在我们实际项目中非常实用，他就想web端的一个js弹窗，默认情况下是false，如果你的app中有类似情况建议打开。eg：caps.setCapability(“autoAcceptAlerts”,”true”)</p>
+<p>　　这些功能仅适用于<a href="https://github.com/appium/appium/blob/master/docs/en/drivers/ios-xcuitest.md" target="_blank" rel="noopener">XCUITest驱动程序</a>和过时的<a href="https://github.com/appium/appium/blob/master/docs/en/drivers/ios-uiautomation.md" target="_blank" rel="noopener">UIAutomation驱动程序</a>。</p>
+<table>
+<thead>
+<tr>
+<th align="center">能力</th>
+<th>描述</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>calendarFormat</strong></td>
+<td>（仅限SIM）为iOS模拟器设置的日历格式</td>
+<td>例如 gregorian</td>
+</tr>
+<tr>
+<td align="center"><strong>bundleId</strong></td>
+<td>测试中的应用程序的捆绑ID。用于在真实设备上启动应用程序或在测试启动期间使用其他需要包ID的大写字母。要使用软件包ID在真实设备上运行测试，可以省略“应用”功能，但必须提供“udid”。</td>
+<td>例如 io.appium.TestApp</td>
+</tr>
+<tr>
+<td align="center"><strong>udid</strong></td>
+<td>连接的物理设备的唯一设备标识符</td>
+<td>例如 1ae203187fc012g</td>
+</tr>
+<tr>
+<td align="center"><strong>launchTimeout</strong></td>
+<td>假设它挂起和失败会话之前以毫秒为单位等待仪器的时间</td>
+<td>例如 20000</td>
+</tr>
+<tr>
+<td align="center"><strong>locationServicesEnabled</strong></td>
+<td>（仅限SIM）强制定位服务处于打开或关闭状态。默认是保持当前的模拟设置。</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>locationServicesAuthorized</strong></td>
+<td>（仅限SIM）通过plist将位置服务设置为授权或未授权，以便位置服务警报不会弹出。默认是保持当前的模拟设置。请注意，如果您使用此设置，您还必须使用该bundleId功能发送您的应用的捆绑ID。</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>autoAcceptAlerts</strong></td>
+<td>如果弹出，则自动接受所有iOS警报。这包括隐私访问权限提醒（例如，位置，联系人，照片）。默认是false。不适用于XCUITest基于测试。</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>autoDismissAlerts</strong></td>
+<td>如果弹出，则自动关闭所有iOS警报。这包括隐私访问权限提醒（例如，位置，联系人，照片）。默认是false。不适用于XCUITest基于测试。</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>nativeInstrumentsLib</strong></td>
+<td>使用本机intruments lib（即禁用仪器，无延迟）。</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>nativeWebTap</strong></td>
+<td>（仅限SIM）在Safari中启用“真实”，非基于JavaScript的网页浏览。默认：false。警告：根据视口的大小/比例，这可能无法准确地点击一个元素</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>safariInitialUrl</strong></td>
+<td>（仅限SIM）（&gt; = 8.1）初始Safari浏览器网址，默认为本地欢迎页面</td>
+<td>例如 <a href="https://www.github.com" target="_blank" rel="noopener">https://www.github.com</a></td>
+</tr>
+<tr>
+<td align="center"><strong>safariAllowPopups</strong></td>
+<td>（仅限Sim）允许JavaScript在Safari中打开新窗口。默认保持当前的模拟设置</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>safariIgnoreFraudWarning</strong></td>
+<td>（仅限SIM）防止Safari显示欺诈网站警告。默认保持当前的模拟设置。</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>safariOpenLinksInBackground</strong></td>
+<td>（仅限SIM）Safari是否应允许在新窗口中打开链接。默认保持当前的模拟设置。</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>keepKeyChains</strong></td>
+<td>（Sim-only）当appium会话开始/结束时是否保留钥匙串（Library / Keychains）</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>localizableStringsDir</strong></td>
+<td>在哪里寻找可本地化的字符串。默认en.lproj</td>
+<td>en.lproj</td>
+</tr>
+<tr>
+<td align="center"><strong>processArguments</strong></td>
+<td>使用工具传递给AUT的参数</td>
+<td>例如， -myflag</td>
+</tr>
+<tr>
+<td align="center"><strong>interKeyDelay</strong></td>
+<td>输入时发送到元素的击键之间的延迟，以毫秒为单位。</td>
+<td>例如， 100</td>
+</tr>
+<tr>
+<td align="center"><strong>showIOSLog</strong></td>
+<td>是否显示从appium日志中的设备捕获的任何日志。默认false</td>
+<td>true 要么 false</td>
+</tr>
+<tr>
+<td align="center"><strong>sendKeyStrategy</strong></td>
+<td>用于将测试类型输入测试领域的策略。模拟器默认：oneByOne。实际设备默认值：grouped</td>
+<td>oneByOne，grouped或者setValue</td>
+</tr>
+<tr>
+<td align="center"><strong>screenshotWaitTimeout</strong></td>
+<td>以秒为单位的最大超时等待生成屏幕截图。默认：10</td>
+<td>例如， 5</td>
+</tr>
+<tr>
+<td align="center"><strong>waitForAppScript</strong></td>
+<td>ios自动化脚本用于确定应用程序是否已启动，默认情况下系统等待页面源不为空。结果必须是布尔值</td>
+<td>例如true;，target.elements().length &gt; 0;，$.delay(5000); true;</td>
+</tr>
+<tr>
+<td align="center"><strong>webviewConnectRetries</strong></td>
+<td>向远程调试器发送连接消息以获取webview的次数。默认：8</td>
+<td>例如， 12</td>
+</tr>
+<tr>
+<td align="center"><strong>appName</strong></td>
+<td>被测应用程序的显示名称。用于在iOS 9+中自动化后台应用程序。</td>
+<td>例如， UICatalog</td>
+</tr>
+<tr>
+<td align="center"><strong>customSSLCert</strong></td>
+<td>（仅限Sim / Emu）向模拟器添加SSL证书。</td>
+<td>例如 <br>—–BEGIN CERTIFICATE—–MIIFWjCCBEKg…<br>—–END CERTIFICATE—–</td>
+</tr>
+<tr>
+<td align="center"><strong>webkitResponseTimeout</strong></td>
+<td>（仅限实际设备）设置时间（以毫秒为单位）以等待Safari会话中WebKit的响应。默认为5000</td>
+<td>例如， 10000</td>
+</tr>
+</tbody></table>
+<h4 id="5-Capability实战"><a href="#5-Capability实战" class="headerlink" title="5.Capability实战"></a>5.Capability实战</h4><p>　　当我们知道基础的Capability 如何使用时，大家是否觉得现在我们已经就可以原原本本的照着去执行了呢？其实没错，是可以照样去执行。但是你有思考过一个问题吗？如果你的app变化了？你的package变化了？你的手机变化了？你的版本变化了等等你怎么去实现？你是不是还需要到程序里面来更改代码？low吗？要想不low我们接着往下看。</p>
+<pre><code> 1 # coding=utf-8
+ 2 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
+ 3 
+ 4 # 2.注释：包括记录创建时间，创建人，项目名称。
+ 5 &#39;&#39;&#39;
+ 6 Created on 2019-7-05
+ 7 @author: 北京-宏哥   QQ交流群：707699217
+ 8 Project:学习和使用appium自动化测试-与Capability完美懈垢之解读
+ 9 &#39;&#39;&#39;
+10 # 3.导入模块
+11 from appium import webdriver
+12 import time
+13 import os
+14 
+15 def testCase(platformName,platformVersion,deviceName,app,appPackage,appActivity,port):
+16    PATH = lambda p: os.path.abspath(os.path.join(os.path.dirname(__file__), p))
+17    desired_caps = {}
+18    desired_caps[&#39;platformName&#39;] = platformName #设置平台
+19    desired_caps[&#39;platformVersion&#39;] = platformVersion #系统版本
+20    desired_caps[&#39;deviceName&#39;] = deviceName #设备id
+21    desired_caps[&#39;autoLaunch&#39;] = &#39;true&#39; #是否自动启动
+22    desired_caps[&#39;app&#39;] = PATH(app)#安装包路径，放在该py文件的目录下)
+23    desired_caps[&#39;appPackage&#39;] = appPackage #包名
+24    desired_caps[&#39;appActivity&#39;] = appActivity #启动的activity
+25    self.driver = webdriver.Remote(&#39;http://localhost:%s/wd/hub&#39;, desired_caps) % port</code></pre><p>　　从上面的代码我们可以和之前的代码进行比较，大家是否发现了一些不同之处。在做自动化时我们一定要保持数据的灵活性，所以在这里我们做了一些小小的改变，我们将所有的数据都改变成了变量，变量从何而来这个我们后面可能会讲，这个会去读取配置文件。现在从代码层面来看是否要比之前的代码更有可读性呢？其实现实中并不是这样，有更高级的版本，这个后面有时间再讲。</p>
+<p>　　在代码的第11行大家注意一个问题没有，在一个字符串中间我使用了一个%s，这个在python里面代表的意思是取一个变量，这个变量是我后面跟着的 port 这个变量的值，这里唯一的有问题就是这里。</p>
+<h4 id="6-小结"><a href="#6-小结" class="headerlink" title="6.小结"></a>6.小结</h4><p>1、想要更详细了解的小伙们，可以看一下官方文档：</p>
+<p>官方文档：<a href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md" target="_blank" rel="noopener">https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md</a></p>
+<p>　　好了，今天就给小伙伴们分享到这里了，有问题加群讨论。</p>
+
+            </div>
+			
+            <hr/>
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">博主不易，靠赏过日！！！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+			<style>
+				.reprint {
+					margin: 2em 0 0;
+					padding: 0.5em 1em;
+					border-left: 3px solid #FF1700;
+					background-color: #F9F9F9;
+					list-style: none;
+				}
+
+				.reprint li {
+					line-height: 30px;
+				}
+			</style>
+            <div class="reprint">
+                <!--<p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="https://hongduhong.github.io" class="b-link-green">北京-宏哥</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2016/04/09/appium/" class="b-link-green">python+appium自动化测试14</a>
+                </p>-->
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>作者:  </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>文章链接:  </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>版权声明:   </strong>
+					本网志所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					许可协议。转载请注明出处!
+				  </li>
+				</ul>
+            </div>
+			<!--<div>
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>copyright.author </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>copyright.link </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>copyright.license_title  </strong>
+					copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					copyright.right_license_content
+				  </li>
+				</ul>
+			<div>
+			<div>
+				 <style>
+.reprint {
+    margin: 2em 0 0;
+    padding: 0.5em 1em;
+    border-left: 3px solid #FF1700;
+    background-color: #F9F9F9;
+    list-style: none;
+}
+
+.reprint li {
+    line-height: 30px;
+}
+</style>
+<div>
+	<ul class="reprint">
+		<li class="reprint-author">
+          <strong>copyright.author </strong>北京-宏哥</a>
+          </li>
+          <li class="reprint-link">
+          <strong>copyright.link </strong>
+          <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+        </li>
+        <li class="reprint-license">
+            <strong>copyright.license_title  </strong>
+            copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+            copyright.right_license_content
+        </li>
+	</ul>
+<div>
+
+			</div>-->
+
+        </div>
+		
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'f198ff3418cff1b4beb1',
+        clientSecret: '4381fdcb7742eb697e6214ca4ccacbbc78620722',
+        repo: 'hongduhong.github.io',
+        owner: 'hongduhong',
+        admin: "hongduhong",
+        id: '2016-04-09T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+	.v .txt-right{ display: none;}
+
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+ <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'QTjhAL7gTPGjIK1RQM2TlxDR-gzGzoHsz',
+        appKey: 'aBlfRinOLK3x6GKoYWr02qWj',
+        notify: 'true' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '留下你足迹吧O(∩_∩)O\n各位站长也留下你的交友申请 \n(申请格式：网站链接 + 一句话简介站点;)\n(如：five-great.coding.me + 互联网爱好者,撸代码,技术交流。)\n( ╯□╰ )建议不要匿名评论,建议填写邮箱便于接收回复信息'
+    });
+</script>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2016/04/10/appium/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="python+appium自动化测试15">
+                        
+                        <span class="card-title">python+appium自动化测试15</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">🔥 Appium+python自动化（十五）- Android 这些基础知识，你知多少？？？（超详解）
+1.简介　　前</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2016-04-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                    Python
+                                </a>
+                            
+                            <a href="/categories/Python/Appium/" class="post-category" target="_blank">
+                                    Appium
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/Appium/" target="_blank">
+                        <span class="chip bg-color">Appium</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2016/04/08/appium/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="python+appium自动化测试13">
+                        
+                        <span class="card-title">python+appium自动化测试13</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">🔥 Appium+python自动化（十三）- 输入中文 - 一次填坑记（超详解）
+1.简介　　无论你在哪里，在做什么</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-04-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                    Python
+                                </a>
+                            
+                            <a href="/categories/Python/Appium/" class="post-category" target="_blank">
+                                    Appium
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/Appium/" target="_blank">
+                        <span class="chip bg-color">Appium</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 北京-宏哥<br />'
+            + '作者: 北京-宏哥<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h4, h5, h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h4, h5, h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  if(window.outerHeight <500&&window.outerWidth<400){
+  $("#p1").hide();
+ 
+   }else{
+  $("#p1").show();
+  
+  }
+});
+</script>
+<footer class="page-footer bg-color">
+ 
+ 
+ 
+ 
+ <div  style="text-align: center;">
+ 
+ 
+ <li class="col s12 m8 l8 copy-right">
+  友链：
+         
+            
+                
+                
+				
+             <a href="https://www.jianshu.com/u/c6e85b30966e" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 简书
+               </a>
+                
+                
+				
+             <a href="https://www.cnblogs.com/du-hong" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 博客园
+               </a>
+                
+                
+				
+             <a href="https://www.zhihu.com/people/bei-jing-hong-ge" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 知乎
+               </a>
+                
+                
+				
+             <a href="https://cloud.tencent.com/developer/user/5695339" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 腾讯云
+               </a>
+                
+            
+
+ 
+ 
+	   		  
+		<span id="busuanzi_container_site_uv" style="float:right"> 
+  恭喜您成为第 <span id="busuanzi_value_site_uv" class="white-color"></span>位访客&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+      </span>
+      </span>
+	  </li>
+   </div>
+   
+	   <div class="container row center-align">
+		<div class="col s12 m8 l8 copy-right">
+            
+         <span id ="p1">&nbsp;&nbsp;&nbsp;</span>
+            
+			
+                
+                
+                <span id="busuanzi_container_site_pv">
+                       <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color">1212112121</span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次&nbsp;
+                </span>
+                
+              
+			
+			
+                <i class="fa fa-area-chart"></i>站点总字数:
+                <span class="white-color">252.7k</span>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			本站由&copy;<a href="https://hongduhong.github.io" target="_blank">北京-宏哥</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 搭建.
+			
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hongduhong/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1918991791@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1918991791" class="tooltipped" data-tooltip="QQ联系我: 1918991791" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+
+
+</div>
+    </div>
+</footer>
+<script>
+
+        //获取输入框的文本
+        function getdata(){
+        var i=document.getElementById('page__date');
+        
+        
+         var a=new Date();var b=new Date('2019-8-20');var count_s=parseInt((a.getTime()-b)/(1000 * 3600 * 24));
+      
+         }
+        setTimeout("getdata()","2000");
+
+</script>
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+
+<div id="backTop" class="top-scroll">
+<a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+<script>
+$("#loading").fadeOut(5000);
+</script>
+</html>

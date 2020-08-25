@@ -4,9 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="python接口自动化9, 北京-宏哥">
-    <meta name="description" content="🔥 python接口自动化（九）–python中字典和json的区别（详解）
-1.简介　　这篇文章的由来是由于上一篇发">
+    <meta name="keywords" content="python接口自动化8, 北京-宏哥">
+    <meta name="description" content="🔥 python接口自动化（八）–发送post请求的接口（详解）
+1.简介　　上篇介绍完发送get请求的接口，大家必然">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>python接口自动化9 | 北京-宏哥</title>
+    <title>python接口自动化8 | 北京-宏哥</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -848,13 +848,13 @@ window.Canvas= new Universe(element);</script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        python接口自动化9
+                        python接口自动化8
                     </div>
                 </div>
             </div>
@@ -986,14 +986,14 @@ window.Canvas= new Universe(element);</script>
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        808
+                        1.2k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        4 分
                     </div>
                     
                 
@@ -1009,31 +1009,40 @@ window.Canvas= new Universe(element);</script>
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>🔥 python接口自动化（九）–python中字典和json的区别（详解）</strong></p>
-<h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　这篇文章的由来是由于上一篇发送post请求的接口时候，参数传字典（dict）和json的缘故，因为python中，json和dict非常类似，都是key-value的形式，为啥还要这么传参，在群里问了一些人，也说不出个所以然了，还是自己动手丰衣足食，所以才有这篇和编辑分类格格不入的文章。来先看一下它们各自的定义。</p>
-<h4 id="2-定义"><a href="#2-定义" class="headerlink" title="2.定义"></a>2.定义</h4><p>　　python中，json和dict非常类似，都是key-value的形式，而且json、dict也可以非常方便的通过dumps、loads互转。既然都是key-value格式，为啥还需要进行格式转换？</p>
-<p>　　json（JavaScript Object Notation）</p>
-<p>　　json：是一种数据格式，是纯字符串。可以被解析成Python的dict或者其他形式。</p>
-<p>　　dict：是一个完整的数据结构，是对Hash Table这一数据结构的一种实现，是一套从存储到提取都封装好了的方案。它使用内置的哈希函数来规划key对应value的存储位置，从而获得O（1）的数据读取速度。</p>
-<h4 id="3-json和dict对比"><a href="#3-json和dict对比" class="headerlink" title="3.json和dict对比"></a>3.json和dict对比</h4><p> 　 1、json的key只能是字符串，python的dict可以是任何可hash对象（hashtable type）；                           </p>
-<p>　　2、json的key可以是有序、重复的；dict的key不可以重复。</p>
-<p>　　3、json的value只能是字符串、浮点数、布尔值或者null，或者它们构成的数组或者对象。</p>
-<p>　　4、json任意key存在默认值undefined，dict默认没有默认值；</p>
-<p>　　5、json访问方式可以是[],也可以是.，遍历方式分in、of；dict的value仅可以下标访问。</p>
-<p>　　6、json的字符串强制双引号，dict字符串可以单引号、双引号；</p>
-<p>　　7、dict可以嵌套tuple，json里只有数组。</p>
-<p>　　8、json:true、false、null</p>
-<p>　　9、python：True、False、None</p>
-<p>　　10、json中文必须是unicode编码，如”\u6211”.</p>
-<p>　　11、json的类型是字符串，字典的类型是字典。</p>
-<h4 id="4-hashtable"><a href="#4-hashtable" class="headerlink" title="4.hashtable"></a>4.hashtable</h4><p>1、post 的 body 是 json 类型，也可以用 json 参数传入。</p>
+                <p><strong>🔥 python接口自动化（八）–发送post请求的接口（详解）</strong></p>
+<h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　上篇介绍完发送get请求的接口，大家必然联想到发送post请求的接口也不会太难，被聪明的你又猜到了。答案是对的，虽然发送post请求的参考例子很简单，但是实际遇到的情况却是很复杂的，因为所有系统或者软件、网站都是从登录开始的，进入这扇门才可以发现里边的奥秘，所以首先介绍的第一个post请求肯定是登录了，但登录是最难处理的。如果把登录问题这只拦路虎解决了，那么后面问题都迎刃而解。</p>
+<h4 id="2-help函数"><a href="#2-help函数" class="headerlink" title="2.help函数"></a>2.help函数</h4><p>　　上篇介绍发送get请求的接口时，学习requests模块，是让大家去访问官方网站，查看官方文档；其实学习一个新的模块捷径，不用去百度什么的，直接用 help 函数就能查看相关注释和案例内容。</p>
+<p><img src="https://i.loli.net/2020/08/04/v78Xpd4ez1FKSyg.png" alt="1232840-20190320111307039-970602898.png"></p>
+<h5 id="2-1python发送get请求接口案例："><a href="#2-1python发送get请求接口案例：" class="headerlink" title="2.1python发送get请求接口案例："></a>2.1python发送get请求接口案例：</h5><p><img src="https://i.loli.net/2020/08/04/nCFyjwU6hHm4Tar.png" alt="1232840-20190320111408383-1120332403.png"> </p>
+<h5 id="2-2python发送post请求接口案例："><a href="#2-2python发送post请求接口案例：" class="headerlink" title="2.2python发送post请求接口案例："></a>2.2python发送post请求接口案例：</h5><p><img src="https://i.loli.net/2020/08/04/Su4ZaQjxTvyRgsI.png" alt="1232840-20190320111450197-719250803.png"></p>
+<h4 id="3-发送post请求的接口（dict参数）"><a href="#3-发送post请求的接口（dict参数）" class="headerlink" title="3.发送post请求的接口（dict参数）"></a>3.发送post请求的接口（dict参数）</h4><p> 　　上一篇，我们就见识过requests的强大功能和威力。寥寥几行代码就可以实现get和post的请求。介绍到这里想必大伙都迫不及待了，好，那我们来牛刀小试一下。</p>
+<p>1、用上面给的python发送post请求接口案例，稍稍地做个简单修改，就可以发个简单的post 请求</p>
+<p>2、便可以像官方文档给出的案例将payload 参数是字典类型（dict），传到如下图的 form 里</p>
+<p><img src="https://i.loli.net/2020/08/04/Sc97u3hG2Zx5bLP.png" alt="1232840-20190321110241440-1728421370.png"> </p>
+<h4 id="4-发送post请求的接口（json参数）"><a href="#4-发送post请求的接口（json参数）" class="headerlink" title="4.发送post请求的接口（json参数）"></a>4.发送post请求的接口（json参数）</h4><p>1、post 的 body 是 json 类型，也可以用 json 参数传入。</p>
 <p>2、先导入 json 模块，用 dumps 方法转化成 json 格式。</p>
 <p>3、返回结果，传到 data 里</p>
-<p>4、只有当tuple内的所有项都是hashtable的时候，tuple才是hashtable；</p>
-<h4 id="5-代码示例对比"><a href="#5-代码示例对比" class="headerlink" title="5.代码示例对比"></a>5.代码示例对比</h4><p><img src="https://i.loli.net/2020/08/04/rtpli7JvEwdSsIb.png" alt="1232840-20190322115207639-1052252685.png"></p>
-<h4 id="6-小结"><a href="#6-小结" class="headerlink" title="6.小结"></a>6.小结</h4><pre><code>实际上JSON就是Python字典的字符串表示，但是字典作为一个复杂对象是无法直接转换成定义它的代码的字符串，字典是一个数据的结构，而json只是一个具有一定规则的字符串，方便在不同平台上处理其中包含的数据。</code></pre><p>但本质上来讲，字典是一种数据结构，json是一种格式；字典有很多内置函数，有多种调用方法，而json是数据打包的一种格式，并不像字典具备操作性，并且是格式就会有一些形式上的限制，比如json的格式要求必须且只能使用双引号作为</p>
-<p>key或者值的边界符号，不能使用单引号，而且“key”必须使用边界符（双引号），但字典就无所谓了。</p>
-<p>形式上的相近也让python提供了json.loads()转换函数，方便json数据的调用。 </p>
+<p><img src="https://i.loli.net/2020/08/04/RYu5MSm8idXKF6J.png" alt="1232840-20190321114337942-847994179.png"></p>
+<h4 id="5-请求头header"><a href="#5-请求头header" class="headerlink" title="5.请求头header"></a>5.请求头header</h4><p>　　现在由于对接口安全性的要求，使得模拟登录越来越复杂，比上边介绍的基本内容要复杂很多。一般来说登陆只要涉及安全性方面考虑，那么登陆就会比较复杂。</p>
+<p>1、以博客园为例，几年前模拟登陆，没有涉及安全性考虑相对简单。发展到现在其登录涉及安全性考虑，所以实际的情况要比上面讲的几个复杂很多，</p>
+<p>2、我们在请求数据时也可以加上自定义的headers（通过headers关键字参数传递）有时候有的特殊的请求必须加上headers头信息，才回返回响应结果。例如：博客园登录时，将请求头 headers添加上,这里不是说博客园登录必须登录才能返回</p>
+<p>响应结果，而是以其为例子来说明将请求头header参数加入到登录请求接口中。这里可以用抓包工具来看其登录时的请求头。如下是fiddler工具抓包时登录的请求头。</p>
+<p><img src="https://i.loli.net/2020/08/04/O8PaQfh3Cr6S5YX.png" alt="1232840-20190322170733298-290744009.png"></p>
+<p>3、由于博客园的登录方式改变了，我们换一个例子演示。还是以官方文档给的网址演示如下</p>
+<p>（1）抓包，查看其请求头，浏览器F12查看</p>
+<p><img src="https://i.loli.net/2020/08/04/GklSRvoqV9aHOX7.png" alt="1232840-20190325091555997-1268316817.png"></p>
+<p>　　Fiddler抓包查看请求头，结果如下：</p>
+<p><img src="https://i.loli.net/2020/08/04/N6UngjcbAo3HimL.png" alt="1232840-20190325091840428-664121257.png"></p>
+<p>　　实例代码和其结果：</p>
+<p><img src="https://i.loli.net/2020/08/04/yCt2BDwX5fUWMjR.png" alt="1232840-20190325092751603-711297740.png"> </p>
+<p>　　遇到问题报错和解决办法：</p>
+<pre><code>raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host=&#39;httpbin.org&#39;, port=443): Max retries exceeded with url: /post (Caused by SSLError(SSLError(&quot;bad handshake: Error([(&#39;SSL routines&#39;, &#39;tls_process_server_certificate&#39;, &#39;certificate verify failed&#39;)])&quot;)))</code></pre><h4 id="6-小结"><a href="#6-小结" class="headerlink" title="6.小结"></a>6.小结</h4><p>1、由于这里是 https 请求，直接发送请求会报错误:</p>
+<pre><code>SSLError: HTTPSConnectionPool(host=&#39;httpbin.org&#39;, port=443): Max retries exceeded with url: /post (Caused by SSLError(SSLError(&quot;bad handshake: Error([(&#39;SSL routines&#39;, &#39;tls_process_server_certificate&#39;, &#39;certificate verify failed&#39;)])&quot;)))</code></pre><p>2、可以加个参数：verify=False，表示忽略对 SSL 证书的验证，但是此时仍然会有警告：</p>
+<pre><code>InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+InsecureRequestWarning)</code></pre><p>3、这里请求参数 payload 是 json 格式的，用 json 参数传。将请求头写成字典格式，进行传参。</p>
+<p>4、最后结果是 json 格式，可以直接用 r.json 返回 json 数据：</p>
+<pre><code>{&#39;args&#39;: {}, &#39;data&#39;: &#39;&#39;, &#39;files&#39;: {}, &#39;form&#39;: {}, &#39;headers&#39;: {&#39;Accept&#39;: &#39;*/*&#39;, &#39;Accept-Encoding&#39;: &#39;gzip, deflate&#39;, &#39;Content-Length&#39;: &#39;0&#39;, &#39;Host&#39;: &#39;httpbin.org&#39;, &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko&#39;}, &#39;json&#39;: None, &#39;origin&#39;: &#39;222.128.10.95, 222.128.10.95&#39;, &#39;url&#39;: &#39;https://httpbin.org/post&#39;}</code></pre><p>5、json参数和dict的参数非常类似，都是key-value的形式，它们有何区别，欲知后事如何，且听下回分解。</p>
 
             </div>
 			
@@ -1193,7 +1202,7 @@ window.Canvas= new Universe(element);</script>
                     </span>
                     <a href="https://hongduhong.github.io" class="b-link-green">北京-宏哥</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2016/02/21/interface/" class="b-link-green">python接口自动化9</a>
+                    <a href="/2016/02/21/interface/" class="b-link-green">python接口自动化8</a>
                 </p>-->
 				<ul class="post-copyright">
 				  <li class="post-copyright-author">
@@ -1565,21 +1574,21 @@ window.Canvas= new Universe(element);</script>
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2016/02/21/interface/">
+                <a href="/2016/02/22/interface/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="python接口自动化8">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="python接口自动化9">
                         
-                        <span class="card-title">python接口自动化8</span>
+                        <span class="card-title">python接口自动化9</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">🔥 python接口自动化（八）–发送post请求的接口（详解）
-1.简介　　上篇介绍完发送get请求的接口，大家必然</div>
+                    <div class="summary">🔥 python接口自动化（九）–python中字典和json的区别（详解）
+1.简介　　这篇文章的由来是由于上一篇发</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2016-02-21
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2016-02-22
                         </span>
                         <span class="publish-author">
                             
@@ -1852,7 +1861,7 @@ $(document).ready(function(){
 			
 			
                 <i class="fa fa-area-chart"></i>站点总字数:
-                <span class="white-color">86.3k</span>
+                <span class="white-color">252.7k</span>
             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			本站由&copy;<a href="https://hongduhong.github.io" target="_blank">北京-宏哥</a>基于
             <a href="https://hexo.io/" target="_blank">Hexo</a> 搭建.
