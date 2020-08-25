@@ -4,23 +4,173 @@
   
     
     <entry>
-      <title>Chrome相关知识-04</title>
-      <link href="/2016/06/02/chrome/"/>
-      <url>/2016/06/02/chrome/</url>
+      <title>JMeter基础篇详解教程-22</title>
+      <link href="/2017/06/02/jmeter/"/>
+      <url>/2017/06/02/jmeter/</url>
       
-        <content type="html"><![CDATA[<p><strong>🔥 《废柴》系列 - What？废柴，你不会下载Google浏览器插件，Are you kidding？？？</strong></p><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>乍眼一看这文章标题我就笑了，相信大家这时候也笑了，哈哈😝😄，而且是笑得肚子疼。别笑，再笑宏哥就没有那个状态了！！！虽然宏哥打算这么简单没必要再写一篇文章说明了，但是在博客园看了很多关于推荐Google浏览器插件的文章，各式各样的，简直是琳良满目，泛滥成灾。写这篇文章的起因是：我有一次碰到有人问我Google的插件如何下载，我当时就呵呵了。还好那天心情不错，自己也不太忙。于是就给他耐心地解答了。是的，对于国外或者国内可以翻墙可以 Google 的人来说，下载安装谷歌插件当然很简单，直接进入 Chrome网上应用商店 ，找到自己想要安装的插件，点击安装就行了。但是对于国内不会翻墙，或者翻墙没翻过去不可以Google的人来说，下载插件就是件会让人头疼的事。即使你推荐的插件再好，他也只能是看看或者是望而却步。推荐插件是：授人以鱼，而宏哥教你下载插件是：授人以渔，授人以鱼不如授人以渔。后来还有很多人问到类似问题。所以想到这里宏哥决定还是写一下关于下载下载的文章。</p><p>首先说明这里主要针对的是不能Google的童鞋或者小伙伴，如果能Google，你可以略过，或者有兴趣的也可以继续往下看看，说不定会有意外的收获了。说不定宏哥的方法会比你的好一点点了。</p><h4 id="2-能Google"><a href="#2-能Google" class="headerlink" title="2.能Google"></a>2.能Google</h4><p>　　能Google的来说下载安装谷歌插件很简单，直接进入Chrome网上应用商店，找到自己想要的安装的或者别人推荐的插件，点击安装就可以了。</p><p>Chrome网上应用商店地址：<a href="https://chrome.google.com/webstore/category/extensions?hl=zh-CN" target="_blank" rel="noopener">https://chrome.google.com/webstore/category/extensions?hl=zh-CN</a></p><p><img src="https://i.loli.net/2020/08/12/4YawUsjdl5BG3mN.png" alt="1232840-20200323125847354-134724162.png"></p><h4 id="3-不能Google"><a href="#3-不能Google" class="headerlink" title="3.不能Google"></a>3.不能Google</h4><p>这里主要是为不能访问 Chrome应用商店，那可能需要采用其他方法下载插件。宏哥这里暂时提供四种方法，保证让你能够下载到想要的插件。</p><h5 id="3-1中文镜像网站"><a href="#3-1中文镜像网站" class="headerlink" title="3.1中文镜像网站"></a>3.1中文镜像网站</h5><p>　　这种镜像网站好多的，例如我们下载Android的SDK的时候访问不到国外的Google地址的下载SDK网站，我们就需要在网上找一个镜像网站进行下载；在例如：我们在安装Python的某些模块时候访问不到国外的网站地址，也需要找个镜像地址，进行下载安装。</p><p>　　在这里，宏哥首先介绍的也是一个在线的中文镜像网站，这种网站网上挺多，但这个算是中文里做的最好的。界面 UI 也正版的网站神似。下载也没有那么多烦人、恶心的限制，比如必须要关注公众号才能下载等等。</p><p>中文镜像网站地址：<a href="https://www.gugeapps.net" target="_blank" rel="noopener">https://www.gugeapps.net</a> ，打开如下图：</p><p><img src="https://i.loli.net/2020/08/12/FMWiROmLSvVbfkY.png" alt="1232840-20200323125940984-1203144533.png"></p><p>选到自己想要的插件，然后点击下载，下载完解压就行，</p><p>这里解压出来是个插件的文件夹，现在文件夹已经有了，如果要使用，还得安装。我前面视频提到了怎样安装插件，并且如果安装失败，怎样解决我也做了演示，不知道的朋友记得去先看那个视频，等会链接我放在视频描述中。</p><p>####3 3.2英文镜像</p><p>　　上边是中文的镜像网站，那么洋鬼子人家在国内也不能访问Google，也看不懂中文，那该怎么办了？？？</p><p>别急啊！现在宏哥就给你推荐一个英文的，相比来说，它的优点更多。它更知名，全世界想离线下载谷歌插件，基本都是来这下，最主要的是它提供了插件的历史版本。像这些插件的历史版本文件，连 Chrome网上商店都下载不到，这里是最好的下载地址。</p><p> 这个网站国内也可以访问和下载。和刚才的区别是，这里下载下来的文件是 .crx 格式文件。这是插件的压缩格式，这是正宗的Chrome插件的文件格式。刚才前面下载下来的是已经被解压缩的文件夹。但是区别不大，没啥影响。</p><p>英文镜像网站地址：<a href="https://www.crx4chrome.com/" target="_blank" rel="noopener">https://www.crx4chrome.com/</a>   打开后如下图：</p><p><img src="https://i.loli.net/2020/08/12/jNOYAGeCBFQk5X3.png" alt="1232840-20200323130034202-1120456365.png"> </p><p>基本这以上两个网站就可以解决下载谷歌插件的需求。</p><h5 id="3-3鸡肋网站"><a href="#3-3鸡肋网站" class="headerlink" title="3.3鸡肋网站"></a>3.3鸡肋网站</h5><p>接下来是以防万一，这个网站也是用来下载插件的，但是有点区别，需要提供谷歌官网网站插件的 ID 或者 URL。</p><p>鸡肋网站地址：<a href="https://chrome-extension-downloader.com/" target="_blank" rel="noopener">https://chrome-extension-downloader.com/</a> 打开如下图：</p><p><img src="https://i.loli.net/2020/08/12/6gL8aJdpOSknBT2.png" alt="1232840-20200323133708234-667272431.png"></p><p>反正我觉得这网站很鸡肋，我们那个人可以记得那么一长串字母的插件的ID和URL,除非是被人或者同时发给你的，那你可以用这个在这个网站试一下，其他的我觉没什么使用场景、没有什么用武之地。</p><h5 id="3-4绝招"><a href="#3-4绝招" class="headerlink" title="3.4绝招"></a>3.4绝招</h5><p>　最后是最重要的绝招，不到万不得已的时候，千万不能轻易显露，否则可能引来杀身之祸。这句词怎么这么熟悉了，呀！跑题了。回归正题：绝招就是将插件离线打包下来，比如我现在有个插件，我要打包导出来给别人使用。或者是</p><p>如果我们自己电脑上已经通过某种方式添加了扩展程序, 想把它移植到其他没有翻墙或者压根没有网的电脑上去怎么办呢?</p><p>这时候就需要利用chrome浏览器的扩展程序打包功能了。</p><p>1.在谷歌浏览器的URL地址输入：chrome://version/  查看安装插件所在的目录如下图：个人资料路径</p><p><img src="https://i.loli.net/2020/08/12/s6oVS4F2fRdtwZA.png" alt="1232840-20200323130423131-1575791462.png"></p><p>2.找到Extensions文件夹，如下图：</p><p><img src="https://i.loli.net/2020/08/12/xhbGwyIsFDnBdYc.png" alt="1232840-20200323130549421-989512099.png"></p><p>3.找到Extensions文件夹，点击打开，可以看到一串字母是插件的ID。如下图：</p><p><img src="https://i.loli.net/2020/08/12/jCca5Kw4F7Rio8P.png" alt="1232840-20200323130707480-939192332.png"></p><p>4.然后打开扩展程序的开发者模式</p><p><img src="https://i.loli.net/2020/08/12/VaLrNHh3xyltWB7.png" alt="1232840-20200323132511485-327114122.png"></p><p>5.点击打包扩展程序, 把扩展程序的本地路径复制粘贴上去即可</p><p><img src="https://i.loli.net/2020/08/12/TWyoQpLhJPxbVkR.png" alt="1232840-20200323132840015-753782218.png"></p><p>6.点击点击打包扩展程序后，点击“确定”</p><p><img src="https://i.loli.net/2020/08/12/ldqkrYDS5mVvcEO.png" alt="1232840-20200323132907101-302567763.png"></p><p>7.点击确定后, 就会在…..Default\Extensions\插件ID 的文件夹生成我们需要的crx文件了</p><p><img src="https://i.loli.net/2020/08/12/sUm7jdGuKIN5HTb.png" alt="1232840-20200323133005876-338940262.png"></p><p>这时候只要将这个文件拖到chrome浏览器上就可以安装了</p><p>这是一个兜底的方案，万一前面的都不行了，知道了这种方法也能成功让别人安装上插件。当然前提是你自己已经安装上这个插件。</p><h4 id="4-小结"><a href="#4-小结" class="headerlink" title="4.小结"></a>4.小结</h4><p>　　 好了，今天就分享到这里吧，你可以在评论里留下，你觉得比较好的下载Chrome插件的方法。</p>]]></content>
+        <content type="html"><![CDATA[<p><strong>🔥 Jmeter(二十二) - 从入门到精通 - JMeter断言 - 下篇（详解教程）</strong></p><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>断言组件用来对服务器的响应数据做验证，常用的断言是响应断言，其支持正则表达式。虽然我们的通过响应断言能够完成绝大多数的结果验证工作，但是JMeter还是为我们提供了适合多个场景的断言元件，辅助我们来更好的完成结果验证工作。在使用JMeter进行性能测试或者接口自动化测试工作中，经常会用到的一个功能，就是断言，断言相当于检查点，它是用来判断系统返回的响应结果是否正确，以此帮我们判断测试是否通过。</p><h4 id="2-预览断言"><a href="#2-预览断言" class="headerlink" title="2.预览断言"></a>2.预览断言</h4><p>　　首先我们来看一下JMeter的断言，路径：线程组（用户）-&gt;添加-&gt;断言；我们可以清楚地看到JMeter5中共有13个断言（不包括jp@gc开头的断言，这个是宏哥安装的插件），如下图所示：</p><p><img src="https://i.loli.net/2020/08/17/8aSDkAbCgVcqmf1.png" alt="1232840-20200722090456854-246813506.png"></p><p>如果上图您看得不是很清楚的话，宏哥总结了一个思维导图，关于JMeter5的断言类型，如下图所示： </p><p><img src="https://i.loli.net/2020/08/17/Yofh8lGmdeBcnPZ.png" alt="1232840-20200723130527688-282348624.png"></p><p>通过以上的了解，我们对断言有了一个大致的了解和认识。下面宏哥就给小伙伴或则童鞋们分享讲解一些通常在工作中会用到的断言。 </p><h4 id="3-常用断言详解"><a href="#3-常用断言详解" class="headerlink" title="3.常用断言详解"></a>3.常用断言详解</h4><p>这一小节，宏哥就由上而下地详细地讲解一下常用的断言。</p><h5 id="3-1-HTML断言"><a href="#3-1-HTML断言" class="headerlink" title="3.1 HTML断言"></a>3.1 HTML断言</h5><p>对响应类为XML类型的文件进行断言；</p><p>作用对象：针对sampler中的SOAP/XML-RPC Request而使用的断言</p><p>1、我们先来看看这个 HTML断言 长得是啥样子，路径：线程组 &gt; 添加 &gt; 断言 &gt; HTML断言，如下图所示： </p><p><img src="https://i.loli.net/2020/08/17/1Gl46osKyDk7UxN.png" alt="1232840-20200723132011819-54779036.png"></p><p>2、关键参数说明如下：</p><p>名称：控制器的描述性名称，显示在左边节点上，并用于命名事务 </p><p>注释：控制器注释信息，非必填项 </p><p>Tidy Settings:Tidy 环境（Tidy是一个HTML语法检查器和打印工具，可以将HTML转换为XML类型的文件）</p><p>Doctype:文档类型（可通过下拉框选择不同文档类型→ omit疏忽遗漏的/auto动态的/strict严格的/loose）</p><p>Format：文件格式（可选择HTML/XHTML/XML三种不同类型的文件格式来检查返回内容）</p><p>Errors only：误差校正（能接受的最大值）</p><p>Error threshold：误差/错误范围（可选择误差/错误数量的范围，最大值）</p><p>Warning threshold：警告范围（可选择误差警告的数量范围，最大值）</p><p>如果勾选“Error only”这里忽略Warning，只对误差作统计检查；如果对返回内容的检查结果不超过指定结果，则断言通过，否则失败。</p><p>Write JTidy report to file:写入JTidy报告的文件（JTidy是Tidy的一个java移植，可以将它当成一个处理HTML文件的DOM解析器）</p><h5 id="3-2MD5-Hex断言"><a href="#3-2MD5-Hex断言" class="headerlink" title="3.2MD5 Hex断言"></a>3.2MD5 Hex断言</h5><p>MD5是一种消息摘要算法，用以提供消息的完整性保护，对返回的MD5结果进行断言，使用简单，直接跳入MD5值。执行服务器响应的MD5哈希并将其与给定的Md5哈希进行比较。它非常适合您要检查下载文件是否完整的情况。</p><p>作用对象：针对参数类型为MD5Hex加密的参数的断言</p><p>1、我们先来看看这个 MD5 Hex断言 长得是啥样子，路径：线程组 &gt; 添加 &gt; 断言 &gt; MD5 Hex断言，如下图所示： </p><p><img src="https://i.loli.net/2020/08/17/lyitx9YKmCTIsZb.png" alt="1232840-20200723132050265-887107958.png"></p><p>2、关键参数说明如下：</p><p>名称：控制器的描述性名称，显示在左边节点上，并用于命名事务 </p><p>注释：控制器注释信息，非必填项 </p><p>MD5Hex：将已被MD5加密的参数写入其中，添加取样器等其他元件</p><h5 id="3-3SMIME断言"><a href="#3-3SMIME断言" class="headerlink" title="3.3SMIME断言"></a>3.3SMIME断言</h5><p>SMIME是一种多用途网际邮件扩充协议，相比于之前的SMAP邮件传输协议，增加了安全性，对邮件主题进行保护；</p><p>作用对象：针对采用了该种邮件传输协议的信息</p><p>1、我们先来看看这个 SMIME断言长得是啥样子，路径：线程组 &gt; 添加 &gt; 断言 &gt; SMIME断言，如下图所示： </p><p><img src="https://i.loli.net/2020/08/17/aOQfAPESwm8IHzq.png" alt="1232840-20200723132128105-897998871.png"></p><p>2、关键参数说明如下：</p><p>名称：控制器的描述性名称，显示在左边节点上，并用于命名事务 </p><p>注释：控制器注释信息，非必填项 </p><p>signature:签名（可选择对协议的签名验证状态）</p><pre><code>      Verify signature:验证签名      Message not signed:没有签名消息</code></pre><p>Signer certificate：签名证书（因为SMIME协议增加了安全传输，需要证书验证）</p><pre><code>      No check：不检查      Check values:检查</code></pre><p>Signer distinguished name:签名证书者名称（证书注册者的名称）</p><p>Sigmer email address:签名者的邮件地址（注册的邮件地址）</p><p>Issuer distinguished name:发行者名称（由谁发行的证书）</p><p>Serial Number:证书序号</p><p>Certificate file:选择证书文件</p><p>Execute assertion message at position:执行断言消息的位置（在返回消息的具体哪个位置执行断言）</p><h5 id="3-4XML断言"><a href="#3-4XML断言" class="headerlink" title="3.4XML断言"></a>3.4XML断言</h5><p>XML(可扩展标记语言) 提供一种描述结构化数据的方法。与主要用于控制数据的显示和外观的 HTML 标记不同，XML 标记用于定义数据本身的结构和数据类型；</p><p>作用对象：判断返回结果是否和xml的格式即&lt;&gt;&lt;/&gt;成对出现</p><p>1、我们先来看看这个 XML断言长得是啥样子，路径：线程组 &gt; 添加 &gt; 断言 &gt; XML断言，如下图所示： </p><p><img src="https://i.loli.net/2020/08/17/MsANEFmLkHGce6b.png" alt="1232840-20200723132203143-1115929205.png"></p><p>2、关键参数说明如下：</p><p>名称：控制器的描述性名称，显示在左边节点上，并用于命名事务 </p><p>注释：控制器注释信息，非必填项 </p><h5 id="3-5-XML-Schema断言"><a href="#3-5-XML-Schema断言" class="headerlink" title="3.5 XML Schema断言"></a>3.5 XML Schema断言</h5><p>亦可以称为XML模型断言/XML数据类型断言；XML Schema 定义了两种主要的数据类型：①xml document schema 文档架构 ;② 文档架构xml-schema xml模式</p><p>作用对象：返回结果为XML概要断言的2中数据类型的消息</p><p>1、我们先来看看这个 XML Schema断言 长得是啥样子，路径：线程组 &gt; 添加 &gt; 断言 &gt; XML Schema断言，如下图所示： </p><p><img src="https://i.loli.net/2020/08/17/KD6xnc2FwpIylU5.png" alt="1232840-20200723132240507-1289452731.png"></p><p>2、关键参数说明如下：</p><p>名称：控制器的描述性名称，显示在左边节点上，并用于命名事务 </p><p>注释：控制器注释信息，非必填项 </p><p>文件名：载入文件名 ，（写入需要断言的文件名称）</p><h5 id="3-6-Bean-Shell断言"><a href="#3-6-Bean-Shell断言" class="headerlink" title="3.6 Bean Shell断言"></a>3.6 Bean Shell断言</h5><p>BeanShell是一种松散类型的脚本语言（这点和JS类似），一种完全符合java语法的java脚本语言，并且又拥有自己的一些语法和方法；</p><p>BeanShell断言支持各种开发语言，本文介绍使用java编写断言，使用BeanShell断言的好处是可以自由发挥，比如当断言失败，提示预期结果、实际结果，或者失败时把结果输出到日志。</p><p>作用对象：针对sampler中的Bean Shell sampler而使用的断言</p><p>1、我们先来看看这个 BeanShell断言 长得是啥样子，路径：线程组 &gt; 添加 &gt; 断言 &gt; BeanShell断言，如下图所示： </p><p><img src="https://i.loli.net/2020/08/17/5wTu6nS7osAaRGf.png" alt="1232840-20200723132321520-1058492710.png"></p><p>2、关键参数说明如下：</p><p>名称：控制器的描述性名称，显示在左边节点上，并用于命名事务 </p><p>注释：控制器注释信息，非必填项 </p><p>Reset bsh.interpreter before each call:在每次调用Bean Shell之前重置bsh.interpreter类（bsh.interpreter是Bean Shell脚本语言的一种类，也可以理解为一种解析器）</p><p>Parameters（String Parameters and String []bsh.args）:String参数（String []bsh.args是主类main函数的形式参数,是一个String 对象数组，可以用来获取命令行用户输入进去的参数）</p><p>Script file：脚本文件（可以填入脚本文件路径）</p><p>Script（see below for variables that are defined）:参照下文定义的变量（使脚本文件参照定义的变量来运行）</p><h4 id="4-小结"><a href="#4-小结" class="headerlink" title="4.小结"></a>4.小结</h4><p> 　　好了，今天到这里JMeter5的所有断言基础就介绍和分享完了，感谢您耐心的阅读和一路支持宏哥！！！</p>]]></content>
       
       
       <categories>
           
-          <category> Chrome </category>
+          <category> Jmeter </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Chrome </tag>
+            <tag> Jmeter </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python相关知识-04</title>
+      <link href="/2016/06/08/python/"/>
+      <url>/2016/06/08/python/</url>
+      
+        <content type="html"><![CDATA[<p><strong>🔥 python学习 -女神或者男神把微信消息撤回后好慌，有了这个妈妈再也不担心你看不到女神或者男神撤回的消息了（超详解）</strong></p><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>有时候在忙工作，女朋友发了一个消息，就撤回了，但是人天生的都有一颗好奇心，而且在当今这个时代找个女朋友不容易，一个程序猿找一个女朋友更是不容易的。人家好不容易跟你，你还不得把人家当老佛爷侍候着，侍候着也不行，还得小心翼翼地侍候着，但是声明：宏哥可能过分宠她，但绝对不是妻管严哈！因此当她撤回消息后，慌得一逼，是不是不高兴了？是不是生气了？还是发生什么事了？是不是生病了？还是我哪里惹到她了？俗话说：不干亏心事，不怕鬼叫门，虽然自己确实没有干亏心事，但是心里仍然打着小鼓，脑海里一遍一遍的过滤着，我好像没有惹到她呀！到底是怎么了呢？更严重的话，可能有时候自己会胡思乱想，因为这个可能会影响正常工作，当然了，宏哥目前还没出现这种情况哈！偶尔有时候我会问一次，女朋友告诉我撤回啥了，但是有时候人家撤回好几条，我要一一追问；人家就会说：烦你，烦死了，一些之类的话。吓得宏哥以后都不敢问了，所以为了不问，就有了这篇文章。</p><p>当我们与朋友，亲人，爱人聊天的时候，我估计每个人都经理过，那就是微信撤回功能中所提到的，对方撤回一条消息。</p><p>俗话说，说出口的话，如泼出去的水，是收不回的。但今天可以了，在微信和QQ上，你可以撤回你刚刚说的话。当你的手机发出“嘀”的提示音，表示你收到了一条消息。忙打开，迫不及待地看看，是谁又在与自己说话。还没来得及看，或还没有看完，那句话却忽然没了，屏幕上显示“对方撤回了一条消息”。这个时候，我们都会有所感受</p><p><img src="https://i.loli.net/2020/08/13/JPVnfILe5adgCA6.png" alt="1232840-20190710130126354-1972084673.png"></p><p>每天，我们的手机都会收到大量的信息，包括别人与你说的话，其中的绝大多数，都属于可有可无的话，即垃圾信息。你也许为此不胜其烦，但有一条消息，一定能够引起你的关注，那就是“对方撤回了一条消息”。</p><p>一条撤回的消息，就像一个秘密，让你迫切地想去一探究竟；或如一个诱饵，瞬间勾起你强烈的兴趣。你想知道，那是怎样的一句话？是对方不慎讲出的真话，还是一句发错了对象的话？</p><p>总之，这个撤回的消息，让人顿生×××。这个时候，就是技术人员出马的时候了，哪门子技术人员？如：Python程序员！</p><p><img src="https://i.loli.net/2020/08/13/KUqmZr2aT5o79sJ.png" alt="1232840-20190710130354979-1124712765.png"><br><img src="https://i.loli.net/2020/08/13/e8xvE69uaGLtizo.jpg" alt="1474961669_736163.jpg"></p><p>看了上边这种那个图片想必大家都不是很陌生吧。<br>你是不是遇到过这样的情况，一个微信群，某个臭小子或者女神、男神发了条消息，等到自己有时间去看的时候却被撤回了……总感觉自己突然成为了唯一的吃瓜群众……<br>又或者你的女神、男神发了个消息，结果没来急看就这样了……<br>比如……下面这个</p><p><img src="https://i.loli.net/2020/08/13/7c9gbpNfY6QBshP.jpg" alt="1474961717_675662.jpg"></p><p>内心独白：好想知道对面跟我说了什么了?<br>内心独白：我要不要直接打电话过去?<br>内心独白：还是直接问问刚才你发的什么（屁话，人家想让你知道还撤回啊？）</p><p><img src="https://i.loli.net/2020/08/13/WCInaiSKMkmTtRL.jpg" alt="1474961788_981255.jpg"></p><p>想要知道那条消息是啥，想的心里痒痒？今天宏哥就给大家透露一个方法，嘿嘿嘿，接着看吧：<br>哈哈哈！</p><p><img src="https://i.loli.net/2020/08/13/fC6qKHZxrE9wp7I.jpg" alt="1474961810_319769.jpg"></p><h4 id="2-普通人"><a href="#2-普通人" class="headerlink" title="2.普通人"></a>2.普通人</h4><p>此方法只针对iPhone用户，且只能查看文字消息（Android 用户可以试一下，成不成功吗，这里还是个问号，因为宏哥没有实践，没有实践，就没有发言权）。</p><p>此方法对图片、视频神马的没办法的呦！具体操作：</p><p>1.首先,进入iPhone的设置页面，设置通知栏。</p><p>2.在微信的设置页面，允许微信通知，并且其中的所有选项都修改为允许。</p><p><img src="https://i.loli.net/2020/08/13/i6ve7qslSbawH19.jpg" alt="1474961831_587389.jpg"></p><p>3.这么设置以后有啥效果呢？嘿嘿嘿，小伙伴们想想看，你那丰富的通知栏……懂了吧，啥消息都会给你留在那儿了。</p><p><img src="https://i.loli.net/2020/08/13/sYSzEQKJa26MfbR.jpg" alt="1474961924_810360.jpg"></p><p>PS：如果你按照宏哥的说法做了，但是仍然没有看到消息，可能是微信APP内的设置选项没有打开，可以打开微信设置——新消息通知——打开通知显示消息详情，然后再试试罗！<br>小伙伴们拿走不谢！</p><p><img src="https://i.loli.net/2020/08/13/DfHobGFr7gL12vz.jpg" alt="1474961945_543613.jpg"></p><p>最后有些人说这么简单，哪里用你教，拜托宏哥也是搜集的一些小技巧，没有提醒，咋么想到这个方法呢？</p><p> 以上方法撑死了只能看到文字信息，图片语音等等就看不到了，下边宏哥介绍代码实现得方法：</p><p>ps:安卓手机我试过了很好使的，有兴趣的iPhone手机用户也可以试一下哈！！！</p><h4 id="3-python技术人员"><a href="#3-python技术人员" class="headerlink" title="3.python技术人员"></a>3.python技术人员</h4><h5 id="1、准备环境"><a href="#1、准备环境" class="headerlink" title="1、准备环境"></a>1、准备环境</h5><p>python语言环境</p><p>python解释器-pycharm</p><h5 id="2、itchat介绍"><a href="#2、itchat介绍" class="headerlink" title="2、itchat介绍"></a>2、itchat介绍</h5><p>itchat是一个开源的微信个人号接口，通过itchat可以实现微信（好友或微信群）的信息处理，包括文本、图片、小视频、地理位置消息、名片消息、语音消息、动画表情、普通链接、音乐链接、群消息、红包消息、系统消息等，可以对微信的消息进行获取和回复。</p><h5 id="3、itchat使用"><a href="#3、itchat使用" class="headerlink" title="3、itchat使用"></a>3、itchat使用</h5><blockquote><p>itchat库的安装</p></blockquote><pre><code>pip install itchat</code></pre><p><img src="https://i.loli.net/2020/08/13/pu3m9DgFSPzq7dB.png" alt="1232840-20190710104949085-164366023.png"></p><blockquote><p>API</p></blockquote><p><a href="https://itchat.readthedocs.io/zh/latest/api/" target="_blank" rel="noopener">查看地址</a></p><h5 id="4、pycharm解释器写入代码"><a href="#4、pycharm解释器写入代码" class="headerlink" title="4、pycharm解释器写入代码"></a>4、pycharm解释器写入代码</h5><pre><code>#!/usr/bin/env python3# -*- coding: utf-8 -*-# 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行# 2.注释：包括记录创建时间，创建人，项目名称。&#39;&#39;&#39;Created on 2019-7-10@author: 北京-宏哥   QQ交流群：707699217Project:学习和使用python&#39;&#39;&#39;# 3.导入模块import itchatfrom itchat.content import *import timeimport reimport osmsg_information = {}# 针对表情包的内容face_bug = None@itchat.msg_register([TEXT, PICTURE, FRIENDS, CARD, MAP, SHARING, RECORDING, ATTACHMENT, VIDEO], isFriendChat=True, isMpChat=True)def handle_receive_msg(msg):    global face_bug    # 接收消息的时间    msg_time_rec = time.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;, time.localtime())    # 在好友列表列表中查询发送信息的好友昵称    msg_from = itchat.search_friends(userName=msg[&#39;FromUserName&#39;])[&#39;NickName&#39;]    # 信息发送的时间    msg_time = msg[&#39;CreateTime&#39;]    # 每条信息的ID    msg_id = msg[&#39;MsgId&#39;]    # 储存信息的内容    msg_content = None    # 储存分享的连接，比如分享的文章和音乐    msg_share_url = None    # 如果发送的消息是文本或者好友推荐    if msg[&#39;Type&#39;] == &#39;Text&#39; or msg[&#39;Type&#39;] == &#39;Friends&#39;:        msg_content = msg[&#39;Text&#39;]        print(msg_content)    # 如果发送的消息是附件，视频，图片，语音    elif msg[&#39;Type&#39;] == &#39;Attachment&#39; or msg[&#39;Type&#39;] == &#39;Video&#39; \        or msg[&#39;Type&#39;] == &#39;Picture&#39;\            or msg[&#39;Type&#39;] == &#39;Recording&#39;:        # 内容为下载文件名        msg_content = msg[&#39;FileName&#39;]        msg[&#39;Text&#39;](str(msg_content))    # 如果消息是推荐的名片    elif msg[&#39;Type&#39;] == &#39;Card&#39;:        # 内容是推荐人的昵称和性别        msg_content = msg[&#39;RecommendInfo&#39;][&#39;NickName&#39;] + &#39;的名片&#39;        if msg[&#39;RecommendInfo&#39;][&#39;Sex&#39;] == 1:            msg_content += &#39;性别为男&#39;        else:            msg_content += &#39;性别为女&#39;        print(msg_content)    # 如果消息为分享的位置信息    elif msg[&#39;Type&#39;] == &#39;Map&#39;:        x, y, location = re.search(            &quot;&lt;location x=\&quot;(.*?)\&quot; y=\&quot;(.*?)\&quot;.*label=\&quot;(.*?)\&quot;.*&quot;, msg[&#39;OriContent&#39;]).group(1, 2, 3)        if location is None:            # 内容为详细地址            msg_content = r&#39;纬度-&gt;&#39; + x.__str__() + &quot;经度-&gt;&quot; + y.__str__()        else:            msg_content = r&quot;&quot; + location    # 如果消息是分享的音乐或者文章，详细的内容为文章的标题或者分享的名字    elif msg[&#39;Type&#39;] == &#39;Sharing&#39;:        msg_content = msg[&#39;Text&#39;]        msg_share_url = msg[&#39;Url&#39;]        print(msg_share_url)    face_bug = msg_content    # 将信息存储在字典中，每一个msg_id对应一条消息    msg_information.update(        {            msg_id: {                &quot;msg_from&quot;: msg_from, &quot;msg_time&quot;: msg_time, &quot;msg_time_rec&quot;: msg_time_rec,                &quot;msg_type&quot;: msg[&#39;Type&#39;],                &quot;msg_content&quot;: msg_content, &quot;msg_share_url&quot;: msg_share_url            }        })#这个是用于监听是否有friend消息撤回@itchat.msg_register(NOTE, isFriendChat=True, isGroupChat=True, isMpChat=True)def information(msg):    # 这里如果这里的msg[&#39;Content&#39;]中包含消息撤回和id，就执行下面的语句    if &#39;撤回了一条消息&#39; in msg[&#39;Content&#39;]:        old_msg_id = re.search(&quot;\&lt;msgid\&gt;(.*?)\&lt;\/msgid\&gt;&quot;, msg[&#39;Content&#39;]).group(1)        # 得到消息        old_msg = msg_information.get(old_msg_id)        print(old_msg)        # 如果发送的是表情        if len(old_msg_id)&lt;11:            itchat.send_file(face_bug, toUserName=&#39;filehelper&#39;)        # 发送撤回的提示给文件助手        else:            msg_body = &quot;【&quot;\                       + old_msg.get(&#39;msg_from&#39;) + &quot;撤回了】\n&quot;\                       + old_msg.get(&quot;msg_type&quot;) + &quot;消息:&quot; + &quot;\n&quot;\                       + old_msg.get(&quot;msg_time_rec&quot;) + &quot;\n&quot;\                       + r&quot;&quot; + old_msg.get(&quot;msg_content&quot;)        # 如果分享的文件被撤回了，那么就将分享的url加在msg_body中发送给文件助手        if old_msg[&#39;msg_type&#39;] == &quot;Sharing&quot;:            msg_body += &quot;\n就是这个链接&gt;&quot; + old_msg.get(&#39;msg_share_url&#39;)        # 将撤回消息发送到文件助手        itchat.send_msg(msg_body, toUserName=&quot;filehelper&quot;)        # 有文件的话也要将文件发送回去        if old_msg[&quot;msg_type&quot;] == &quot;Picture&quot;\                or old_msg[&quot;msg_type&quot;] == &quot;Recording&quot;\                or old_msg[&quot;msg_type&quot;] == &quot;Video&quot;\                or old_msg[&quot;msg_type&quot;] == &quot;Attachment&quot;:            file = &quot;@fil@%s&quot; % (old_msg[&#39;msg_content&#39;])            itchat.send(msg=file, toUserName=&#39;filehelper&#39;)            os.remove(old_msg[&#39;msg_content&#39;])        # 删除字典旧信息        msg_information.pop(old_msg_id)itchat.auto_login(hotReload=True)itchat.run()</code></pre><p>运行之后需要扫描二维码登录，登录后微信手机助手就能监测到对方撤回的消息</p><p><img src="https://i.loli.net/2020/08/13/9ogHFQ2u8WndxyB.png" alt="786645-20190430144939424-363898350.png"></p><p>扫码登录日志撤回测试：</p><p><img src="https://i.loli.net/2020/08/13/YiLq2IeQHscfKtp.png" alt="1232840-20190710115019243-1843266056.png"></p><p>文件传输助手接收到的撤回信息：（你可以在这里查看女神或者男神撤回的信息）</p><p><img src="https://i.loli.net/2020/08/13/GUOjASQmvPFw45E.png" alt="1232840-20190710115448892-334454506.png"><br><img src="https://i.loli.net/2020/08/13/3PfspFzE7Q2xOIZ.png" alt="1232840-20190710130430968-976090296.png"></p><p>下面介绍.py文件如何生成.exe文件，方便做成exe发送给其他人使用</p><p>pycharm编辑器Terminal窗口使用</p><pre><code>pyinstaller -F .py文件所在绝对路径</code></pre><p>成功之后会在python安装路径下的dist文件看到生成的exe文件</p><p>PS：python3.6版本下的才能转换成功</p><p>欢迎留言讨论你的男神和女神对于你撤回消息的反应哈！！！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python相关知识-03</title>
+      <link href="/2016/06/07/python/"/>
+      <url>/2016/06/07/python/</url>
+      
+        <content type="html"><![CDATA[<p><strong>🔥 安装需要的第三方库时，命令行输入pip提示不是内部或外部命令</strong></p><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>在做Python开发时，安装需要的第三方库时，大多数人喜欢选择在命令行用pip进行安装。</p><p>然而有时敲入pip命令会提示‘pip’不是内部或外部命令。。如图：</p><p><img src="https://i.loli.net/2020/08/13/SLlHMdvDCr7Axm9.png" alt="1232840-20190111103734604-1038184035.png"></p><h4 id="2-解决办法"><a href="#2-解决办法" class="headerlink" title="2.解决办法"></a>2.解决办法</h4><p>1、在python安装目录中找得到script文件夹，查看文件夹内部是否存在pip3.exe这个文件。</p><p><img src="https://i.loli.net/2020/08/13/1ywdlmc2ehFKJPv.png" alt="1232840-20190111104202531-1755210513.png"></p><p>2、如果没有，在命令行输入：python -m ensurepip 将pip.exe文件下载下来</p><p><img src="https://i.loli.net/2020/08/13/mEZ2BnbDfzpkJr6.png" alt="1232840-20190111104339720-994539650.png"></p><p>3、在python安装目录中找得到script文件夹，查看文件夹内部，可以看到存在pip3.exe这个文件了。</p><p><img src="https://i.loli.net/2020/08/13/m1Nx5jDrJ4nhPwK.png" alt="1232840-20190111104308507-1203287731.png"></p><p>4、验证pip是否安装成功，出现如图界面，就是成功的安装了pip。</p><p><img src="https://i.loli.net/2020/08/13/fqXDgktuy7C9Apw.png" alt="1232840-20190111110446180-1159387478.png"></p><h4 id="3-附录"><a href="#3-附录" class="headerlink" title="3.附录"></a>3.附录</h4><p>如果script文件夹内存在pip.exe，那么就是cmd的环境路径有问题</p><p>在命令行输入path c:\windows\system32\</p><p><img src="https://i.loli.net/2020/08/13/yioPqXTZCUFIlxh.png" alt="1232840-20190111110816837-1166434226.png"></p><p>或者在环境变量中添加%SystemRoot%System32</p><p><img src="https://i.loli.net/2020/08/13/vPuSLDV95IlB63O.png" alt="1232840-20190111110756814-467727971.png"></p><p>有些python库是windows环境下无法支持使用的，为了不影响学习和使用，在此添加一个whl包的下载方法</p><p>Python open-source extension packages </p><p><a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy" target="_blank" rel="noopener">https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy</a></p><p>这个网站里面有很多.whl格式的packages，是一个非常好的资源站。 </p><p>以一个实例演示whl文件的安装</p><p>1.首先在网站下载需要的库包</p><p>2.win+R打开终端</p><p>3.在终端执行 pip install D:\curses-2.2+utf8-cp37-cp37m-win_amd64.whl(我下载安装的是curses)</p><p>此外，安装的话<br>同时，在windows下确实很多package不好装。可以下载python包到本地，命令行进入文件夹（有setup.py路径下），输入：</p><pre><code> $ python setup.py install</code></pre><p>则可以将第三方库安装到python中。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python相关知识-02</title>
+      <link href="/2016/06/06/python/"/>
+      <url>/2016/06/06/python/</url>
+      
+        <content type="html"><![CDATA[<p><strong>🔥 api-ms-win-crt-process-l1-1-0.dll 丢失的处理，遇到问题和完美解决</strong></p><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>在换了新电脑后，一些环境需要重新搭建，本以为是个小case，没想到竟然遇到了各种拦路虎。</p><p>在成功安装Python3.7后，需要检验是否成功安装，在命令行输入python后，回车；发现提示api-ms-win-crt-process-l1-1-0.dll丢失，网上搜索后发现很多人都出现了 api-ms-win-crt**.dll缺失的问题，导致一些软件或游戏无法正常运行。总结如下：</p><p>Windows 通用 C 运行库（Universal C Runtime）是通过Windows Update更新安装到系统的，更新的编号为KB2999226（10.0.10240.16390）或KB3118401（10.0.10586.9），组件如下：</p><p>　　api-ms-win-core-file-l1-2-0.dll</p><p>　　api-ms-win-core-file-l2-1-0.dll</p><p>　　api-ms-win-core-localization-l1-2-0.dll</p><p>　　api-ms-win-core-processthreads-l1-1-1.dll</p><p>　　api-ms-win-core-synch-l1-2-0.dll</p><p>　　api-ms-win-core-timezone-l1-1-0.dll</p><p>　　api-ms-win-core-xstate-l2-1-0.dll</p><p>　　api-ms-win-crt-conio-l1-1-0.dll</p><p>　　api-ms-win-crt-convert-l1-1-0.dll</p><p>　　api-ms-win-crt-environment-l1-1-0.dll</p><p>　　api-ms-win-crt-filesystem-l1-1-0.dll</p><p>　　api-ms-win-crt-heap-l1-1-0.dll</p><p>　　api-ms-win-crt-locale-l1-1-0.dll</p><p>　　api-ms-win-crt-math-l1-1-0.dll</p><p>　　api-ms-win-crt-multibyte-l1-1-0.dll</p><p>　　api-ms-win-crt-private-l1-1-0.dll</p><p>　　api-ms-win-crt-process-l1-1-0.dll</p><p>　　api-ms-win-crt-runtime-l1-1-0.dll</p><p>　　api-ms-win-crt-stdio-l1-1-0.dll</p><p>　　api-ms-win-crt-string-l1-1-0.dll</p><p>　　api-ms-win-crt-time-l1-1-0.dll</p><p>　　api-ms-win-crt-utility-l1-1-0.dll</p><p>　　api-ms-win-eventing-provider-l1-1-0.dll（KB3118401不含此文件）</p><p>　　ucrtbase.dll</p><p>在C:\window\system\   或者C:\window\SysWOW64\ 里找不到相应的.dll文件。网上有一些 单个.dll文件的下载，但是尝试后均无效。正确的做法是micorsoft 官网下载相应更新，再安装。重启后OK：</p><p>micorsoft 官网也告诉我们两个解决方法如下图：</p><p><img src="https://i.loli.net/2020/08/13/Q2HTcxPulepqfU5.png" alt="1232840-20190110090158227-376225806.png"></p><h4 id="2-方法一："><a href="#2-方法一：" class="headerlink" title="2.方法一："></a>2.方法一：</h4><p>1、点击左下角的Windows图标，点击控制面板</p><p><img src="https://i.loli.net/2020/08/13/NAb7O9uFxE5qJRp.png" alt="1232840-20190110090358016-1555634697.png"></p><p>2、点击“系统和安全”，点击“Windows Update”</p><p><img src="https://i.loli.net/2020/08/13/hLvR9OeMANuywEd.png" alt="1232840-20190110090741616-332028880.png"></p><p>3、点击“检查更新”，下载安装包，安装即可。（这个我这边亲自实验一边，问题没有解决），有兴趣的自己可以试一下。</p><h4 id="3-方法二："><a href="#3-方法二：" class="headerlink" title="3.方法二："></a>3.方法二：</h4><p>下载更新的独立程序（缺少哪个就安装那个），运行如图：</p><p><img src="https://i.loli.net/2020/08/13/ihuAdCQLywTIvN8.png" alt="1232840-20190110084818397-1276668829.png"></p><p>api-ms-win-crt-process-l1-1-0.dll 丢失是因为缺少下边两个安装包</p><p>KB2999226、KB3118401更新下载：</p><p>KB2999226 微软下载链接 <a href="https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows" target="_blank" rel="noopener">https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows</a></p><p>KB3118401 微软下载链接 <a href="https://support.microsoft.com/en-us/help/3118401/update-for-universal-c-runtime-in-windows" target="_blank" rel="noopener">https://support.microsoft.com/en-us/help/3118401/update-for-universal-c-runtime-in-windows</a></p><p> 本人亲测第一个下载安装后，问题就解决了，所以第二个没有安装。</p><p>注意：下载的时候下载对应操作系统和64、32的安装包。笔者第一次下载32位的，运行时报错，当时没找到原因，第二天才发现下载的是32位的安装包</p><p>然后下载64位，运行成功，安装成功，问题解决。</p><h4 id="4-安装包"><a href="#4-安装包" class="headerlink" title="4.安装包"></a>4.安装包</h4><p>说是下载失效了特意找了几个，没有试过，自己下载试一下。附上网盘链接: <a href="https://pan.baidu.com/s/13lV8hDX4b5TiOL8og7dHSg" target="_blank" rel="noopener">https://pan.baidu.com/s/13lV8hDX4b5TiOL8og7dHSg</a> 提取码: 8sks</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python相关知识-01</title>
+      <link href="/2016/06/05/python/"/>
+      <url>/2016/06/05/python/</url>
+      
+        <content type="html"><![CDATA[<p><strong>🔥 Python冒号的解释</strong></p><h4 id="1-Python冒号的解释"><a href="#1-Python冒号的解释" class="headerlink" title="1.Python冒号的解释"></a>1.Python冒号的解释</h4><ol><li>“没什么首次没有为第二个，跳了三个”。它得到的切片序列的每一个第三个项目。 扩展片是你想要的。新在Python 2.3 </li><li>Python的序列切片地址可以写成[开始：结束：一步]和任何启动，停止或结束可以被丢弃。a[::3]是每第三个序列。 </li><li>seq[::n]是每一个序列n个项的整个序列中。 例如：</li></ol><pre><code>&gt;&gt;&gt; range(10)[::2][0, 2, 4, 6, 8]</code></pre><p>语法是：</p><p>seq[start:end:step]<br>所以，你可以这样做：</p><pre><code>&gt;&gt;&gt; range(100)[5:18:2][5, 7, 9, 11, 13, 15, 17]</code></pre><ol start="4"><li>解释s[i:j:k]是，根据该“片第从i到j与第k步”。何时i和j缺席，整个序列是和s[::k]意思是“每k个项目”。 示例 首先，让我们来初始化一个列表：</li></ol><pre><code>&gt;&gt;&gt; s = range(20)&gt;&gt;&gt; s[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]</code></pre><p>让我们从每一个第3项s：</p><pre><code>&gt;&gt;&gt; s[::3][0, 3, 6, 9, 12, 15, 18]</code></pre><p>让我们从每一个第3项s[2:]：</p><pre><code>&gt;&gt;&gt; s[2:][2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]&gt;&gt;&gt; s[2::3][2, 5, 8, 11, 14, 17]</code></pre><p>让我们从每一个第3项s[5:12]：</p><pre><code>&gt;&gt;&gt; s[5:12][5, 6, 7, 8, 9, 10, 11]&gt;&gt;&gt; s[5:12:3][5, 8, 11]</code></pre><p>让我们从每一个第3项s[:10]：</p><pre><code>&gt;&gt;&gt; s[:10][0, 1, 2, 3, 4, 5, 6, 7, 8, 9]&gt;&gt;&gt; s[:10:3][0, 3, 6, 9]</code></pre><ol start="5"><li>当在Python切片第三是一步。至于看片扩展为一个很好的概述。 有了这些知识 CodeGo.net，[::3]您还没有指定任何开始或结束指数的切片。既然你已经指定了一步，3，这将需要的每第三个条目something开始优先个索引。例如：</li></ol><pre><code>&gt;&gt;&gt; &#39;123123123&#39;[::3]&#39;111&#39;</code></pre><ol start="6"><li><p>第三是优先步。因此，[:: 3]将返回列表/字符串的每个第3位。 </p></li><li><p>该::分开结束，开始，步长值。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>手把手教你安装Eclipse最新版本的详细教程</title>
+      <link href="/2016/06/04/eclipse/"/>
+      <url>/2016/06/04/eclipse/</url>
+      
+        <content type="html"><![CDATA[<p><strong>🔥 手把手教你安装Eclipse最新版本的详细教程 （非常详细，非常实用）</strong></p><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>首先声明此篇文章主要是针对测试菜鸟或者刚刚入门的小伙们或者童鞋们，大佬就没有必要往下看了。</p><p>写这篇文章的由来是因为后边要用这个工具，但是由于某些原因有部分小伙伴和童鞋们可能不会安装此工具，为了方便小伙伴们和童鞋们的后续学习和不打击他们的积极性，因为80%的人都是死在工具的安装这第一道门槛上，这门槛说高也不高说低也不是太低。所以宏哥就抽时间水了这一篇文章。</p><h4 id="2-第一步：下载eclipse，并安装。"><a href="#2-第一步：下载eclipse，并安装。" class="headerlink" title="2.第一步：下载eclipse，并安装。"></a>2.第一步：下载eclipse，并安装。</h4><p>1、首先打开官方地址（见下面）</p><p>Eclipse官方下载地址：点击打开官方链接</p><p>下载链接：<a href="http://www.eclipse.org/downloads/" target="_blank" rel="noopener">http://www.eclipse.org/downloads/</a></p><p><img src="https://i.loli.net/2020/08/13/VFh7zjDdGMKkyH4.png" alt="1232840-20191014111219368-1569509436.png"></p><p>2、点击 Download Packages;</p><p><img src="https://i.loli.net/2020/08/13/p72WXNatJOhwHMz.png" alt="1232840-20191014113422987-250379218.png"></p><p>3、下载安装包<br>如图：根据自己的系统选择64位的，点击相应链接下载（可能会弹出一个需要你付费的页面，并不是eclipse需要付费，这只是请求你捐钱的，无需理会）</p><p>下载完成后，解压安装包，解压路径随意。</p><p>打开之后，选中图中的文件，在桌面创建快捷方式，安装告一段落，可以尝试双击打开运行一下，应该会有bug。(这是因为没有安装JDK)</p><p><img src="https://i.loli.net/2020/08/13/n5LhuMmab2ceCT1.png" alt="1232840-20191014113539558-1601346403.png"></p><h4 id="3-第二步：下载JDK。"><a href="#3-第二步：下载JDK。" class="headerlink" title="3.第二步：下载JDK。"></a>3.第二步：下载JDK。</h4><p>1、下载JDK安装包<br>先给上下载链接：<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a></p><p><img src="https://i.loli.net/2020/08/13/D7rmwZYGbicOgW8.png" alt="1232840-20191014115457232-1232844090.png"></p><p>2、点击java之后，在第一个框中，点选Accept License Agreement</p><p><img src="https://i.loli.net/2020/08/13/bR6kiPIGAZHh2YU.png" alt="1232840-20191014115705700-845721958.png"></p><p>3、下载完成后，打开一路确定安装即可。</p><h4 id="4-第三步：java环境变量配置。"><a href="#4-第三步：java环境变量配置。" class="headerlink" title="4.第三步：java环境变量配置。"></a>4.第三步：java环境变量配置。</h4><p>1、我的电脑-&gt;右键-&gt;属性-&gt;高级系统设置-&gt;环境变量设置</p><p><img src="https://i.loli.net/2020/08/13/slq3tvrzni5xJko.png" alt="1232840-20191014132921799-1220247949.png"><br><img src="https://i.loli.net/2020/08/13/XsJhAoHCIfR8gBe.png" alt="1322366-20190509103700175-611435434.png"><br><img src="https://i.loli.net/2020/08/13/8FQHZv3nAVPoYWa.png" alt="1322366-20190509103708400-407578846.png"></p><p>2、变量配置<br>要让系统变量中（第二个框是系统变量）有path和classpath这两个变量，方法是：</p><p>点击新建，变量名：path，变量值：刚刚JDK的安装路径，例如我的：C:\Program Files\Java\jdk1.8.0_121\bin。</p><p>同样新建，变量名：classpath，变量值:C:\Program Files\Java\jdk1.8.0_121\jre\lib\rt.jar</p><p><img src="https://i.loli.net/2020/08/13/ezt9yafiUPHGTcO.png" alt="1322366-20190509103639640-1801091649.png"></p><p>到这里，就已经配置完成了，接下来可以打开DOS命令（开始菜单右键，运行：CMD）输入javac，显示如下图一样就可以了。</p><p><img src="https://i.loli.net/2020/08/13/s3m8pCf6awV9BKD.png" alt="1232840-20191014133147629-1250026089.png"></p><p>3、第二种配置方法：</p><p>“变量名”：JAVA_HOME</p><p>“变量值”：C:\Program Files\Java\jdk1.7.0_07//你安装的jdk的磁盘路径</p><p>“变量名”：Path</p><p>“变量值”：%Java_Home%\bin;%Java_Home%\jre\bin;</p><p>“变量名”：ClassPath</p><p>“变量值”：.;%Java_Home%\bin;%Java_Home%\lib\dt.jar;%Java_Home%\lib\tools.jar</p><p>注：上面的代码最好也是一个字符不变的贴上去，“变量值”最前面的 .; 不要漏掉。</p><p>做完上面的三个步骤之后，环境变量的配置已经完成了。</p><p>检查环境变量搭好了：调出“cmd”检查</p><p>1、输入：“java”，你应该看到下面的东西：</p><p><img src="https://i.loli.net/2020/08/13/6iIlY5mvdFqCJHK.png" alt="1322366-20190509103621678-260783540.png"></p><p>2、输入“javac”，你应该看到下面的东西：</p><p><img src="https://i.loli.net/2020/08/13/s3m8pCf6awV9BKD.png" alt="1232840-20191014133147629-1250026089.png"></p><p>3、输入“java -version”，你应该看到下面的东西：</p><p><img src="https://i.loli.net/2020/08/13/yJqOVscAe1haERr.png" alt="1232840-20191014133330429-452343785.png"></p><p>安装和配置完环境变量，再次双击桌面上的Eclipse图标，Eclipse启动成功。</p><h4 id="5-小结"><a href="#5-小结" class="headerlink" title="5.小结"></a>5.小结</h4><pre><code>    好了，菜鸟们到此Eclipse的安装就已经全部结束和完成。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Eclipse </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Eclipse </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Firefox相关知识-01</title>
+      <link href="/2016/06/03/firefox/"/>
+      <url>/2016/06/03/firefox/</url>
+      
+        <content type="html"><![CDATA[<p><strong>🔥 火狐浏览器所有版本</strong></p><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>最近在群里看到好多人需要火狐浏览器的低版本，而且都是跪求，更有甚者是高额悬赏，因此给大家一个链接，免费的，免费的，免费的！！！重要的事说三遍，拿走不谢~~</p><h4 id="2-下载地址"><a href="#2-下载地址" class="headerlink" title="2.下载地址"></a>2.下载地址</h4><p>火狐所有版本，了解一下，有需要的自行下载。</p><p><a href="http://ftp.mozilla.org/pub/firefox/releases/" target="_blank" rel="noopener">http://ftp.mozilla.org/pub/firefox/releases/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Firefox </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Firefox </tag>
             
         </tags>
       
