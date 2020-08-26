@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1015,7 +1025,7 @@ window.Canvas= new Universe(element);</script>
 <p>简单介绍一下。如果需要或者有兴趣可以在网上查看各种工具对应的资料进行深入人的学习，这里带领大家了解一下，碰到这些工具会用、了解、知道这些工具就达到目的了，不要到时候说到测试工具，一问三不知，一脸懵逼，那样就尴尬</p>
 <p>了。</p>
 <h4 id="2-接口测试工具"><a href="#2-接口测试工具" class="headerlink" title="2.接口测试工具"></a>2.接口测试工具</h4><p>　　接口测试工具如图：</p>
-<p><img src="https://i.loli.net/2020/08/04/EvR8oZDGfTyHxSd.png" alt="1232840-20190313103659147-746111331.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/EvR8oZDGfTyHxSd.png" alt="1232840-20190313103659147-746111331.png"></p>
 <h5 id="2-1Fiddler"><a href="#2-1Fiddler" class="headerlink" title="2.1Fiddler"></a>2.1Fiddler</h5><p>   首先，这是一个HTTP协议调试代理工具，说白了就是一个抓http包的工具。web测试和手机测试都能用到这个工具。既然是http协议，这个工具也能支持接口测试。稍后文章，我会专门介绍fiddler这个工具。Fiddler工具介绍：传送门</p>
 <h5 id="2-2PostMan"><a href="#2-2PostMan" class="headerlink" title="2.2PostMan"></a>2.2PostMan</h5><p>   Postman一款非常流行的API调试工具。其实，开发人员用的更多。因为测试人员做接口测试会有更多选择，例如Jmeter、soapUI等。不过，对于开发过程中去调试接口，Postman确实足够的简单方便，而且功能强大。这是一款google工程师开发的一个插件，可以安装到chrome浏览器上。支持不同接口测试请求，能够管理测试套件和自动化运行，弱点在于，自动化断言功能不强大。不能和jenkins和代码管理库进行持续集成测试。但是，绝对是一个很好的半手工，半自动化测试工具，我一般在写自动化接口测试用例，会打开postman进行辅助测试和debug。这个工具也会稍后在文章介绍。PostMan工具介绍：传送门</p>
 <p>　　Postman视频教程：</p>
@@ -1144,10 +1154,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1567,7 +1577,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="python接口自动化5">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="python接口自动化5">
                         
                         <span class="card-title">python接口自动化5</span>
                     </div>
@@ -1621,7 +1631,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="python接口自动化3">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/21.jpg" class="responsive-img" alt="python接口自动化3">
                         
                         <span class="card-title">python接口自动化3</span>
                     </div>
@@ -1762,9 +1772,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1898,7 +1920,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1943,7 +1964,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1045,21 +1055,21 @@ window.Canvas= new Universe(element);</script>
 <p>关闭该文件可用fp.close()</p>
 <p>备注： 改动之后，中文也不会乱码。</p>
 <h4 id="3-中文乱码"><a href="#3-中文乱码" class="headerlink" title="3.中文乱码"></a>3.中文乱码</h4><p>1、测试报告中，msg 自定义异常内容有中文情况会出现乱码，如图所示：</p>
-<p><img src="https://i.loli.net/2020/08/05/v2UAxtI13eMkwVs.png" alt="1232840-20190430135233864-848932277 _1_.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/v2UAxtI13eMkwVs.png" alt="1232840-20190430135233864-848932277 _1_.png"></p>
 <p>2、找到 HTMLTestRunner.py 文件，搜索:uo =</p>
 <p>3、找到红色区域设置编码的两个地方</p>
-<p><img src="https://i.loli.net/2020/08/05/5JPe347kvdt2mBx.png" alt="1232840-20190430134430216-1843435441.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/5JPe347kvdt2mBx.png" alt="1232840-20190430134430216-1843435441.png"></p>
 <p>4、注释掉红色区域这两个设置，重新添加编码格式为：uo = o.decode(‘utf-8’) ue = e.decode(‘utf-8’)，或者在此基础上直接修给成uo = o.decode(‘utf-8’) ue = e.decode(‘utf-8’)，建议初学者还是用第一种方法。这样出错了，可以很快还原，否则</p>
 <p>在碰到更复杂的代码直接修改就可能会遇到问题</p>
 <p>5、修改好之后记得保存，重新运行，乱码问题就解决了</p>
-<p><img src="https://i.loli.net/2020/08/05/Ub3ouNqFrjQ5pBn.png" alt="1232840-20190430135508632-850240072.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/Ub3ouNqFrjQ5pBn.png" alt="1232840-20190430135508632-850240072.png"></p>
 <h4 id="4-python3-报告问题"><a href="#4-python3-报告问题" class="headerlink" title="4.python3 报告问题"></a>4.python3 报告问题</h4><p>1、各位小伙伴可以按照我前边的方法进行自己修改，或者找我要也是可以，注意在修改的时候空格和Tab的问题，否则运行会报这样的错误</p>
-<p><img src="https://i.loli.net/2020/08/05/HgPqxceyoipa4tL.png" alt="1232840-20190430135930506-1946234772.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/HgPqxceyoipa4tL.png" alt="1232840-20190430135930506-1946234772.png"></p>
 <h4 id="5-报告问题样式优化"><a href="#5-报告问题样式优化" class="headerlink" title="5.报告问题样式优化"></a>5.报告问题样式优化</h4><p>1、优化是一些前端和CSS知识，在这里就不做详细介绍了，有兴趣的可以找我探讨一下，也可以和我要一下那个优化后的报告文件，优化后报告展示：</p>
-<p><img src="https://i.loli.net/2020/08/05/iwnINQ1f7Pr8suc.png" alt="1232840-20190430140451648-1262963364.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/iwnINQ1f7Pr8suc.png" alt="1232840-20190430140451648-1262963364.png"></p>
 <h4 id="6-小结"><a href="#6-小结" class="headerlink" title="6.小结"></a>6.小结</h4><p>1、关于生成报告，优化报告就是这么简单，小伙伴们练起来吧！</p>
 <p>2、为了新的报告不会覆盖掉老的测试报告，可以按图中的红色部分圈起来的方法实现</p>
-<p><img src="https://i.loli.net/2020/08/05/nWqliwtZPgTz6XU.png" alt="1232840-20190430141802039-838368915.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/nWqliwtZPgTz6XU.png" alt="1232840-20190430141802039-838368915.png"></p>
 <p>3、参考代码（增加一行代码，测试报告的路径修改一下）</p>
 <pre><code>1 # 获取当前时间，这样便于下面的使用。
 2 now = time.strftime(&quot;%Y-%m-%M-%H_%M_%S&quot;, time.localtime(time.time()))
@@ -1176,10 +1186,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1599,7 +1609,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="python接口自动化29">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/13.jpg" class="responsive-img" alt="python接口自动化29">
                         
                         <span class="card-title">python接口自动化29</span>
                     </div>
@@ -1653,7 +1663,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="python接口自动化27">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/11.jpg" class="responsive-img" alt="python接口自动化27">
                         
                         <span class="card-title">python接口自动化27</span>
                     </div>
@@ -1794,9 +1804,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1930,7 +1952,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1975,7 +1996,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

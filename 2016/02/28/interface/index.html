@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1013,23 +1023,23 @@ window.Canvas= new Universe(element);</script>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　我们用自动化新建任务之后，要想接着对这个新建任务操作，那就需要用参数关联了，新建任务之后会有一个任务的Jenkins-Crumb，获取到这个Jenkins-Crumb，就可以通过传这个任务Jenkins-Crumb继续操作这个新建的任务。</p>
 <p>大致流程步骤：登录—&gt;新建任务—&gt;web界面操作删除—&gt;抓取删除操作请求—&gt;提取参数—&gt;传参—&gt;代码实现。</p>
 <h4 id="2-删除新建任务"><a href="#2-删除新建任务" class="headerlink" title="2.删除新建任务"></a>2.删除新建任务</h4><p>1、我们前面讲过登录后新建任务后，那可以继续接着操作：删除刚才新建的任务</p>
-<p><img src="https://i.loli.net/2020/08/05/2z4AmT6wPotfuUY.png" alt="1232840-20190410100142473-890749140.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/2z4AmT6wPotfuUY.png" alt="1232840-20190410100142473-890749140.png"> </p>
 <p>2、用fiddler抓包，抓到删除新建任务的请求，从抓包结果可以看出，传的data参数是Jenkins-Crumb</p>
-<p><img src="https://i.loli.net/2020/08/05/1DFjHhAWeg43QX2.png" alt="1232840-20190410100833406-1133193107.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/1DFjHhAWeg43QX2.png" alt="1232840-20190410100833406-1133193107.png"> </p>
 <p>3.这个Jenkins-Crumb哪里来的呢？可以看上个请求的body</p>
-<p><img src="https://i.loli.net/2020/08/05/HM9y5fd831RSsIY.png" alt="1232840-20190410101314596-1293215964.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/HM9y5fd831RSsIY.png" alt="1232840-20190410101314596-1293215964.png"></p>
 <p>4、也就是说在新建任务的时候，系统随机生成一个Jenkins-Crumb参数的值，body里面带有Jenkins-Crumb这个参数。那接下来我们提取出来就可以了 </p>
 <h4 id="3-提取参数"><a href="#3-提取参数" class="headerlink" title="3.提取参数"></a>3.提取参数</h4><p>1、我们需要的参数Jenkins-Crumb是在新建任务是body里Jenkins-Crumb的值，这时候从body里提出对应的参数值就行了（注意：每次保存需要修改内容，不能重复）</p>
-<p><img src="https://i.loli.net/2020/08/05/o4kXQaqpnyju8Ve.png" alt="1232840-20190410102243835-275675165.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/o4kXQaqpnyju8Ve.png" alt="1232840-20190410102243835-275675165.png"></p>
 <h4 id="4-传参"><a href="#4-传参" class="headerlink" title="4.传参"></a>4.传参</h4><p>1、删除新建任务的data参数传上面取到的参数：{“Jenkins-Crumb”: Jenkins_Crumb}</p>
 <p>2、data数据类型post里面填data就行</p>
 <p>3、接着前面的新建任务操作，就可以删除成功了</p>
 <p>注意：如果想看清楚，可以在删除新建任务出打断点，看到新建的任务后，再次执行下边的代码 看看是不是可以删掉新建任务</p>
-<p><img src="https://i.loli.net/2020/08/05/SuawDTAt874CEbZ.png" alt="1232840-20190410103226878-1130583889.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/SuawDTAt874CEbZ.png" alt="1232840-20190410103226878-1130583889.png"></p>
 <p>4、302重定向</p>
-<p><img src="https://i.loli.net/2020/08/05/qsLVQ38Sfo1thKW.png" alt="1232840-20190410103106417-321307515.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/qsLVQ38Sfo1thKW.png" alt="1232840-20190410103106417-321307515.png"></p>
 <p>5、content内容复制到记事本，修改后缀以后，浏览器查看有“欢迎来到Jenkins”</p>
-<p><img src="https://i.loli.net/2020/08/05/GnD54YRTp2KjEhf.png" alt="1232840-20190410103459932-438816878.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/GnD54YRTp2KjEhf.png" alt="1232840-20190410103459932-438816878.png"></p>
 <h4 id="5-参考代码"><a href="#5-参考代码" class="headerlink" title="5.参考代码"></a>5.参考代码</h4><pre><code> 1 # coding:utf-8
  2 import requests
  3 # 先打开登录首页，获取部分session
@@ -1089,19 +1099,19 @@ window.Canvas= new Universe(element);</script>
 3 name = quote(name)
 4 url2 = &quot;http://localhost:8080/jenkins/job/&quot;+name+&quot;/doDelete&quot;</code></pre><p>2、给小伙伴们演示一下，打断点</p>
 <p>（1）在删除新建任务出打上断点,双击前边即可出现一个红色的大圆点</p>
-<p><img src="https://i.loli.net/2020/08/05/XN7yWrupABwjk3Q.png" alt="1232840-20190410151411971-729052573.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/XN7yWrupABwjk3Q.png" alt="1232840-20190410151411971-729052573.png"></p>
 <p>（2）查看jenkins主界面，没有新建任务</p>
-<p><img src="https://i.loli.net/2020/08/05/jzBEN7vXfQJcU8b.png" alt="1232840-20190410151819124-1886457889.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/jzBEN7vXfQJcU8b.png" alt="1232840-20190410151819124-1886457889.png"> </p>
 <p>（3）点击右上方的昆虫图标</p>
-<p><img src="https://i.loli.net/2020/08/05/Fy43odrzgXLvUBu.png" alt="1232840-20190410151619234-957694967.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/Fy43odrzgXLvUBu.png" alt="1232840-20190410151619234-957694967.png"></p>
 <p>（4）进入debug模式，代码运行到断点处停止运行</p>
-<p><img src="https://i.loli.net/2020/08/05/VbPu6v3jXrEFUmk.png" alt="1232840-20190410151903262-329092371.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/VbPu6v3jXrEFUmk.png" alt="1232840-20190410151903262-329092371.png"> </p>
 <p>（5）刷新主界面，再次查看jenkins主界面，有新建任务-北京-宏哥</p>
-<p><img src="https://i.loli.net/2020/08/05/pjlytHCT6b8axMg.png" alt="1232840-20190410152051748-1639698550.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/pjlytHCT6b8axMg.png" alt="1232840-20190410152051748-1639698550.png"></p>
 <p>（6）点击右边的绿色图标一次性执行完后边的代码，或者是上边拐弯蓝色图标，一步一步执行完后边的代码</p>
-<p><img src="https://i.loli.net/2020/08/05/o8Yi2vV5NhrbJzA.png" alt="1232840-20190410152454855-780685709.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/o8Yi2vV5NhrbJzA.png" alt="1232840-20190410152454855-780685709.png"> </p>
 <p>（7）刷新主界面，再次查看jenkins主界面，你会看到：新建任务-北京-宏哥  神奇的消失了，他就这样被你神不知鬼不觉的干掉了</p>
-<p><img src="https://i.loli.net/2020/08/05/PH46qLwXc3DlbeT.png" alt="1232840-20190410152953831-1349312086.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/PH46qLwXc3DlbeT.png" alt="1232840-20190410152953831-1349312086.png"></p>
 
             </div>
 			
@@ -1214,10 +1224,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1637,7 +1647,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="python接口自动化16">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="python接口自动化16">
                         
                         <span class="card-title">python接口自动化16</span>
                     </div>
@@ -1691,7 +1701,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="python接口自动化14">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/1.jpg" class="responsive-img" alt="python接口自动化14">
                         
                         <span class="card-title">python接口自动化14</span>
                     </div>
@@ -1832,9 +1842,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1968,7 +1990,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2013,7 +2034,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

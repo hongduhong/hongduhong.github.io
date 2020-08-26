@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1016,14 +1026,14 @@ window.Canvas= new Universe(element);</script>
 <p>　　预期结果</p>
 <p>　　其实对于接口功能测试也同样如此；接口测试的步骤中，最重要的是将实现向接口发送预设请求，结果则要关注响应信息及后续处理。</p>
 <p>　　所以接口功能测试用例编排可以考虑下列两种形式：</p>
-<p><img src="https://i.loli.net/2020/08/04/1rcOIyMhHWBDUTn.png" alt="1232840-20190311154749001-1803008343.png"></p>
-<p><img src="https://i.loli.net/2020/08/04/RkMUOeLc8ZA6y1t.png" alt="1232840-20190311143216663-314645977.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/1rcOIyMhHWBDUTn.png" alt="1232840-20190311154749001-1803008343.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/RkMUOeLc8ZA6y1t.png" alt="1232840-20190311143216663-314645977.png"></p>
 <p>接口其他方面测试用例模板：</p>
-<p>　　<img src="https://i.loli.net/2020/08/04/d5LbxpUScmajDPl.png" alt="1232840-20190311151949428-310494332.png"></p>
+<p>　　<img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/d5LbxpUScmajDPl.png" alt="1232840-20190311151949428-310494332.png"></p>
 <p> 　　要特别注意的是，实际工作场景中我们可能还会对接口之间的串联和混合场景进行测试。就是上一个接口返回的数据有可能作为后边的接口的参数传入后边的接口。</p>
 <h4 id="3-测试报告模板"><a href="#3-测试报告模板" class="headerlink" title="3.测试报告模板"></a>3.测试报告模板</h4><p>　　测试报告是指把测试的过程和结果写成文档，对发现的问题和缺陷进行分析，为纠正软件的存在的质量问题提供依据，同时为软件验收和交付打下基础。测试报告是测试阶段最后的文档产出物。优秀的测试经理或测试人员应该具备良好的文档编写能力。</p>
 <p>　　接口测试报告很多时候会和接口性能测试报告一起，如果要单独报告的话，可以考虑以下内容：</p>
-<p><img src="https://i.loli.net/2020/08/04/VMLBXD8kfvPlwpz.png" alt="1232840-20190311155422033-262095564.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/VMLBXD8kfvPlwpz.png" alt="1232840-20190311155422033-262095564.png"></p>
 <h5 id="3-1系统接口概况"><a href="#3-1系统接口概况" class="headerlink" title="3.1系统接口概况"></a>3.1系统接口概况</h5><p>　　简要描述与测试项目相关的一些背景资料，如被测系统简介，项目上线计划等。</p>
 <p>　　对于系统接口的定义和设计做出介绍。</p>
 <p>　　比如系统一共有多少个接口？采用哪种协议？都涉及到哪些发送方法？采用怎样的请求格式？使用怎样的返回标准？可用表格说明。</p>
@@ -1048,18 +1058,18 @@ window.Canvas= new Universe(element);</script>
 <p>　　测试工具：该测试将使用Postman（例）</p>
 <p>　　Postman是谷歌的一款接口测试插件，它使用简单，支持用例管理，支持get、 post、文件上传、响应验证、变量管理、环境参数管理等功能，可以批量运 行，并支持用例导出、导入。</p>
 <h6 id="3-3-2辅助工具：略"><a href="#3-3-2辅助工具：略" class="headerlink" title="3.3.2辅助工具：略"></a>3.3.2辅助工具：略</h6><p>测试资源</p>
-<p><img src="https://i.loli.net/2020/08/04/tceBdMA6xLYCKn8.png" alt="1232840-20190311155810574-845307390.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/tceBdMA6xLYCKn8.png" alt="1232840-20190311155810574-845307390.png"></p>
 <h5 id="3-4测试记录及结果分析"><a href="#3-4测试记录及结果分析" class="headerlink" title="3.4测试记录及结果分析"></a>3.4测试记录及结果分析</h5><p>​     单场景接口测试</p>
 <p>​     测试结果数据</p>
 <p>　　  给出本次单场景接口测试的测试结果数据</p>
-<p><img src="https://i.loli.net/2020/08/04/ilJOp7dbXTrAtPs.png" alt="1232840-20190311155843541-2138306925.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/ilJOp7dbXTrAtPs.png" alt="1232840-20190311155843541-2138306925.png"> </p>
 <h5 id="3-5测试问题及结果分析"><a href="#3-5测试问题及结果分析" class="headerlink" title="3.5测试问题及结果分析"></a>3.5测试问题及结果分析</h5><p>　　结合测试中发现的问题对于整体测试结果进行分析，做出判断。</p>
 <p>接口业务功能错误类缺陷情况</p>
 <p>接口异常处理类缺陷情况</p>
 <p>接口处理数据沉淀缺陷类情况</p>
 <p>接口安全性缺陷情况</p>
 <h4 id="4-混合场景接口测试"><a href="#4-混合场景接口测试" class="headerlink" title="4.混合场景接口测试"></a>4.混合场景接口测试</h4><h5 id="4-1测试结果数据"><a href="#4-1测试结果数据" class="headerlink" title="4.1测试结果数据"></a>4.1测试结果数据</h5><p>给出本次混合场景接口测试的测试结果数据</p>
-<p><img src="https://i.loli.net/2020/08/04/2FXUzRJc8S6CIx7.png" alt="1232840-20190311155922443-194550287.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/2FXUzRJc8S6CIx7.png" alt="1232840-20190311155922443-194550287.png"></p>
 <h5 id="4-2测试问题及结果分析"><a href="#4-2测试问题及结果分析" class="headerlink" title="4.2测试问题及结果分析"></a>4.2测试问题及结果分析</h5><p>　　结合测试中发现的问题对于整体测试结果进行分析，做出判断。</p>
 <p>混合接口业务功能错误类缺陷情况</p>
 <p>混合接口业务数据传递类缺陷情况</p>
@@ -1181,10 +1191,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1604,7 +1614,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="python接口自动化6">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="python接口自动化6">
                         
                         <span class="card-title">python接口自动化6</span>
                     </div>
@@ -1658,7 +1668,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="python接口自动化4">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="python接口自动化4">
                         
                         <span class="card-title">python接口自动化4</span>
                     </div>
@@ -1799,9 +1809,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1935,7 +1957,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1980,7 +2001,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

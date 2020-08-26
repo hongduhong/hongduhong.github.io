@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1015,7 +1025,7 @@ window.Canvas= new Universe(element);</script>
 <p>你能走多远，取决于你填坑能力有多强</p>
 </blockquote>
 <p>微博上看到一张图：</p>
-<p><img src="https://i.loli.net/2020/08/07/fFGUVn7pl3AoKkE.png" alt="1232840-20190704130954165-216909833.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/fFGUVn7pl3AoKkE.png" alt="1232840-20190704130954165-216909833.png"></p>
 <blockquote>
 <p>01</p>
 </blockquote>
@@ -1039,11 +1049,11 @@ window.Canvas= new Universe(element);</script>
 <p>　　好了，故事就讲到这里吧。言归正传，本篇就由宏哥把前边留有悬念的中文输入问题的坑，带着小伙伴们一起把这个坑填平它，KO它。</p>
 <p>　　宏哥思路：宏哥将会通过屏蔽软键盘，绕过手机的软键盘方法，解决中文输入的问题。</p>
 <h4 id="2-定位搜索"><a href="#2-定位搜索" class="headerlink" title="2.定位搜索"></a>2.定位搜索</h4><p>1、打开淘宝点搜索按钮，进入到搜索页面</p>
-<p><img src="https://i.loli.net/2020/08/07/8sCvoIyZHqYFme2.png" alt="1232840-20190704134148569-262358729.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/8sCvoIyZHqYFme2.png" alt="1232840-20190704134148569-262358729.png"> </p>
 <p>2、然后定位到搜索框后用sendkeys方法输入“hongge”,这里定位元素用第四篇讲的uiautomatorviewer工具就可以了</p>
-<p><img src="https://i.loli.net/2020/08/07/DgmJzqyxFbjLTZe.png" alt="1232840-20190704134055301-58524613.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/DgmJzqyxFbjLTZe.png" alt="1232840-20190704134055301-58524613.png"></p>
 <p>3、实例代码</p>
-<p><img src="https://i.loli.net/2020/08/07/MkFU6PC5oIaHuw4.png" alt="1232840-20190704135934375-745408341.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/MkFU6PC5oIaHuw4.png" alt="1232840-20190704135934375-745408341.png"></p>
 <p>4、运行后夜神模拟器、appium、代码的运行过程如下（拼音或者英文），请小伙伴们和宏哥一起仔细看是不是搜索框输入了：hongge 拼音</p>
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
     <iframe src="https://showmore.com/zh/embed/xi3lake" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;">
@@ -1079,15 +1089,15 @@ window.Canvas= new Universe(element);</script>
 26 driver.find_element_by_id(&quot;com.taobao.taobao:id/searchEdit&quot;).click()
 27 
 28 driver.find_element_by_id(&quot;com.taobao.taobao:id/searchEdit&quot;).send_keys(u&quot;hongge&quot;)</code></pre><h4 id="3-运行脚本"><a href="#3-运行脚本" class="headerlink" title="3.运行脚本"></a>3.运行脚本</h4><p>1、首先要确认手机上的输入法是用的什么输入法，如果默认是中文的输入法，启动后会出现下面情况，无法输入成功</p>
-<p><img src="https://i.loli.net/2020/08/07/tWL24X8uTpzrof1.png" alt="1070438-20170429140322256-221610356.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/tWL24X8uTpzrof1.png" alt="1070438-20170429140322256-221610356.png"></p>
 <p>2、于是可以先把手机上的输入法改成英文的状态，这样就可以输入英文字符串了。那么问题来了，如果想输入中文的字符串呢？如何解决。。。</p>
 <h4 id="4-屏蔽软键盘"><a href="#4-屏蔽软键盘" class="headerlink" title="4.屏蔽软键盘"></a>4.屏蔽软键盘</h4><p>1、通过前面的操作，大概可以知道，在APP里面输入字符串是调用的软键盘输入的，有没办法像selenium做web自动化时候一样，直接sendkeys绕过键盘输入呢？</p>
 <p>2、于是可以想办法屏蔽软键盘，只需在desired_caps{}设置里面加两个参数（注意了，注意力，注意力，能不能填坑就看这里啊！！！），如果直接跟随宏哥的小伙伴们直接把注释去掉了，就可以。</p>
-<p><img src="https://i.loli.net/2020/08/07/NEF4LVo73cvhigD.png" alt="1232840-20190704140331133-1617890593.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/NEF4LVo73cvhigD.png" alt="1232840-20190704140331133-1617890593.png"></p>
 <p>3、unicodeKeyboard是使用unicode编码方式发送字符串</p>
 <p>4、resetKeyboard是将键盘隐藏起来</p>
 <h4 id="5-输入中文字符"><a href="#5-输入中文字符" class="headerlink" title="5.输入中文字符"></a>5.输入中文字符</h4><p>1、将上面代码改成输入中文u“北京-宏哥”，然后运行脚本，在手机上查看结果。（python2中文前面要加个u，python3的可以忽略）</p>
-<p><img src="https://i.loli.net/2020/08/07/OJo5wtjfWSsQ6YN.png" alt="1232840-20190704144612073-676466453.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/OJo5wtjfWSsQ6YN.png" alt="1232840-20190704144612073-676466453.png"></p>
 <p>2、运行后夜神模拟器、appium、代码的运行过程如下：请小伙伴们和宏哥一起仔细看是不是搜索框输入了：北京-宏哥  中文汉字</p>
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
     <iframe src="https://showmore.com/zh/embed/r29l1nc" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;">
@@ -1122,9 +1132,9 @@ time.sleep(3)
 driver.find_element_by_id(&quot;com.taobao.taobao:id/searchEdit&quot;).click()
 
 driver.find_element_by_id(&quot;com.taobao.taobao:id/searchEdit&quot;).send_keys(u&quot;北京-宏哥&quot;)</code></pre><h4 id="7-小结"><a href="#7-小结" class="headerlink" title="7.小结"></a>7.小结</h4><p>1、如果在输入中文的时候，手机遇到显示中文字符为乱码时：</p>
-<p><img src="https://i.loli.net/2020/08/07/9qBsmigJxUrcohO.png" alt="1070438-20170429140354350-124650414.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/9qBsmigJxUrcohO.png" alt="1070438-20170429140354350-124650414.png"></p>
 <p>2、解决办法：前面加上“#-<em>-coding:gb18030-</em>-” 如下图所示：</p>
-<p><img src="https://i.loli.net/2020/08/07/Gti4XujEw8Dn7Qo.png" alt="1070438-20170429140406678-1656624777.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/Gti4XujEw8Dn7Qo.png" alt="1070438-20170429140406678-1656624777.png"></p>
 <p>3、还原设置</p>
 <p>（1）当运行上面的脚本后，发现手动去输入时候，无法调出软键盘了，如何恢复呢？</p>
 <p>（2）打开手机设置，找到输入法设置选项，会发现默认的输入法被改成appium的输入法了。所以只需把这里的设置，恢复成原来输入法就OK拉。</p>
@@ -1241,10 +1251,10 @@ driver.find_element_by_id(&quot;com.taobao.taobao:id/searchEdit&quot;).send_keys
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1664,7 +1674,7 @@ driver.find_element_by_id(&quot;com.taobao.taobao:id/searchEdit&quot;).send_keys
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="python+appium自动化测试14">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/14.jpg" class="responsive-img" alt="python+appium自动化测试14">
                         
                         <span class="card-title">python+appium自动化测试14</span>
                     </div>
@@ -1718,7 +1728,7 @@ driver.find_element_by_id(&quot;com.taobao.taobao:id/searchEdit&quot;).send_keys
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="python+appium自动化测试12">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/12.jpg" class="responsive-img" alt="python+appium自动化测试12">
                         
                         <span class="card-title">python+appium自动化测试12</span>
                     </div>
@@ -1859,9 +1869,21 @@ driver.find_element_by_id(&quot;com.taobao.taobao:id/searchEdit&quot;).send_keys
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1995,7 +2017,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2040,7 +2061,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

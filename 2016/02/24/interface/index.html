@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1012,13 +1022,13 @@ window.Canvas= new Universe(element);</script>
                 <p><strong>🔥 python接口自动化（十一）–发送post【data】（详解）</strong></p>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　前面登录博客园的是传 json 参数，由于其登录机制的改变没办法演示，然而在工作中有些登录不是传 json 的，如 jenkins 的登录，这里小编就以jenkins 登录为案例，传 data 参数，给各位童鞋详细演练一下。</p>
 <h4 id="2-登录jenkins抓包"><a href="#2-登录jenkins抓包" class="headerlink" title="2.登录jenkins抓包"></a>2.登录jenkins抓包</h4><p>1、浏览器上登录jenkins，输入账号和密码，点击登录</p>
-<p><img src="https://i.loli.net/2020/08/05/4hWvVAFIzXSunkT.png" alt="1232840-20190409104912554-2057818411.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/4hWvVAFIzXSunkT.png" alt="1232840-20190409104912554-2057818411.png"> </p>
 <p>2、fiddler抓包工具抓取jenkins登录的过程</p>
-<p><img src="https://i.loli.net/2020/08/05/4sJqKzDIu8GR7jf.png" alt="1232840-20190409104957864-1906678021.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/4sJqKzDIu8GR7jf.png" alt="1232840-20190409104957864-1906678021.png"></p>
 <p>3、可以清楚地看到这个body参数并不是json格式，是key=value格式，也就是前面介绍post请求四种数据类型里面的第一种</p>
-<p><img src="https://i.loli.net/2020/08/05/TLNejRviOBM7KzC.png" alt="1232840-20190326153546758-1080778198.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/TLNejRviOBM7KzC.png" alt="1232840-20190326153546758-1080778198.png"></p>
 <h4 id="3-请求头部"><a href="#3-请求头部" class="headerlink" title="3.请求头部"></a>3.请求头部</h4><p>1.上面抓包已经知道body的数据类型了，那么头部里面Content-Type类型也需要填写对应的参数类型</p>
-<p><img src="https://i.loli.net/2020/08/05/aUb7ARCr6IE89H4.png" alt="614655-20170904220738929-1796950581.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/aUb7ARCr6IE89H4.png" alt="614655-20170904220738929-1796950581.png"></p>
 <h4 id="4-实现登录"><a href="#4-实现登录" class="headerlink" title="4.实现登录"></a>4.实现登录</h4><p>1、登录实例代码如下：</p>
 <p>注意：此处的登录URL是fiddler抓包抓到的，而并非是浏览器的URL地址，如果你复制的是浏览器的地址，就会报错了</p>
 <pre><code> 1 # coding:utf-8
@@ -1037,16 +1047,16 @@ window.Canvas= new Universe(element);</script>
 14 s = requests.session()
 15 r = s.post(url, headers=headers, data=d)
 16 print (r.content.decode(&#39;utf-8&#39;))</code></pre><p>2、运行后的结果如下：</p>
-<p><img src="https://i.loli.net/2020/08/05/BbDUyXsdoNMjEuS.png" alt="1232840-20190409110231035-1632164720.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/BbDUyXsdoNMjEuS.png" alt="1232840-20190409110231035-1632164720.png"></p>
 <p>3、为了更好地查看你可以将其拷贝到记事本，保存，然后将文件后缀名修改成.html或者.htm，用浏览器打开查看</p>
-<p><img src="https://i.loli.net/2020/08/05/HTatYKpSfDhGuqn.png" alt="1232840-20190409111957961-1617125551.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/HTatYKpSfDhGuqn.png" alt="1232840-20190409111957961-1617125551.png"></p>
 <h4 id="5-判断登录是否成功"><a href="#5-判断登录是否成功" class="headerlink" title="5.判断登录是否成功"></a>5.判断登录是否成功</h4><p>1.首先这个登录接口有重定向，看左边会话框302，那登录成功的结果看最后一个200就行</p>
-<p><img src="https://i.loli.net/2020/08/05/InjqYdM1WpFx4gH.png" alt="614655-20170904220819194-218604847.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/InjqYdM1WpFx4gH.png" alt="614655-20170904220819194-218604847.png"></p>
 <p>2.返回的结果并不是跟博客园一样的json格式，返回的是一个html页面 </p>
 <h4 id="6-判断登录成功"><a href="#6-判断登录成功" class="headerlink" title="6.判断登录成功"></a>6.判断登录成功</h4><p>1.判断登录成功，可以抓取页面上的关键元素，比如：账号名称admin，注销按钮</p>
-<p><img src="https://i.loli.net/2020/08/05/t9wkcpHgZMmd84f.png" alt="1232840-20190326155254663-1114019940.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/t9wkcpHgZMmd84f.png" alt="1232840-20190326155254663-1114019940.png"></p>
 <p>2.通过正则表达式提出这2个关键字</p>
-<p><img src="https://i.loli.net/2020/08/05/MB3U4wSO2Xpsznu.png" alt="1232840-20190409110411277-2010459.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/MB3U4wSO2Xpsznu.png" alt="1232840-20190409110411277-2010459.png"></p>
 <h4 id="7-参考代码"><a href="#7-参考代码" class="headerlink" title="7.参考代码"></a>7.参考代码</h4><pre><code> 1 # coding:utf-8
  2 import requests
  3 # 先打开登录首页，获取部分session
@@ -1068,9 +1078,9 @@ window.Canvas= new Universe(element);</script>
 19 t = re.findall(r&#39;&lt;b&gt;(.+?)&lt;/b&gt;&#39;, r.content.decode(&#39;utf-8&#39;))   # 用python3的这里r.content需要解码
 20 print (t[0])
 21 print (t[1])</code></pre><h4 id="8-遇到问题可解决方法"><a href="#8-遇到问题可解决方法" class="headerlink" title="8.遇到问题可解决方法"></a>8.遇到问题可解决方法</h4><p>注意这里边遇到的问题python3遇到的问题，或许python2没有这些问题，笔者没有实践，有兴趣的自己可以试一下<br>1、如果打印content，没有加后边的.decode(‘utf-8’)，会出现乱码，解决方法加上即可。</p>
-<p><img src="https://i.loli.net/2020/08/05/V2icILTuw6YeO5B.png" alt="1232840-20190409111050605-2065451392.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/V2icILTuw6YeO5B.png" alt="1232840-20190409111050605-2065451392.png"></p>
 <p>2、如果正则提取没有加.decode(‘utf-8’)，会报如下错误，解决方案也是加上即可</p>
-<p><img src="https://i.loli.net/2020/08/05/xVmzNuehAZIOpwt.png" alt="1232840-20190409110820571-1290410890.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/xVmzNuehAZIOpwt.png" alt="1232840-20190409110820571-1290410890.png"></p>
 <h4 id="9-小结"><a href="#9-小结" class="headerlink" title="9.小结"></a>9.小结</h4><p>　　jenkins 代码模拟登陆到这里就结束，实际工作中的登录接口也就是这些，记住万变不离其宗，举一反三。</p>
 
             </div>
@@ -1184,10 +1194,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1607,7 +1617,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="python接口自动化12">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="python接口自动化12">
                         
                         <span class="card-title">python接口自动化12</span>
                     </div>
@@ -1661,7 +1671,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="python接口自动化10">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/21.jpg" class="responsive-img" alt="python接口自动化10">
                         
                         <span class="card-title">python接口自动化10</span>
                     </div>
@@ -1802,9 +1812,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1938,7 +1960,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1983,7 +2004,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

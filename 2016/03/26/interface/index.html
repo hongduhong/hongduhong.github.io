@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1012,7 +1022,7 @@ window.Canvas= new Universe(element);</script>
                 <p><strong>🔥 python接口自动化（四十二）- 项目架构设计之大结局（超详解）</strong></p>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　这一篇主要是将前边的所有知识做一个整合，把各种各样的砖块—模块（post请求，get请求，logging，参数关联，接口封装等等）垒起来，搭建一个房子。并且有很多小伙伴对于接口项目测试的框架一筹莫展，吵吵着什么时候才可以看到一篇相对于比较完整的项目源码，但是由于完整的项目属于公司内部的代码，这个是说句大实话是没法分享的，这个想必大家都知道吧，不知道入职的时候都签过保密协议吧。所以由于种种原因没办法给小伙伴们分享公司内部的项目源码，就算别人分享了，也只适用于本公司内部的业务。你拿过来也不能用的，需要修修补补。所以用例的代码还是得自己去一个个写，这个宏哥只能分享项目框架，自己在框架里添加自己公司的业务测试用例，使她变的丰满充实，适合自己公司的业务。希望对小伙伴们有所指导或者是启发，好了时间不早了，废话少说，还是尽快进入今天的主题吧—接口项目测试结构（框架）设计。</p>
 <h4 id="2-项目结构"><a href="#2-项目结构" class="headerlink" title="2.项目结构"></a>2.项目结构</h4><p>关注公众号发送：项目架构设计源码。获取源码下载地址</p>
-<p><img src="https://i.loli.net/2020/08/06/K25TE9Qneo3rZJs.png" alt="1232840-20200511150147357-507855537.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/K25TE9Qneo3rZJs.png" alt="1232840-20200511150147357-507855537.png"></p>
 <p>1、新建一个工程（一定要创建工程），工程名称自己定义，如：hongge_jiekou</p>
 <p>2、在工程的跟目录新建一个脚本：run_main.py,用来执行全部用例</p>
 <p>3、在工程下创建以下几个pakage包:</p>
@@ -1021,36 +1031,36 @@ window.Canvas= new Universe(element);</script>
 <p>–config:cfg.ini这里是配置文件，如邮箱的一些参数：收件人，发件人，密码等,readConfig.py用于读取配置文件</p>
 <p>–logs:这里存放日志信息</p>
 <p>–report:这里存放测试报告</p>
-<p><img src="https://i.loli.net/2020/08/06/1VFOChj5uyQ36ZP.png" alt="1232840-20190531165759363-1788586090.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/1VFOChj5uyQ36ZP.png" alt="1232840-20190531165759363-1788586090.png"></p>
 <h4 id="3-run-main"><a href="#3-run-main" class="headerlink" title="3.run_main"></a>3.run_main</h4><p>第一步：用discover方法加载所有的测试用例</p>
 <p>1、cur_path这个参数是读取当前这个脚本的真实路径，也就是run_main.py的真实路径</p>
 <p>2、caseName=”case”这个case是存放测试用例的文件夹，如果没有的话，自动创建。如果想运行其它文件夹的用例，就改下caseName这个参数值</p>
 <p>3、rule=”test*.py”这个是匹配用例脚本名称的规则，默认匹配test开头的所有用例</p>
-<p><img src="https://i.loli.net/2020/08/06/NmPFzRLogQp15ay.png" alt="1232840-20190531170242245-89309306.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/NmPFzRLogQp15ay.png" alt="1232840-20190531170242245-89309306.png"></p>
 <p>第二步：生成HTML报告</p>
 <p>1.把上一步加载到用例的参数传入这个函数，测试报告的文件名称默认report文件夹：reportName=”report</p>
 <p>2.如果没有这个report文件夹也没关系，可以自动创建的</p>
-<p><img src="https://i.loli.net/2020/08/06/azbGKkyJtOxfTid.png" alt="1232840-20190531170326967-1509488137.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/azbGKkyJtOxfTid.png" alt="1232840-20190531170326967-1509488137.png"></p>
 <p>第三步：获取最新的测试报告</p>
 <p>1.如果第二步生成的测试报告加了时间戳，想找到最新的文件就用第三步</p>
 <p>2.如果第二步不加时间戳，只是生成result.html，那这一步其实没卵用，可以忽略</p>
 <p>（个人觉得报告用一个名称result.html就行,新的自动覆盖旧的）</p>
-<p><img src="https://i.loli.net/2020/08/06/O14eitxL3PFhczd.png" alt="1232840-20190531170416742-1301943554.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/O14eitxL3PFhczd.png" alt="1232840-20190531170416742-1301943554.png"></p>
 <p>第四步：发送测试报告到邮箱</p>
 <p>1、像QQ邮箱这种ssl加密的就走SMTP_SSL，用授权码登录</p>
 <p>2、其它邮箱就正常账号密码登录，走SMTP</p>
-<p><img src="https://i.loli.net/2020/08/06/sOKhX4AvCqyYEp9.png" alt="1232840-20190531170535622-1040310707.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/sOKhX4AvCqyYEp9.png" alt="1232840-20190531170535622-1040310707.png"></p>
 <p>3、最后执行代码</p>
 <p>这里邮箱的内容读的配置文件</p>
-<p><img src="https://i.loli.net/2020/08/06/tGLgCqRr2i5VhT6.png" alt="1232840-20190531170659637-957783789.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/tGLgCqRr2i5VhT6.png" alt="1232840-20190531170659637-957783789.png"></p>
 <h4 id="4-config配置"><a href="#4-config配置" class="headerlink" title="4.config配置"></a>4.config配置</h4><p>1、cfg.ini打开，这里写配置文件内容</p>
-<p><img src="https://i.loli.net/2020/08/06/HEPvo7CtUTGfZzw.png" alt="1232840-20190531170853089-32854243.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/HEPvo7CtUTGfZzw.png" alt="1232840-20190531170853089-32854243.png"></p>
 <p>2、用readConfig.py读取配置文件</p>
-<p><img src="https://i.loli.net/2020/08/06/MsJAa3DKToc9Y8V.png" alt="1232840-20190531171110029-485892658.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/MsJAa3DKToc9Y8V.png" alt="1232840-20190531171110029-485892658.png"></p>
 <p>3、读取的内容就是传入第二步操作里面需要调用邮箱的配置信息</p>
 <h4 id="5-logger"><a href="#5-logger" class="headerlink" title="5.logger"></a>5.logger</h4><p>1、logger.py这个文件放到common目录下，封装日志文件的读取</p>
 <p>2、日志保存到logs文件夹</p>
-<p><img src="https://i.loli.net/2020/08/06/OXrzCJW8xVhFlyT.png" alt="1232840-20190531171503939-1861371115.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/OXrzCJW8xVhFlyT.png" alt="1232840-20190531171503939-1861371115.png"></p>
 <p>3、参开代码：</p>
 <pre><code> 1 # -*- coding:utf-8 -*-
  2 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1127,16 +1137,16 @@ window.Canvas= new Universe(element);</script>
 73     log.info(&quot;---测试开始----&quot;)
 74     log.info(&quot;操作步骤1,2,3&quot;)
 75     log.warning(&quot;----测试结束----&quot;)</code></pre><h4 id="6-case放用例"><a href="#6-case放用例" class="headerlink" title="6.case放用例"></a>6.case放用例</h4><p>1、常用的接口，需要检查被调用的单独封装处理，如登录等</p>
-<p><img src="https://i.loli.net/2020/08/06/TfgmVvABjPQN39W.png" alt="1232840-20190531171748383-1753319229.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/TfgmVvABjPQN39W.png" alt="1232840-20190531171748383-1753319229.png"></p>
 <p>2、test开头的用例</p>
-<p><img src="https://i.loli.net/2020/08/06/O16p8sQCRo2tGdl.png" alt="1232840-20190531171908237-446450855.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/O16p8sQCRo2tGdl.png" alt="1232840-20190531171908237-446450855.png"></p>
 <h4 id="7-logs日志查看"><a href="#7-logs日志查看" class="headerlink" title="7.logs日志查看"></a>7.logs日志查看</h4><p>1、运行完后日志都会收集到logs文件夹以日期命名</p>
-<p><img src="https://i.loli.net/2020/08/06/fytA7UdQu2CaH91.png" alt="1232840-20190531171940583-1727491326.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/fytA7UdQu2CaH91.png" alt="1232840-20190531171940583-1727491326.png"></p>
 <h4 id="8-生成测试报告"><a href="#8-生成测试报告" class="headerlink" title="8.生成测试报告"></a>8.生成测试报告</h4><p>1、这里调用的是HTMLTestRunner生成html的测试报告</p>
-<p><img src="https://i.loli.net/2020/08/06/LMmSqgYnVGo1Zi6.png" alt="1232840-20190531172052103-1887703389.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/LMmSqgYnVGo1Zi6.png" alt="1232840-20190531172052103-1887703389.png"> </p>
 <h4 id="9-发送报告到邮箱"><a href="#9-发送报告到邮箱" class="headerlink" title="9.发送报告到邮箱"></a>9.发送报告到邮箱</h4><p>1、运行run_main.py就会自动生成报告，然后发送到邮箱了</p>
 <p>（这里QQ邮箱的展示是有问题的，一般用企业邮箱的话，是可以正常展示的）</p>
-<p><img src="https://i.loli.net/2020/08/06/ivSnMZ31xXeCtBf.png" alt="1232840-20190531172027804-1063205594.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/ivSnMZ31xXeCtBf.png" alt="1232840-20190531172027804-1063205594.png"></p>
 <h4 id="10-小结"><a href="#10-小结" class="headerlink" title="10.小结"></a>10.小结</h4><p>1、问题：在python3.7中使用sendmail进行邮件发送，mailInfo[“to”]为逗号分隔的str类型，结果只有第一个邮件地址能收到邮件。将邮箱前后对调后，还是第一个邮箱可以收到测试报告，后边的邮箱收不到邮件。</p>
 <p>折腾好久，邮件里可以看到收件人有多个，实际上始终只能第一个收件人可以收到邮件。经多次搜索，发现是这样：email中收件人和sendmail中的收件人是没啥联系的。</p>
 <p>sendmail中收件人，它的格式应该为list。这个为实际的收件人地址。</p>
@@ -1147,18 +1157,18 @@ window.Canvas= new Universe(element);</script>
 <p>smtp.sendmail(sender, receiver, msg.as_string())<br>替换为下边这样就可以了：</p>
 <p>smtp.sendmail(sender, receiver.split(‘,’), msg.as_string())<br>当然了，以上是个人的愚见，如果你有更巧妙的解决办法，欢迎指教和讨论。</p>
 <p>2、问题：在边写边做的过程中，遇到的另为一个奇葩的问题就是，在配置文件里加上中文的注释之后，老是报编码错误，报错如下：</p>
-<p><img src="https://i.loli.net/2020/08/06/a5Mwj2bGNkCPFXt.png" alt="1232840-20190603105957831-670555003.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/a5Mwj2bGNkCPFXt.png" alt="1232840-20190603105957831-670555003.png"></p>
 <p>这个也折腾了好久，由于时间太晚了，实在是不想折腾了，所以就想着，那我不加注释了，先让代码跑起来再说了，但是这个问题一直困扰着我，如果不解决，以后遇到类似的问题，人家非要你加注释，你绕都绕不过，怎么办？？？吾日三省吾身，自己问自己。完了还</p>
 <p>是没办法，自己放不过自己，还是解决吧。完了自己 冷静了一下，静下心来捋了一下思路，由于胡子不够长，所有就只能摸摸自己头，冷静分析了一下：</p>
 <p>（1）分析问题（bug）——–读取配置文件报编码错误，那就一定是在读取配置文件的时候，没有注意编码的问题导致出错</p>
 <p>（2）解决问题（bug）——–读取配置文件的时候，加上编码encoding=”utf-8” 即可</p>
 <p>（3）定位问题（bug）——–全部代码，读取配置文件的只有邮箱信息，邮箱信息又在readconfig.py文件里，问题范围有缩小了，怀疑对象有缩小了，目标嫌疑人已经锁定，下一步找出证据，判他死刑</p>
 <p>（4）用证据说话—————-查看读取配置文件时，是否有编码问题，没有注意，果不其然是这个问题 ：</p>
-<p><img src="https://i.loli.net/2020/08/06/7PT3rj6Wa4ZhsyA.png" alt="1232840-20190603111923772-1917565231.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/7PT3rj6Wa4ZhsyA.png" alt="1232840-20190603111923772-1917565231.png"></p>
 <p>（5）弹药上膛————-加上编码  encoding=”utf-8”  即可</p>
-<p><img src="https://i.loli.net/2020/08/06/oWYL7hBDdOg5P3f.png" alt="1232840-20190603112127874-492475480.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/oWYL7hBDdOg5P3f.png" alt="1232840-20190603112127874-492475480.png"> </p>
 <p>（6）下令开枪，判处死刑———-运行代码，顺利通过，邮件发出，大功告成</p>
-<p><img src="https://i.loli.net/2020/08/06/EFboQlsRK1gxN2w.png" alt="1232840-20190603112245615-895264534.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/EFboQlsRK1gxN2w.png" alt="1232840-20190603112245615-895264534.png"></p>
 <p>　　嘿嘿，时光穿越，当了一回狄仁杰，过了一把神探的瘾，不过那个时候没有枪，应该是大刀举起，砍下人头，但是大晚上一个人害怕，又太血腥，还是穿越到现代拿把枪过去再行刑。好了，时间太晚了。这时候我是不是应该说：“元芳，你怎么看”。。。。。。。。</p>
 
             </div>
@@ -1272,10 +1282,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1695,7 +1705,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="python+appium自动化测试1">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="python+appium自动化测试1">
                         
                         <span class="card-title">python+appium自动化测试1</span>
                     </div>
@@ -1749,7 +1759,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="python接口自动化41">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/19.jpg" class="responsive-img" alt="python接口自动化41">
                         
                         <span class="card-title">python接口自动化41</span>
                     </div>
@@ -1890,9 +1900,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2026,7 +2048,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2071,7 +2092,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

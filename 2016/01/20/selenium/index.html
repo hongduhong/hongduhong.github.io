@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1028,9 +1038,9 @@ window.Canvas= new Universe(element);</script>
 <p>Mozilla GeckoDriver：<a href="https://github.com/mozilla/geckodriver/releases" target="_blank" rel="noopener">https://github.com/mozilla/geckodriver/releases</a></p>
 <p>Internet Explorer Driver：<a href="http://selenium-release.storage.googleapis.com/3.13/IEDriverServer_x64_3.13.0.zip" target="_blank" rel="noopener">http://selenium-release.storage.googleapis.com/3.13/IEDriverServer_x64_3.13.0.zip</a></p>
 <h5 id="3-2浏览器驱动driver的安装"><a href="#3-2浏览器驱动driver的安装" class="headerlink" title="3.2浏览器驱动driver的安装"></a>3.2浏览器驱动driver的安装</h5><p>下载下来的zip文件解压至python安装目录中，可以放置在：C:\Users\Administrator\AppData\Local\Programs\Python\Python36中，但是推荐放置在scripts目录中：C:\Users\Administrator\AppData\Local\Programs\Python\Python36\Scripts</p>
-<p><img src="https://i.loli.net/2020/07/31/nwqkD7ZMIm4vAGi.png" alt="1196630-20180704095308704-1620635076.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/nwqkD7ZMIm4vAGi.png" alt="1196630-20180704095308704-1620635076.png"></p>
 <h4 id="4-测试驱动浏览器"><a href="#4-测试驱动浏览器" class="headerlink" title="4.测试驱动浏览器"></a>4.测试驱动浏览器</h4><h5 id="4-1CMD中启动python并从selenium引入webdriver包"><a href="#4-1CMD中启动python并从selenium引入webdriver包" class="headerlink" title="4.1CMD中启动python并从selenium引入webdriver包"></a>4.1CMD中启动python并从selenium引入webdriver包</h5><p><code>from selenium import webdriver</code></p>
-<p><img src="https://i.loli.net/2020/07/31/sHaojLSFeBE1M6W.png" alt="1196630-20180704101237824-1245397003.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/sHaojLSFeBE1M6W.png" alt="1196630-20180704101237824-1245397003.png"></p>
 <h5 id="4-2驱动chrome浏览器"><a href="#4-2驱动chrome浏览器" class="headerlink" title="4.2驱动chrome浏览器"></a>4.2驱动chrome浏览器</h5><p>打开Chrome浏览器，访问谷歌网址，然后再关闭Chrome浏览器。</p>
 <h6 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h6><pre><code># coding=utf-8
 
@@ -1049,7 +1059,7 @@ Project: python+ selenium-打开和关闭浏览器
 from selenium import webdriver
 Ch_driver = webdriver.Chrome()
 Ch_driver.get(&quot;https://www.google.com&quot;)
-Ch_driver.quit() # 使用quit()关闭了chrome并结束了此次测试，如果是close()只是关闭chrome，后台仍在进行。</code></pre><p><img src="https://i.loli.net/2020/07/31/Y1X9JSeTtUPnpZ3.png" alt="1196630-20180704101630657-1814386536.png"><br><img src="https://i.loli.net/2020/07/31/a1ufl8GovkYLCEg.png" alt="1196630-20180704100807496-347760964.png"><br><img src="https://i.loli.net/2020/07/31/W75NLwEK9sM2QY1.png" alt="1196630-20180704100857370-284197383.png"></p>
+Ch_driver.quit() # 使用quit()关闭了chrome并结束了此次测试，如果是close()只是关闭chrome，后台仍在进行。</code></pre><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/Y1X9JSeTtUPnpZ3.png" alt="1196630-20180704101630657-1814386536.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/a1ufl8GovkYLCEg.png" alt="1196630-20180704100807496-347760964.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/W75NLwEK9sM2QY1.png" alt="1196630-20180704100857370-284197383.png"></p>
 <h5 id="4-3驱动Firefox浏览器"><a href="#4-3驱动Firefox浏览器" class="headerlink" title="4.3驱动Firefox浏览器"></a>4.3驱动Firefox浏览器</h5><p>打开Firefox浏览器，访问谷歌网址，然后再关闭Firefox浏览器。</p>
 <h6 id="参考代码-1"><a href="#参考代码-1" class="headerlink" title="参考代码"></a>参考代码</h6><pre><code># coding=utf-8
 
@@ -1068,7 +1078,7 @@ Project: python+ selenium-打开和关闭浏览器
 from selenium import webdriver
 Fi_driver = webdriver.Firefox()
 Fi_driver.get(&quot;https://www.google.com&quot;)
-Fi_driver.quit()</code></pre><p><img src="https://i.loli.net/2020/07/31/iG892kx7FANnUTu.png" alt="1196630-20180704103046654-2141193591.png"><br><img src="https://i.loli.net/2020/07/31/QTi4h81sl97bAKq.png" alt="1196630-20180704103057910-1845587517.png"><br><img src="https://i.loli.net/2020/07/31/BRsDUIXfwV752WM.png" alt="1196630-20180704103113580-1652103038.png"></p>
+Fi_driver.quit()</code></pre><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/iG892kx7FANnUTu.png" alt="1196630-20180704103046654-2141193591.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/QTi4h81sl97bAKq.png" alt="1196630-20180704103057910-1845587517.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/BRsDUIXfwV752WM.png" alt="1196630-20180704103113580-1652103038.png"></p>
 <h5 id="4-4驱动IE浏览器"><a href="#4-4驱动IE浏览器" class="headerlink" title="4.4驱动IE浏览器"></a>4.4驱动IE浏览器</h5><p>打开IE浏览器，访问谷歌网址，然后再关闭IE浏览器。</p>
 <h6 id="参考代码-2"><a href="#参考代码-2" class="headerlink" title="参考代码"></a>参考代码</h6><pre><code># coding=utf-8
 
@@ -1087,7 +1097,7 @@ Project: python+ selenium-打开和关闭浏览器
 from selenium import webdriver
 Ie_driver = webdriver.Ie()
 Ie_driver.get(&quot;https://www.google.com&quot;)
-Ie_driver.quit()</code></pre><p><img src="https://i.loli.net/2020/07/31/FcdzXN7k6fDulZU.png" alt="1196630-20180704103637539-1818569735.png"><br><img src="https://i.loli.net/2020/07/31/QMJtbzV69pujxlL.png" alt="1196630-20180704103702229-1094809754.png"><br><img src="https://i.loli.net/2020/07/31/voT7tkyMSUcpJ5h.png" alt="1196630-20180704103648309-1601883642.png"></p>
+Ie_driver.quit()</code></pre><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/FcdzXN7k6fDulZU.png" alt="1196630-20180704103637539-1818569735.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/QMJtbzV69pujxlL.png" alt="1196630-20180704103702229-1094809754.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/voT7tkyMSUcpJ5h.png" alt="1196630-20180704103648309-1601883642.png"></p>
 <p>看起来都正常驱动浏览器并打开了网页，然后关闭退出浏览器。这样我们就完成了selenium自动化测试的打开和关闭浏览器的准备工作~</p>
 <p>注意:可能出现的报错</p>
 <p>Exception: Message: Unexpected error launching Internet Explorer. Protected Mode settings are not the same for all zones. Enable Protected Mode must be set to the same value (enabled or disabled) for all zones.</p>
@@ -1237,10 +1247,10 @@ driver.quit() #关闭并退出浏览器</code></pre><p>打开cmd窗口，cd到fi
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1660,7 +1670,7 @@ driver.quit() #关闭并退出浏览器</code></pre><p>打开cmd窗口，cd到fi
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="python+selenium自动化测试3">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/10.jpg" class="responsive-img" alt="python+selenium自动化测试3">
                         
                         <span class="card-title">python+selenium自动化测试3</span>
                     </div>
@@ -1714,7 +1724,7 @@ driver.quit() #关闭并退出浏览器</code></pre><p>打开cmd窗口，cd到fi
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="python+ selenium自动化测试1">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="python+ selenium自动化测试1">
                         
                         <span class="card-title">python+ selenium自动化测试1</span>
                     </div>
@@ -1855,9 +1865,21 @@ driver.quit() #关闭并退出浏览器</code></pre><p>打开cmd窗口，cd到fi
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1991,7 +2013,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2036,7 +2057,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

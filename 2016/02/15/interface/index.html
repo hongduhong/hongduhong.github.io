@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1014,7 +1024,7 @@ window.Canvas= new Universe(element);</script>
 <h4 id="2-什么是接口测试"><a href="#2-什么是接口测试" class="headerlink" title="2.什么是接口测试"></a>2.什么是接口测试</h4><p>　　接口测试是测试系统组件间接口的一种测试。接口测试主要用于检测外部系统与系统之间以及内部各个子系统之间的交互点。测试的重点是要检查数据的交换，传递和控制管理过程，以及系统间的相互逻辑依赖关系等。　<br>　　一般来说，测试接口，就是指测试接口的功能，性能和稳定性测试，当然可能还有安全性测试。这个入门系列会让你掌握接口的功能测试。一般，来说我们听说到的接口基本上都是指HTTP或者HTTPS协议的接口测试，也就是一些web服务请求。一个软件项目中，<br>有很多接口，少的有几十个，多的有几百上千个接口。这个时候，我们没有软件界面，没有具体的测试场景，只有一个接口描述文档。我们需要把接口这样抽象的东西，通过软件测试的理论和方法去测试接口，找出接口的功能和安全性的缺陷。接口有内部接口和外部<br>接口。内部接口就是开发人员自己开发的接口。外部接口，好比网站调用微信支付和支付宝支付接口。还有一些模块与模块之间的接口。学习过Java或者用过selenium的人，应该对接口有了解。你的自动化脚本调用了很多selenium的接口。</p>
 <h4 id="3-为什么要做接口测试"><a href="#3-为什么要做接口测试" class="headerlink" title="3.为什么要做接口测试"></a>3.为什么要做接口测试</h4><p>1、现在很多系统前后端架构是分离的，因为不同端（前段，后端）的工作进度不一样，所以我们要针对最开始出来的接口，以及需要调用其他公司的（银行，支付宝，微信，qq等）一些接口进行接口测试及验证数据，从安全层面来说，只依赖前端进行限制已经完全不能满足系统的安全要求（绕过前端太容易了）， 需要后端同样进行控制，在这种情况下就需要从接口层面进行验证。在这种情况下就需要从接口层面进行验证。前后端传输、日志打印等信息是否加密传输也是需要验证的，特别是涉及到用户的隐私信息，如身份证，银行卡等。</p>
 <p>2、如今系统越来越复杂，传统的靠前端测试已经大大降低了效率，而且现在我们都推崇测试前移也叫测试左移，希望测试能更早的介入测试，那接口测试就是一种及早介入的方式。例如传统测试，你是不是得等前后端都完成你才能进行测试，才能进行自动化代码编写。 而如果是接口测试，只需要前后端定义好接口，那这时自动化就可以介入编写接口自动化测试代码，手工测试只需要后端代码完成就可以介入测试后端逻辑而不用等待前端工作完成。<br>　　测试左移这个是一次偶然的机会在群里看到的，孤陋寡闻的我，第一次看到，也是一知半解，后来查了一些资料供大家参考。<br>　　测试左移的原则支持测试团队在软件开发周期早期和所有干系人合作。因此他们能清晰地理解需求以及设计测试用例去帮助软件“快速失败”，促使团队更早的修改所有的bug。　　<br>　　测试左移并没有什么独特的，只是让测试人员在软件开发生命周期内更早的参与进来，同时让他们去理解需求、软件设计、软件架构以及软件功能，也让他们去向客户、商业分析师和开发人员问问题，寻找答案，提供反馈结果已达到支持团队的工作得可能性。参与和理解会使测试人员获取产品完整的知识，彻底想清楚各种场景，根据软件行为设计实时的场景，这些都会帮助团队在编码完成之前识别出一些缺陷。这样也可以更好的的体现我们作为一个QA的价值体                                                                </p>
-<p><img src="https://i.loli.net/2020/08/04/jmKF6hX5nJS4skf.png" alt="1232840-20190312085202817-981337531.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/jmKF6hX5nJS4skf.png" alt="1232840-20190312085202817-981337531.png"></p>
 <p>​                                                                         金字塔模型<br>通过之前对金字塔结构的学习，大概了解到了金字塔模型想告诉我们的几个道理：</p>
 <p>　　1.越底层，越稳定。</p>
 <p>　　金字塔主要观点认为单元测试的稳定性高，需要多投入。</p>
@@ -1025,7 +1035,7 @@ window.Canvas= new Universe(element);</script>
 <p>　　4.越底层，越难实施。</p>
 <p>　　越底层的实现对技术专业性要求越高，这点跟第三点有点矛盾，往往越专业的人才也意味着人力成本越高。</p>
 <p>　　综合下金字塔模型，随着前后端分离越来越清晰，我个人愚见提出了灯笼模型，拿接口测试和UI层测试以及单元测试做了比较，从图中各部分所占有的比重，可以一目了然的看出并最终认定接口（API）测试可以获得较高的投资回报。</p>
-<p><img src="https://i.loli.net/2020/08/04/keSiMygwFYq2BZH.png" alt="1232840-20190312084032485-331187664.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/keSiMygwFYq2BZH.png" alt="1232840-20190312084032485-331187664.png"></p>
 <p>​                                                                            灯笼模型<br>　　个人愚见，如有过错，请批评指正：<br>　　接口将前端和后端进行很好的分离，帮前后端实现数据交互，这样在项目初期就可以和前端工程师讨论需要的后端数据，然后后端根据需求开发后接口，将数据返回给前端，测试人员提前进入测试接口，前后端然后在各自开发自己模块。</p>
 <p> 项目迁移，以及后期维护，接口带来的便利性，试想一下，如果没有项目交付以后，后端人员将数据库的某个字段的长度、类型修改后发版，而由于某些原因没有及时通知前端工程师，而此时前端的获取的这个字段的类型、长度是以前的，那么就可能引发线上事故。如</p>
 <p>果前端技术牛叉，存储获取字段是一个变量，工作量还小点。只需要改变变量类型、长度即可，如果是一个差一点的没有用变量，而前端又是好几百个页面都用到这个字段，这样就造成后果无法想象的，但是用到接口就有不一样了，如果出现类似的情况，后端人员只需</p>
@@ -1151,10 +1161,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1574,7 +1584,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="python接口自动化3">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/21.jpg" class="responsive-img" alt="python接口自动化3">
                         
                         <span class="card-title">python接口自动化3</span>
                     </div>
@@ -1628,7 +1638,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="python接口自动化1">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/19.jpg" class="responsive-img" alt="python接口自动化1">
                         
                         <span class="card-title">python接口自动化1</span>
                     </div>
@@ -1769,9 +1779,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1905,7 +1927,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1950,7 +1971,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

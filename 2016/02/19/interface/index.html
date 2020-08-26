@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1019,23 +1029,23 @@ window.Canvas= new Universe(element);</script>
 <pre><code>pip list –outdated</code></pre><p>　　方法2：</p>
 <p>　　　　♦先卸载：</p>
 <pre><code>pip uninstall packagename</code></pre><p>　　　　♦在用：easy_install.exe安装</p>
-<pre><code>easy_install.exe pip</code></pre><p><img src="https://i.loli.net/2020/08/04/WXYmVnoLNHJtwDh.png" alt="1232840-20190319102135614-37325132.png"> </p>
+<pre><code>easy_install.exe pip</code></pre><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/WXYmVnoLNHJtwDh.png" alt="1232840-20190319102135614-37325132.png"> </p>
 <p>　　出现Installing collected packages: idna, chardet, certifi, requests</p>
 <p>　　　　Successfully installed certifi-2019.3.9 chardet-3.0.4 idna-2.8 requests-2.21.0 说明requests模块安装成功！</p>
 <p>使用requests（get请求无参数param）<br>1、将安装好的requests模块导入后，通过GET访问一个URL地址的网页页面，如：<a href="https://www/douban.com" target="_blank" rel="noopener">https://www/douban.com</a></p>
 <p>2、这里的 r 也就是 response，请求后的返回值，可以调用 response 里的 status_code 方法查看状态码</p>
 <p>3、状态码 200 只能说明这个接口访问的服务器地址是对的，并不能说明功能 OK，一般要查看响应的内容，r.text 是返回文本信息</p>
 <p>看吧！这个就是requests的威力，看起来是不是很神奇很牛逼：</p>
-<p><img src="https://i.loli.net/2020/08/04/VBy9uq75SvohCZX.png" alt="1232840-20190319105208667-1972695820 _1_.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/VBy9uq75SvohCZX.png" alt="1232840-20190319105208667-1972695820 _1_.png"> </p>
 <p>使用requests（get请求有参数param）<br>1、再发一个带参数的 get 请求，如在豆瓣网搜索：西游记,url 地址为：<a href="https://www.douban.com/search?q=西游记" target="_blank" rel="noopener">https://www.douban.com/search?q=西游记</a></p>
 <p>2、请求参数：q=西游记，可以以字典的形式传参:{“q”: “西游记”}</p>
 <p>3、多个参数格式：{“key1”: “value1”, “key2”: “value2”, “key3”: “value3”}</p>
-<p><img src="https://i.loli.net/2020/08/04/c4sbiamRp8wQeLg.png" alt="1232840-20190319111831536-1097467522.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/c4sbiamRp8wQeLg.png" alt="1232840-20190319111831536-1097467522.png"></p>
 <p> 这部分最容易犯错的部分，就是1、豆瓣网址后没有+/search；2、params错误的写成param</p>
 <p>使用request（get获取响应文本content）<br>1、豆瓣网首页如果用 r.text 会发现获取到的内容有乱码，因为豆瓣网首页响应内容是 gzip 压缩的（非 text 文本）</p>
-<p><img src="https://i.loli.net/2020/08/04/w4KpZkvFAma9uhI.png" alt="1232840-20190319144239193-1311256864.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/w4KpZkvFAma9uhI.png" alt="1232840-20190319144239193-1311256864.png"></p>
 <p>2、如果是在 fiddler 工具乱码，是可以点击后解码的，在代码里面可以用 r.content 这个方法，content 会自动解码 gzip 和 deflate 压缩（这个就是开始介绍requests的高级功能：自动解码和自动解压）</p>
-<p><img src="https://i.loli.net/2020/08/04/VBy9uq75SvohCZX.png" alt="1232840-20190319105208667-1972695820 _1_.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/VBy9uq75SvohCZX.png" alt="1232840-20190319105208667-1972695820 _1_.png"></p>
 <h4 id="4-附录response返回的其他信息"><a href="#4-附录response返回的其他信息" class="headerlink" title="4.附录response返回的其他信息"></a>4.附录response返回的其他信息</h4><p>1.response 的返回内容（content）还有其它更多信息</p>
 <p>– r.status_code #响应状态码</p>
 <p>– r.content #字节方式的响应体，会自动为你解码 gzip 和deflate 压缩</p>
@@ -1159,10 +1169,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1582,7 +1592,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="python接口自动化7">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/1.jpg" class="responsive-img" alt="python接口自动化7">
                         
                         <span class="card-title">python接口自动化7</span>
                     </div>
@@ -1636,7 +1646,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="python接口自动化5">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="python接口自动化5">
                         
                         <span class="card-title">python接口自动化5</span>
                     </div>
@@ -1777,9 +1787,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1913,7 +1935,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1958,7 +1979,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

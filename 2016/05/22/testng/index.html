@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1185,7 +1195,7 @@ public class NewTest {
       System.out.println(&quot;afterMethod&quot;);
   }
 }</code></pre><p>控制台输出如下：</p>
-<p><img src="https://i.loli.net/2020/08/12/6BGdjEbzgrSyu2I.png" alt="1232840-20191113100820775-1204938300.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/6BGdjEbzgrSyu2I.png" alt="1232840-20191113100820775-1204938300.png"></p>
 <h4 id="3-使用注释-注解的好处"><a href="#3-使用注释-注解的好处" class="headerlink" title="3.使用注释/注解的好处"></a>3.使用注释/注解的好处</h4><p>以下是使用注释/注解的一些好处：</p>
 <p>TestNG通过查找注释/注解来识别它感兴趣的方法。 因此，方法名称不限于任何模式或格式。</p>
 <p>可以将其他参数传递给注释。</p>
@@ -1194,7 +1204,7 @@ public class NewTest {
 <h4 id="4-Concurrenttesting（注解方式）"><a href="#4-Concurrenttesting（注解方式）" class="headerlink" title="4.Concurrenttesting（注解方式）:"></a>4.Concurrenttesting（注解方式）:</h4><p>@Test注解上可通过配置threadPoolSize来实现并发，threadPoolSize和invocationCount是结合使用的，当invocationCount=1的时候，threadPoolSize没有意义。invocationCount表示方法被调用的次数，如果不配置threadPoolSize，该方法会被顺序执行5次，如果配置threaPoolSize=4，下图所示的方法会一次以4个线程并发执行，缩短执行时间。<br>下面的例子是输出进程ID，threadPoolSize用来指明线程池的大小，也就是并发的线程数目是多少</p>
 <p>5次调用，有3个线程可调用</p>
 <p>1、新建com.course.testng.multiThread包，包里新建MuitiThreadOnAnnotion类，如下</p>
-<p><img src="https://i.loli.net/2020/08/12/1ulrFfSvWMjGyYx.png" alt="1232840-20191111101934183-1576776927.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/1ulrFfSvWMjGyYx.png" alt="1232840-20191111101934183-1576776927.png"></p>
 <p>2、参考代码</p>
 <pre><code>package com.course.testng.multiThread;
 
@@ -1215,9 +1225,9 @@ public class MuitiThreadOnAnnotion {
         System.out.printf(&quot;Thrad Id : %s%n&quot;,Thread.currentThread().getId());
     }
 }</code></pre><p>3、控制台页面输出</p>
-<p><img src="https://i.loli.net/2020/08/12/K8sHJaVkBy6oZzF.png" alt="1232840-20191111102757607-673507643.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/K8sHJaVkBy6oZzF.png" alt="1232840-20191111102757607-673507643.png"></p>
 <p>4、若改成5次调用，有5个线程可调用</p>
-<p><img src="https://i.loli.net/2020/08/12/EP6kjNpTO8FoBzI.png" alt="1232840-20191111103001152-2032081040.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/EP6kjNpTO8FoBzI.png" alt="1232840-20191111103001152-2032081040.png"></p>
 <h4 id="5-testng-xml配置文件"><a href="#5-testng-xml配置文件" class="headerlink" title="5.testng.xml配置文件"></a>5.testng.xml配置文件</h4><p>TestNG可以以多线程的模式运行所有的test，这样可以获得最大的运行速度，最大限度的节约执行时间。当然，并发运行也是有代价的，就是需要我们的代码是线程安全的。</p>
 <p>并发运行测试的话，需要我们指定运行的配置文件，一个示例如下：</p>
 <pre><code>&lt;suite name=&quot;My suite&quot; parallel=&quot;methods&quot; thread-count=&quot;4&quot;&gt;</code></pre><p>说明：在当前测试规划的执行过程中，为每个测试方法的执行使用单独的线程，最多并发4个线程。</p>
@@ -1228,7 +1238,7 @@ public class MuitiThreadOnAnnotion {
 <p>1.Parallel=”methods”的意思是指TestNG会将method作为并发的元子单位，即每个method运行在自己的thread中。如果parallel=”tests”,则指会将test 作为并发的元子单位</p>
 <p>2.Thread-count=”2”是指，运行的时候，并发度为2，同时会有两个线程在运行。</p>
 <p>1、新建一个测试类，例如：Test1</p>
-<p><img src="https://i.loli.net/2020/08/12/jZePfuAplwJq9d2.png" alt="1232840-20191112095111389-1930640207.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/jZePfuAplwJq9d2.png" alt="1232840-20191112095111389-1930640207.png"></p>
 <p>2、参考代码</p>
 <pre><code>package com.course.testng.multiThread;
 
@@ -1264,7 +1274,7 @@ public class Test1 {
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;</code></pre><p>4、控制台输出结果：</p>
-<p><img src="https://i.loli.net/2020/08/12/iUY2DJ53zyAGIxw.png" alt="1232840-20191112100319468-717012041.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/iUY2DJ53zyAGIxw.png" alt="1232840-20191112100319468-717012041.png"></p>
 <p>5、修改testng.xml文件如下：</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
@@ -1275,7 +1285,7 @@ public class Test1 {
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;</code></pre><p>6、控制台页面输出(因为aThreadPool(),bThreadPool(),cThreadPool()都在一个test下面)</p>
-<p><img src="https://i.loli.net/2020/08/12/ZQj8EKp6cnwqTse.png" alt="1232840-20191112100540616-1149314269.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/ZQj8EKp6cnwqTse.png" alt="1232840-20191112100540616-1149314269.png"></p>
 <h4 id="6-小结"><a href="#6-小结" class="headerlink" title="6.小结"></a>6.小结</h4><p> 　　  好了，今天关于TestNG之annotation与并发测试篇 ，就分享到这里。</p>
 <p>有问题加入java自动化测试交流群：694280102</p>
 
@@ -1390,10 +1400,10 @@ public class Test1 {
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1813,7 +1823,7 @@ public class Test1 {
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Java自动化测试框架-12">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/6.jpg" class="responsive-img" alt="Java自动化测试框架-12">
                         
                         <span class="card-title">Java自动化测试框架-12</span>
                     </div>
@@ -1867,7 +1877,7 @@ public class Test1 {
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Java自动化测试框架-10">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="Java自动化测试框架-10">
                         
                         <span class="card-title">Java自动化测试框架-10</span>
                     </div>
@@ -2008,9 +2018,21 @@ public class Test1 {
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2144,7 +2166,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2189,7 +2210,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

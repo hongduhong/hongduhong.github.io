@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1012,12 +1022,12 @@ window.Canvas= new Universe(element);</script>
                 <p><strong>🔥 python接口自动化（十四）–session关联接口（详解）</strong></p>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　上一篇cookie绕过验证码模拟登录博客园，但这只是第一步，一般登录后，还会有其它的操作，如发帖，评论等等，这时候如何保持会话呢？这里我以jenkins平台为例，给小伙伴们在沙场演练一下。</p>
 <h4 id="2-session简介"><a href="#2-session简介" class="headerlink" title="2.session简介"></a>2.session简介</h4><p>1、通过help方法查看帮助文档,截图一部分，后面省略了，有兴趣的自己可以敲一下看看</p>
-<p><img src="https://i.loli.net/2020/08/05/sdn14afOhyTKilR.png" alt="1232840-20190403162623701-1650488720.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/sdn14afOhyTKilR.png" alt="1232840-20190403162623701-1650488720.png"></p>
 <p>2、参考代码</p>
 <pre><code>1 # coding:utf-8
 2 import requests
 3 help(requests.session())</code></pre><h4 id="3-使用session登录"><a href="#3-使用session登录" class="headerlink" title="3.使用session登录"></a>3.使用session登录</h4><p>1、使用session登录只需在登录的基础上稍做修改，即可</p>
-<p><img src="https://i.loli.net/2020/08/05/P9U3fC7xRkj1Qns.png" alt="1232840-20190409113139413-1149291392.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/P9U3fC7xRkj1Qns.png" alt="1232840-20190409113139413-1149291392.png"> </p>
 <p>2、参考代码</p>
 <pre><code># coding:utf-8
 import requests
@@ -1035,11 +1045,11 @@ d = {&quot;j_username&quot;: &quot;admin&quot;,
 s = requests.session()
 r = s.post(url, headers=headers, data=d)
 #print (r.content.decode(&#39;utf-8&#39;))</code></pre><h4 id="4-保存编辑"><a href="#4-保存编辑" class="headerlink" title="4.保存编辑"></a>4.保存编辑</h4><p>1、先打开新建任务，手动输入任务名称和选择下边选项后，打开fiddler抓包，然后点击“确定”</p>
-<p><img src="https://i.loli.net/2020/08/05/ArRs7xjVBGMtyue.png" alt="1232840-20190409112640867-1436217274.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/ArRs7xjVBGMtyue.png" alt="1232840-20190409112640867-1436217274.png"></p>
 <p>fiddler抓包</p>
-<p><img src="https://i.loli.net/2020/08/05/hJ8nGBzAdZrDtOk.png" alt="1232840-20190409112939013-755978808.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/hJ8nGBzAdZrDtOk.png" alt="1232840-20190409112939013-755978808.png"></p>
 <p>2、把body的参数内容写成字典格式</p>
-<p><img src="https://i.loli.net/2020/08/05/fvQsbGYZK5T1zHF.png" alt="1232840-20190409132923437-1230626099.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/fvQsbGYZK5T1zHF.png" alt="1232840-20190409132923437-1230626099.png"> </p>
 <p>参考代码：</p>
 <pre><code>1 body = {&quot;name&quot;:&quot;北京-宏哥1&quot;,
 2         &quot;mode&quot;: &quot;hudson.model.FreeStyleProject&quot;,
@@ -1050,13 +1060,13 @@ r = s.post(url, headers=headers, data=d)
 7 
 8         }
 9 }</code></pre><p>3、用上面登录保存的session继续发送post请求，来新建任务</p>
-<p><img src="https://i.loli.net/2020/08/05/9EifdWGaHjYFoUc.png" alt="1232840-20190409133031677-6251901.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/9EifdWGaHjYFoUc.png" alt="1232840-20190409133031677-6251901.png"> </p>
 <p>4、执行后，查看所有任务就多了一条新增的了</p>
-<p><img src="https://i.loli.net/2020/08/05/DZjVKuXBiHqC58b.png" alt="1232840-20190409132752754-1308665219.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/DZjVKuXBiHqC58b.png" alt="1232840-20190409132752754-1308665219.png"> </p>
 <p>5、运行结果部分截图：</p>
-<p><img src="https://i.loli.net/2020/08/05/qS8oyFUHukbiKvz.png" alt="1232840-20190409135811981-1266307704.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/qS8oyFUHukbiKvz.png" alt="1232840-20190409135811981-1266307704.png"></p>
 <p>6、粘贴到记事本修改后缀查看：</p>
-<p><img src="https://i.loli.net/2020/08/05/TWuNFDmlp9oR31S.png" alt="1232840-20190409135849947-1352095135.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/TWuNFDmlp9oR31S.png" alt="1232840-20190409135849947-1352095135.png"></p>
 <h4 id="7-参考代码"><a href="#7-参考代码" class="headerlink" title="7.参考代码"></a>7.参考代码</h4><pre><code> 1 # coding:utf-8
  2 import requests
  3 # 先打开登录首页，获取部分session
@@ -1206,10 +1216,10 @@ r = s.post(url, headers=headers, data=d)
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1629,7 +1639,7 @@ r = s.post(url, headers=headers, data=d)
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="python接口自动化15">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/2.jpg" class="responsive-img" alt="python接口自动化15">
                         
                         <span class="card-title">python接口自动化15</span>
                     </div>
@@ -1683,7 +1693,7 @@ r = s.post(url, headers=headers, data=d)
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="python接口自动化13">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="python接口自动化13">
                         
                         <span class="card-title">python接口自动化13</span>
                     </div>
@@ -1824,9 +1834,21 @@ r = s.post(url, headers=headers, data=d)
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1960,7 +1982,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2005,7 +2026,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

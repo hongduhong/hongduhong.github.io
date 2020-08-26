@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1015,34 +1025,34 @@ window.Canvas= new Universe(element);</script>
 <h4 id="2-常用定位方法讲解"><a href="#2-常用定位方法讲解" class="headerlink" title="2.常用定位方法讲解"></a>2.常用定位方法讲解</h4><p>　　对象定位是自动化测试中很关键的一步，也可以说是最关键的一步，毕竟你对象都没定位那么你想操作也不行。所以本章节的知识宏哥希望小伙伴们多动手去操作和实战，不要仅仅只是书本上的知识，毕竟这个我只能够举例说明。下面我们来看我们常用的一些定位方式。</p>
 <h5 id="2-1-ID定位"><a href="#2-1-ID定位" class="headerlink" title="2.1 ID定位"></a>2.1 ID定位</h5><p>　　无论是在web自动化还是app自动化中id都是唯一的，可能有的小伙伴看到这里会有疑问，因为有的资料说是通过name定位是唯一的，为什么你这里是id呢，其实这个在之前是不冲突的，但是如果你用的是appium较新版本是不行的，在新版本中name定位被去掉了，所以在以后的定位中不会有name定位了，通常情况下我们也更喜欢用id进行定位。这里可能刚学的小伙伴会有疑问，有的时候你的应用为什么没有id，或者说在这个手机上有但是另外的手机上没有。1、开发没有添加。2、android版本是4.4以下的。</p>
 <p>我们直接看下面这张图片吧</p>
-<p><img src="https://i.loli.net/2020/08/07/LfCFTtvEPwDoYcr.png" alt="1232840-20190620143859834-1019346780.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/LfCFTtvEPwDoYcr.png" alt="1232840-20190620143859834-1019346780.png"></p>
 <p>上面图片中左边部分用红色圈出来的对象的id我们在右边的属性中可以看到，它的id宏哥同样是用红色圈出，如果我们需要对“请输入淘宝账户”这个输入框进行输入信息，我们只需操作右边的id就行，下面我们直接看代码。</p>
 <pre><code>1 driver.find_element_by_id(&quot;com.taobao.taobao:id/aliuser_login_account_et&quot;).send_keys(&quot;北京宏哥&quot;)</code></pre><p>通过上面的代码我们能够直接在账户信息输入框中输入账户信息北京宏哥。可能对于无基础的人来说这里会又点儿迷糊，这个driver是哪里来的，driver在我们配置启动的时就已经初始化，我们只需要调用他的方法find_element_by_id。如果你的ide有自动补全功能，那么你在输入后面的方法时会发现一个问题，为什么还有一个find_elements_by_id呢？这个在后面宏哥会讲解，有兴趣的小伙伴可以思考一下。</p>
 <h5 id="2-2-className定位"><a href="#2-2-className定位" class="headerlink" title="2.2 className定位"></a>2.2 className定位</h5><p>在实际工作中className定位用得相对而言会比较少。当你经常去看class时你会发现很多的className是一样的，你没有办法对其进行唯一定位，下面我们看下面两张图片</p>
-<p><img src="https://i.loli.net/2020/08/07/l7TfucrxU2s9meV.png" alt="1232840-20190620145211610-876204083.png"><br><img src="https://i.loli.net/2020/08/07/qDPgtlYTMv9VScI.png" alt="1232840-20190620144640656-1742231255.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/l7TfucrxU2s9meV.png" alt="1232840-20190620145211610-876204083.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/qDPgtlYTMv9VScI.png" alt="1232840-20190620144640656-1742231255.png"></p>
 <p>我们可以仔细看一下这两张图片中淘宝账号、密码两个输入框中的className都是一样的，如果在这种情况下你使用下边这种方式去定位，你会发现你永远定位不了密码栏，这是为什么呢？因为在设计的时候如果你查找的元素在页面有多个，系统会自动给你选择第一个，所以你永远操作不了后面的，那么在实际工作或者实战的时候如果遇到此类问题如何解决这种问题呢？宏哥后面会讲解。</p>
 <pre><code>driver.find_element_by_class_name(&quot;android.widget.EditText&quot;).send_keys(&quot;北京宏哥&quot;)</code></pre><h5 id="2-3-xpath定位"><a href="#2-3-xpath定位" class="headerlink" title="2.3 xpath定位"></a>2.3 xpath定位</h5><p>xpath定位在web自动化中是最常见的，而且也是最有效的，使用xpath定位避免了找不到元素导致报错的问题，但是在app中使用xpath定位是一件很low的事情。为什么这么说呢？因为在宏哥过来人的经历中只要遇见使用xpath定位元素他的反应就会比较慢，自动化的目的是为了提高效率，但是使用xpath后会降低效率，所以这里说很 low。但很多时候我们不得不去了解，下面我们大概讲解一下。首先我们要熟悉一下web的xpath定位。</p>
 <p>1）讲web的xpath之前大家先装一下fireFox浏览器，再在浏览器中安装fireBug以及FirePath两个插件。如下图：</p>
-<p><img src="https://i.loli.net/2020/08/07/MGPOxwmyRhjqdaS.jpg" alt="imageview _1_.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/MGPOxwmyRhjqdaS.jpg" alt="imageview _1_.jpg"></p>
 <p>在自动化或者学习xpath时这两个插件是必不可少的，这里我们直接讲xpath，我们来看下面一张图片理解一下</p>
-<p><img src="https://i.loli.net/2020/08/07/sA6rhIV9i3wTRYy.jpg" alt="imageview _2_.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/sA6rhIV9i3wTRYy.jpg" alt="imageview _2_.jpg"></p>
 <p>用红色圈出有虚线的输入框我们看一下xFirePath给我们的定位，在定位的xpath中显示的是“.//<em>[@id=’kw’]”，这个是什么意思呢？我们来一步一步讲解。1、//</em>  选取文档中的所有元素 。2、@id=’kw’]  匹配属性为id且值为kw的节点。这里有的小伙伴可能不是很理解，说这里直接使用id进行定位就行。其实也是，但是当没有这个属性的时候呢？我们看下面这张图片</p>
-<p><img src="https://i.loli.net/2020/08/07/XV2O6NKmWSkcxHC.jpg" alt="imageview _3_.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/XV2O6NKmWSkcxHC.jpg" alt="imageview _3_.jpg"></p>
 <p>name定位无效的情况下，当你看到这张图片的时候如果你不用xpath怎么定位呢？有一些抓狂的感觉吧。小伙伴可以尝试着自己使用xpath进行定位，可能有一些人发现xpath中定位不是很明白了，为什么呢？.//*[@id=’u1’]/a[4]  在这个xpath中我们没有像之前那样思路清晰了他多了一些层级关系，这个后面我们会仔细讲。这个xpath中首先第一步1、@id=’u1’和之前的一样匹配属性为id值为ul的节点，然后再在他的下面进行定位第二步2、/a[4]  意思就是从根节点下选取第四个a元素。这样一步一步解析是否更加容易理解了呢？下面我们看一下在xpath定位中经常用到的一些语法，下来大家多多练习。</p>
-<p><img src="https://i.loli.net/2020/08/07/n9bXplDZrFsTNUP.png" alt="imageview.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/n9bXplDZrFsTNUP.png" alt="imageview.png"></p>
 <p>这个是我们经常用到的，而且是最基础的知识，只有这些没有办法完成很多古怪的需求，那么就有更难的，下面我们看下面的列表</p>
-<p><img src="https://i.loli.net/2020/08/07/QIB9ofljGNvpZPe.png" alt="imageview _1_.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/QIB9ofljGNvpZPe.png" alt="imageview _1_.png"></p>
 <p>上面这些知识都是在<a href="http://www.w3school.com.cn/xpath/xpath_examples.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/xpath/xpath_examples.asp</a> 里面，大家可以多看看，多练习。</p>
 <p>下面我们直接看在app中xpath的使用</p>
-<p><img src="https://i.loli.net/2020/08/07/nwTmgaortx6M7pZ.png" alt="1232840-20190621103652688-506808560.png"><br><img src="https://i.loli.net/2020/08/07/a1ZgGNXDeBy72PJ.png" alt="1232840-20190621102325546-2071797774.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/nwTmgaortx6M7pZ.png" alt="1232840-20190621103652688-506808560.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/a1ZgGNXDeBy72PJ.png" alt="1232840-20190621102325546-2071797774.png"></p>
 <p>在上面两张图片中我们能够清除的看见他们的id、className都是一样的，这样的情况下不用层级定位方式我们只能够采用xpath来进行定位，首先根据前面web的学习大家可以思考一下该怎么定位。我们直接看代码</p>
 <pre><code>1 driver.find_element_by_xpath(&quot;//android.widget.TextView[@text=&#39;聚划算&#39;]&quot;).click()</code></pre><p>在xpath里面我们的语法是这样“//android.widget.TextView[@text=’JavaScript’]”，这个和我们之前web的xpath一样，意思是查找所有节点中节点为android.widget.TextView （这里使用的是className，也可以使用id，系统会依次去找）并且他的text属性值为JavaScript，这样是否更容易理解呢？下来多练习。这样的定位方式不推荐，效率很慢。</p>
 <h4 id="3-层级定位"><a href="#3-层级定位" class="headerlink" title="3.层级定位"></a>3.层级定位</h4><h5 id="3-1什么是层级定位"><a href="#3-1什么是层级定位" class="headerlink" title="3.1什么是层级定位"></a>3.1什么是层级定位</h5><p>　　在前面的章节中我们已经提到了层级定位，只是不知道具体怎么操作而已。在很多的自动化中如果只是靠简单的定位是没有办法完成自动化的，就像刚xpath定位一样，有的元素的id、name、className都是一样的，xpath定位效率低下，这个时候我们大多数都会采用层级定位。</p>
 <h5 id="3-2项目中层级定位如何运用"><a href="#3-2项目中层级定位如何运用" class="headerlink" title="3.2项目中层级定位如何运用"></a>3.2项目中层级定位如何运用</h5><p>下面我们举一个简单的例子来理解层级定位。</p>
-<p><img src="https://i.loli.net/2020/08/07/afNA9kUTbcZtqHl.png" alt="1232840-20190621115229039-501129874.png"><br><img src="https://i.loli.net/2020/08/07/p3ilngjLq95rZFM.png" alt="1232840-20190621111347932-1346193760.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/afNA9kUTbcZtqHl.png" alt="1232840-20190621115229039-501129874.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/p3ilngjLq95rZFM.png" alt="1232840-20190621111347932-1346193760.png"></p>
 <p>从上面的图片我们可以看出id为com.taobao.taobao:id/rv_main_container的节点下面包含了很多的android.widget.FrameLayout</p>
 <p>从下面的图片我们可以看出id为android.widget.FrameLayout的节点下面包含了很多的android.widget.LinearLayout</p>
-<p><img src="https://i.loli.net/2020/08/07/Mha3Gp4yZOLlS69.png" alt="1232840-20190621111535260-1518321995.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/Mha3Gp4yZOLlS69.png" alt="1232840-20190621111535260-1518321995.png"></p>
 <p>从这张图片我们不难看出，如果我们要定位这个元素我们是没办法去定位的，这种情况我们大多数使用的是层级定位以及xpath，这里我们来看如何使用层级定位。</p>
 <p>首先我们可以看出三幅图的结构上的区别，第三幅图的元素它是在第二幅图里面的，第二幅图元素它是在第一幅图里面的，这里我们称第一幅图id（com.taobao.taobao:id/rv_main_container）为android.widget.FrameLayout的节点为第二幅图元素的父节点，第二幅图id（android.widget.FrameLayout）为android.widget.FrameLayout的节点为第三幅图元素的父节点，第一幅图id（com.taobao.taobao:id/rv_main_container）为android.widget.LinearLayout的节点为第三幅图元素的祖父节点；我们只需要先通过id定位到祖父节点，然后再从祖父节点往下面依次进行定位就好。现在你可以练习一下，看和我的结果一样吗？看代码：</p>
 <pre><code>1 element= driver.find_element_by_id(&quot;com.taobao.taobao:id/rv_main_container&quot;)
@@ -1054,7 +1064,7 @@ window.Canvas= new Universe(element);</script>
     </iframe>
 </div>
 
-<p><img src="https://i.loli.net/2020/08/07/1aPHTkKyu4h8dVB.png" alt="1232840-20190621125559597-572477866.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/1aPHTkKyu4h8dVB.png" alt="1232840-20190621125559597-572477866.png"></p>
 <p>在祖父节点下的所有子节点他的className都是“android.widget.FrameLayout”，在父节点下的所有子节点他的className都是“android.widget.LinearLayout”，这种情况下他怎么去点击操作呢？所以在这种情况下会引发一个新的定位问题，就是宏哥在接下来要讲的List定位。</p>
 <h5 id="3-3参考代码"><a href="#3-3参考代码" class="headerlink" title="3.3参考代码"></a>3.3参考代码</h5><pre><code> 1 # coding=utf-8
  2 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1088,13 +1098,13 @@ window.Canvas= new Universe(element);</script>
 30 # driver.quit()</code></pre><h4 id="4-小结"><a href="#4-小结" class="headerlink" title="4.小结"></a>4.小结</h4><p>1、前边介绍了一下火狐浏览器，这里宏哥再给小伙伴们总结一下谷歌浏览器如何用xpath定位，当然了，大神和大佬可以忽略不看，因为可以直接手写xpath定位。其实看看他们的语法也很简单，自己后期也可以尝试手写，看看和工具的有哪些区别，这样可以有助于自己的提高和提升。</p>
 <p>2、谷歌浏览器xpath插件下载地址<a href="https://chrome.google.com/webstore/detail/xpath-helper/hgimnogjllphhhkhlmebbmlgjoejdpjl" target="_blank" rel="noopener">https://chrome.google.com/webstore/detail/xpath-helper/hgimnogjllphhhkhlmebbmlgjoejdpjl</a></p>
 <p>3、安装方法，用谷歌浏览器直接访问上边的地址，添加以后即可。</p>
-<p><img src="https://i.loli.net/2020/08/07/smcyGL6ogPM4SrD.png" alt="1232840-20190621090122318-1928073650.png"><br><img src="https://i.loli.net/2020/08/07/PLVShmBQwsE3bo4.png" alt="1232840-20190621090227696-1147435557.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/smcyGL6ogPM4SrD.png" alt="1232840-20190621090122318-1928073650.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/PLVShmBQwsE3bo4.png" alt="1232840-20190621090227696-1147435557.png"></p>
 <p>4、看一下如何使用和其效果</p>
 <p>（1）谷歌浏览器，F12，不可以的话，可以打开“开发者工具”</p>
 <p>（2）点击左边的“箭头”，查找到要定位的元素</p>
 <p>（3）选中控制台的元素，鼠标右键，在copy里，选中“Copy XPath”</p>
 <p>（4）copy的内容：（//*[@id=”kw”]）</p>
-<p><img src="https://i.loli.net/2020/08/07/fOojVLrpH1TRuvJ.png" alt="1232840-20190701151358393-328311040.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/fOojVLrpH1TRuvJ.png" alt="1232840-20190701151358393-328311040.png"></p>
 <p>5、注意find_element和find_elements的区别！！！</p>
 <p>　　好了，时间不多了，天也很晚了，大致就这些吧，今天就给小伙伴们就说到这里吧。</p>
 
@@ -1209,10 +1219,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1632,7 +1642,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="python+appium自动化测试11">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/11.jpg" class="responsive-img" alt="python+appium自动化测试11">
                         
                         <span class="card-title">python+appium自动化测试11</span>
                     </div>
@@ -1686,7 +1696,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="python+appium自动化测试9">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/6.jpg" class="responsive-img" alt="python+appium自动化测试9">
                         
                         <span class="card-title">python+appium自动化测试9</span>
                     </div>
@@ -1827,9 +1837,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1963,7 +1985,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2008,7 +2029,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

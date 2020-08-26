@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1014,7 +1024,7 @@ window.Canvas= new Universe(element);</script>
 <p>上一篇文章修改了一些基本的ReportNG信息，链接：Java自动化测试框架-05 - 来给你的测试报告化个妆整个形 - （上），本文将继续带大家进行修改，重点是添加饼图，将从普通会员升级到VIP会员。</p>
 <p>经过上次的整容恢复的差不多了，宏哥继续带领下伙伴们和同学们折腾，给reportng来个二次开刀。</p>
 <h4 id="2-第一刀"><a href="#2-第一刀" class="headerlink" title="2.第一刀"></a>2.第一刀</h4><p>1、修改测试结果顺序，修改TestResultComparator类compare方法</p>
-<p><img src="https://i.loli.net/2020/08/11/DC3aWF51LGbSidZ.png" alt="1232840-20191031093519728-971497947.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/DC3aWF51LGbSidZ.png" alt="1232840-20191031093519728-971497947.png"></p>
 <p>2、参考代码</p>
 <pre><code>//=============================================================================
 // Copyright 2006-2013 Daniel W. Dyer
@@ -1060,15 +1070,15 @@ class TestResultComparator implements Comparator&lt;ITestResult&gt;
         return longresult2;
     }
 }</code></pre><h4 id="3-第二刀"><a href="#3-第二刀" class="headerlink" title="3.第二刀"></a>3.第二刀</h4><p>1、添加饼图,在overview.html.vm添加</p>
-<p><img src="https://i.loli.net/2020/08/11/uIxR8OpD5iGQXgs.png" alt="1232840-20191031093759036-1184193197.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/uIxR8OpD5iGQXgs.png" alt="1232840-20191031093759036-1184193197.png"></p>
 <p>2、参考代码</p>
 <pre><code>&lt;script src=&#39;http://www.ichartjs.com/ichart.latest.min.js&#39;&gt;&lt;/script&gt;</code></pre><h4 id="4-第三刀"><a href="#4-第三刀" class="headerlink" title="4.第三刀"></a>4.第三刀</h4><p>1、继续在overview.html.vm添加</p>
-<p><img src="https://i.loli.net/2020/08/11/27WJYLZeBlhagk1.png" alt="1232840-20191031094025703-1039078980.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/27WJYLZeBlhagk1.png" alt="1232840-20191031094025703-1039078980.png"></p>
 <p>2、参考代码</p>
 <pre><code>&lt;div id=&#39;ichart-render&#39;&gt;&lt;/div&gt;</code></pre><h4 id="5-第四刀"><a href="#5-第四刀" class="headerlink" title="5.第四刀"></a>5.第四刀</h4><p>1、给通过总数，失败总数和跳过总数添加id属性&lt;td class=”passRate suite”&gt;之前添加，找到#if($totalPassed&gt;0),为td标签，添加id属性，如下：</p>
-<p><img src="https://i.loli.net/2020/08/11/l85Jrp9sciaZIj1.png" alt="1232840-20191031094915333-806444491.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/l85Jrp9sciaZIj1.png" alt="1232840-20191031094915333-806444491.png"></p>
 <h4 id="6-第五刀"><a href="#6-第五刀" class="headerlink" title="6.第五刀"></a>6.第五刀</h4><p>1、添加饼图js代码，添加在&lt;/body&gt;之前即可</p>
-<p><img src="https://i.loli.net/2020/08/11/OSBPzoc7HyQFMAJ.png" alt="1232840-20191031095135205-1080599885.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/OSBPzoc7HyQFMAJ.png" alt="1232840-20191031095135205-1080599885.png"></p>
 <p>2、参考代码</p>
 <pre><code>&lt;script type=&#39;text/javascript&#39;&gt;
     pcount=document.getElementById(&quot;tpn&quot;).innerHTML;
@@ -1189,25 +1199,25 @@ class TestResultComparator implements Comparator&lt;ITestResult&gt;
     });
 &lt;/script&gt;</code></pre><h4 id="7-包扎缝合"><a href="#7-包扎缝合" class="headerlink" title="7.包扎缝合"></a>7.包扎缝合</h4><p>这次的包扎缝合宏哥给你们换另一个方式通过ant来导出jar。ant的安装和配置在上一篇大家都可以看到的，这里就不赘述了。</p>
 <p>1、进入代码目录，将其build.xml的jar包版本修改成1.1.8</p>
-<p><img src="https://i.loli.net/2020/08/11/xyCtFuWeMS2UK53.png" alt="1232840-20191031100530896-1004044175.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/xyCtFuWeMS2UK53.png" alt="1232840-20191031100530896-1004044175.png"></p>
 <p>2、导出jar包。成功。</p>
-<p><img src="https://i.loli.net/2020/08/11/vHZWmjipeVNsCyE.png" alt="1232840-20191031100701477-1302869374.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/vHZWmjipeVNsCyE.png" alt="1232840-20191031100701477-1302869374.png"></p>
 <p>3、到哪个目录下找到jar包。</p>
-<p><img src="https://i.loli.net/2020/08/11/dgAZqwJV5BWIUXi.png" alt="1232840-20191031100810732-426198654.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/dgAZqwJV5BWIUXi.png" alt="1232840-20191031100810732-426198654.png"></p>
 <p>4、新建项目引用jar包。</p>
-<p><img src="https://i.loli.net/2020/08/11/dQ5BPeHEV3v6j2N.png" alt="1232840-20191104092105064-805058278.png"></p>
-<h4 id="8-术后恢复效果图："><a href="#8-术后恢复效果图：" class="headerlink" title="8.术后恢复效果图："></a>8.术后恢复效果图：</h4><p><img src="https://i.loli.net/2020/08/11/VurPIfb4n2xG3He.png" alt="1232840-20191104085709691-1242083008.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/dQ5BPeHEV3v6j2N.png" alt="1232840-20191104092105064-805058278.png"></p>
+<h4 id="8-术后恢复效果图："><a href="#8-术后恢复效果图：" class="headerlink" title="8.术后恢复效果图："></a>8.术后恢复效果图：</h4><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/VurPIfb4n2xG3He.png" alt="1232840-20191104085709691-1242083008.png"></p>
 <h4 id="9-小结"><a href="#9-小结" class="headerlink" title="9.小结"></a>9.小结</h4><p>1、小伙伴可能按照宏哥的步骤操作到最后也会一脸懵逼的发现我的饼图在哪里，给谁吃掉了。来跟随宏哥看看，到底是被谁吃掉了。</p>
 <p>（1）首先宏哥看了一看修改的代码，复查了一遍没有问题。</p>
 <p>（2）完了宏哥突然发现有一段引入图标插件的js的代码：&lt;script src=’<a href="http://www.ichartjs.com/ichart.latest.min.js&#39;&gt;" target="_blank" rel="noopener">http://www.ichartjs.com/ichart.latest.min.js&#39;&gt;</a>&lt;/script&gt;是通过一个网址引入的就是在动第二刀的时候，然后宏哥就试着访问网址：<a href="http://www.ichartjs.com/ichart.latest.min.js，结果悲剧了访问到如下：" target="_blank" rel="noopener">http://www.ichartjs.com/ichart.latest.min.js，结果悲剧了访问到如下：</a></p>
-<p><img src="https://i.loli.net/2020/08/11/qRcFHtOxN4IrmEw.png" alt="1232840-20191104090608099-216599890.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/qRcFHtOxN4IrmEw.png" alt="1232840-20191104090608099-216599890.png"></p>
 <p>（3）到这里宏哥就确定引入的JS有问题了，所以饼图没有出现那么我们网址访问不到，那么就下载一个到本地，在本地访问</p>
-<p><img src="https://i.loli.net/2020/08/11/ZHU4VQMF1CtsYG6.png" alt="1232840-20191104090906380-882365043.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/ZHU4VQMF1CtsYG6.png" alt="1232840-20191104090906380-882365043.png"></p>
 <p>（4）完成以后，宏哥就开始导出jar包，然后引入jar包以后，仍然没有出现饼图。</p>
 <p>（5）完了宏哥就抱着试一试的心理，把js拷贝到测试报告的文件夹中，再次看测试报告。</p>
-<p><img src="https://i.loli.net/2020/08/11/VX9whuYt3UxWcoZ.png" alt="1232840-20191104091225363-1256240728.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/VX9whuYt3UxWcoZ.png" alt="1232840-20191104091225363-1256240728.png"></p>
 <p>（6）饼图出现了，原来是js还是没有被引入，先前做的仅仅是将js引入jar包，而没有引入测试报告，要想引入测试报告还的修改一个地方的代码，仿照上边CSS和JS的引入，如下：</p>
-<p><img src="https://i.loli.net/2020/08/11/mT6azQNvyYbdo8S.png" alt="1232840-20191104091705504-354184020.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/mT6azQNvyYbdo8S.png" alt="1232840-20191104091705504-354184020.png"></p>
 <p>（7）再次导出jar包，测试报告的饼图就出现了。</p>
 <p>2、好了，关于这个就到这里了。</p>
 <p>有问题加入java自动化测试交流群：694280102</p>
@@ -1323,10 +1333,10 @@ class TestResultComparator implements Comparator&lt;ITestResult&gt;
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1746,7 +1756,7 @@ class TestResultComparator implements Comparator&lt;ITestResult&gt;
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Java自动化测试框架-07">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="Java自动化测试框架-07">
                         
                         <span class="card-title">Java自动化测试框架-07</span>
                     </div>
@@ -1800,7 +1810,7 @@ class TestResultComparator implements Comparator&lt;ITestResult&gt;
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Java自动化测试框架-05">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/2.jpg" class="responsive-img" alt="Java自动化测试框架-05">
                         
                         <span class="card-title">Java自动化测试框架-05</span>
                     </div>
@@ -1941,9 +1951,21 @@ class TestResultComparator implements Comparator&lt;ITestResult&gt;
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2077,7 +2099,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2122,7 +2143,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

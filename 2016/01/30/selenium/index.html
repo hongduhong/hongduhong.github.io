@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1021,18 +1031,18 @@ window.Canvas= new Universe(element);</script>
 &lt;iframeid=&quot;frame2&quot;src=&quot;http://example.com&quot;name=&quot;example&quot;height=&quot;325&quot;width=&quot;550&quot;&gt;&lt;/iframe&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre><p>用本地浏览器打开如下图：</p>
-<p><img src="https://i.loli.net/2020/08/03/7BxdqnisvS6OmoA.png" alt="1232840-20191206103624347-982811508.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/7BxdqnisvS6OmoA.png" alt="1232840-20191206103624347-982811508.png"></p>
 <p>用firepath来获得百度文本输入框的XPath截图</p>
-<p><img src="https://i.loli.net/2020/08/03/AxSKB3Ynzsj8uOG.png" alt="1232840-20191206103818467-1474136437.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/AxSKB3Ynzsj8uOG.png" alt="1232840-20191206103818467-1474136437.png"></p>
 <p>看到了红圈位置不是显示TopWindow，说明你要定位的目标元素在一个iframe里，如果要操作这个元素，首先需要从默认的TopWindow，利用switch_to.frame(‘iframeid’)方法来切换到具体的iframe，然后才能去操作目标元素。</p>
 <p>正常百度页面，文本输入框截图</p>
-<p><img src="https://i.loli.net/2020/08/03/PIeBUjplXn7RZ98.png" alt="1232840-20191206104024140-983253540.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/PIeBUjplXn7RZ98.png" alt="1232840-20191206104024140-983253540.png"></p>
 <p>方法介绍：</p>
 <pre><code>driver.switch_to.frame(&quot;iframe1&quot;)
 #操作目标元素，这个目标元素在iframe1里面，这里就是百度文本输入框输入文字
 driver.switch_to.default_content()</code></pre><p>如果有具体项目页面利用了iframe,自己动手写一下脚本。</p>
 <h5 id="2-3示例二"><a href="#2-3示例二" class="headerlink" title="2.3示例二"></a>2.3示例二</h5><p>　　宏哥最后终于找到了一个合适的demo来给小伙伴们或者童鞋们来用代码实际演练的例子如下：</p>
-<p><img src="https://i.loli.net/2020/08/03/SKTAE8qFPhZifX1.png" alt="1232840-20191209113905253-1041700613.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/SKTAE8qFPhZifX1.png" alt="1232840-20191209113905253-1041700613.png"></p>
 <p>步骤：</p>
 <p>1.先确认你要操作的元素，是否存在与iframe中，如果元素在iframe中就需要切换</p>
 <p>2.找到该iframe</p>
@@ -1043,7 +1053,7 @@ driver.switch_to.frame(&#39;login_frame_qq&#39;)#通过name
 driver.switch_to.frame(driver.find_element_by_xpath(&#39;//iframe[@name=&quot;login_frame_qq&quot;]&#39;))#通过webelement</code></pre><p>第两种方式：既等待元素可见又进行了iframe切换</p>
 <pre><code>WebDriverWait(driver,20).until(EC.frame_to_be_available_and_switch_to_it(&#39;login_frame_qq&#39;))</code></pre><p>4.切换完后，就以这个iframe中的html为主html</p>
 <p>5.返回默认的html页面，无论现在在那一层的iframe，执行一次即可。</p>
-<pre><code>driver.switch_to.default_content()</code></pre><h6 id="2-3-1代码实现"><a href="#2-3-1代码实现" class="headerlink" title="2.3.1代码实现"></a>2.3.1代码实现</h6><p><img src="https://i.loli.net/2020/08/03/DVGzC3biqvmEX1F.png" alt="1232840-20191209092347831-595788387.png"></p>
+<pre><code>driver.switch_to.default_content()</code></pre><h6 id="2-3-1代码实现"><a href="#2-3-1代码实现" class="headerlink" title="2.3.1代码实现"></a>2.3.1代码实现</h6><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/DVGzC3biqvmEX1F.png" alt="1232840-20191209092347831-595788387.png"></p>
 <h6 id="2-3-2参考代码"><a href="#2-3-2参考代码" class="headerlink" title="2.3.2参考代码"></a>2.3.2参考代码</h6><pre><code>#coding=utf-8🔥
 
 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1084,13 +1094,13 @@ driver.switch_to.frame(driver.find_element_by_xpath(&#39;//iframe[@name=&quot;lo
 #WebDriverWait(driver,20).until(EC.visibility_of_element_located((By.XPATH,&#39;//a[@id=&quot;switcher_plogin&quot;]&#39;)))
 time.sleep(10)
 driver.find_element_by_xpath(&#39;//a[@id=&quot;switcher_plogin&quot;]&#39;).click()</code></pre><h6 id="2-3-3运行结果"><a href="#2-3-3运行结果" class="headerlink" title="2.3.3运行结果"></a>2.3.3运行结果</h6><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/08/03/EFINJ6mvUQsKkhL.png" alt="1232840-20191209090549797-1965612904.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/EFINJ6mvUQsKkhL.png" alt="1232840-20191209090549797-1965612904.png"></p>
 <h6 id="2-3-4浏览器运行结果"><a href="#2-3-4浏览器运行结果" class="headerlink" title="2.3.4浏览器运行结果"></a>2.3.4浏览器运行结果</h6><p>浏览器的运行过程，宏哥这里就不做屏幕录制了，这个我们看一下结果。浏览器运行结果如下：</p>
-<p><img src="https://i.loli.net/2020/08/03/vASnEwsDPqmLtOf.png" alt="1232840-20191209092738118-991207600.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/vASnEwsDPqmLtOf.png" alt="1232840-20191209092738118-991207600.png"></p>
 <h4 id="3-处理Alert弹窗"><a href="#3-处理Alert弹窗" class="headerlink" title="3.处理Alert弹窗"></a>3.处理Alert弹窗</h4><p>本文来介绍如何通过Selenium方法去处理网页Alert弹窗，和处理iframe类似，都是通过switch_to方法。这里还是没有找到合适的alert弹窗网站，我们就自己创建一个吧，前面文章介绍了如何通过执行JS来增加一个弹窗。</p>
 <p>（1）使用switch_to方法先切换到浏览器弹出框<br>driver.switch_to.alert<br>（2）Alert类提供了一系列的操作方法<br>dismiss():否<br>accept():是<br>text():获取弹出框里的文本内容<br>send_keys():在弹出框里输入文本</p>
 <p>相关脚本代码如下：</p>
-<h5 id="3-1代码实现"><a href="#3-1代码实现" class="headerlink" title="3.1代码实现"></a>3.1代码实现</h5><p><img src="https://i.loli.net/2020/08/03/tFbBZV7iUWl1fze.png" alt="1232840-20191206162720819-1573154394.png"></p>
+<h5 id="3-1代码实现"><a href="#3-1代码实现" class="headerlink" title="3.1代码实现"></a>3.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/tFbBZV7iUWl1fze.png" alt="1232840-20191206162720819-1573154394.png"></p>
 <h5 id="3-2参考代码"><a href="#3-2参考代码" class="headerlink" title="3.2参考代码"></a>3.2参考代码</h5><pre><code>#coding=utf-8🔥
 
 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1118,13 +1128,13 @@ time.sleep(2)
 driver.switch_to_alert().accept()#点击弹出里面的确定按钮
 
 #driver.switch_to_alert().dismiss()#点击弹出上面的X按</code></pre><h5 id="3-3运行结果"><a href="#3-3运行结果" class="headerlink" title="3.3运行结果"></a>3.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/08/03/mhqsLlINjAkyJH4.png" alt="1232840-20191206162543872-1121124198.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/mhqsLlINjAkyJH4.png" alt="1232840-20191206162543872-1121124198.png"></p>
 <p>注意：<br>driver.switch_to_alert().accept()</p>
 <p>这是一个老方法，在有些编辑器（后面会介绍一款Python的IDE工具）会提示这个方法划横线，说明在最新Selenium在Pyhton支持包里，这个方法被丢弃，虽然还是可以用，现在新的方法是switch_to.alert(),用这个最新方法，我测试了下，无法模拟点击确定和点击关</p>
 <p>闭弹窗按钮，所以这个地方选择了旧的方法switch_to_alert()</p>
 <h4 id="4-获取当前页面全部图片信息"><a href="#4-获取当前页面全部图片信息" class="headerlink" title="4.获取当前页面全部图片信息"></a>4.获取当前页面全部图片信息</h4><p>本文来介绍下如何获取当前页面全部的图片信息，图片信息可能包括，图片名称，图片大小等。</p>
 <p>相关脚本代码如下：</p>
-<h5 id="4-1代码实现"><a href="#4-1代码实现" class="headerlink" title="4.1代码实现"></a>4.1代码实现</h5><p><img src="https://i.loli.net/2020/08/03/9HTrQSvnKMgbuG3.png" alt="1232840-20191209093332225-902209360.png"></p>
+<h5 id="4-1代码实现"><a href="#4-1代码实现" class="headerlink" title="4.1代码实现"></a>4.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/9HTrQSvnKMgbuG3.png" alt="1232840-20191209093332225-902209360.png"></p>
 <h5 id="4-2参考代码"><a href="#4-2参考代码" class="headerlink" title="4.2参考代码"></a>4.2参考代码</h5><pre><code>#coding=utf-8🔥
 
 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1151,13 +1161,13 @@ forimageindriver.find_elements_by_tag_name(&quot;img&quot;):
 print(image.text)
 print(image.size)
 print(image.tag_name)</code></pre><h5 id="4-3运行结果"><a href="#4-3运行结果" class="headerlink" title="4.3运行结果"></a>4.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/08/03/P4vZ5J8VUMRigtF.png" alt="1232840-20191209093243331-2083227649.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/P4vZ5J8VUMRigtF.png" alt="1232840-20191209093243331-2083227649.png"></p>
 <p>运行结果：</p>
 <p>运行结果，发现没有图片名称打印出来，说明百度新闻页面，所有图片都没有给出text这个属性，前端的妹子没有写图片的text属性。不相信的同学或者小伙伴们可以通过F12查看一下图片是否有text这个属性。</p>
 <h4 id="5-获取页面元素的href属性"><a href="#5-获取页面元素的href属性" class="headerlink" title="5.获取页面元素的href属性"></a>5.获取页面元素的href属性</h4><p>本文来介绍如何通过Selenium获取页面元素的某一个属性。一个元素可能有多个属性，例如class,id,name,text,href,vale等等。这里我们举例一个爬虫中经常需要处理的链接问题：找出当前页面所有的超链接。</p>
 <p>已百度首页为例，打印所有包含href的元素的链接。</p>
 <p>相关脚本代码如下：</p>
-<h5 id="5-1代码实现"><a href="#5-1代码实现" class="headerlink" title="5.1代码实现"></a>5.1代码实现</h5><p><img src="https://i.loli.net/2020/08/03/cG1nS6eXHBl5u8s.png" alt="1232840-20191209094423839-1113523856.png"></p>
+<h5 id="5-1代码实现"><a href="#5-1代码实现" class="headerlink" title="5.1代码实现"></a>5.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/cG1nS6eXHBl5u8s.png" alt="1232840-20191209094423839-1113523856.png"></p>
 <h5 id="5-2参考代码"><a href="#5-2参考代码" class="headerlink" title="5.2参考代码"></a>5.2参考代码</h5><pre><code>#coding=utf-8🔥
 
 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1183,12 +1193,12 @@ time.sleep(1)
 forlinkindriver.find_elements_by_xpath(&quot;//*[@href]&quot;):
 print(link.get_attribute(&#39;href&#39;))
 driver.quit()</code></pre><h5 id="5-3运行结果"><a href="#5-3运行结果" class="headerlink" title="5.3运行结果"></a>5.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/08/03/qCgrwvnxAFds8Zb.png" alt="1232840-20191209094149221-303452327.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/qCgrwvnxAFds8Zb.png" alt="1232840-20191209094149221-303452327.png"></p>
 <p>这里只是找元素的href属性，如果你需要其它属性，例如你需要查看页面所有元素具有id值的话，你可以这样写：print(link.get_attribute(‘id’))</p>
 <h4 id="6-如何截图并保存"><a href="#6-如何截图并保存" class="headerlink" title="6.如何截图并保存"></a>6.如何截图并保存</h4><p>本文介绍如何利用Selenium的方法进行截图，在测试过程中，是有必要截图，特别是遇到错误的时候进行截图。在seleniumforpython中主要有三个截图方法，我们挑选其中最常用的一种。</p>
-<pre><code>get_screenshot_as_file()</code></pre><p><img src="https://i.loli.net/2020/08/03/ATDEIsLlXWObBf9.png" alt="1232840-20191209101447375-197406823.png"></p>
+<pre><code>get_screenshot_as_file()</code></pre><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/ATDEIsLlXWObBf9.png" alt="1232840-20191209101447375-197406823.png"></p>
 <p>相关代码如下：</p>
-<h5 id="6-1代码实现"><a href="#6-1代码实现" class="headerlink" title="6.1代码实现"></a>6.1代码实现</h5><p><img src="https://i.loli.net/2020/08/03/dN1yjCxJuBTmVH2.png" alt="1232840-20191209095134940-2095002700.png"></p>
+<h5 id="6-1代码实现"><a href="#6-1代码实现" class="headerlink" title="6.1代码实现"></a>6.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/dN1yjCxJuBTmVH2.png" alt="1232840-20191209095134940-2095002700.png"></p>
 <h5 id="6-2参考代码"><a href="#6-2参考代码" class="headerlink" title="6.2参考代码"></a>6.2参考代码</h5><pre><code>#coding=utf-8🔥
 
 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1213,9 +1223,9 @@ time.sleep(1)
 
 driver.get_screenshot_as_file(&quot;C:\\Users\\你的账户名\\Desktop\\baidu.png&quot;)
 driver.quit()</code></pre><h5 id="6-3运行结果"><a href="#6-3运行结果" class="headerlink" title="6.3运行结果"></a>6.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/08/03/Hl1TLFidjsgSXvp.png" alt="1232840-20191209095005652-573588182.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/Hl1TLFidjsgSXvp.png" alt="1232840-20191209095005652-573588182.png"></p>
 <h5 id="6-4执行结果"><a href="#6-4执行结果" class="headerlink" title="6.4执行结果"></a>6.4执行结果</h5><p>会在桌面保存一张百度首页的截图，图片后缀是png。注意路径是要两个\。如下图：</p>
-<p><img src="https://i.loli.net/2020/08/03/ZKwFp4jeRqgx2nL.png" alt="1232840-20191209094844053-1861319712.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/ZKwFp4jeRqgx2nL.png" alt="1232840-20191209094844053-1861319712.png"></p>
 <h4 id="7-小结"><a href="#7-小结" class="headerlink" title="7.小结"></a>7.小结</h4><h5 id="7-1多个iframe的切换问题"><a href="#7-1多个iframe的切换问题" class="headerlink" title="7.1多个iframe的切换问题"></a>7.1多个iframe的切换问题</h5><pre><code>#如：有两个iframe：f1、f2
 #1.定位到f1
 driver.switch_to_frame(&quot;f1&quot;)
@@ -1344,10 +1354,10 @@ driver.switch_to.parent_frame()</code></pre><p>好了，今天的练习就到这
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1767,7 +1777,7 @@ driver.switch_to.parent_frame()</code></pre><p>好了，今天的练习就到这
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="python+selenium自动化测试13">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/17.jpg" class="responsive-img" alt="python+selenium自动化测试13">
                         
                         <span class="card-title">python+selenium自动化测试13</span>
                     </div>
@@ -1821,7 +1831,7 @@ driver.switch_to.parent_frame()</code></pre><p>好了，今天的练习就到这
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="python+selenium自动化测试11">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/19.jpg" class="responsive-img" alt="python+selenium自动化测试11">
                         
                         <span class="card-title">python+selenium自动化测试11</span>
                     </div>
@@ -1962,9 +1972,21 @@ driver.switch_to.parent_frame()</code></pre><p>好了，今天的练习就到这
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2098,7 +2120,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2143,7 +2164,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

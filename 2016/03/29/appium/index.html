@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1013,9 +1023,9 @@ window.Canvas= new Universe(element);</script>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>本来宏哥一开始打算用真机做的，所以在前边搭建环境时候就没有下载SDK，但是由于许多小伙伴通过博客发短消息给宏哥留言说是没有真机，所以顺应民意整理一下模拟器，毕竟“得民心者，得天下”。SDK顾名思义，Android SDK Manager就是一个Android软件开发工具包管理器，就像一个桥梁，连通本地和服务器，从服务器下载安卓开发所需工具到本地。而AVD Manager是一个Android虚拟驱动管理器，主要用来创建安卓模拟器（即手机模拟器）。当然，安卓模拟器所需的镜像（可以理解成模拟器的操作系统）是通过SDK Manager来下载的。所以要想用模拟器，必须先使用SDK下载操作系统。</p>
 <p>　　对于SDK Manager和AVD Manager的使用，还需要一个基础工具包tools提供支持。</p>
 <pre><code>   SDK Manager到有哪些东西是必须安装的呢？首先来看一下某位大神的分享！！！是不是一目了然，震撼人心哦。</code></pre><h4 id="2-详解图"><a href="#2-详解图" class="headerlink" title="2.详解图"></a>2.详解图</h4><p>1、以下图是来自大神的神解释，在许多安卓开发的博客中都可以看到的</p>
-<p><img src="https://i.loli.net/2020/08/07/JSbgeANRZ12M6Ci.png" alt="1070438-20170718223009536-1304967972.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/JSbgeANRZ12M6Ci.png" alt="1070438-20170718223009536-1304967972.png"></p>
 <h4 id="3-SDK-Manager"><a href="#3-SDK-Manager" class="headerlink" title="3.SDK Manager"></a>3.SDK Manager</h4><p>1、双击打开SDK Manager就会出现和大神分享一模一样的界面</p>
-<p><img src="https://i.loli.net/2020/08/07/M7eIrfEP9uVFLs5.png" alt="下载.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/M7eIrfEP9uVFLs5.png" alt="下载.png"></p>
 <p>2、这里我再次啰嗦一下各个工具作用如下</p>
 <p>━━┳Tools目录（必须的工具）：</p>
 <p>　　　　　　┣ ━━Android SDK Tools（必须，只需下载一个版本，一般选最新版本）：基础工具包，版本号带rc字样的是预览版。</p>
@@ -1036,31 +1046,31 @@ window.Canvas= new Universe(element);</script>
 <p>–Android SDK Platform-tools里面有adb</p>
 <p>–Android SDK Build-tools里面有aapt</p>
 <p>4、SDK Platform下个最新的就可以了，因为它是可以向下兼容</p>
-<p><img src="https://i.loli.net/2020/08/07/FvU5wajrQpdg6fV.png" alt="下载 _1_.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/FvU5wajrQpdg6fV.png" alt="下载 _1_.png"></p>
 <p>5、Extras这里选下面三个就行了</p>
 <p>–Android Support Respository 安卓兼容库，必须安装</p>
 <p>–最下面一个安卓模拟器加速器，这个随缘吧，安装不了莫强求</p>
 <p>–其它的看心情了，想安装就安装</p>
-<p><img src="https://i.loli.net/2020/08/07/6URaPyoKBxfbS8Y.png" alt="下载 _2_.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/6URaPyoKBxfbS8Y.png" alt="下载 _2_.png"></p>
 <h4 id="4-android版本"><a href="#4-android版本" class="headerlink" title="4.android版本"></a>4.android版本</h4><p>1、Android的版本这里宏哥选择的是4.4.2（API 19）,当然了你可以选择其他版本的。其它的像Android 4.4w.2这种是手表的，还有一些带TV字样的是电视的，别乱勾选一些无关紧要的。</p>
 <p>2、为了保险起见，这里4.4.2全家桶全部勾选了，其它的版本不需要的话，暂时不用勾选了。不然会不仅用不到、下载时间长。而且下载下来放在那里也是占用空间和资源。</p>
-<p><img src="https://i.loli.net/2020/08/07/Zq4lW26a7YfVJBP.png" alt="下载 _3_.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/Zq4lW26a7YfVJBP.png" alt="下载 _3_.png"></p>
 <h4 id="5-安装与卸载"><a href="#5-安装与卸载" class="headerlink" title="5.安装与卸载"></a>5.安装与卸载</h4><p>1、勾选需要下载的插件后，点击安装即可，然后就是接受安装协议（Accept License），耐心等待下载完成…</p>
-<p><img src="https://i.loli.net/2020/08/07/HS9Lz75f4IyPeYp.png" alt="下载 _4_.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/HS9Lz75f4IyPeYp.png" alt="下载 _4_.png"></p>
 <p>2、如果已经安装了，后面会有Installed标志,勾选后可以选择右下角“Delete”按钮卸载</p>
-<p><img src="https://i.loli.net/2020/08/07/dP9KxRapSqNgjVZ.png" alt="下载 _5_.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/dP9KxRapSqNgjVZ.png" alt="下载 _5_.png"></p>
 <p>3、注意事项</p>
 <p>注1：Google开头的文件初学一般用不到，而且使用需FQ。</p>
 <p>注2：如果Intel系列模拟器无法使用，就改用ARM模拟器。ARM模拟器缺点是慢….</p>
 <p>注3：关于最后那个模拟器加速器的使用，其只支持Intel x86架构系列模拟器，且下载后还需单独安装一次：</p>
 <p>打开加速器的下载目录：</p>
-<p><img src="https://i.loli.net/2020/08/07/U3J8c2Ck4LgXSvY.png" alt="781564-20160627184542296-717019074.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/U3J8c2Ck4LgXSvY.png" alt="781564-20160627184542296-717019074.png"></p>
 <p>安装加速器（一路点击下一步即可）：</p>
-<p><img src="https://i.loli.net/2020/08/07/inroawyZFv5G3uD.png" alt="781564-20160627184535359-485954856.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/inroawyZFv5G3uD.png" alt="781564-20160627184535359-485954856.png"></p>
 <h4 id="6-小结"><a href="#6-小结" class="headerlink" title="6.小结"></a>6.小结</h4><p>1、如果不能安装勾选的插件，可采用代理的设置。这儿是一个可用的国内SDK镜像代理（仅供下载SDK中的资源）：</p>
-<p><img src="https://i.loli.net/2020/08/07/ezL1sGp7UEkxCbt.png" alt="781564-20160627203629218-1089688734.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/ezL1sGp7UEkxCbt.png" alt="781564-20160627203629218-1089688734.png"></p>
 <p>2、设置代理的地方：</p>
-<p><img src="https://i.loli.net/2020/08/07/GXzyEMP7Sx4inQR.png" alt="781564-20160627203855218-562834707.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/GXzyEMP7Sx4inQR.png" alt="781564-20160627203855218-562834707.png"></p>
 <p>3、对于有FQ查询资料需求的小伙伴，特推荐免费的代理小工具蓝灯（Lantern），有桌面版和移动版：</p>
 <p>工具下载地址：<a href="https://github.com/getlantern/lantern" target="_blank" rel="noopener">https://github.com/getlantern/lantern</a></p>
 <p>注：安装蓝灯后但不开启蓝灯，可能会导致默认浏览器失效。所以建议将电脑默认浏览器设置为不常用的IE。工具下载后，解压双击安装即可…</p>
@@ -1068,7 +1078,7 @@ window.Canvas= new Universe(element);</script>
 <p>启动Lantern，获取其代理地址和监听端口（注：你那里的端口可能与我这里的不同）。</p>
 <p>　  参考博文：如何查看程序所占端口号和IP</p>
 <p>设置代理，设置结果如图（不同电脑可能不同）：</p>
-<p><img src="https://i.loli.net/2020/08/07/Vo5TAtyEQwmJiFN.png" alt="781564-20160704032659781-601168657.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/Vo5TAtyEQwmJiFN.png" alt="781564-20160704032659781-601168657.png"></p>
 <p>4、安卓开发工具和相关镜像</p>
 <p>5、镜像服务地址：</p>
 <p>1、南阳理工学院镜像服务器地址：mirror.nyist.edu.cn     端口：80</p>
@@ -1194,10 +1204,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1617,7 +1627,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="python+appium自动化测试4">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/1.jpg" class="responsive-img" alt="python+appium自动化测试4">
                         
                         <span class="card-title">python+appium自动化测试4</span>
                     </div>
@@ -1671,7 +1681,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="python+appium自动化测试2">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="python+appium自动化测试2">
                         
                         <span class="card-title">python+appium自动化测试2</span>
                     </div>
@@ -1812,9 +1822,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1948,7 +1970,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1993,7 +2014,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

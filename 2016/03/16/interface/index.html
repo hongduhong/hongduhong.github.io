@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1075,7 +1085,7 @@ window.Canvas= new Universe(element);</script>
 <td align="center">关闭SMTP服务器连接</td>
 </tr>
 </tbody></table>
-<h4 id="2-看下官方给的示例："><a href="#2-看下官方给的示例：" class="headerlink" title="2.看下官方给的示例："></a>2.看下官方给的示例：</h4><p><img src="https://i.loli.net/2020/08/06/28kqwLFZc5Hdvhr.png" alt="1232840-20190508153251751-2017271717.png"></p>
+<h4 id="2-看下官方给的示例："><a href="#2-看下官方给的示例：" class="headerlink" title="2.看下官方给的示例："></a>2.看下官方给的示例：</h4><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/28kqwLFZc5Hdvhr.png" alt="1232840-20190508153251751-2017271717.png"></p>
 <p>我们根据示例给自己发一个邮件测试下：</p>
 <p>我这里测试使用本地的SMTP服务器，也就是要装一个支持SMTP协议的服务，比如sendmail、postfix等。</p>
 <p>CentOS安装sendmail：yum install sendmail</p>
@@ -1088,7 +1098,7 @@ window.Canvas= new Universe(element);</script>
 7 ... This is a test &#39;&#39;&#39;
 8 &gt;&gt;&gt; s.sendmail(&quot;me@my.org&quot;, tolist, msg)
 9 {}</code></pre><p>进入腾讯和网易收件人邮箱，就能看到刚发的测试邮件，一般都被邮箱服务器过滤成垃圾邮件，所以收件箱没有，你要去垃圾箱看看。</p>
-<p><img src="https://i.loli.net/2020/08/06/VPR64l3NUZD1iEL.png" alt="1232840-20200707145902192-1249892968.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/VPR64l3NUZD1iEL.png" alt="1232840-20200707145902192-1249892968.png"></p>
 <p>可以看到，多个收件人可以放到一个列表中进行群发。msg对象里From表示发件人，Subject是邮件标题，换行后输入的是邮件内容。</p>
 <h4 id="3-Python发送邮件并抄送"><a href="#3-Python发送邮件并抄送" class="headerlink" title="3.Python发送邮件并抄送"></a>3.Python发送邮件并抄送</h4><pre><code> 1 #!/usr/bin/python
  2 # -*- coding: utf-8 -*-
@@ -1124,12 +1134,12 @@ window.Canvas= new Universe(element);</script>
 32     except smtplib.SMTPException as e:
 33         print &quot;Error: %s&quot; %e
 34 if __name__ == &quot;__main__&quot;:
-35     sendMail(&quot;This is a test!&quot;)</code></pre><p><img src="https://i.loli.net/2020/08/06/nALgWDc9p8Pe75X.png" alt="1232840-20190509132331603-729145739.png"></p>
+35     sendMail(&quot;This is a test!&quot;)</code></pre><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/nALgWDc9p8Pe75X.png" alt="1232840-20190509132331603-729145739.png"></p>
 <p>s.sendmail(from_mail, to_mail+cc_mail, msg) 在这里注意下，收件人和抄送人为什么放一起发送呢？其实无论是收件人还是抄送人，它们收到的邮件都是一样的，SMTP都是认为收件人这样一封一封的发出。所以实际上并没有抄送这个概念，只是在邮件头加了抄送人的信息罢了！另外，如果不需要抄送人，直接把上面cc的信息去掉即可。</p>
 <p>另外以上代码发送的邮件会出现主题中文乱码：</p>
-<p><img src="https://i.loli.net/2020/08/06/UZKqEs85GwibXDk.png" alt="1232840-20190509132628995-1110170050.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/UZKqEs85GwibXDk.png" alt="1232840-20190509132628995-1110170050.png"></p>
 <p>解决方案：三行代码即可，修改成红色框代码即可</p>
-<p><img src="https://i.loli.net/2020/08/06/yxsTjn9B164QXNY.png" alt="1232840-20190509133325318-1775180628.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/yxsTjn9B164QXNY.png" alt="1232840-20190509133325318-1775180628.png"></p>
 <h4 id="4-Python发送邮件带附件"><a href="#4-Python发送邮件带附件" class="headerlink" title="4.Python发送邮件带附件"></a>4.Python发送邮件带附件</h4><p>由于SMTP.sendmail()方法不支持添加附件，所以可以使用email模块来满足需求。email模块是一个构造邮件和解析邮件的模块。</p>
 <p>先看下如何用email库构造一个简单的邮件：</p>
 <pre><code>message = Message()
@@ -1198,7 +1208,7 @@ message.set_payload(&#39;邮件内容&#39;)</code></pre><p>基本的格式就是
 57 if __name__ == &quot;__main__&quot;:
 58     #本地文件的路径
 59     att_path= r&#39;E:\pythontest\text.txt&#39;
-60     send_mail(att_path)</code></pre><p><img src="https://i.loli.net/2020/08/06/ViSmr37ogq4Hup2.png" alt="1232840-20190509154743960-1776799402.png"></p>
+60     send_mail(att_path)</code></pre><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/ViSmr37ogq4Hup2.png" alt="1232840-20190509154743960-1776799402.png"></p>
 <h4 id="5-Python发送HTML邮件"><a href="#5-Python发送HTML邮件" class="headerlink" title="5.Python发送HTML邮件"></a>5.Python发送HTML邮件</h4><pre><code> 1 # coding=utf-8
  2 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
  3 
@@ -1283,10 +1293,10 @@ def sendmail(to_list,sub,content):
 if sendmail(mailto_list,&quot;标题:发送的是HTML格式&quot;,&quot;&lt;a href=&#39;https://www.cnblogs.com/du-hong&#39;&gt;北京-宏哥&lt;/a&gt;&quot;):
     print (&quot;done!&quot;)
 else:
-    print (&quot;falsed!&quot;)</code></pre><p><img src="https://i.loli.net/2020/08/06/oceUqSThMZbs6IJ.png" alt="1232840-20190509154351367-21715505.png"></p>
+    print (&quot;falsed!&quot;)</code></pre><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/oceUqSThMZbs6IJ.png" alt="1232840-20190509154351367-21715505.png"></p>
 <p>上面发邮件的几种常见的发邮件方法基本满足日常需求了。</p>
 <h4 id="6-小结"><a href="#6-小结" class="headerlink" title="6.小结"></a>6.小结</h4><p>1、linux环境下提示AttributeError: module ‘smtplib’ has no attribute ‘SMTP’，Windows环境运行代码也报如下错误：</p>
-<p><img src="https://i.loli.net/2020/08/06/UDSRFjzcTBAwdfr.png" alt="1232840-20190508162011243-816651460.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/UDSRFjzcTBAwdfr.png" alt="1232840-20190508162011243-816651460.png"></p>
 <p>2、原因当然不是模块的问题，检查了一下拼写也没有出问题，最后在这个帖子（链接）的启发下发现，发现自己的文件命名为email.py，和模块中的函数有冲突，改名之后Linux环境邮件正常发送。</p>
 <pre><code>为了方便大家在移动端也能看到我分享的</code></pre>
             </div>
@@ -1400,10 +1410,10 @@ else:
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1823,7 +1833,7 @@ else:
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="python接口自动化33">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/14.jpg" class="responsive-img" alt="python接口自动化33">
                         
                         <span class="card-title">python接口自动化33</span>
                     </div>
@@ -1877,7 +1887,7 @@ else:
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="python接口自动化31">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/12.jpg" class="responsive-img" alt="python接口自动化31">
                         
                         <span class="card-title">python接口自动化31</span>
                     </div>
@@ -2018,9 +2028,21 @@ else:
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2154,7 +2176,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2199,7 +2220,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

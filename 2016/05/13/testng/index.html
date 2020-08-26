@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1019,19 +1029,19 @@ window.Canvas= new Universe(element);</script>
 <p>testNG.xml<br>testNG的运行需要一个配置文件，默认为testng.xml，其描述了要运行哪些测试等配置。<br>编写testNG.xml如果没有书写提示，给在头部引入<br><code>&lt;!DOCTYPE suite PUBLIC &quot;--//beust.com//testng//testng 1.0//EN&quot; &quot;http://beust.com/testng/testng-1.0.dtd&quot; &gt;</code>就会有提示了</p>
 <h4 id="2-实践"><a href="#2-实践" class="headerlink" title="2.实践"></a>2.实践</h4><p>testng.xml是testNG的配置文件，以xml格式记录测试文件，项目创建成功后并没有自动创建testng.xml文件，需要自己添加，添加步骤如下：</p>
 <p>1)在eclipse中创建项目，如下图</p>
-<p><img src="https://i.loli.net/2020/08/11/9tlZLQ1vqwmhWYa.png" alt="1232840-20191017112227325-1596448684.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/9tlZLQ1vqwmhWYa.png" alt="1232840-20191017112227325-1596448684.png"></p>
 <p>2)选择项目，右击 弹出菜单并选择菜单：【TestNG】-【Convert to TestNG】如下图</p>
-<p><img src="https://i.loli.net/2020/08/11/1EugZnfo6i5ehRH.png" alt="1232840-20191017112923321-2127618153.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/1EugZnfo6i5ehRH.png" alt="1232840-20191017112923321-2127618153.png"></p>
 <p>3)勾选 Generate test.xml，并设置testng.xml相关信息，如下图</p>
-<p><img src="https://i.loli.net/2020/08/11/3CTk6fNmpjiwM7V.png" alt="1232840-20191017113326024-1132243166.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/3CTk6fNmpjiwM7V.png" alt="1232840-20191017113326024-1132243166.png"></p>
 <p>4）设置好testng.xml相关信息后 可以点击 【next】or【Finish】按钮进入下一步，下面是点击【next后的界面】</p>
-<p><img src="https://i.loli.net/2020/08/11/TefhOlrYSmNIipy.png" alt="1232840-20191017113617897-1542347848.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/TefhOlrYSmNIipy.png" alt="1232840-20191017113617897-1542347848.png"></p>
 <p>5）再点击【finish】按钮，testng.xml文件创建成功，可在主界面看到</p>
-<p><img src="https://i.loli.net/2020/08/11/Ok2f3e7DlopvhKU.png" alt="1232840-20191017113714684-539400294.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/Ok2f3e7DlopvhKU.png" alt="1232840-20191017113714684-539400294.png"></p>
 <p>6）双击 testng.xml文件 可对文件内容进行编辑</p>
-<p><img src="https://i.loli.net/2020/08/11/mk4SPHoYlBVhqej.png" alt="1232840-20191017113841092-1607550552.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/mk4SPHoYlBVhqej.png" alt="1232840-20191017113841092-1607550552.png"></p>
 <p>7）testng.xml文件编辑完毕，选择该文件、右击可运行测试类 如下</p>
-<p><img src="https://i.loli.net/2020/08/11/mwyNX9TscQvKlnW.png" alt="1232840-20191017114419044-1425191477.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/mwyNX9TscQvKlnW.png" alt="1232840-20191017114419044-1425191477.png"></p>
 <p>注意：TestNG使用的是 正则表达式，而不是通配符。注意这二者的区别</p>
 <p>例如：”anything” 是匹配于 “.*” – 点和星号 – 而不是星号 “*”</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -1045,7 +1055,7 @@ window.Canvas= new Universe(element);</script>
 &lt;/suite&gt; &lt;!-- Suite --&gt;</code></pre><p>Groups<br>testNG可以将各个method存放在不同的group里面，然后运行的时候可以指定要运行的group。Group指定的方式如下：</p>
 <pre><code>@Test(groups = {&quot;fast&quot;, &quot;unit&quot;, &quot;database&quot; })
 public voidrowShouldBeInserted() {}</code></pre><h4 id="3-实例"><a href="#3-实例" class="headerlink" title="3.实例"></a>3.实例</h4><p>1.创建测试实例加法类TestSum</p>
-<p><img src="https://i.loli.net/2020/08/11/MEFKwkzQ1HdS4Nm.png" alt="1232840-20191017153919343-146051914.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/MEFKwkzQ1HdS4Nm.png" alt="1232840-20191017153919343-146051914.png"></p>
 <p>2.参考代码</p>
 <pre><code>package hongge;
 
@@ -1066,7 +1076,7 @@ public class TestSum {
     }
 
 }</code></pre><p>3.按照一开始的步骤创建TestNG测试业务逻辑类：NewTest</p>
-<p><img src="https://i.loli.net/2020/08/11/x16kswTIpHPGStY.png" alt="1232840-20191017154349965-488184460.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/x16kswTIpHPGStY.png" alt="1232840-20191017154349965-488184460.png"> </p>
 <p>4.参考代码：</p>
 <pre><code>package hongge;
 
@@ -1121,9 +1131,9 @@ public class NewTest {
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;</code></pre><p>6.右键点击testng.xml，选择run as-&gt; testNG suite：</p>
-<p><img src="https://i.loli.net/2020/08/11/HBqzJFetXgZIVkS.png" alt="1232840-20191017154936165-1619149771.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/HBqzJFetXgZIVkS.png" alt="1232840-20191017154936165-1619149771.png"></p>
 <p>7.console输出结果：</p>
-<p><img src="https://i.loli.net/2020/08/11/uaQMXbPWInT3m6q.png" alt="1232840-20191017155108048-857815486.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/uaQMXbPWInT3m6q.png" alt="1232840-20191017155108048-857815486.png"> </p>
 <p>8.从上图我们清楚地可以看到：当运行t1测试组时，就仅仅运行f()和f3()方法。</p>
 <p>9.修改testNG.xml运行t2测试组，修改XML文件：</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -1140,11 +1150,11 @@ public class NewTest {
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;</code></pre><p>console结果：</p>
-<p><img src="https://i.loli.net/2020/08/11/thECfsNJUdPevak.png" alt="1232840-20191017155359505-1792917337.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/thECfsNJUdPevak.png" alt="1232840-20191017155359505-1792917337.png"></p>
 <p>10.其中f2()方法故意留个错误，我们看下出现bug的情况：期望是4，但是不是3.</p>
-<p><img src="https://i.loli.net/2020/08/11/TUoetY2Ahz59vSb.png" alt="1232840-20191017155458175-806936682.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/TUoetY2Ahz59vSb.png" alt="1232840-20191017155458175-806936682.png"></p>
 <p>11.哎呀！脑阔短路了，看测试报告不是更加直观啊，现在分享的就是它，请看下边吧：</p>
-<p><img src="https://i.loli.net/2020/08/11/892OXlgHxvoULq7.png" alt="1232840-20191017162632781-808873195.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/11/892OXlgHxvoULq7.png" alt="1232840-20191017162632781-808873195.png"></p>
 <h4 id="4-小结"><a href="#4-小结" class="headerlink" title="4.小结"></a>4.小结</h4><p>额外知识：在java代码中，@Test(groups={“t1”,”t2”})可以在大括号里指定多个组，中间用逗号分开就行。在testng.xml中<run>标签下还可以书写<exclude name="abc">标签，表示不执行属于abc组的用例。<br>好了，今天就分享到这里！！！</exclude></run></p>
 
             </div>
@@ -1258,10 +1268,10 @@ public class NewTest {
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1681,7 +1691,7 @@ public class NewTest {
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Java自动化测试框架-03">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="Java自动化测试框架-03">
                         
                         <span class="card-title">Java自动化测试框架-03</span>
                     </div>
@@ -1735,7 +1745,7 @@ public class NewTest {
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Java自动化测试框架-01">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="Java自动化测试框架-01">
                         
                         <span class="card-title">Java自动化测试框架-01</span>
                     </div>
@@ -1876,9 +1886,21 @@ public class NewTest {
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2012,7 +2034,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2057,7 +2078,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

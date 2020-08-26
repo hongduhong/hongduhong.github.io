@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1062,10 +1072,10 @@ window.Canvas= new Universe(element);</script>
 </tbody></table>
 <h4 id="5-163邮箱（非SSL）"><a href="#5-163邮箱（非SSL）" class="headerlink" title="5.163邮箱（非SSL）"></a>5.163邮箱（非SSL）</h4><p>1、先导入 smtplib 库用来发送邮件，导入 MIMEText 库用来做纯文本的邮件模板</p>
 <p>2、先准备几个跟发邮件相关的参数，每个邮箱的发件服务器都不一样，以 163为例，百度搜到发件服务器为：smtp.163.com</p>
-<p><img src="https://i.loli.net/2020/08/06/4qk5KPVyCQuxgd3.png" alt="1232840-20190507140739294-1754057195.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/4qk5KPVyCQuxgd3.png" alt="1232840-20190507140739294-1754057195.png"></p>
 <p>3、接下来就是写邮件的主题和正文内容，正文这里用 html 格式的</p>
 <p>4、最后调用发件服务</p>
-<p><img src="https://i.loli.net/2020/08/06/8iXTEMf4LRbxzjD.png" alt="1232840-20190507140815957-515961600.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/8iXTEMf4LRbxzjD.png" alt="1232840-20190507140815957-515961600.png"></p>
 <p>5、参考代码</p>
 <pre><code> 1 # coding=utf-8
  2 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1098,14 +1108,14 @@ window.Canvas= new Universe(element);</script>
 29 smtp.login(sender, psw) # 登录
 30 smtp.sendmail(sender, receiver, msg.as_string()) # 发送
 31 smtp.quit() # 关闭</code></pre><h4 id="6-QQ邮箱（SSL）"><a href="#6-QQ邮箱（SSL）" class="headerlink" title="6.QQ邮箱（SSL）"></a>6.QQ邮箱（SSL）</h4><p>1、QQ 邮箱是需要 SSL 认证的，这种邮箱跟上面的就有点不一样了（如果已经开启了，不知道授权码，就点温馨提示里面的‘生成授权码’）</p>
-<p><img src="https://i.loli.net/2020/08/06/NU2OJWsnxSLhl78.png" alt="1232840-20190507145139543-134313177.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/NU2OJWsnxSLhl78.png" alt="1232840-20190507145139543-134313177.png"></p>
 <p>2、找到 QQ 邮箱授权码，打开 QQ 邮箱-设置-账号-POP3 开启服务-开启</p>
-<p><img src="https://i.loli.net/2020/08/06/OZAt6J1oTQacRm5.png" alt="1232840-20190507145336602-530953428.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/OZAt6J1oTQacRm5.png" alt="1232840-20190507145336602-530953428.png"></p>
 <p>3、根据相对应的验证方式，就会收到授权码了</p>
-<p><img src="https://i.loli.net/2020/08/06/lDpAdPULsgBCV85.png" alt="1232840-20190507145528270-2138859758.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/lDpAdPULsgBCV85.png" alt="1232840-20190507145528270-2138859758.png"></p>
 <p>4、收到授权码后复制，保存下来，这个就可以当 QQ 邮箱的密码了</p>
 <p>5、QQ 邮箱发送邮件代码，跟 163 有点不一样，如下图红色框框：</p>
-<p><img src="https://i.loli.net/2020/08/06/dHoDqvaZXlO9sLm.png" alt="1232840-20190507153113523-1794063469.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/dHoDqvaZXlO9sLm.png" alt="1232840-20190507153113523-1794063469.png"></p>
 <p>6、参考代码</p>
 <pre><code> 1 # coding=utf-8
  2 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1145,12 +1155,12 @@ window.Canvas= new Universe(element);</script>
 <p>try-except 语句(以及其更复杂的形式)定义了进行异常监控的一段代码, 并且提供了处理异常的机制.</p>
 <p>最常见的 try-except 语句语法如下所示，它由try块和except块 (try_suite 和 except_suite )组成, 也可以有一个可选的错误原因。首先尝试执行 try 子句, 如果没有错误, 忽略所有的 except 从句继续执行，如果发生异常, 解释器将在这一串处理器</p>
 <p>(except 子句)中查找匹配的异常。</p>
-<p><img src="https://i.loli.net/2020/08/06/QUWRc4dDafvMjs1.jpg" alt="u_3551840761,1138950460_fm_173_app_25_f_JPEG.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/QUWRc4dDafvMjs1.jpg" alt="u_3551840761,1138950460_fm_173_app_25_f_JPEG.jpg"></p>
 <p>简单用法（except后面不跟特定异常，这会捕获所有异常）这种好处就是你不知道会发生什么异常，尽管用；坏处就是当异常发生时候，不能清楚了解到底发生哪种异常。</p>
-<p><img src="https://i.loli.net/2020/08/06/zYoMWv6VZLcnFd2.jpg" alt="u_3440588802,3676325594_fm_173_app_25_f_JPEG.jpg"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/zYoMWv6VZLcnFd2.jpg" alt="u_3440588802,3676325594_fm_173_app_25_f_JPEG.jpg"></p>
 <p>我们可以发现，连接没有成功，但程序是正常运行的，会继续往下运行如果没有try，程序则会中断报错。我们发现第一个print并没有运行，这是因为try 语句块中异常发生点后的剩余语句永远不会到达(所以也永远不会执行)。</p>
 <p>2、好了关于try的讲解就到这里，回归正题：如果想兼容上面两种方式发送邮件，只需把第三块内容稍微改下，如下所示</p>
-<p><img src="https://i.loli.net/2020/08/06/8KpIUcxzv2RiOHo.png" alt="1232840-20190508090351471-1815021821.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/8KpIUcxzv2RiOHo.png" alt="1232840-20190508090351471-1815021821.png"></p>
 <p>3、参考代码</p>
 <pre><code> 1 # ----------3.发送邮件------
  2 try:
@@ -1275,10 +1285,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1698,7 +1708,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="python接口自动化32">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/13.jpg" class="responsive-img" alt="python接口自动化32">
                         
                         <span class="card-title">python接口自动化32</span>
                     </div>
@@ -1752,7 +1762,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="python接口自动化30">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/11.jpg" class="responsive-img" alt="python接口自动化30">
                         
                         <span class="card-title">python接口自动化30</span>
                     </div>
@@ -1893,9 +1903,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2029,7 +2051,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2074,7 +2095,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1020,7 +1030,7 @@ window.Canvas= new Universe(element);</script>
 <p>python发邮件需要掌握两个模块的用法，smtplib和email，这俩模块是python自带的，只需import即可使用。smtplib模块主要负责发送邮件，email模块主要负责构造邮件。</p>
 <p>smtplib模块主要负责发送邮件：是一个发送邮件的动作，连接邮箱服务器，登录邮箱，发送邮件（有发件人，收信人，邮件内容）。</p>
 <p>email模块主要负责构造邮件：指的是邮箱页面显示的一些构造，如发件人，收件人，主题，正文，附件等。</p>
-<p><img src="https://i.loli.net/2020/08/06/yYdv4g2VeFwnEz1.png" alt="1232840-20190510090233349-828034619.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/yYdv4g2VeFwnEz1.png" alt="1232840-20190510090233349-828034619.png"></p>
 <h4 id="2-smtplib模块"><a href="#2-smtplib模块" class="headerlink" title="2.smtplib模块"></a>2.smtplib模块</h4><p>smtplib使用较为简单。以下是最基本的语法。</p>
 <p>导入及使用方法如下：</p>
 <pre><code>1 import smtplib
@@ -1101,8 +1111,8 @@ msg.attach(MIMEText对象或MIMEImage对象):将MIMEText对象或MIMEImage对象
 <pre><code>msg.attach(text_plain)    
 msg.attach(text_html)    
 msg.attach(text_att)    
-msg.attach(image)</code></pre><h4 id="4-文字，html，图片，附件实现实例"><a href="#4-文字，html，图片，附件实现实例" class="headerlink" title="4.文字，html，图片，附件实现实例"></a>4.文字，html，图片，附件实现实例</h4><h5 id="4-1实例"><a href="#4-1实例" class="headerlink" title="4.1实例"></a>4.1实例</h5><p><img src="https://i.loli.net/2020/08/06/gPuoUI9veSftwpX.png" alt="1232840-20190510112838820-1608628037.png"></p>
-<h5 id="4-2运行结果"><a href="#4-2运行结果" class="headerlink" title="4.2运行结果"></a>4.2运行结果</h5><p><img src="https://i.loli.net/2020/08/06/b5Pnw6hdyiqRc8u.png" alt="1232840-20190510113010537-33392216.png"></p>
+msg.attach(image)</code></pre><h4 id="4-文字，html，图片，附件实现实例"><a href="#4-文字，html，图片，附件实现实例" class="headerlink" title="4.文字，html，图片，附件实现实例"></a>4.文字，html，图片，附件实现实例</h4><h5 id="4-1实例"><a href="#4-1实例" class="headerlink" title="4.1实例"></a>4.1实例</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/gPuoUI9veSftwpX.png" alt="1232840-20190510112838820-1608628037.png"></p>
+<h5 id="4-2运行结果"><a href="#4-2运行结果" class="headerlink" title="4.2运行结果"></a>4.2运行结果</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/b5Pnw6hdyiqRc8u.png" alt="1232840-20190510113010537-33392216.png"></p>
 <h5 id="4-3参考代码"><a href="#4-3参考代码" class="headerlink" title="4.3参考代码"></a>4.3参考代码</h5><pre><code> 1 # coding=utf-8
  2 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
  3 
@@ -1315,10 +1325,10 @@ msg.attach(image)</code></pre><h4 id="4-文字，html，图片，附件实现实
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1738,7 +1748,7 @@ msg.attach(image)</code></pre><h4 id="4-文字，html，图片，附件实现实
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="python接口自动化34">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/15.jpg" class="responsive-img" alt="python接口自动化34">
                         
                         <span class="card-title">python接口自动化34</span>
                     </div>
@@ -1792,7 +1802,7 @@ msg.attach(image)</code></pre><h4 id="4-文字，html，图片，附件实现实
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="python接口自动化32">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/13.jpg" class="responsive-img" alt="python接口自动化32">
                         
                         <span class="card-title">python接口自动化32</span>
                     </div>
@@ -1933,9 +1943,21 @@ msg.attach(image)</code></pre><h4 id="4-文字，html，图片，附件实现实
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2069,7 +2091,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2114,7 +2135,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

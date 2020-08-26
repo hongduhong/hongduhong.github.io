@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1011,7 +1021,7 @@ window.Canvas= new Universe(element);</script>
             <div id="articleContent">
                 <p><strong>🔥 python接口自动化（二十二）–unittest执行顺序隐藏的坑（详解）</strong></p>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　大多数的初学者在使用 unittest 框架时候，不清楚用例的执行顺序到底是怎样的。对测试类里面的类和方法分不清楚，不知道什么时候执行，什么时候不执行。虽然或许通过代码实现了，也是稀里糊涂的一知半解，这样还好，好歹自己鼓捣出了，但是时间和效率并不是很高，下次遇到还是老样子。那么本篇通过最简单案例来给给为小伙伴详细讲解、演示一下 unittest 执行顺序。</p>
-<h4 id="2-实例代码"><a href="#2-实例代码" class="headerlink" title="2.实例代码"></a>2.实例代码</h4><p><img src="https://i.loli.net/2020/08/05/nQ2e6I8WYtwxZVf.png" alt="1232840-20190424083353030-1129366547.png"></p>
+<h4 id="2-实例代码"><a href="#2-实例代码" class="headerlink" title="2.实例代码"></a>2.实例代码</h4><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/nQ2e6I8WYtwxZVf.png" alt="1232840-20190424083353030-1129366547.png"></p>
 <h4 id="3-参考代码"><a href="#3-参考代码" class="headerlink" title="3.参考代码"></a>3.参考代码</h4><pre><code> 1 # coding=utf-8
  2 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
  3 
@@ -1053,24 +1063,24 @@ window.Canvas= new Universe(element);</script>
 39         &quot;&quot;&quot;
 40 if __name__ == &quot;__main__()&quot;:
 41     unittest.main()</code></pre><p>这是一个标准的使用unittest进行测试的例子，写完后心里美滋滋，嗯，就按照一贯思路代码会按照这个顺序测就可以了。结果一运行。就傻眼了</p>
-<p><img src="https://i.loli.net/2020/08/05/vlZc9x36gPXiubD.png" alt="1232840-20190424083919359-1934783132.png"><br><img src="https://i.loli.net/2020/08/05/SxBCjaDdK92NmrL.png" alt="1232840-20190424144647874-1636973817.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/vlZc9x36gPXiubD.png" alt="1232840-20190424083919359-1934783132.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/SxBCjaDdK92NmrL.png" alt="1232840-20190424144647874-1636973817.png"></p>
 <p>　　这时候自己心里犯嘀咕，这是什么鬼，怎么回事呢。执行的顺序乱了。第一个执行的测试用例并不是登录博客园，而是添加随笔，此时用户还没登录博客园，进行添加随笔的话会直接报错，导致用例失败。</p>
 <p>到这里有些小伙伴可能会说，为什么要让测试用例之间有所依赖呢？</p>
 <p>　　的确，如果完全没依赖，测试用例的执行顺序是不需要关注的。但是这样对于用例的设计和实现，要求就高了许多。而对博客园来说，一个系统内的操作，是有很大的关联性的。以添加随笔为例，随笔内的每个操作都有一个前提，你需要</p>
 <p>登录博客园才能添加随笔。所以要实现用例之间的完全解耦，需要每个用例开始之前，检测用户的登录状态。</p>
 <p>　　如果可以控制测试用例的执行顺序，按照功能流程一遍走下来，节省的代码量是非常可观的，阅读测试用例也会清晰明了许多。</p>
 <h4 id="4-如何控制unittest用例执行的顺序呢？"><a href="#4-如何控制unittest用例执行的顺序呢？" class="headerlink" title="4.如何控制unittest用例执行的顺序呢？"></a>4.如何控制unittest用例执行的顺序呢？</h4><p>1、带大家先看看源码，unittest是怎么样对用例进行排序的。在loader.py的loadTestsFromTestCase方法里边，调用了getTestCaseNames方法来获取测试用例的名称</p>
-<p><img src="https://i.loli.net/2020/08/05/KHvBzT2aSMJIi35.png" alt="1232840-20190424111758350-210516870.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/KHvBzT2aSMJIi35.png" alt="1232840-20190424111758350-210516870.png"></p>
 <p>2、从源码可以清楚地看到，getTestCaseNames方法对测试用例的名称进行了排序</p>
-<p><img src="https://i.loli.net/2020/08/05/hk4vJyepEsrbmHD.png" alt="1232840-20190424111938233-1864966866.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/hk4vJyepEsrbmHD.png" alt="1232840-20190424111938233-1864966866.png"></p>
 <p>3、一步一步跟进去，查看其排序方法</p>
-<p><img src="https://i.loli.net/2020/08/05/C9MOT3sjk1fvaIA.png" alt="1232840-20190424112402962-614080194.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/C9MOT3sjk1fvaIA.png" alt="1232840-20190424112402962-614080194.png"></p>
 <p>4、根据排序规则，unittest执行测试用例，默认是根据ASCII码的顺序加载测试用例，数字与字母的顺序为：0-9，A-Z，a-z。</p>
 <p>5、做个小demo，看看是不是我们所说的那种排序规则</p>
-<p><img src="https://i.loli.net/2020/08/05/yITO3wHq1AStDL9.png" alt="1232840-20190424112753576-29735455.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/yITO3wHq1AStDL9.png" alt="1232840-20190424112753576-29735455.png"></p>
 <p>6、从上边的运行结果，我们可以看出是：unittest执行测试用例，默认是根据ASCII码的顺序加载测试用例，数字与字母的顺序为：0-9，A-Z，a-z。</p>
 <p>7、基于unittest的机制，如何控制用例执行顺序呢？查了一些网上的资料，主要介绍了两种方式：</p>
-<h5 id="方式1，通过TestSuite类的addTest方法，按顺序加载测试用例"><a href="#方式1，通过TestSuite类的addTest方法，按顺序加载测试用例" class="headerlink" title="方式1，通过TestSuite类的addTest方法，按顺序加载测试用例"></a>方式1，通过TestSuite类的addTest方法，按顺序加载测试用例</h5><p><img src="https://i.loli.net/2020/08/05/aNxZO17Hw8LoABT.png" alt="1232840-20190424144432296-1513536059.png"></p>
+<h5 id="方式1，通过TestSuite类的addTest方法，按顺序加载测试用例"><a href="#方式1，通过TestSuite类的addTest方法，按顺序加载测试用例" class="headerlink" title="方式1，通过TestSuite类的addTest方法，按顺序加载测试用例"></a>方式1，通过TestSuite类的addTest方法，按顺序加载测试用例</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/aNxZO17Hw8LoABT.png" alt="1232840-20190424144432296-1513536059.png"></p>
 <h6 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h6><pre><code> 1 # coding=utf-8
  2 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
  3 
@@ -1132,7 +1142,7 @@ window.Canvas= new Universe(element);</script>
 59     # 创建TextTestRunner类的实例对象
 60     runner = unittest.TextTestRunner()
 61     runner.run(suite)
-62     #unittest.TextTestRunner(verbosity=3).run(suite)</code></pre><h5 id="方式2，通过修改函数名的方式"><a href="#方式2，通过修改函数名的方式" class="headerlink" title="方式2，通过修改函数名的方式"></a>方式2，通过修改函数名的方式</h5><p><img src="https://i.loli.net/2020/08/05/dTaSAnK9somkIH8.png" alt="1232840-20190424145005526-1651743407.png"></p>
+62     #unittest.TextTestRunner(verbosity=3).run(suite)</code></pre><h5 id="方式2，通过修改函数名的方式"><a href="#方式2，通过修改函数名的方式" class="headerlink" title="方式2，通过修改函数名的方式"></a>方式2，通过修改函数名的方式</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/dTaSAnK9somkIH8.png" alt="1232840-20190424145005526-1651743407.png"></p>
 <h6 id="参考代码-1"><a href="#参考代码-1" class="headerlink" title="参考代码"></a>参考代码</h6><pre><code> 1 # coding=utf-8
  2 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
  3 
@@ -1180,8 +1190,8 @@ window.Canvas= new Universe(element);</script>
 45         pass
 46 if __name__ == &#39;__main__&#39;:
 47     # 启动单元测试
-48     unittest.main()</code></pre><h4 id="5-拓展练习"><a href="#5-拓展练习" class="headerlink" title="5.拓展练习"></a>5.拓展练习</h4><h5 id="1、实例"><a href="#1、实例" class="headerlink" title="1、实例"></a>1、实例</h5><p><img src="https://i.loli.net/2020/08/05/VWtgMSv2BlCLFXU.png" alt="1232840-20190423130704591-2042375124.png"></p>
-<h5 id="2、运行结果"><a href="#2、运行结果" class="headerlink" title="2、运行结果"></a>2、运行结果</h5><p><img src="https://i.loli.net/2020/08/05/9p2kwLWr6UfvROE.png" alt="1232840-20190423131122823-559985546.png"></p>
+48     unittest.main()</code></pre><h4 id="5-拓展练习"><a href="#5-拓展练习" class="headerlink" title="5.拓展练习"></a>5.拓展练习</h4><h5 id="1、实例"><a href="#1、实例" class="headerlink" title="1、实例"></a>1、实例</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/VWtgMSv2BlCLFXU.png" alt="1232840-20190423130704591-2042375124.png"></p>
+<h5 id="2、运行结果"><a href="#2、运行结果" class="headerlink" title="2、运行结果"></a>2、运行结果</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/9p2kwLWr6UfvROE.png" alt="1232840-20190423131122823-559985546.png"></p>
 <h5 id="3、运行结果分析"><a href="#3、运行结果分析" class="headerlink" title="3、运行结果分析"></a>3、运行结果分析</h5><p>1、从运行结果可以看出执行顺序：</p>
 <p>　　start!-执行测试用例 01-end!</p>
 <p>　　start!-执行测试用例 02-end!</p>
@@ -1333,10 +1343,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1756,7 +1766,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="python接口自动化23">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="python接口自动化23">
                         
                         <span class="card-title">python接口自动化23</span>
                     </div>
@@ -1810,7 +1820,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="python接口自动化21">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/5.jpg" class="responsive-img" alt="python接口自动化21">
                         
                         <span class="card-title">python接口自动化21</span>
                     </div>
@@ -1951,9 +1961,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2087,7 +2109,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2132,7 +2153,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

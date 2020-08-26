@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1192,7 +1202,7 @@ print(&quot;我已找到&quot;)
 finally:
 print(ctime())
 dr.quit()</code></pre><p>执行结果：</p>
-<p><img src="https://i.loli.net/2020/08/03/SaiOjFeMpKybECs.png" alt="1232840-20191210095812467-1566559149.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/SaiOjFeMpKybECs.png" alt="1232840-20191210095812467-1566559149.png"></p>
 <p>以上代码执行后就发现，整段代码执行速度非常快，即使我在WebDriverWait中设置10秒，也不会等待10秒的情况，因为在不到一秒内，已经完成了加载并定位id为“kw”的元素。</p>
 <p>通过WebDriverWait和ExpectedCondition组合使用，让我们的代码执行只需要等待需要的时长，而不是固定的时长，这样最大限度的节省时间。</p>
 <p>此外ExpectedCondition类中提供了很多预期条件判断方法，省去了再创建包的功夫：</p>
@@ -1218,7 +1228,7 @@ alert_is_present：判断页面上是否存在alert
 <pre><code>　　until_not(method,message=&#39;&#39;)</code></pre><p>调用该方法体提供的回调函数作为一个参数，直到返回值为False</p>
 <pre><code>　　until(method,message=&#39;&#39;)</code></pre><p>调用该方法体提供的回调函数作为一个参数，直到返回值为True</p>
 <h4 id="3-下拉框or弹框"><a href="#3-下拉框or弹框" class="headerlink" title="3.下拉框or弹框"></a>3.下拉框or弹框</h4><p>通常情况下，在网页中会有一些下拉框进行选择或者给你一个弹框告诉你需要进行确认，遇到这样的情况如何解决呢，宏哥在这里就来简单地说一说……‘’</p>
-<h5 id="3-1代码实现"><a href="#3-1代码实现" class="headerlink" title="3.1代码实现"></a>3.1代码实现</h5><p><img src="https://i.loli.net/2020/08/03/xRG2TZDMVoSytE8.png" alt="1232840-20191210102339912-363889200.png"></p>
+<h5 id="3-1代码实现"><a href="#3-1代码实现" class="headerlink" title="3.1代码实现"></a>3.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/xRG2TZDMVoSytE8.png" alt="1232840-20191210102339912-363889200.png"></p>
 <h5 id="3-2参考代码"><a href="#3-2参考代码" class="headerlink" title="3.2参考代码"></a>3.2参考代码</h5><pre><code>#coding=utf-8🔥
 
 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1262,9 +1272,9 @@ driver.switch_to.alert.accept()#此处同意警告框提示内容
 time.sleep(2)
 
 driver.quit()</code></pre><h5 id="3-3运行结果"><a href="#3-3运行结果" class="headerlink" title="3.3运行结果"></a>3.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/08/03/oFBblP2t3qj8zav.png" alt="1232840-20191210102542835-1737742273.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/oFBblP2t3qj8zav.png" alt="1232840-20191210102542835-1737742273.png"></p>
 <h5 id="3-4浏览器"><a href="#3-4浏览器" class="headerlink" title="3.4浏览器"></a>3.4浏览器</h5><p>浏览器跳转到设置页面，会提示“已记录下您的偏好”</p>
-<p><img src="https://i.loli.net/2020/08/03/Ofd1KakH5y6NJsW.png" alt="1232840-20191210102706151-900086221.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/Ofd1KakH5y6NJsW.png" alt="1232840-20191210102706151-900086221.png"></p>
 <p>在百度首页想要进行设置每次搜索页面显示的数目，就会有一个下拉框进行选择，这里可以导入Select这个模块进行对下拉框进行选择，通常下拉框的列表是包含一个值的，这样就可以通过value来选定，完成设置之后，当然是要保存设置啦，点击保存发现，居然有</p>
 <p>一个弹框，这可如何是好，切换至alert之后接受吧……</p>
 <p>通过在编辑器中的提示，我们同样可以给弹框发送一个值，当然这里设置中并没有出现这类情况。</p>
@@ -1372,13 +1382,13 @@ if__name__==&#39;__main__&#39;:
 unittest.main()</code></pre><p>通过以上代码，我们可以看到使用selenium和unittest框架结合，已经可以对用户登陆的模块做一个简单的自动化测试。</p>
 <p>但是现在博客园的登陆机制的改变有可能部分用例不成功，但是你知道怎么做就可以了。</p>
 <p>测试截图如下：</p>
-<p><img src="https://i.loli.net/2020/08/03/vXliHFn9tsWwS72.png" alt="1232840-20191210112143198-1158153495.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/vXliHFn9tsWwS72.png" alt="1232840-20191210112143198-1158153495.png"></p>
 <p>正确用户名和密码登录成功！</p>
-<p><img src="https://i.loli.net/2020/08/03/wgAKT6hseS8fLom.png" alt="1232840-20191210112206398-1659915471.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/wgAKT6hseS8fLom.png" alt="1232840-20191210112206398-1659915471.png"></p>
 <p>用户名正确，密码为空</p>
-<p><img src="https://i.loli.net/2020/08/03/csQL7ofS2TBgzZb.png" alt="1232840-20191210112254000-61190505.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/csQL7ofS2TBgzZb.png" alt="1232840-20191210112254000-61190505.png"></p>
 <p>用户名为空，密码正确</p>
-<p><img src="https://i.loli.net/2020/08/03/kyKFh25RipJ6uo3.png" alt="1232840-20191210112335159-716848504.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/kyKFh25RipJ6uo3.png" alt="1232840-20191210112335159-716848504.png"></p>
 <h4 id="5-小结"><a href="#5-小结" class="headerlink" title="5.小结"></a>5.小结</h4><p>好了，今天的分享就到这里吧！！！谢谢各位的耐心阅读。</p>
 
             </div>
@@ -1492,10 +1502,10 @@ unittest.main()</code></pre><p>通过以上代码，我们可以看到使用sele
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1915,7 +1925,7 @@ unittest.main()</code></pre><p>通过以上代码，我们可以看到使用sele
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="python+selenium自动化测试14">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/16.jpg" class="responsive-img" alt="python+selenium自动化测试14">
                         
                         <span class="card-title">python+selenium自动化测试14</span>
                     </div>
@@ -1969,7 +1979,7 @@ unittest.main()</code></pre><p>通过以上代码，我们可以看到使用sele
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="python+selenium自动化测试12">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/18.jpg" class="responsive-img" alt="python+selenium自动化测试12">
                         
                         <span class="card-title">python+selenium自动化测试12</span>
                     </div>
@@ -2110,9 +2120,21 @@ unittest.main()</code></pre><p>通过以上代码，我们可以看到使用sele
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2246,7 +2268,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2291,7 +2312,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

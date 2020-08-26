@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1013,13 +1023,13 @@ window.Canvas= new Universe(element);</script>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　上一篇说了关于json数据处理，是为了断言方便，这篇就带各位小伙伴实战一下。首先捋一下思路，然后根据思路一步一步的去实现和实战，不要一开始就盲目的动手和无头苍蝇一样到处乱撞，撞得头破血流后而放弃了。不仅什么没学习到，自己的自信心都受到打击了，自己都怀疑自己。其实你是最棒的，天生我材必有用，好了废话不说，进入实战——以查看快递物流接口为例。</p>
 <p>　　大致流程步骤：web页面操作—&gt;抓包看参数和url—&gt;代码模拟接口请求—&gt;取到接口返回结果—&gt;断言</p>
 <h4 id="2-web页面操作"><a href="#2-web页面操作" class="headerlink" title="2.web页面操作"></a>2.web页面操作</h4><p>1、浏览器输入快递物流查询url，输入快递单号，点击“查询”</p>
-<p><img src="https://i.loli.net/2020/08/05/KcFDyLb2IBYk1W6.png" alt="1232840-20190419141511965-1753386553.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/KcFDyLb2IBYk1W6.png" alt="1232840-20190419141511965-1753386553.png"></p>
 <h4 id="3-抓包看参数和url"><a href="#3-抓包看参数和url" class="headerlink" title="3.抓包看参数和url"></a>3.抓包看参数和url</h4><p>1、点击“查询”，fiddler抓包，查看url和参数</p>
-<p><img src="https://i.loli.net/2020/08/05/uLqWXlAKhRUkdz6.png" alt="1232840-20190419140316034-2114919797.png"></p>
-<h4 id="4-代码模拟接口请求"><a href="#4-代码模拟接口请求" class="headerlink" title="4.代码模拟接口请求"></a>4.代码模拟接口请求</h4><p><img src="https://i.loli.net/2020/08/05/rF9BNHwod6bpyVz.png" alt="1232840-20190419141802721-1381488165.png"></p>
-<h4 id="5-取到接口返回结果"><a href="#5-取到接口返回结果" class="headerlink" title="5.取到接口返回结果"></a>5.取到接口返回结果</h4><p><img src="https://i.loli.net/2020/08/05/QMm4NzZSwvbfksL.png" alt="1232840-20190419141832962-1187277977.png"> </p>
-<h4 id="6-断言"><a href="#6-断言" class="headerlink" title="6.断言"></a>6.断言</h4><p><img src="https://i.loli.net/2020/08/05/p9KLR1il8v2WqNM.png" alt="1232840-20190419141854588-1768672082.png"></p>
-<h4 id="7-代码及运行结果"><a href="#7-代码及运行结果" class="headerlink" title="7.代码及运行结果"></a>7.代码及运行结果</h4><p><img src="https://i.loli.net/2020/08/05/SCgEQfHcVuWyv1O.png" alt="1232840-20190419142011078-567748148.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/uLqWXlAKhRUkdz6.png" alt="1232840-20190419140316034-2114919797.png"></p>
+<h4 id="4-代码模拟接口请求"><a href="#4-代码模拟接口请求" class="headerlink" title="4.代码模拟接口请求"></a>4.代码模拟接口请求</h4><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/rF9BNHwod6bpyVz.png" alt="1232840-20190419141802721-1381488165.png"></p>
+<h4 id="5-取到接口返回结果"><a href="#5-取到接口返回结果" class="headerlink" title="5.取到接口返回结果"></a>5.取到接口返回结果</h4><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/QMm4NzZSwvbfksL.png" alt="1232840-20190419141832962-1187277977.png"> </p>
+<h4 id="6-断言"><a href="#6-断言" class="headerlink" title="6.断言"></a>6.断言</h4><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/p9KLR1il8v2WqNM.png" alt="1232840-20190419141854588-1768672082.png"></p>
+<h4 id="7-代码及运行结果"><a href="#7-代码及运行结果" class="headerlink" title="7.代码及运行结果"></a>7.代码及运行结果</h4><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/SCgEQfHcVuWyv1O.png" alt="1232840-20190419142011078-567748148.png"></p>
 <h4 id="8-参考代码"><a href="#8-参考代码" class="headerlink" title="8.参考代码"></a>8.参考代码</h4><pre><code> 1 # coding:utf-8
  2 import requests
  3 url =&quot;http://www.kuaidi100.com/query?type=annengwuliu&amp;postid=300240694004&amp;temp=0.5964149534969456&amp;phone=&quot;
@@ -1153,10 +1163,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1576,7 +1586,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="python接口自动化20">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="python接口自动化20">
                         
                         <span class="card-title">python接口自动化20</span>
                     </div>
@@ -1630,7 +1640,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="python接口自动化18">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/5.jpg" class="responsive-img" alt="python接口自动化18">
                         
                         <span class="card-title">python接口自动化18</span>
                     </div>
@@ -1771,9 +1781,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1907,7 +1929,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1952,7 +1973,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

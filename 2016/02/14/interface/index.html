@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1030,22 +1040,22 @@ window.Canvas= new Universe(element);</script>
 <p>　　 举个例子：如一个用于提交博文的URL，/addBlog。如果用PUT，则提交的URL会是像这样的”/addBlog/abc123”，其中abc123就是这个博文的地址。而如果用POST，则这个地址会在提交后由服务器告知客户端。目前大部分博客都是这样的。显然，PUT和POST用途是不一样的。具体用哪个还取决于当前的业务场景。</p>
 <p>　　DELETE：删除某一个资源。基本上这个也很少见，不过还是有一些地方比如amazon的S3云服务里面就用的这个方法来删除资源。</p>
 <h5 id="1）get型接口"><a href="#1）get型接口" class="headerlink" title="1）get型接口"></a>1）get型接口</h5><p>格式：请求数参数写在网址后面，用”?”连接，多个参数之间用”&amp;”连接。如：<a href="https://api.douban.com/v2/book/search?q=&#39;&#39;,这是一个豆瓣查询图书信息的开发api，q=&#39;&#39;，单引号里就是查询的参数，如查询《小王子》这本书的信息，则q=&#39;小王子&#39;，使用postman工具来试验一下，如下图：" target="_blank" rel="noopener">https://api.douban.com/v2/book/search?q=&#39;&#39;,这是一个豆瓣查询图书信息的开发api，q=&#39;&#39;，单引号里就是查询的参数，如查询《小王子》这本书的信息，则q=&#39;小王子&#39;，使用postman工具来试验一下，如下图：</a></p>
-<p><img src="https://i.loli.net/2020/08/04/eMco3dwbqEkOKx5.png" alt="1232840-20190307155704927-1228173401.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/eMco3dwbqEkOKx5.png" alt="1232840-20190307155704927-1228173401.png"></p>
 <p>场景：get型接口用于获取信息，多用于查询数据，如列表查询功能，点击查询按钮就调用一个get接口，然后把信息返回出来</p>
 <p>特点：1）请求数据量小，2）参数暴露于url地址中，故存在安全隐患</p>
 <h5 id="2）post型接口"><a href="#2）post型接口" class="headerlink" title="2）post型接口"></a>2）post型接口</h5><p>说明：向指定资源位置提交数据（如提交表单、上传文件）来进行请求，post请求可能会导致新资源的建立</p>
 <p>场景：如注册、上传、发帖等功能，如用户在豆瓣网站对某本书进行收藏、写笔记、发表评论</p>
 <p>特点：请求数据量大，安全性高</p>
 <p>如豆瓣的发表评论的开放api，见下图：</p>
-<p><img src="https://i.loli.net/2020/08/04/TXKlw5hJRULQNWr.png" alt="1232840-20190307155722927-1016151054.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/TXKlw5hJRULQNWr.png" alt="1232840-20190307155722927-1016151054.png"></p>
 <h5 id="3）put型接口"><a href="#3）put型接口" class="headerlink" title="3）put型接口"></a>3）put型接口</h5><p>说明：put请求用于向指定资源位置上传最新内容</p>
 <p>场景：如用户在豆瓣网站修改对某本书的收藏、修改某篇笔记或修改评论</p>
 <p>如豆瓣的修改评论的开放api，见下图：</p>
-<p><img src="https://i.loli.net/2020/08/04/Lg7Duw8tq3OBHrX.png" alt="1232840-20190307155734127-617712613.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/Lg7Duw8tq3OBHrX.png" alt="1232840-20190307155734127-617712613.png"></p>
 <h5 id="4）delete型接口"><a href="#4）delete型接口" class="headerlink" title="4）delete型接口"></a>4）delete型接口</h5><p>说明：请求服务器删除请求里url所标识的资源</p>
 <p>场景：如用户在豆瓣网站取消对某本书的收藏、删除某篇笔记或删除评论</p>
 <p>如豆瓣的删除评论的开放api，见下图：</p>
-<p><img src="https://i.loli.net/2020/08/04/hfXgMDK4UwA7JE6.png" alt="1232840-20190307155748988-302529172.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/hfXgMDK4UwA7JE6.png" alt="1232840-20190307155748988-302529172.png"></p>
 <h4 id="5-不常见的接口类型（了解即可）"><a href="#5-不常见的接口类型（了解即可）" class="headerlink" title="5.不常见的接口类型（了解即可）"></a>5.不常见的接口类型（了解即可）</h4><p>  　　不常见的http请求方式包括：head、connect、options和trace。</p>
 <p>　　  head：HEAD和GET本质是一样的，区别在于HEAD不含有呈现数据，而仅仅是HTTP头信息。换句话说，就是返回响应中没有具体内容，只获取报头。有的人可能觉得这个方法没什么用，其实不是这样的。想象一个业务情景：欲判断某个资源是否存在，我们通常使用GET，但这里用HEAD则意义更加明确。</p>
 <p>　　  connect：HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。</p>
@@ -1170,10 +1180,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1593,7 +1603,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="python接口自动化2">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/20.jpg" class="responsive-img" alt="python接口自动化2">
                         
                         <span class="card-title">python接口自动化2</span>
                     </div>
@@ -1647,7 +1657,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="python+selenium自动化测试26">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="python+selenium自动化测试26">
                         
                         <span class="card-title">python+selenium自动化测试26</span>
                     </div>
@@ -1795,9 +1805,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1931,7 +1953,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1976,7 +1997,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

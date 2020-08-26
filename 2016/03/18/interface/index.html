@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1014,14 +1024,14 @@ window.Canvas= new Universe(element);</script>
 <p>　　参数化的思维只需记住一点：不要写死，这样就便于维护，否则就会牵一发而动全身，一处修改导致处处修改，不便于维护。</p>
 <h4 id="2-登录函数"><a href="#2-登录函数" class="headerlink" title="2.登录函数"></a>2.登录函数</h4><p>1、s 参数是 session 的一个实例类，先放这里，方便写后面代码</p>
 <p>2、登录函数传三个参数，s 是需要调用前面的 session 类，所以必传，可以传个登录的 url,然后 payload 是账号和密码</p>
-<p><img src="https://i.loli.net/2020/08/06/RA52DEcXnmj4voz.png" alt="1232840-20190513114931058-1407169831.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/RA52DEcXnmj4voz.png" alt="1232840-20190513114931058-1407169831.png"></p>
 <h4 id="3-保存草稿"><a href="#3-保存草稿" class="headerlink" title="3.保存草稿"></a>3.保存草稿</h4><p>1、编辑内容的标题 title 和正文 body_data 参数化了，这样后面可以方便传不同值</p>
 <p>2、这里返回了获取到新的 url 地址，因为后面的 postid 参数需要在这里提取</p>
-<p><img src="https://i.loli.net/2020/08/06/zpS5TXr6o93cb8v.png" alt="1232840-20190513115206721-41296126.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/zpS5TXr6o93cb8v.png" alt="1232840-20190513115206721-41296126.png"></p>
 <h4 id="4-提取-postid"><a href="#4-提取-postid" class="headerlink" title="4.提取 postid"></a>4.提取 postid</h4><p>1、这里用正则表达式提取 url 里面的 postid</p>
-<p><img src="https://i.loli.net/2020/08/06/e21WT3k5tc9sSAd.png" alt="1232840-20190513115557644-1634287280.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/e21WT3k5tc9sSAd.png" alt="1232840-20190513115557644-1634287280.png"></p>
 <h4 id="5-删除草稿"><a href="#5-删除草稿" class="headerlink" title="5.删除草稿"></a>5.删除草稿</h4><p>1、传个 url 和 postid 就可以了</p>
-<p><img src="https://i.loli.net/2020/08/06/q8DRmQw5Wn7OYxS.png" alt="1232840-20190513115704488-253526171.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/q8DRmQw5Wn7OYxS.png" alt="1232840-20190513115704488-253526171.png"></p>
 <h4 id="6-参考代码"><a href="#6-参考代码" class="headerlink" title="6.参考代码"></a>6.参考代码</h4><pre><code> 1 # coding=utf-8
  2 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
  3 
@@ -1104,27 +1114,27 @@ window.Canvas= new Universe(element);</script>
 80  url3 = &quot;https://i.cnblogs.com/post/delete&quot;
 81  delete_box(s, url3, postid)</code></pre><p>由于博客园的登录机制改变，我们想要让代码跑起来还需要用老办法绕过验证码通过cookie登录替换登录这个动作</p>
 <h4 id="7-改造代码如下"><a href="#7-改造代码如下" class="headerlink" title="7.改造代码如下"></a>7.改造代码如下</h4><p>第一步：将登录方法注释掉</p>
-<p><img src="https://i.loli.net/2020/08/06/OIh7XR8cfBnAeH2.png" alt="1232840-20190513130636751-1727500905.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/OIh7XR8cfBnAeH2.png" alt="1232840-20190513130636751-1727500905.png"></p>
 <p>第二步：将登录方法所传的参数和调用登录的方法注释掉</p>
-<p><img src="https://i.loli.net/2020/08/06/1OlUFGYDvLex6wV.png" alt="1232840-20190513130732743-1672247342.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/1OlUFGYDvLex6wV.png" alt="1232840-20190513130732743-1672247342.png"></p>
 <p>第三步：通过cookie登录绕过验证码，实现登录</p>
-<p><img src="https://i.loli.net/2020/08/06/nxDqeMmIZEpNd8T.png" alt="1232840-20190513131012759-1737420003.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/nxDqeMmIZEpNd8T.png" alt="1232840-20190513131012759-1737420003.png"></p>
 <p>第四步：直接运行代码，查看结果</p>
-<p><img src="https://i.loli.net/2020/08/06/gmfiO7SoNMaLcIb.png" alt="1232840-20190513152918996-1717613603.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/gmfiO7SoNMaLcIb.png" alt="1232840-20190513152918996-1717613603.png"></p>
 <p>第五步：由于我们新增又删除，所以看到的界面看到的效果还是不太明显，为了让小伙伴们看到明显效果，我们这里还是通过老方法：打断点</p>
 <p>第六步：在调用删除随笔的方法前打断点，双击方法前边出现一个大红点</p>
-<p><img src="https://i.loli.net/2020/08/06/zGvHgCwLlPZR2m3.png" alt="1232840-20190513131733317-285409792.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/zGvHgCwLlPZR2m3.png" alt="1232840-20190513131733317-285409792.png"></p>
 <p>第七步：debug运行代码，点击右上角的昆虫</p>
-<p><img src="https://i.loli.net/2020/08/06/S4lGYIeLfTtJuCZ.png" alt="1232840-20190513131850842-1165025449.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/S4lGYIeLfTtJuCZ.png" alt="1232840-20190513131850842-1165025449.png"></p>
 <p>第八步：浏览器登录查看随笔页面</p>
-<p><img src="https://i.loli.net/2020/08/06/Y6Em72ZtC4jLBzP.png" alt="1232840-20190513132015301-623275556.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/Y6Em72ZtC4jLBzP.png" alt="1232840-20190513132015301-623275556.png"></p>
 <p>postid</p>
-<p><img src="https://i.loli.net/2020/08/06/eCbi23ruAZV5aMk.png" alt="1232840-20190513132405316-115333701.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/eCbi23ruAZV5aMk.png" alt="1232840-20190513132405316-115333701.png"></p>
 <p>第九步：继续运行。执行删除随笔的方法</p>
 <p>代码运行结果</p>
-<p><img src="https://i.loli.net/2020/08/06/tsnVpuvwTjZ1cby.png" alt="1232840-20190513151502357-447736374.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/tsnVpuvwTjZ1cby.png" alt="1232840-20190513151502357-447736374.png"></p>
 <p>第十步：刷新随笔页面，查看刚刚新增的那条随笔消失了</p>
-<p><img src="https://i.loli.net/2020/08/06/3EqHyXlD5ZnALWU.png" alt="1232840-20190513151543412-2138688762.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/3EqHyXlD5ZnALWU.png" alt="1232840-20190513151543412-2138688762.png"></p>
 <h4 id="8-改造后参考代码"><a href="#8-改造后参考代码" class="headerlink" title="8.改造后参考代码"></a>8.改造后参考代码</h4><pre><code>  1 # coding=utf-8
   2 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
   3 
@@ -1347,10 +1357,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1770,7 +1780,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="python接口自动化35">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/16.jpg" class="responsive-img" alt="python接口自动化35">
                         
                         <span class="card-title">python接口自动化35</span>
                     </div>
@@ -1824,7 +1834,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="python接口自动化33">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/14.jpg" class="responsive-img" alt="python接口自动化33">
                         
                         <span class="card-title">python接口自动化33</span>
                     </div>
@@ -1965,9 +1975,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2101,7 +2123,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2146,7 +2167,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

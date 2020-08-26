@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1014,11 +1024,11 @@ window.Canvas= new Universe(element);</script>
 <h4 id="2-抓登录cookie"><a href="#2-抓登录cookie" class="headerlink" title="2.抓登录cookie"></a>2.抓登录cookie</h4><p>1、如博客园登录后会生成一个已登录状态的cookie，那么只需要直接把这个值添加到cookies里面就可以了。</p>
 <p>2、可以先手动登录一次，然后抓取这个cookie，这里就需要用抓包工具fiddler了</p>
 <p>3、先打开博客园登录界面，手动输入账号和密码（勾选下次自动登录）</p>
-<p><img src="https://i.loli.net/2020/08/05/PbU3VBQZJ4pkLt2.png" alt="1232840-20190401154817598-2029649734.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/PbU3VBQZJ4pkLt2.png" alt="1232840-20190401154817598-2029649734.png"></p>
 <p>4、打开fiddler抓包工具，刷新下登录首页，就是登录前的cookie了</p>
-<p><img src="https://i.loli.net/2020/08/05/LnNRMCdqhvbgjFH.png" alt="1232840-20190416090612960-199035741.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/LnNRMCdqhvbgjFH.png" alt="1232840-20190416090612960-199035741.png"></p>
 <p>5、登录成功后，再查看cookie变化，发现多了两组参数，多的这两组参数就是我们想要的，copy出来，一会有用</p>
-<p><img src="https://i.loli.net/2020/08/05/92XGCINvmfwPRBK.png" alt="1232840-20190416091134168-1983444868.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/92XGCINvmfwPRBK.png" alt="1232840-20190416091134168-1983444868.png"></p>
 <h4 id="3-cookie组成结构"><a href="#3-cookie组成结构" class="headerlink" title="3.cookie组成结构"></a>3.cookie组成结构</h4><p>1、用抓包工具fidller只能看到cookie的name和value两个参数，实际上cookie还有其它参数</p>
 <p>2、以下是一个完整的cookie组成结构</p>
 <pre><code>1 cookie ={u&#39;domain&#39;: u&#39;.cnblogs.com&#39;,
@@ -1044,9 +1054,9 @@ window.Canvas= new Universe(element);</script>
 2 c.set(&#39;.CNBlogsCookie&#39;, &#39;xxx&#39;)
 3 c.set(&#39;.Cnblogs.AspNetCore.Cookies&#39;,&#39;xxx&#39;)
 4 s.cookies.update(c)
-5 print(s.cookies)</code></pre><p><img src="https://i.loli.net/2020/08/05/BUfiZ9t2qKbmPIW.png" alt="1232840-20190401155020777-888861529.png"></p>
+5 print(s.cookies)</code></pre><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/BUfiZ9t2qKbmPIW.png" alt="1232840-20190401155020777-888861529.png"></p>
 <h4 id="6-代码运行，刷新随笔"><a href="#6-代码运行，刷新随笔" class="headerlink" title="6.代码运行，刷新随笔"></a>6.代码运行，刷新随笔</h4><p>1、看到刚刚添加的随笔</p>
-<p><img src="https://i.loli.net/2020/08/05/OVjdfp8Q3xIR1Yo.png" alt="1232840-20190416101553901-426176631.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/OVjdfp8Q3xIR1Yo.png" alt="1232840-20190416101553901-426176631.png"></p>
 <h4 id="7-参考代码"><a href="#7-参考代码" class="headerlink" title="7.参考代码"></a>7.参考代码</h4><p>1、由于登录时候是多加2个cookie，我们可以先用get方法打开登录首页，获取部分cookie</p>
 <p>2、再把登录需要的cookie添加到session里</p>
 <p>3、添加成功后，随便编辑正文和标题保存到草稿箱</p>
@@ -1191,10 +1201,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1614,7 +1624,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="python接口自动化14">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/1.jpg" class="responsive-img" alt="python接口自动化14">
                         
                         <span class="card-title">python接口自动化14</span>
                     </div>
@@ -1668,7 +1678,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="python接口自动化12">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="python接口自动化12">
                         
                         <span class="card-title">python接口自动化12</span>
                     </div>
@@ -1809,9 +1819,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1945,7 +1967,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1990,7 +2011,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

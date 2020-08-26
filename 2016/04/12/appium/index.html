@@ -96,7 +96,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -181,7 +181,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -290,7 +290,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -828,7 +833,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1028,22 +1038,22 @@ window.Canvas= new Universe(element);</script>
 <p>b）在PC上adb shell 进入Android系统，通过执行 monkey {+命令参数} 来进行Monkey 测试          </p>
 <p>c )  在Android机或者模拟器上直接执行monkey 命令，可以在Android机上安装Android终端模拟器  </p>
 <h4 id="7-Monkey-架构"><a href="#7-Monkey-架构" class="headerlink" title="7.Monkey 架构"></a>7.Monkey 架构</h4><p>　　Monkey 运行在设备或模拟器上面，可以脱离PC运行（普遍做法是将monkey作为一个像待测应用发送 随机按键消息的测试工具。验证待测应用在这些随机性的输入面前是否会闪退或者崩溃）</p>
-<p><img src="https://i.loli.net/2020/08/10/JExMCdFrH6eGLz9.png" alt="263119-20160505223944482-1516389266.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/JExMCdFrH6eGLz9.png" alt="263119-20160505223944482-1516389266.png"></p>
 <h4 id="8-Monkey弱点"><a href="#8-Monkey弱点" class="headerlink" title="8.Monkey弱点"></a>8.Monkey弱点</h4><p>　　Monkey虽然可以根据一个指定的命令脚本发送按键消息，但其丌支持条件判断，也丌支持读取待测界 面的信息来执行验证操作。</p>
 <h4 id="9-Moneky-路径"><a href="#9-Moneky-路径" class="headerlink" title="9.Moneky 路径"></a>9.Moneky 路径</h4><p>　　Monkey程序是Android系统自带的，其启动脚本是位于Android系统的/system/bin目录的Monkey文件，其jar包是位于Android系统的/system/framework目录的Monkey.jar文件。用户主要是通过adb命令来启动Monkey的，Monkey在运行时，会根据命令行参数的配置，生成伪随机的事件流，并在Android设备上执行对应的测试事件。同时，Monkey还会对测试系统进行监测，当出现以下三种情况时会进行特殊处理：</p>
 <p>如限定了Monkey运行在特定包上，当监测到试图转到其他包的操作，将对其进行阻止。<br>如应用程序崩溃或接收到任何失控异常，Monkey将记录对应的错误日志，并根据命令行参数判断是停止运行还是继续运行。<br>如果应用程序发生了程序无响应（application not responding）的错误，Monkey将记录对应的错误日志，并根据命令行参数判断是停止运行还是继续运行。<br>按照选定的不同级别的反馈信息，在Monkey中还可以看到其执行过程报告和生成的事件。</p>
 <h4 id="10-Monkey启动步骤"><a href="#10-Monkey启动步骤" class="headerlink" title="10.Monkey启动步骤"></a>10.Monkey启动步骤</h4><p>1、检查设备连接状态（以夜神模拟器为例）</p>
-<p><img src="https://i.loli.net/2020/08/10/VWO2urAKkFpTmPa.png" alt="1232840-20190711154633085-422398990.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/VWO2urAKkFpTmPa.png" alt="1232840-20190711154633085-422398990.png"></p>
 <p>2、从上图看出，设备未连接，连接移动设备</p>
-<p><img src="https://i.loli.net/2020/08/10/3kNEj28CYuOIcqS.png" alt="1232840-20190711154803241-1369129532.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/3kNEj28CYuOIcqS.png" alt="1232840-20190711154803241-1369129532.png"></p>
 <p>3、再次查看设备连接状态</p>
-<p><img src="https://i.loli.net/2020/08/10/5aTncMG1Lh7yQPv.png" alt="1232840-20190711154858243-1427394927.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/5aTncMG1Lh7yQPv.png" alt="1232840-20190711154858243-1427394927.png"></p>
 <p>4、连接成功后输入命令：adb shell</p>
-<p><img src="https://i.loli.net/2020/08/10/AQ3gH9OjdeNivIq.png" alt="1232840-20190711155007128-1945780180.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/AQ3gH9OjdeNivIq.png" alt="1232840-20190711155007128-1945780180.png"></p>
 <p>5、进入到指定目录，命令：cd /system/bin</p>
-<p><img src="https://i.loli.net/2020/08/10/x3YBJpirMbh7D9E.png" alt="1232840-20190711155048379-747931972.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/x3YBJpirMbh7D9E.png" alt="1232840-20190711155048379-747931972.png"></p>
 <p>6、输入 monkey命令看到如下提示则说明启动成功。</p>
-<p><img src="https://i.loli.net/2020/08/10/HYqcRFpPnO3Tzyf.png" alt="1232840-20190711155158219-940439512.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/HYqcRFpPnO3Tzyf.png" alt="1232840-20190711155158219-940439512.png"></p>
 <h4 id="11-强制关闭monkey"><a href="#11-强制关闭monkey" class="headerlink" title="11.强制关闭monkey"></a>11.强制关闭monkey</h4><p>1、adb shell ps 查看全部在运行的进程</p>
 <p>2、查找出com.android.commands.monkey 进程PID</p>
 <p>3、adb shell kill pid 杀掉monkey进程</p>
@@ -1163,10 +1173,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1586,7 +1596,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="python+appium自动化测试18">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/18.jpg" class="responsive-img" alt="python+appium自动化测试18">
                         
                         <span class="card-title">python+appium自动化测试18</span>
                     </div>
@@ -1639,7 +1649,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="python+appium自动化测试16">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/16.jpg" class="responsive-img" alt="python+appium自动化测试16">
                         
                         <span class="card-title">python+appium自动化测试16</span>
                     </div>
@@ -1780,9 +1790,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1916,7 +1938,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1961,7 +1982,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

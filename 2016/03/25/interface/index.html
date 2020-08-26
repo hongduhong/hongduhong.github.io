@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1017,7 +1027,7 @@ application/json
 text/xml
 multipart/form-data</code></pre><p>　　本篇就来给各位看官和小伙伴们来讲xml这种类型的body案例，如何用python去实现，由于公司的制度的保密性，所以公司的接口就不能在这里给小伙伴们演示了，我给小伙伴们模拟了一个类似的接口，来给小伙伴们讲解一下思路，希望小伙伴们在遇到的时候不至于慌了神，不知道从何处入手，其实说到底，说破大天了，它的本质还是一个接口，那就还是按照接口的那套思路往上边靠，这样就思路不至于太偏，也会走很少的弯路。好了就不啰嗦了，直接进入今天的正题吧。</p>
 <h4 id="2-text-xml的数据类型"><a href="#2-text-xml的数据类型" class="headerlink" title="2.text/xml的数据类型"></a>2.text/xml的数据类型</h4><p>1、首先要确定post请求的body部分类型是xml格式，可以用fiddler抓包工具、postman、jemter、Google浏览器接口调试插件来进行缺洞，这里我是用fiddler抓包工具来确定的。看到body部分格式如下：</p>
-<p><img src="https://i.loli.net/2020/08/06/4DGN1dqEuQvpxMe.png" alt="1232840-20190529103203555-917537625.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/4DGN1dqEuQvpxMe.png" alt="1232840-20190529103203555-917537625.png"></p>
 <p>2、body里xml的参数：</p>
 <pre><code>&lt;?xml version=“1.0” encoding = “UTF-8”?&gt;
 &lt;COM&gt;
@@ -1028,19 +1038,19 @@ multipart/form-data</code></pre><p>　　本篇就来给各位看官和小伙伴
 &lt;/REQ&gt;
 &lt;/COM&gt;</code></pre><h4 id="3-模拟接口请求"><a href="#3-模拟接口请求" class="headerlink" title="3.模拟接口请求"></a>3.模拟接口请求</h4><p>　　PS：！！！先不要着急的去用代码实现，而是先用工具请求一次，看是否可以请求是否可以成功。不要一开始就抨击怕啦的敲了半天，运行代码，傻眼了，运行结果和股市一样行情大涨，一片红色。结果你费了半天劲调试代码，也没查出错误。一问开发，开发用工具一试，一脸淫笑，然后笑呵呵的告诉你：额。。。，这个接口有点小问题，我需要调整一下下，这个时候是不是有一种想把开发接口的人痛揍一顿冲动，但是仔细想想还是自己的问题，如果一开始你就用工具模拟一下，出现问题立马找开发人员确认沟通，就不会有后面的剧情了。这种场景一般是萌新、小白可能会遇到的。好了，以下给小伙伴们列举了两种方法，当然了你也可以用其他方法模拟，条条大路通罗马，即可。</p>
 <p>(1)Google浏览器接口调试插件模拟<br>1、将url、请求方法、参数在插件中填写好，以后直接点击“Send”，即可</p>
-<p><img src="https://i.loli.net/2020/08/06/fpL97cWlYOPxyVI.png" alt="1232840-20190528162904549-347505053.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/fpL97cWlYOPxyVI.png" alt="1232840-20190528162904549-347505053.png"></p>
 <p>(2)使用fiddler模拟<br>1、点开fiddler工具上composer菜单</p>
-<p><img src="https://i.loli.net/2020/08/06/DUWrGsPF4kItVf3.png" alt="1232840-20190529111000157-219486083.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/DUWrGsPF4kItVf3.png" alt="1232840-20190529111000157-219486083.png"> </p>
 <p>2、填写URL、选择请求方法、将xml数据直接复制到右下方Request Body部分，然后点右上角Execute就能执行了</p>
-<p><img src="https://i.loli.net/2020/08/06/3s8KDxlERUijgaz.png" alt="1232840-20190529110827734-469829660.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/3s8KDxlERUijgaz.png" alt="1232840-20190529110827734-469829660.png"></p>
 <h4 id="4-python3代码实现"><a href="#4-python3代码实现" class="headerlink" title="4.python3代码实现"></a>4.python3代码实现</h4><p>1、宏哥演示环境：</p>
 <p>（1）python37 （2）PyCharm 2018.3.5 x64  （3）操作系统win10</p>
 <p>2、其实很简单的，难而不会，会而不难。将xml格式的body部分直接写成一个字符串类型就行了，遇到换行的字符串，在后面加个反斜杠</p>
-<p><img src="https://i.loli.net/2020/08/06/LROIVZqbYUSQaFP.png" alt="1232840-20190529115030121-1515245717.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/LROIVZqbYUSQaFP.png" alt="1232840-20190529115030121-1515245717.png"></p>
 <p>3、body参数用data去接收传入，要是遇到编码问题报错，就对body部分encode下再传入</p>
-<p><img src="https://i.loli.net/2020/08/06/PBf4ErT1k3dNqSL.png" alt="1232840-20190529114810548-1659119572.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/PBf4ErT1k3dNqSL.png" alt="1232840-20190529114810548-1659119572.png"></p>
 <p>4、运行结果</p>
-<p><img src="https://i.loli.net/2020/08/06/sfhmFpaTKbYQV5P.png" alt="1232840-20190529115116941-117439250.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/sfhmFpaTKbYQV5P.png" alt="1232840-20190529115116941-117439250.png"></p>
 <p>5、参考代码</p>
 <pre><code> 1 # coding=utf-8
  2 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1068,9 +1078,9 @@ multipart/form-data</code></pre><p>　　本篇就来给各位看官和小伙伴
 24 # 遇到编码报错时候，对body进行encode
 25 r = requests.post(url, data=body.encode(&quot;utf-8&quot;))
 26 print(r.text)</code></pre><h4 id="5-从文件中读取XML数据"><a href="#5-从文件中读取XML数据" class="headerlink" title="5.从文件中读取XML数据"></a>5.从文件中读取XML数据</h4><p>1、xml格式的数据写到代码里面，不太直观，后期维护也不方便，可以把xml格式数据单独拿出来写到一个文件里，再用open函数去读取</p>
-<p><img src="https://i.loli.net/2020/08/06/1gEHcVMSlXy2ktf.png" alt="1232840-20190529113555518-1045039716.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/1gEHcVMSlXy2ktf.png" alt="1232840-20190529113555518-1045039716.png"></p>
 <p>2、新建一个body1_xml文件，写入内容如下</p>
-<p><img src="https://i.loli.net/2020/08/06/weRAlECdGLqSzgk.png" alt="1232840-20190529113715561-117859115.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/weRAlECdGLqSzgk.png" alt="1232840-20190529113715561-117859115.png"></p>
 <p>3、参考内容</p>
 <pre><code>&lt;?xml version=“1.0” encoding = “UTF-8”?&gt;
 &lt;COM&gt;
@@ -1080,9 +1090,9 @@ multipart/form-data</code></pre><p>　　本篇就来给各位看官和小伙伴
         &lt;SESSION_ID&gt;absbnmasbnfmasbm1213&lt;/SESSION_ID&gt;
     &lt;/REQ&gt;
 &lt;/COM&gt;</code></pre><p>4、用open函数去读xml内容</p>
-<p><img src="https://i.loli.net/2020/08/06/IvljHDhdxtqkP6i.png" alt="1232840-20190529113847169-838819342.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/IvljHDhdxtqkP6i.png" alt="1232840-20190529113847169-838819342.png"></p>
 <p>5、运行结果</p>
-<p><img src="https://i.loli.net/2020/08/06/6ZDGx2kcT3pXqJ4.png" alt="1232840-20190529114236318-1821806204.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/06/6ZDGx2kcT3pXqJ4.png" alt="1232840-20190529114236318-1821806204.png"></p>
 <p>6、参考代码</p>
 <pre><code> 1 # coding=utf-8
  2 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1222,10 +1232,10 @@ multipart/form-data</code></pre><p>　　本篇就来给各位看官和小伙伴
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1645,7 +1655,7 @@ multipart/form-data</code></pre><p>　　本篇就来给各位看官和小伙伴
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="python接口自动化42">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/20.jpg" class="responsive-img" alt="python接口自动化42">
                         
                         <span class="card-title">python接口自动化42</span>
                     </div>
@@ -1699,7 +1709,7 @@ multipart/form-data</code></pre><p>　　本篇就来给各位看官和小伙伴
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="python接口自动化40">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/18.jpg" class="responsive-img" alt="python接口自动化40">
                         
                         <span class="card-title">python接口自动化40</span>
                     </div>
@@ -1840,9 +1850,21 @@ multipart/form-data</code></pre><p>　　本篇就来给各位看官和小伙伴
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1976,7 +1998,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2021,7 +2042,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

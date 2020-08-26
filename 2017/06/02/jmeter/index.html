@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1004,15 +1014,15 @@ window.Canvas= new Universe(element);</script>
                 <p><strong>🔥 Jmeter(二十二) - 从入门到精通 - JMeter断言 - 下篇（详解教程）</strong></p>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>断言组件用来对服务器的响应数据做验证，常用的断言是响应断言，其支持正则表达式。虽然我们的通过响应断言能够完成绝大多数的结果验证工作，但是JMeter还是为我们提供了适合多个场景的断言元件，辅助我们来更好的完成结果验证工作。在使用JMeter进行性能测试或者接口自动化测试工作中，经常会用到的一个功能，就是断言，断言相当于检查点，它是用来判断系统返回的响应结果是否正确，以此帮我们判断测试是否通过。</p>
 <h4 id="2-预览断言"><a href="#2-预览断言" class="headerlink" title="2.预览断言"></a>2.预览断言</h4><p>　　首先我们来看一下JMeter的断言，路径：线程组（用户）-&gt;添加-&gt;断言；我们可以清楚地看到JMeter5中共有13个断言（不包括jp@gc开头的断言，这个是宏哥安装的插件），如下图所示：</p>
-<p><img src="https://i.loli.net/2020/08/17/8aSDkAbCgVcqmf1.png" alt="1232840-20200722090456854-246813506.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/17/8aSDkAbCgVcqmf1.png" alt="1232840-20200722090456854-246813506.png"></p>
 <p>如果上图您看得不是很清楚的话，宏哥总结了一个思维导图，关于JMeter5的断言类型，如下图所示： </p>
-<p><img src="https://i.loli.net/2020/08/17/Yofh8lGmdeBcnPZ.png" alt="1232840-20200723130527688-282348624.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/17/Yofh8lGmdeBcnPZ.png" alt="1232840-20200723130527688-282348624.png"></p>
 <p>通过以上的了解，我们对断言有了一个大致的了解和认识。下面宏哥就给小伙伴或则童鞋们分享讲解一些通常在工作中会用到的断言。 </p>
 <h4 id="3-常用断言详解"><a href="#3-常用断言详解" class="headerlink" title="3.常用断言详解"></a>3.常用断言详解</h4><p>这一小节，宏哥就由上而下地详细地讲解一下常用的断言。</p>
 <h5 id="3-1-HTML断言"><a href="#3-1-HTML断言" class="headerlink" title="3.1 HTML断言"></a>3.1 HTML断言</h5><p>对响应类为XML类型的文件进行断言；</p>
 <p>作用对象：针对sampler中的SOAP/XML-RPC Request而使用的断言</p>
 <p>1、我们先来看看这个 HTML断言 长得是啥样子，路径：线程组 &gt; 添加 &gt; 断言 &gt; HTML断言，如下图所示： </p>
-<p><img src="https://i.loli.net/2020/08/17/1Gl46osKyDk7UxN.png" alt="1232840-20200723132011819-54779036.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/17/1Gl46osKyDk7UxN.png" alt="1232840-20200723132011819-54779036.png"></p>
 <p>2、关键参数说明如下：</p>
 <p>名称：控制器的描述性名称，显示在左边节点上，并用于命名事务 </p>
 <p>注释：控制器注释信息，非必填项 </p>
@@ -1027,7 +1037,7 @@ window.Canvas= new Universe(element);</script>
 <h5 id="3-2MD5-Hex断言"><a href="#3-2MD5-Hex断言" class="headerlink" title="3.2MD5 Hex断言"></a>3.2MD5 Hex断言</h5><p>MD5是一种消息摘要算法，用以提供消息的完整性保护，对返回的MD5结果进行断言，使用简单，直接跳入MD5值。执行服务器响应的MD5哈希并将其与给定的Md5哈希进行比较。它非常适合您要检查下载文件是否完整的情况。</p>
 <p>作用对象：针对参数类型为MD5Hex加密的参数的断言</p>
 <p>1、我们先来看看这个 MD5 Hex断言 长得是啥样子，路径：线程组 &gt; 添加 &gt; 断言 &gt; MD5 Hex断言，如下图所示： </p>
-<p><img src="https://i.loli.net/2020/08/17/lyitx9YKmCTIsZb.png" alt="1232840-20200723132050265-887107958.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/17/lyitx9YKmCTIsZb.png" alt="1232840-20200723132050265-887107958.png"></p>
 <p>2、关键参数说明如下：</p>
 <p>名称：控制器的描述性名称，显示在左边节点上，并用于命名事务 </p>
 <p>注释：控制器注释信息，非必填项 </p>
@@ -1035,7 +1045,7 @@ window.Canvas= new Universe(element);</script>
 <h5 id="3-3SMIME断言"><a href="#3-3SMIME断言" class="headerlink" title="3.3SMIME断言"></a>3.3SMIME断言</h5><p>SMIME是一种多用途网际邮件扩充协议，相比于之前的SMAP邮件传输协议，增加了安全性，对邮件主题进行保护；</p>
 <p>作用对象：针对采用了该种邮件传输协议的信息</p>
 <p>1、我们先来看看这个 SMIME断言长得是啥样子，路径：线程组 &gt; 添加 &gt; 断言 &gt; SMIME断言，如下图所示： </p>
-<p><img src="https://i.loli.net/2020/08/17/aOQfAPESwm8IHzq.png" alt="1232840-20200723132128105-897998871.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/17/aOQfAPESwm8IHzq.png" alt="1232840-20200723132128105-897998871.png"></p>
 <p>2、关键参数说明如下：</p>
 <p>名称：控制器的描述性名称，显示在左边节点上，并用于命名事务 </p>
 <p>注释：控制器注释信息，非必填项 </p>
@@ -1054,14 +1064,14 @@ window.Canvas= new Universe(element);</script>
 <h5 id="3-4XML断言"><a href="#3-4XML断言" class="headerlink" title="3.4XML断言"></a>3.4XML断言</h5><p>XML(可扩展标记语言) 提供一种描述结构化数据的方法。与主要用于控制数据的显示和外观的 HTML 标记不同，XML 标记用于定义数据本身的结构和数据类型；</p>
 <p>作用对象：判断返回结果是否和xml的格式即&lt;&gt;&lt;/&gt;成对出现</p>
 <p>1、我们先来看看这个 XML断言长得是啥样子，路径：线程组 &gt; 添加 &gt; 断言 &gt; XML断言，如下图所示： </p>
-<p><img src="https://i.loli.net/2020/08/17/MsANEFmLkHGce6b.png" alt="1232840-20200723132203143-1115929205.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/17/MsANEFmLkHGce6b.png" alt="1232840-20200723132203143-1115929205.png"></p>
 <p>2、关键参数说明如下：</p>
 <p>名称：控制器的描述性名称，显示在左边节点上，并用于命名事务 </p>
 <p>注释：控制器注释信息，非必填项 </p>
 <h5 id="3-5-XML-Schema断言"><a href="#3-5-XML-Schema断言" class="headerlink" title="3.5 XML Schema断言"></a>3.5 XML Schema断言</h5><p>亦可以称为XML模型断言/XML数据类型断言；XML Schema 定义了两种主要的数据类型：①xml document schema 文档架构 ;② 文档架构xml-schema xml模式</p>
 <p>作用对象：返回结果为XML概要断言的2中数据类型的消息</p>
 <p>1、我们先来看看这个 XML Schema断言 长得是啥样子，路径：线程组 &gt; 添加 &gt; 断言 &gt; XML Schema断言，如下图所示： </p>
-<p><img src="https://i.loli.net/2020/08/17/KD6xnc2FwpIylU5.png" alt="1232840-20200723132240507-1289452731.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/17/KD6xnc2FwpIylU5.png" alt="1232840-20200723132240507-1289452731.png"></p>
 <p>2、关键参数说明如下：</p>
 <p>名称：控制器的描述性名称，显示在左边节点上，并用于命名事务 </p>
 <p>注释：控制器注释信息，非必填项 </p>
@@ -1070,7 +1080,7 @@ window.Canvas= new Universe(element);</script>
 <p>BeanShell断言支持各种开发语言，本文介绍使用java编写断言，使用BeanShell断言的好处是可以自由发挥，比如当断言失败，提示预期结果、实际结果，或者失败时把结果输出到日志。</p>
 <p>作用对象：针对sampler中的Bean Shell sampler而使用的断言</p>
 <p>1、我们先来看看这个 BeanShell断言 长得是啥样子，路径：线程组 &gt; 添加 &gt; 断言 &gt; BeanShell断言，如下图所示： </p>
-<p><img src="https://i.loli.net/2020/08/17/5wTu6nS7osAaRGf.png" alt="1232840-20200723132321520-1058492710.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/17/5wTu6nS7osAaRGf.png" alt="1232840-20200723132321520-1058492710.png"></p>
 <p>2、关键参数说明如下：</p>
 <p>名称：控制器的描述性名称，显示在左边节点上，并用于命名事务 </p>
 <p>注释：控制器注释信息，非必填项 </p>
@@ -1191,10 +1201,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1615,7 +1625,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="JMeter基础篇详解教程-22">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/20.jpg" class="responsive-img" alt="JMeter基础篇详解教程-22">
                         
                         <span class="card-title">JMeter基础篇详解教程-22</span>
                     </div>
@@ -1662,7 +1672,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Python相关知识-04">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/17.jpg" class="responsive-img" alt="Python相关知识-04">
                         
                         <span class="card-title">Python相关知识-04</span>
                     </div>
@@ -1794,9 +1804,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1930,7 +1952,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1975,7 +1996,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

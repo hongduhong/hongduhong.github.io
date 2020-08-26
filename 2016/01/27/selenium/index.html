@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1013,13 +1023,13 @@ window.Canvas= new Universe(element);</script>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　今天我们还是继续练习练习基本功，各位小伙伴要耐住住性子，要耐得住寂寞啊，不要急躁，后面你会感谢你在前边的不断练习的。到后面也是检验你前边的学习成果的一次很好实践。所以今天我们继续前边的练习，学习和练习一下：如何使用webdriver方法获取操作复选框-CheckBox、测试不同的分辨率、如何断言title、如何获取某一个元素的text属性值等等，这些小练习，来巩固基础。</p>
 <h4 id="2-操作复选框-Checkbox"><a href="#2-操作复选框-Checkbox" class="headerlink" title="2.操作复选框-Checkbox"></a>2.操作复选框-Checkbox</h4><p>本小节介绍Selenium中，如何操作复选框-Checkbox，最终的方法还是click()。<br>本来想还是继续采用for语句来把所有的复选框勾选一遍，例如这样的场景：注册一个网站勾选身份或者职业的时候，由于没有找到合适的demo网站。这里还是以百度举例，登录时，勾选下次自动登录：</p>
 <p>（1）访问百度主页面，点击百度首页的“登录”，xpath定位如下：</p>
-<p><img src="https://i.loli.net/2020/08/03/ANlu5b3goMFwvSx.png" alt="1232840-20191203163453967-1371821693.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/ANlu5b3goMFwvSx.png" alt="1232840-20191203163453967-1371821693.png"></p>
 <p>（2）点击“用户名登录”，xpath定位如下图：</p>
-<p><img src="https://i.loli.net/2020/08/03/P5q4bcln2okLyaJ.png" alt="1232840-20191203163642344-302152905.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/P5q4bcln2okLyaJ.png" alt="1232840-20191203163642344-302152905.png"></p>
 <p>（3）点击下次自动登录点选按钮，xpath定位如下：</p>
-<p><img src="https://i.loli.net/2020/08/03/g5l6QUOJ7qYGmSB.png" alt="1232840-20191204090447961-180890905.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/g5l6QUOJ7qYGmSB.png" alt="1232840-20191204090447961-180890905.png"></p>
 <p>相关脚本代码如下：</p>
-<h5 id="2-1代码实现"><a href="#2-1代码实现" class="headerlink" title="2.1代码实现"></a>2.1代码实现</h5><p><img src="https://i.loli.net/2020/08/03/JZDfgVRFpI9AosN.png" alt="1232840-20191204090554945-233420252.png"></p>
+<h5 id="2-1代码实现"><a href="#2-1代码实现" class="headerlink" title="2.1代码实现"></a>2.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/JZDfgVRFpI9AosN.png" alt="1232840-20191204090554945-233420252.png"></p>
 <h5 id="2-2参考代码"><a href="#2-2参考代码" class="headerlink" title="2.2参考代码"></a>2.2参考代码</h5><pre><code># coding=utf-8🔥
 
 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1047,11 +1057,11 @@ time.sleep(1)
 driver.find_element_by_xpath(&quot;.//*[@id=&#39;TANGRAM__PSP_10__memberPass&#39;]&quot;).click()
 time.sleep(1)
 driver.find_element_by_xpath(&quot;.//*[@id=&#39;TANGRAM__PSP_10__memberPass&#39;]&quot;).click()</code></pre><h5 id="2-3运行结果"><a href="#2-3运行结果" class="headerlink" title="2.3运行结果"></a>2.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/08/03/RSq8FBzkw2uPCHM.png" alt="1232840-20191204090625634-1461121970.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/RSq8FBzkw2uPCHM.png" alt="1232840-20191204090625634-1461121970.png"></p>
 <p>由于这个勾选是默认选中的，这里方便观察点击效果，点击了两次。如果有多个复选框，考虑用for循环，参考前面radio button的方法。</p>
 <h4 id="3-测试不同分辨率"><a href="#3-测试不同分辨率" class="headerlink" title="3.测试不同分辨率"></a>3.测试不同分辨率</h4><p>本小节来学习下如何通过Selenium方法，设置符合不同测试场景浏览器窗口大小。例如，你有一台机器，最大支持1366*768，你完全可以利用这个机器测试不同分辨率下的场景。</p>
 <p>相关测试脚本代码如下：</p>
-<h5 id="3-1代码实现："><a href="#3-1代码实现：" class="headerlink" title="3.1代码实现："></a>3.1代码实现：</h5><p><img src="https://i.loli.net/2020/08/03/lnxItKm1uUC6psb.png" alt="1232840-20191204091406154-848281599.png"> </p>
+<h5 id="3-1代码实现："><a href="#3-1代码实现：" class="headerlink" title="3.1代码实现："></a>3.1代码实现：</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/lnxItKm1uUC6psb.png" alt="1232840-20191204091406154-848281599.png"> </p>
 <h5 id="3-2参考代码"><a href="#3-2参考代码" class="headerlink" title="3.2参考代码"></a>3.2参考代码</h5><pre><code># coding=utf-8🔥
 
 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1080,10 +1090,10 @@ print (driver.get_window_size())
 driver.set_window_size(1024,768) # 分辨率 1024*768
 time.sleep(1)
 print (driver.get_window_size())</code></pre><h5 id="3-3运行结果"><a href="#3-3运行结果" class="headerlink" title="3.3运行结果"></a>3.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/08/03/PsZ83cvCpuRmz5i.png" alt="1232840-20191204091323995-486168247.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/PsZ83cvCpuRmz5i.png" alt="1232840-20191204091323995-486168247.png"> </p>
 <h4 id="4-title断言方法"><a href="#4-title断言方法" class="headerlink" title="4.title断言方法"></a>4.title断言方法</h4><p>本小节介绍一个Selenium中页面title断言方法，这个在以后的断言中会用到，大致都是换汤不换药，照猫画虎就可以了，但是在这里一定要认真学习和练习，后边应用起来才回得心应手。</p>
 <p>相关脚本代码如下：</p>
-<h5 id="4-1代码实现"><a href="#4-1代码实现" class="headerlink" title="4.1代码实现"></a>4.1代码实现</h5><p><img src="https://i.loli.net/2020/08/03/vdeUp2IsoajEOcJ.png" alt="1232840-20191204092201697-1562549398.png"></p>
+<h5 id="4-1代码实现"><a href="#4-1代码实现" class="headerlink" title="4.1代码实现"></a>4.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/vdeUp2IsoajEOcJ.png" alt="1232840-20191204092201697-1562549398.png"></p>
 <h5 id="4-2参考代码"><a href="#4-2参考代码" class="headerlink" title="4.2参考代码"></a>4.2参考代码</h5><pre><code># coding=utf-8🔥
 
 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1116,19 +1126,19 @@ else:
     print (&#39;Assertion test fail.&#39;)
 
 print(driver.title)</code></pre><h5 id="4-3运行结果"><a href="#4-3运行结果" class="headerlink" title="4.3运行结果"></a>4.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/08/03/xSq8actjVldvPCg.png" alt="1232840-20191204092058591-259140259.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/xSq8actjVldvPCg.png" alt="1232840-20191204092058591-259140259.png"></p>
 <p>方法一，是利用python中Assert方法，采用包含判断，方法二是通过if方法，采用完全相等方法，建议选择第一种方法。</p>
 <p>u”百度一下，你就知道”</p>
 <p>这u代表unicode的意思，由于我们这里采用了python 2, 如果你使用pyn3 就不需要，在Python3中，字符串默认采用unicode存储。</p>
 <h4 id="5-获取某一个元素的text属性值"><a href="#5-获取某一个元素的text属性值" class="headerlink" title="5.获取某一个元素的text属性值"></a>5.获取某一个元素的text属性值</h4><p>　　本小节介绍如何通过Selenium方法来获取某一个元素的text属性值。在很多自动化测试脚本中，需要多次获取元素的text值，拿过来进行对比和匹配。例如，在一个登陆界面，如果不输入用户名和密码，直接点击登录，肯定会有相关错误提醒。这个错误，我们需要通过selenium抓取出来，和需求说明文档中的描述去进行匹配，如果匹配，测试成功，否则失败。<br>这里用百度登录举例：</p>
-<p><img src="https://i.loli.net/2020/08/03/aAEBMwgmFxY4qte.png" alt="1232840-20191204132723067-1677693373.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/aAEBMwgmFxY4qte.png" alt="1232840-20191204132723067-1677693373.png"></p>
 <p>需要通过Selenium脚本去自动判断是否显示错误文字“请您填写手机/邮箱/用户名”，前边已经定位到这个页面，这里就不再赘述了，这里需要定位“登录”按钮，定位text的属性值。</p>
 <p>（1）定位“登录”按钮</p>
-<p><img src="https://i.loli.net/2020/08/03/tJ3lQxVhfM5k2A9.png" alt="1232840-20191204134039161-2063974330.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/tJ3lQxVhfM5k2A9.png" alt="1232840-20191204134039161-2063974330.png"></p>
 <p>（2）定位text的属性值</p>
-<p><img src="https://i.loli.net/2020/08/03/IwyBdJ4LmVzHpge.png" alt="1232840-20191204134120053-290770356.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/IwyBdJ4LmVzHpge.png" alt="1232840-20191204134120053-290770356.png"></p>
 <p>相关脚本代码如下：</p>
-<h5 id="5-1代码实现"><a href="#5-1代码实现" class="headerlink" title="5.1代码实现"></a>5.1代码实现</h5><p><img src="https://i.loli.net/2020/08/03/HBh49Mxuk6tNvUV.png" alt="1232840-20191204135852911-579104209.png"></p>
+<h5 id="5-1代码实现"><a href="#5-1代码实现" class="headerlink" title="5.1代码实现"></a>5.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/HBh49Mxuk6tNvUV.png" alt="1232840-20191204135852911-579104209.png"></p>
 <h5 id="5-2参考代码"><a href="#5-2参考代码" class="headerlink" title="5.2参考代码"></a>5.2参考代码</h5><pre><code># coding=utf-8🔥
 
 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1173,7 +1183,7 @@ try:
     print (&#39;Test pass.&#39;)
 except Exception as e:
     print (&quot;Test fail.&quot;, format(e))</code></pre><h5 id="5-3运行结果"><a href="#5-3运行结果" class="headerlink" title="5.3运行结果"></a>5.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/08/03/kCp3WeGZIFgRlcb.png" alt="1232840-20191204135738481-70636654.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/03/kCp3WeGZIFgRlcb.png" alt="1232840-20191204135738481-70636654.png"></p>
 <p>总结：<br>要获取到目标元素的text的值，需要定义一个目标元素element，然后通过element.text方法得到字符串，注意不是element.text(),这个方法是没有带小括号的。上面介绍了两个方法，方法一是，直接把字段写入XPath表达式，如果通过该XPath能定位到元素，说明这个<br>错误字段已经在页面显示；方法二是通过该目标元素节点，然后通过element.text得到值，在拿得到的text值取和期待的结果去字符串匹配。建议在自动化测试脚本开发中，采用第二个方法。</p>
 <h4 id="6-小结"><a href="#6-小结" class="headerlink" title="6.小结"></a>6.小结</h4><p>好了，今天的练习就到这里，希望大家好好的练习和理解。 </p>
 
@@ -1288,10 +1298,10 @@ except Exception as e:
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1711,7 +1721,7 @@ except Exception as e:
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="python+selenium自动化测试10">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/20.jpg" class="responsive-img" alt="python+selenium自动化测试10">
                         
                         <span class="card-title">python+selenium自动化测试10</span>
                     </div>
@@ -1765,7 +1775,7 @@ except Exception as e:
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="python+selenium自动化测试8">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/5.jpg" class="responsive-img" alt="python+selenium自动化测试8">
                         
                         <span class="card-title">python+selenium自动化测试8</span>
                     </div>
@@ -1906,9 +1916,21 @@ except Exception as e:
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2042,7 +2064,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2087,7 +2108,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

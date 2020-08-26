@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1014,21 +1024,21 @@ window.Canvas= new Universe(element);</script>
 <p>要用参数关联了，发随笔之后会有一个随笔的 id，获取到这个 id，继续操作传这个随笔 id 就可以了（博客园的登录机制已经变了，不能用账号和密码登录了，这里用 cookie 登录）</p>
 <p>大致流程步骤：web界面操作登录抓包查看cookie—&gt;代码模拟cookie登录—&gt;web界面操作新建随笔和保存随笔—&gt;抓包查看新建随笔和保存随笔的url和参数等—&gt;代码模拟新建随笔并保存编辑内容—&gt;web界面操作删除随笔—&gt;抓取删除操作请求—&gt;提取参数—&gt;传参—&gt;代码实现。</p>
 <h4 id="2-删除随笔"><a href="#2-删除随笔" class="headerlink" title="2.删除随笔"></a>2.删除随笔</h4><p>1、我们前面讲过登录后新建随笔和保存随笔后，不记得可以点击传送门那可以继续接着操作：删除刚才新建的随笔</p>
-<p><img src="https://i.loli.net/2020/08/05/Kl4VQPvTULDZ156.png" alt="1232840-20190416112854202-1863970122.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/Kl4VQPvTULDZ156.png" alt="1232840-20190416112854202-1863970122.png"> </p>
 <p>2、用fiddler抓包，抓到删除新建随笔的请求，从抓包结果可以看出，传的json参数是postId</p>
-<p><img src="https://i.loli.net/2020/08/05/flLhsj4maUR9QXi.png" alt="1232840-20190416114809493-773371217.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/flLhsj4maUR9QXi.png" alt="1232840-20190416114809493-773371217.png"></p>
 <p>3.这个postId哪里来的呢？可以看上个请求的url地址</p>
-<p><img src="https://i.loli.net/2020/08/05/JVGbsYjEgaQU2dM.png" alt="1232840-20190416114627706-1999908725.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/JVGbsYjEgaQU2dM.png" alt="1232840-20190416114627706-1999908725.png"></p>
 <p>4、也就是说保存草稿箱成功之后，重定向一个 url 地址，里面带有 postId 这个参数。那我们想办法将这个参数提取出来就可以了</p>
 <h4 id="3-提取参数"><a href="#3-提取参数" class="headerlink" title="3.提取参数"></a>3.提取参数</h4><p>1、我们需要的参数 postId 是在保存成功后 url 地址，这时候从 url 地址提出对应的参数值就行了，先获取保存成功后 url</p>
 <p>2、通过正则表达式从保存的url提取需要的字符串，这个参数值前面（postid=）和后面（&amp;）字符串都是固定的</p>
 <p>3、这里正则提出来的是 list 类型，取第一个值就可以是字符串了（注意：每次保存需要修改内容，不能重复）</p>
-<p><img src="https://i.loli.net/2020/08/05/o1IOeJt5wXl9kxi.png" alt="1232840-20190416132226901-2016326895.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/o1IOeJt5wXl9kxi.png" alt="1232840-20190416132226901-2016326895.png"></p>
 <h4 id="4-传参"><a href="#4-传参" class="headerlink" title="4.传参"></a>4.传参</h4><p>1、删除草稿箱的 json 参数传上面取到的参数：{“postId”: postid[0]}</p>
 <p>2、json 数据类型 post 里面填 json 就行，会自动转 json</p>
 <p>3、接着前面的保存随笔的操作，就可以删除成功了</p>
 <p>注意：同理和jenkins一样，如果想看清楚，可以在删除新建随笔出打断点，看到新建的随笔后，再次执行下边的代码 看看是不是可以删掉新建随笔</p>
-<p><img src="https://i.loli.net/2020/08/05/92TbOkPqmGwH5JX.png" alt="1232840-20190416132335249-1213273111.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/05/92TbOkPqmGwH5JX.png" alt="1232840-20190416132335249-1213273111.png"></p>
 <h4 id="5-参考代码"><a href="#5-参考代码" class="headerlink" title="5.参考代码"></a>5.参考代码</h4><pre><code> 1 # coding:utf-8
  2 import requests
  3 # 先打开登录首页，获取部分cookie
@@ -1188,10 +1198,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1611,7 +1621,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="python接口自动化17">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="python接口自动化17">
                         
                         <span class="card-title">python接口自动化17</span>
                     </div>
@@ -1665,7 +1675,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="python接口自动化15">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/2.jpg" class="responsive-img" alt="python接口自动化15">
                         
                         <span class="card-title">python接口自动化15</span>
                     </div>
@@ -1806,9 +1816,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1942,7 +1964,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1987,7 +2008,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

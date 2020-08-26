@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1012,9 +1022,9 @@ window.Canvas= new Universe(element);</script>
                 <p><strong>🔥《一头扎进》系列之Python+Selenium框架实战篇8-年底升职加薪，年终奖就差最后这一步你知道不？？？</strong></p>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　到上一篇为止，测试报告已经完美的生成，但是你此时不要沾沾自喜，因为还差点意思，你才能升职加薪、拿年终奖。差点啥了？？？听宏哥给你慢慢道来。那就是把你生成的高端大气上档次的测试报告给领导展示一番，吹嘘一番。不把测试报告发出去好好地在领导面前表现一番，你留着生娃过年吗？这马上就新年了，你还真的留着它生娃啊？？？辛苦了这么久升职加薪，拿年终奖就靠这一把了。今天这篇文章宏哥就给小伙伴和童鞋们来答疑解惑了，当然了方式方法多种多样的，你可以通过邮件、QQ、微信将测试报告附件手动写邮件发送给相关负责人。这里宏哥讲解如何将测试报告自动发送给相关的负责人。</p>
 <h4 id="2-框架结构"><a href="#2-框架结构" class="headerlink" title="2.框架结构"></a>2.框架结构</h4><p>　　先一睹为快，看看宏哥把邮件模块放在那里了，宏哥认为这个也是固定的只要封装好，在需要用到的地方进行导入和调用就可以了。因为宏哥将它放在了framework文件夹下，如下图所示：</p>
-<p><img src="https://i.loli.net/2020/08/04/91Ozt6BWSKahfCo.png" alt="1232840-20191226101542466-436823471.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/91Ozt6BWSKahfCo.png" alt="1232840-20191226101542466-436823471.png"></p>
 <h4 id="3-邮件模块封装"><a href="#3-邮件模块封装" class="headerlink" title="3.邮件模块封装"></a>3.邮件模块封装</h4><p>　　上边都说了，我们需要封装，因此这里给小伙伴或童鞋们分享一下邮件模块的封装，封装将最新的测试报告发送给测试负责人或者是领导，让他们看看你的成果，这个是你升职加薪，年终奖的砝码。相关代码如下：</p>
-<h5 id="3-1代码实现"><a href="#3-1代码实现" class="headerlink" title="3.1代码实现"></a>3.1代码实现</h5><p><img src="https://i.loli.net/2020/08/04/BWrT1c6KACbPpe9.png" alt="1232840-20191226103229084-1376317205.png"></p>
+<h5 id="3-1代码实现"><a href="#3-1代码实现" class="headerlink" title="3.1代码实现"></a>3.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/BWrT1c6KACbPpe9.png" alt="1232840-20191226103229084-1376317205.png"></p>
 <h5 id="3-2参考代码"><a href="#3-2参考代码" class="headerlink" title="3.2参考代码"></a>3.2参考代码</h5><pre><code>#-*-coding:utf-8-*-
 
 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1091,17 +1101,17 @@ print(&#39;sendmailsuccess&#39;)
 if__name__==&#39;__main__&#39;:
 sendMail=SendMail()
 sendMail.send()</code></pre><h5 id="3-3运行结果"><a href="#3-3运行结果" class="headerlink" title="3.3运行结果"></a>3.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/08/04/vYXhzRk8gKCL4V3.png" alt="1232840-20191226103344161-1629913332.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/vYXhzRk8gKCL4V3.png" alt="1232840-20191226103344161-1629913332.png"></p>
 <h5 id="3-4验证是否是最新测试报告"><a href="#3-4验证是否是最新测试报告" class="headerlink" title="3.4验证是否是最新测试报告"></a>3.4验证是否是最新测试报告</h5><p>从3.3中控制台运行结果宏哥打印的结果看出最新的测试报告是：</p>
 <p>Thenewreportname:2019-12-25-11_03_42HTMLtemplate.html<br>我们去存储测试报告文件的test_report文件夹看一下是不是这个：是不是最新的测试报告</p>
-<p><img src="https://i.loli.net/2020/08/04/vULwTA8DcrsE7py.png" alt="1232840-20191226132033906-829957124.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/vULwTA8DcrsE7py.png" alt="1232840-20191226132033906-829957124.png"></p>
 <p>综上所述：从控制台打印结果和测试报告文件夹的测试报告文件比较，我们可以清楚地看出二者一致，证明达到了预期的结果。</p>
 <h4 id="4-查看收件箱"><a href="#4-查看收件箱" class="headerlink" title="4.查看收件箱"></a>4.查看收件箱</h4><h5 id="4-1查看收件箱"><a href="#4-1查看收件箱" class="headerlink" title="4.1查看收件箱"></a>4.1查看收件箱</h5><p>在邮件的收件箱中查看到，我们刚刚发送的邮件如下图所示：</p>
-<p><img src="https://i.loli.net/2020/08/04/yvYOBb1E3jTifDd.png" alt="1232840-20191226104343594-1833421715.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/yvYOBb1E3jTifDd.png" alt="1232840-20191226104343594-1833421715.png"></p>
 <h5 id="4-2查看邮件内容"><a href="#4-2查看邮件内容" class="headerlink" title="4.2查看邮件内容"></a>4.2查看邮件内容</h5><p>点击查看邮件内容如下图所示：</p>
-<p><img src="https://i.loli.net/2020/08/04/k6aSNEDl4fQseZM.png" alt="1232840-20191226104053288-1978326421.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/k6aSNEDl4fQseZM.png" alt="1232840-20191226104053288-1978326421.png"></p>
 <h5 id="4-3查看邮件附件"><a href="#4-3查看邮件附件" class="headerlink" title="4.3查看邮件附件"></a>4.3查看邮件附件</h5><p>用浏览器打开附件预览查看如下图所示：</p>
-<p><img src="https://i.loli.net/2020/08/04/SBKpTJkQqifU6m4.png" alt="1232840-20191226104227906-294137950.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/SBKpTJkQqifU6m4.png" alt="1232840-20191226104227906-294137950.png"></p>
 <h4 id="5-小结"><a href="#5-小结" class="headerlink" title="5.小结"></a>5.小结</h4><p>Q：最后说明一下，有的小伙伴或者童鞋们私下会问，那个测试报告能不能在邮件里像在浏览器里一样可以点击？<br>A：不可以的生成的文件是HTML文件，邮件客户端解析不了，可以通过附件用浏览器打开查看，可以发一个最新测试报告ur地址，点击在浏览器上访问查看测试报告</p>
 <p>　　好了，今天的分享就到这里吧！！！谢谢各位的耐心阅读。有问题加群交流讨论！！！</p>
 
@@ -1216,10 +1226,10 @@ sendMail.send()</code></pre><h5 id="3-3运行结果"><a href="#3-3运行结果" 
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1639,7 +1649,7 @@ sendMail.send()</code></pre><h5 id="3-3运行结果"><a href="#3-3运行结果" 
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="python+selenium自动化测试26">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="python+selenium自动化测试26">
                         
                         <span class="card-title">python+selenium自动化测试26</span>
                     </div>
@@ -1700,7 +1710,7 @@ sendMail.send()</code></pre><h5 id="3-3运行结果"><a href="#3-3运行结果" 
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="python+selenium自动化测试24">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/9.jpg" class="responsive-img" alt="python+selenium自动化测试24">
                         
                         <span class="card-title">python+selenium自动化测试24</span>
                     </div>
@@ -1841,9 +1851,21 @@ sendMail.send()</code></pre><h5 id="3-3运行结果"><a href="#3-3运行结果" 
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1977,7 +1999,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2022,7 +2043,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

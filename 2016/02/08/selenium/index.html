@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1012,10 +1022,10 @@ window.Canvas= new Universe(element);</script>
                 <p><strong>🔥《一头扎进》系列之Python+Selenium框架实战篇4-价值好几K的框架，呵！这个框架有点意思啊！！！</strong></p>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>前面文章，我们实现了框架的一部分功能，包括日志类和浏览器引擎类的封装，今天我们继续封装一个基类和介绍如何实现POM。关于基类，是这样定义的：把一些常见的页面操作的selenium封装到base_page.py这个类文件，以后每个POM中的页面类，都继承这个基类，这样每个页面类都有基类的方法，这个我们会在这篇文章由宏哥实现。</p>
 <h4 id="2-项目层级结构"><a href="#2-项目层级结构" class="headerlink" title="2.项目层级结构"></a>2.项目层级结构</h4><p>1.上一篇中我们已经创建好了项目层级结构，具体项目层级结构如下图。这里不再赘述，相关文件也如下：</p>
-<p><img src="https://i.loli.net/2020/08/04/DduxtyFwr7GhUPm.png" alt="1232840-20191219113551572-1602006466.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/DduxtyFwr7GhUPm.png" alt="1232840-20191219113551572-1602006466.png"></p>
 <h4 id="3-定位和截图类封装"><a href="#3-定位和截图类封装" class="headerlink" title="3.定位和截图类封装"></a>3.定位和截图类封装</h4><p>1.在实现封装基类里，我们实现了元素八大方式的定位和截图类封装。</p>
 <p>2.基类base_page.py的具体实现代码，这里就封装了几个常用方法，其他方法，你自己去练习封装下。</p>
-<h5 id="3-1代码实现"><a href="#3-1代码实现" class="headerlink" title="3.1代码实现"></a>3.1代码实现</h5><p><img src="https://i.loli.net/2020/08/04/L8WF7cntl1AaST2.png" alt="1232840-20191220142652608-958817746.png"></p>
+<h5 id="3-1代码实现"><a href="#3-1代码实现" class="headerlink" title="3.1代码实现"></a>3.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/L8WF7cntl1AaST2.png" alt="1232840-20191220142652608-958817746.png"></p>
 <h5 id="3-2参考代码"><a href="#3-2参考代码" class="headerlink" title="3.2参考代码"></a>3.2参考代码</h5><pre><code>#-*-coding:utf-8-*-
 
 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1177,7 +1187,7 @@ defsleep(seconds):
 time.sleep(seconds)
 logger.info(&quot;Sleepfor%dseconds&quot;%seconds)</code></pre><h4 id="4-pageObjects文件夹下相关代码"><a href="#4-pageObjects文件夹下相关代码" class="headerlink" title="4.pageObjects文件夹下相关代码"></a>4.pageObjects文件夹下相关代码</h4><p>1.页面对象中，百度主页的元素定位和简单的操作函数，页面类主要是元素定位和页面操作写成函数，供测试类调用。</p>
 <p>baidu_homepage.py</p>
-<h5 id="4-1代码实现"><a href="#4-1代码实现" class="headerlink" title="4.1代码实现"></a>4.1代码实现</h5><p><img src="https://i.loli.net/2020/08/04/aKUq8dLCwthu9jA.png" alt="1232840-20191220141229591-491080604.png"></p>
+<h5 id="4-1代码实现"><a href="#4-1代码实现" class="headerlink" title="4.1代码实现"></a>4.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/aKUq8dLCwthu9jA.png" alt="1232840-20191220141229591-491080604.png"></p>
 <h5 id="4-2参考代码"><a href="#4-2参考代码" class="headerlink" title="4.2参考代码"></a>4.2参考代码</h5><pre><code>#-*-coding:utf-8-*-
 
 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1211,7 +1221,7 @@ self.click(self.news_link)
 self.sleep(2)</code></pre><p>这里注意下元素定位写法，=&gt;和base_page.py中find_element()方法元素定位切割有关系，网上有些人写根据逗号切割或者等号切割，在实际使用xpath定位，发现单独逗号或者单独等号切割都不精确，造成元素定位失败。</p>
 <h4 id="5-测试类的写法举例"><a href="#5-测试类的写法举例" class="headerlink" title="5.测试类的写法举例"></a>5.测试类的写法举例</h4><p>1.新建一个测试类baidu_search1.py。</p>
 <p>baidu_search1.py</p>
-<h5 id="5-1代码实现"><a href="#5-1代码实现" class="headerlink" title="5.1代码实现"></a>5.1代码实现</h5><p><img src="https://i.loli.net/2020/08/04/L8WF7cntl1AaST2.png" alt="1232840-20191220142652608-958817746.png"></p>
+<h5 id="5-1代码实现"><a href="#5-1代码实现" class="headerlink" title="5.1代码实现"></a>5.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/L8WF7cntl1AaST2.png" alt="1232840-20191220142652608-958817746.png"></p>
 <h5 id="5-2参考代码"><a href="#5-2参考代码" class="headerlink" title="5.2参考代码"></a>5.2参考代码</h5><pre><code>#-*-coding:utf-8-*-
 
 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1279,12 +1289,12 @@ homepage.get_windows_img()#调用基类截图方法
 
 if__name__==&#39;__main__&#39;:
 unittest.main()</code></pre><h5 id="5-3运行结果"><a href="#5-3运行结果" class="headerlink" title="5.3运行结果"></a>5.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/08/04/TDq6fe3YwpltJxn.png" alt="1232840-20191220142933132-1251851631.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/TDq6fe3YwpltJxn.png" alt="1232840-20191220142933132-1251851631.png"></p>
 <h5 id="5-4代码说明"><a href="#5-4代码说明" class="headerlink" title="5.4代码说明"></a>5.4代码说明</h5><pre><code>homepage=HomePage(self.driver)</code></pre><p>上面这行代码要注意，意思是：到一个页面，第一件事情是初始化这个页面的一个页面对象实例。注意，一定要带self.driver，不然会报错，这个self.driver，可以这样理解：在当前测试类里面，self.driver是来自浏览器引擎类中方法得到的，在初始化一个页面对象的时候，也把这个来自浏览器引擎类的driver给赋值给当前的页面对象，这样，才能执行页面对象或者基类里面的相关driver方法。写多了selenium的自动化脚本，你会明白，最重要的是保持前后driver的唯一性。</p>
 <h5 id="5-5生成图片"><a href="#5-5生成图片" class="headerlink" title="5.5生成图片"></a>5.5生成图片</h5><p>1.测试结果：会在logs文件夹生成一个日志文件，也会在screenshots文件夹生成一个png图片。日志看过了，这里我们看一下图片</p>
-<p><img src="https://i.loli.net/2020/08/04/6RWveUzHnNQaci3.png" alt="1232840-20191220143116447-1767610017.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/6RWveUzHnNQaci3.png" alt="1232840-20191220143116447-1767610017.png"></p>
 <p>2.图片内容如下图：</p>
-<p><img src="https://i.loli.net/2020/08/04/AhzwHYZ1JSKLmMV.png" alt="1232840-20191220143153511-1340853207.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/AhzwHYZ1JSKLmMV.png" alt="1232840-20191220143153511-1340853207.png"></p>
 <h4 id="6-小结"><a href="#6-小结" class="headerlink" title="6.小结"></a>6.小结</h4><p>好了，今天的分享就到这里吧！！！谢谢各位的耐心阅读。有问题加群交流讨论</p>
 
             </div>
@@ -1398,10 +1408,10 @@ unittest.main()</code></pre><h5 id="5-3运行结果"><a href="#5-3运行结果" 
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1821,7 +1831,7 @@ unittest.main()</code></pre><h5 id="5-3运行结果"><a href="#5-3运行结果" 
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="python+selenium自动化测试22">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/11.jpg" class="responsive-img" alt="python+selenium自动化测试22">
                         
                         <span class="card-title">python+selenium自动化测试22</span>
                     </div>
@@ -1874,7 +1884,7 @@ unittest.main()</code></pre><h5 id="5-3运行结果"><a href="#5-3运行结果" 
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="python+selenium自动化测试20">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/13.jpg" class="responsive-img" alt="python+selenium自动化测试20">
                         
                         <span class="card-title">python+selenium自动化测试20</span>
                     </div>
@@ -2014,9 +2024,21 @@ unittest.main()</code></pre><h5 id="5-3运行结果"><a href="#5-3运行结果" 
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2150,7 +2172,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2195,7 +2216,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

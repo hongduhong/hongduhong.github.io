@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1012,13 +1022,13 @@ window.Canvas= new Universe(element);</script>
                 <p><strong>🔥 Appium+python自动化（十一）- 元素定位秘籍助你打通任督二脉 - 下卷（超详解）</strong></p>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　宏哥看你骨骼惊奇，印堂发亮，必是练武之奇才！ 按照上一篇的节目预告，这一篇还是继续由宏哥给小伙伴们分享元素定位，是不是按照上一篇的秘籍修炼，是不是感觉到头顶盖好像被掀开,内气从头上冒出去,顿时觉得整个身体都融化了，而且身轻如燕啊！而且控制不住手，想要动手操作一番呢？那还在等什么呢，和宏哥一起练起来吧！！！</p>
 <h4 id="2-List定位"><a href="#2-List定位" class="headerlink" title="2.List定位"></a>2.List定位</h4><p>List故名思义就是一个列表，在python里面也有list这一个说法，如果你不是很理解什么是list，这里暂且理解为一个数组或者说一个集合。首先一个list是一个集合，那么他的个数也就成了不确定性，所以这里需要用复数，所以在我们定位时我们不能够接着用find_element_by_id等等定位方式了，我们需要用他的复数形式find_elements_by_id，所有的定位方式都一样需要采用复数加s。这里我们接着上篇的案例讲，如何使用list定位想定位的元素。首先看一下图片：</p>
-<p><img src="https://i.loli.net/2020/08/07/qzMdxG3D7OYylTX.png" alt="1232840-20190621110735188-1054483119.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/qzMdxG3D7OYylTX.png" alt="1232840-20190621110735188-1054483119.png"></p>
 <p>我们查看图片可以知道我们能够很轻松的通过id定位到整个祖父节点，我们接下来需要做的事定位这个祖父节点下所有的“android.widget.RelativeLayout”父节点，同样的首先我们看一张图：</p>
-<p><img src="https://i.loli.net/2020/08/07/pdD9KhCY6Jql7fR.png" alt="1232840-20190621111347932-1346193760.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/pdD9KhCY6Jql7fR.png" alt="1232840-20190621111347932-1346193760.png"></p>
 <p>这里我们需要直接使用定位复数的方法来操作，直接看代码（祖父节点定位到父节点）：</p>
 <pre><code>element= driver.find_element_by_id(&quot;com.taobao.taobao:id/rv_main_container&quot;)
 elements = element.find_elements_by_class_name(&quot;android.widget.FrameLayout&quot;)</code></pre><p>通过上面的代码我们直接定位了com.taobao.taobao:id/rv_main_container父节点下的所有android.widget.FrameLayout子节点，但是由于这个android.widget.FrameLayout子节点下边还有许多相同的android.widget.LinearLayout孙节点。</p>
-<p><img src="https://i.loli.net/2020/08/07/pdD9KhCY6Jql7fR.png" alt="1232840-20190621111347932-1346193760.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/pdD9KhCY6Jql7fR.png" alt="1232840-20190621111347932-1346193760.png"></p>
 <p>这里我们需要直接使用定位复数的方法来操作，直接看代码（父节点定位到孙节点）：</p>
 <pre><code>1 elements = element.find_elements_by_class_name(&quot;android.widget.FrameLayout&quot;)
 2 elements1 = elements[1].find_elements_by_class_name(&quot;android.widget.LinearLayout&quot;)</code></pre><p>现在我们需要怎么去操作这个子节点了，这里有两种方法：</p>
@@ -1042,7 +1052,7 @@ elements = element.find_elements_by_class_name(&quot;android.widget.FrameLayout&
 <p>如果你动手做到这里会发现一个问题，你进入到第一个标签后没一会儿系统就会报错，为什么呢？你也可以试着去解决这个问题，后面我们会讲解这块儿知识。</p>
 <h4 id="3-内嵌H5定位"><a href="#3-内嵌H5定位" class="headerlink" title="3.内嵌H5定位"></a>3.内嵌H5定位</h4><h5 id="3-1-hybrid定位思考"><a href="#3-1-hybrid定位思考" class="headerlink" title="3.1 hybrid定位思考"></a>3.1 hybrid定位思考</h5><p>在web自动化中我们会遇见frame的问题，在遇见这些内嵌的标签后我们需要做的就是切换窗口，那么在app自动化测试也有类似的情况就是我们经常看见的内嵌html，在我们原生的app中增加一个由html做成的页面。大家可以思考一下这种情况怎么操作。</p>
 <h5 id="3-2-hybrid常见定位问题分析"><a href="#3-2-hybrid常见定位问题分析" class="headerlink" title="3.2 hybrid常见定位问题分析"></a>3.2 hybrid常见定位问题分析</h5><p>首先我们看一下下面一张图片：</p>
-<p><img src="https://i.loli.net/2020/08/07/mt6y3PK1sqTNxWg.png" alt="imageview.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/mt6y3PK1sqTNxWg.png" alt="imageview.png"></p>
 <p>通过右边的结构图我们能够清晰的看见整个页面就是一个webview，无论从什么角度来定位我们都不能够很好的进行，如果这个时候我们需要操作页面的元素就需要通过切换contexts来完成。但是在讲这个知识点之前大家先按照网上的知识来试一下处理这个页面，看能否成功。下面先说大家会遇见的问题:</p>
 <p>1、可能你看到有的文章显示我们不需要通过切换contexts就能够完成定位，这样的情况有，但是那种情况作者只在微博登录、qq登录等第三方登录时遇见过，如果不是这样的情况而像上面的情况就没办法通过类似的方法进行完成，所以我希望读者遇见这种情况时自己动手去操作，看什么方式更加适合自己的项目。</p>
 <p>2、需要切换contexts那么就需要获取页面的所有contexts，此时你通过官网或者其他文章的知识通过下面的方法来获取，可能会报错，这种情况关系不大。</p>
@@ -1052,11 +1062,11 @@ elements = element.find_elements_by_class_name(&quot;android.widget.FrameLayout&
 <pre><code>1 webview = driver.contexts
 2 driver.switch_to.context(webview[1])
 3 driver.find_element_by_link_text(&#39;PHP&#39;).click()</code></pre><p>对于初学者对于上面的代码可能不是很理解，下面我们看一下日志：</p>
-<p><img src="https://i.loli.net/2020/08/07/augpMIybJsmLYAF.png" alt="imageview _1_.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/augpMIybJsmLYAF.png" alt="imageview _1_.png"></p>
 <p>大家这里不用管我执行代码和之前的区别（多了一个self），我们看下面控制台的输出，输出的是一个list，前面说过list和数组类似，在这个list里面有两个元素“NATIVE_APP”,“WEBVIEW_cn_com_open_mooc”,第一个元素是我们原生的app的contexts，后面的则是我们的webview的context，所以我们需要获取webview的context时只需要通过这个list的下表来进行访问。</p>
 <p>我们获取到webview的context后只需要通过driver.switch_to.context()进行切换就好。当切换后我们就可以像定位web一样进行定位。</p>
 <p>看下面一张图片我们通过浏览器将h5页面打开：</p>
-<p><img src="https://i.loli.net/2020/08/07/Az16Fy4iKaqsxob.png" alt="imageview _2_.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/Az16Fy4iKaqsxob.png" alt="imageview _2_.png"></p>
 <p>通过上面的图片我们就能够很轻松的像web一样进行定位，也就可以使用web的一些定位方式。看到这里是不是觉得解决了一个难题呢？动手去吧。</p>
 <h5 id="3-4-hybrid问题实战"><a href="#3-4-hybrid问题实战" class="headerlink" title="3.4 hybrid问题实战"></a>3.4 hybrid问题实战</h5><p>通过前面的学习我相信你已经有了一些实战能力，这里给大家提一个问题，我们获取到的contexts每次一定是两个吗？如果不是两个那么我们上面的脚本是不是就没办法用了呢？可以思考一下这里怎么解决，在看我们下面的思路以及解决方案。</p>
 <p>无论在什么页面我们去获取contexts时他无论有几个但是他的类型是不是肯定都是一个list呢？既然是list那么我们是否可以取到里面的每一个值，然后把每一个值进行判断，只要找出我们的webview就可以了呢？下面看代码：</p>
@@ -1077,9 +1087,9 @@ elements = element.find_elements_by_class_name(&quot;android.widget.FrameLayout&
 <p>3、元素和方向有了，但是你知道我们每次需要滑动屏幕的多少吗？那么我们是否需要先去获取屏幕的大小，然后针对不同的方向去计算一个滑动的值呢？</p>
 <p>万事具备只欠东风，去按照这个思路动手练习一吧。</p>
 <h5 id="4-3-滑动定位实战"><a href="#4-3-滑动定位实战" class="headerlink" title="4.3 滑动定位实战"></a>4.3 滑动定位实战</h5><p>一、根据上面的思路我们能首先来确定我们需要查找的元素，看下面图片：</p>
-<p><img src="https://i.loli.net/2020/08/07/XoHrjMIZSeKUmzb.png" alt="imageview _3_.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/XoHrjMIZSeKUmzb.png" alt="imageview _3_.png"></p>
 <p>我们要找实战推荐后面的“换一换”按钮，然后进行点击。首先我们查看他的定位信息</p>
-<p><img src="https://i.loli.net/2020/08/07/Rdk1WYqJZe2Nbv6.png" alt="imageview _4_.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/Rdk1WYqJZe2Nbv6.png" alt="imageview _4_.png"></p>
 <p>最后我们查找元素的定位信息代码如下：</p>
 <pre><code>1 self.driver.find_element_by_id(&#39;cn.com.open.mooc:id/tv_replace&#39;).click()</code></pre><p>　　对于有一定基础的人可能会觉得这个很low，但是有没有思考过一个问题，我们可以通过这个代码去执行，在没有这按钮的时候却会报错，也就没有办法执行下去了，那么需要怎么处理呢？所以这个时候我们需要有一些python的容错知识，即使我们的代码执行出错了，那么也要让他按照我们的意思执行下去。try…….except…….，这个就是我们python中的容错处理 ，下面我们看添加后的代码：</p>
 <pre><code>1 try:
@@ -1087,7 +1097,7 @@ elements = element.find_elements_by_class_name(&quot;android.widget.FrameLayout&
 3 except Exception,e:
 4 print e</code></pre><p>try的意思就是告诉编译器试着去执行他下面这一段代码，如果报错了，那么你就把except里面的错误信息打印出来。</p>
 <p>二、有了元素现在我们需要知道的是不是就是该怎么滑动界面了呢？首先我们看一下下面这张图片：</p>
-<p><img src="https://i.loli.net/2020/08/07/dCMDPARXSNju5sc.png" alt="imageview _5_.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/dCMDPARXSNju5sc.png" alt="imageview _5_.png"></p>
 <p>在我们使用app的过程中存在上面几种滑动情况，我们把整个界面看作为一个坐标系（x，y），如果我们需要往上滑动，那么我们是不是就是x轴不动，y轴从下往上动呢？往下就是x轴不动，y轴从上往下呢？同理左右滑动是不是就是应该y轴不动x轴左右滑动呢？可以好好去体会一下，脑海中有个画面。</p>
 <p>在appium中滑动我们所需要使用的方法就是swipe函数，至于往哪个方向滑动就是看我们里面的x，y的值，如果我们需要下往上滑动那么我们就应该是：</p>
 <pre><code>1 self.driver.swipe(x1,y1,x1,y2,t)</code></pre><p>上面的代码x轴的值不变，y轴的值进行了变化，所以是沿着上下进行滑动的，从y2滑动到了y1点。t代表的是多少时间完成这个动作，或者说这个时间持续多久。</p>
@@ -1270,10 +1280,10 @@ elements = element.find_elements_by_class_name(&quot;android.widget.FrameLayout&
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1693,7 +1703,7 @@ elements = element.find_elements_by_class_name(&quot;android.widget.FrameLayout&
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="python+appium自动化测试12">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/12.jpg" class="responsive-img" alt="python+appium自动化测试12">
                         
                         <span class="card-title">python+appium自动化测试12</span>
                     </div>
@@ -1747,7 +1757,7 @@ elements = element.find_elements_by_class_name(&quot;android.widget.FrameLayout&
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="python+appium自动化测试10">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/10.jpg" class="responsive-img" alt="python+appium自动化测试10">
                         
                         <span class="card-title">python+appium自动化测试10</span>
                     </div>
@@ -1888,9 +1898,21 @@ elements = element.find_elements_by_class_name(&quot;android.widget.FrameLayout&
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2024,7 +2046,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2069,7 +2090,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

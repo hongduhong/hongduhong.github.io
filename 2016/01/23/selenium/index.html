@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1032,7 +1042,7 @@ window.Canvas= new Universe(element);</script>
 <pre><code>for email in emails :
 
           print email</code></pre><h5 id="4-1-代码实现"><a href="#4-1-代码实现" class="headerlink" title="4.1 代码实现"></a>4.1 代码实现</h5><p>想法技术角度方法都找到，我们新建一个extract_email.py 文件，输入如下代码:</p>
-<p><img src="https://i.loli.net/2020/07/31/iVsjkLxu5A3HPqz.png" alt="1232840-20191128092919337-2143781537.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/iVsjkLxu5A3HPqz.png" alt="1232840-20191128092919337-2143781537.png"></p>
 <h5 id="4-2-参考代码"><a href="#4-2-参考代码" class="headerlink" title="4.2 参考代码"></a>4.2 参考代码</h5><pre><code># coding=utf-8🔥
 
 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1066,10 +1076,10 @@ emails = re.findall(r&#39;[\w]+@[\w\.-]+&#39;, doc)  # 利用正则，找出 xxx
 for email in emails:
     print(email)</code></pre><h5 id="4-3-解释说明"><a href="#4-3-解释说明" class="headerlink" title="4.3 解释说明"></a>4.3 解释说明</h5><p>在python正则表达式语法中，Python中字符串前面加上 r 表示原生字符串，用\w表示匹配字母数字及下划线。re模块下findall方法返回的是一个匹配子字符串的列表。</p>
 <h5 id="4-4-运行结果"><a href="#4-4-运行结果" class="headerlink" title="4.4 运行结果"></a>4.4 运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/07/31/M2UGwohjL4YZtS6.png" alt="1232840-20191128094208608-612185650.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/M2UGwohjL4YZtS6.png" alt="1232840-20191128094208608-612185650.png"></p>
 <h4 id="5-利用ID定位元素"><a href="#5-利用ID定位元素" class="headerlink" title="5.利用ID定位元素"></a>5.利用ID定位元素</h4><p>　　在上边，我们介绍了如何摘取页面字段，通过正则进行匹配符合要求的字段。如果感觉有点困难，不能立马理解，没有关系。把字符串摘取放到第一篇，是因为自动化测试脚本，经常要利用字符串操作，字符串切割，查找，匹配等手段，得到新的字符串或字符串数组，然后根据新得到的字符串进行判断用例是否通过。<br>下面介绍如何通过元素节点信息ID来定位该元素，使用id来定位元素虽然效率要高于XPath，但是实际测试测项目，能直接通过id定位的元素还是比较少，以下来举例百度首页搜索输入框的id定位。</p>
 <h5 id="5-1-代码实现"><a href="#5-1-代码实现" class="headerlink" title="5.1 代码实现"></a>5.1 代码实现</h5><p>我们新建一个test_baidu_id.py文件，输入如下代码：</p>
-<p><img src="https://i.loli.net/2020/07/31/KG1bNuZItEgomxl.png" alt="1232840-20191128095039850-1891218843.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/KG1bNuZItEgomxl.png" alt="1232840-20191128095039850-1891218843.png"></p>
 <h5 id="5-2-参考代码"><a href="#5-2-参考代码" class="headerlink" title="5.2 参考代码"></a>5.2 参考代码</h5><pre><code># coding=utf-8🔥
 
 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1099,13 +1109,13 @@ except Exception as e:
 
 driver.quit()</code></pre><p>这里，我们通过try except语句块来进行测试断言，这个在实际自动化测试脚本开发中，经常要用到处理异常。本文，我们学习了可以利用find_element_by_id（）方法来定位网页元素对象。</p>
 <h5 id="5-3-运行结果"><a href="#5-3-运行结果" class="headerlink" title="5.3 运行结果"></a>5.3 运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/07/31/EmQ9eJokL3pHz2t.png" alt="1232840-20191128095951410-1473777488.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/EmQ9eJokL3pHz2t.png" alt="1232840-20191128095951410-1473777488.png"></p>
 <h4 id="6-利用tag-name定位元素"><a href="#6-利用tag-name定位元素" class="headerlink" title="6.利用tag name定位元素"></a>6.利用tag name定位元素</h4><p>   前边介绍了如何通过元素的id值来定位web元素，本文介绍如何通过tag name来定位元素。个人认为，通过tag name来定位还是有很大缺陷，定位不够精确。主要是tag name有很多重复的，造成了选择tag name来定位页面元素不准确，所以使用这个方法定位web元素的机会很少。</p>
 <p>什么是tag name? 还是以百度首页搜索输入框，在火狐浏览器，右键，通过firepath，检查元素，看下图：</p>
-<p><img src="https://i.loli.net/2020/07/31/Fce6lYT8M9HkaKW.png" alt="1232840-20191128095623886-1995975325.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/Fce6lYT8M9HkaKW.png" alt="1232840-20191128095623886-1995975325.png"></p>
 <pre><code>  上面图片中红色圈选区域的标签名称都是tag name；实际上我们目标元素是输入框，应该是input这个tag name，在图中蓝色高亮区域。但是如果只是通过input这个tag name来定位，发现上面有很多input的选项。所以我们扩大节点的参照选择，我们选择上面这个</code></pre><p>form来作为我们tag name。</p>
 <h5 id="6-1-代码实现"><a href="#6-1-代码实现" class="headerlink" title="6.1 代码实现"></a>6.1 代码实现</h5><p>看看如何写定位form这个元素的脚本：</p>
-<p><img src="https://i.loli.net/2020/07/31/Lqc8fPC43vknjVN.png" alt="1232840-20191128100258049-1119182024.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/Lqc8fPC43vknjVN.png" alt="1232840-20191128100258049-1119182024.png"></p>
 <h5 id="6-2-参考代码"><a href="#6-2-参考代码" class="headerlink" title="6.2 参考代码"></a>6.2 参考代码</h5><pre><code># coding=utf-8🔥
 
 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1134,7 +1144,7 @@ except Exception as e:
     print (&quot;Exception found&quot;, format(e))
 
 driver.quit()</code></pre><h5 id="6-3-运行结果"><a href="#6-3-运行结果" class="headerlink" title="6.3 运行结果"></a>6.3 运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/07/31/zeOf19PMQsqmyvn.png" alt="1232840-20191128100418503-374507135.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/zeOf19PMQsqmyvn.png" alt="1232840-20191128100418503-374507135.png"></p>
 <h4 id="7-小结"><a href="#7-小结" class="headerlink" title="7.小结"></a>7.小结</h4><p>总结：本文介绍了webdriver 八大定位元素方法中的driver.find_element_by_tag_name(“form”) # form是tag name从实际项目中自动化脚本开发来看，使用这个方法定位元素的机会比较少，知道有这么一种方法就好了。</p>
 
             </div>
@@ -1248,10 +1258,10 @@ driver.quit()</code></pre><h5 id="6-3-运行结果"><a href="#6-3-运行结果" 
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1671,7 +1681,7 @@ driver.quit()</code></pre><h5 id="6-3-运行结果"><a href="#6-3-运行结果" 
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="python+selenium自动化测试6">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="python+selenium自动化测试6">
                         
                         <span class="card-title">python+selenium自动化测试6</span>
                     </div>
@@ -1725,7 +1735,7 @@ driver.quit()</code></pre><h5 id="6-3-运行结果"><a href="#6-3-运行结果" 
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="python+selenium自动化测试4">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/9.jpg" class="responsive-img" alt="python+selenium自动化测试4">
                         
                         <span class="card-title">python+selenium自动化测试4</span>
                     </div>
@@ -1866,9 +1876,21 @@ driver.quit()</code></pre><h5 id="6-3-运行结果"><a href="#6-3-运行结果" 
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2002,7 +2024,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2047,7 +2068,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

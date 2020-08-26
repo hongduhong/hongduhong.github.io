@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1019,7 +1029,7 @@ window.Canvas= new Universe(element);</script>
 <p>a．终端USB调成开发者模式</p>
 <p>b．电脑安装手机驱动</p>
 <p>2.手机连接成功后，打开cmd窗口，输入adb devices查看已连接真机或模拟器设备的名称，我们这里仍以夜神模拟器为代表。如图：</p>
-<p><img src="https://i.loli.net/2020/08/10/71bVEcgTCoue9MO.png" alt="1232840-20190722145234091-321349952.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/71bVEcgTCoue9MO.png" alt="1232840-20190722145234091-321349952.png"></p>
 <p>3.在cmd窗口，输入monkeyrunner后，启动Monkeyrunner。做以下操作：导入MonkeyRecorder包、连接模拟器设备、以MonkeyRecorder方式启动模拟器，并依次输入</p>
 <p>如下命令：</p>
 <pre><code>1 from com.android.monkeyrunner import MonkeyRunner,MonkeyDevice
@@ -1028,31 +1038,31 @@ window.Canvas= new Universe(element);</script>
 4 
 5 device=MonkeyRunner.waitForConnection()
 6 
-7 recorder.start(device)</code></pre><p><img src="https://i.loli.net/2020/08/10/dhnSAMHEfOLGpka.png" alt="1232840-20190722161600995-102723991.png"></p>
+7 recorder.start(device)</code></pre><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/dhnSAMHEfOLGpka.png" alt="1232840-20190722161600995-102723991.png"></p>
 <p>4.到此，MonkeyRecorder正式启动。截图如下。</p>
-<p><img src="https://i.loli.net/2020/08/10/fvjTZLeYwgyiPmB.png" alt="1232840-20190722161650461-821578897.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/fvjTZLeYwgyiPmB.png" alt="1232840-20190722161650461-821578897.png"></p>
 <blockquote>
 <p>（2）MonkeyRecorder的使用</p>
 </blockquote>
 <p>1.我们这里只是使用MonkeyRecorder来记录坐标，获取坐标的方式很简单。比如qq的登录界面，点击“登录”按钮，右侧就会显示该按钮的坐标；同样，点击账号输入框或密码输入框，右侧同样会显示坐标。这个坐标就是我们需要获得的坐标。</p>
-<p><img src="https://i.loli.net/2020/08/10/GmPsT6fvk5eMpDX.png" alt="1232840-20190722162410870-423673859.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/GmPsT6fvk5eMpDX.png" alt="1232840-20190722162410870-423673859.png"></p>
 <p>2.同时，MonkeyRecorder中的界面是同模拟器页面保持一致的，在MonkeyRecorder中触发任一操作，模拟器上会有相应的触发。如果两者没有保持一致，则点击MonkeyRecorder右上角的Refresh Display即可刷新页面。</p>
-<p><img src="https://i.loli.net/2020/08/10/vcBksPxKrln9YmM.png" alt="1232840-20190722162136660-1510249308.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/vcBksPxKrln9YmM.png" alt="1232840-20190722162136660-1510249308.png"></p>
 <h5 id="第二种方法（Uiautomatorviewer）"><a href="#第二种方法（Uiautomatorviewer）" class="headerlink" title="第二种方法（Uiautomatorviewer）"></a>第二种方法（Uiautomatorviewer）</h5><p>　　网上很多推荐获取坐标点的方式，是使用 android-sdk/tools 目录下，提供的 uiautomatorviewer 工具来获取。但是这种方式非常的繁琐，而实际上，我们又不需要如此精确的坐标点，毕竟控件那么大，只要点击的坐标落在控件的位置上，即可。</p>
 <p>Uiautomatorviewer是Android sdk自带的工具，位置在sdk/tools下。</p>
 <p>工具打开方法：</p>
 <p>1.sdk/tools下，找到uiautomatorviewer，双击打开</p>
 <p>2.在cmd命令行，直接输入uiautomatorviewer，打开该工具</p>
-<p><img src="https://i.loli.net/2020/08/10/9yzsQD2TtxZMEB6.png" alt="980448-20161019185226326-925509638.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/9yzsQD2TtxZMEB6.png" alt="980448-20161019185226326-925509638.png"></p>
 <p>打开该工具后，我们就可以开始使用了。</p>
 <p>运行环境：Windows</p>
 <p>使用方法：</p>
 <p>1.连接模拟器或真机（我们这里使用模拟器）</p>
-<p><img src="https://i.loli.net/2020/08/10/VbHDp2mlG1eigLu.png" alt="980448-20161019185241529-1945531127.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/VbHDp2mlG1eigLu.png" alt="980448-20161019185241529-1945531127.png"></p>
 <p>2.打开模拟器中指定的app，在uiautomatorviewer中截图指定页面</p>
-<p><img src="https://i.loli.net/2020/08/10/5Zuhpvr9nzVbL7X.png" alt="980448-20161019185258435-549593186.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/5Zuhpvr9nzVbL7X.png" alt="980448-20161019185258435-549593186.png"></p>
 <p>3.截图成功后，页面显示如下：</p>
-<p><img src="https://i.loli.net/2020/08/10/eSozt3bRAPhGLgI.png" alt="980448-20161019185316638-1971835415.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/eSozt3bRAPhGLgI.png" alt="980448-20161019185316638-1971835415.png"></p>
 <p>需要注意的是，你的手机设备或模拟器的api要在16以上，也就是android版本得是4.1以上，因为这个工具是google在4.1以后推出来的，只适用于4.1以后的版本</p>
 <p>4.结果分析</p>
 <p>从上图中，可以获取到对应控件的ID及控件左上角、右下角的坐标。</p>
@@ -1067,25 +1077,25 @@ window.Canvas= new Universe(element);</script>
 <h5 id="第三种方法（Pointer-location获取坐标）"><a href="#第三种方法（Pointer-location获取坐标）" class="headerlink" title="第三种方法（Pointer location获取坐标）"></a>第三种方法（Pointer location获取坐标）</h5><p>　　那么我推荐另外一种更简单的方式，来获取当前你看见的，在待测试设备上的控件的坐标点的定位方式。那就是利用 Android 设备的开发者选项。</p>
 <p>这里以夜神模拟器为例：</p>
 <p>1.点击设置</p>
-<p><img src="https://i.loli.net/2020/08/10/Z4UPGjCzmup51dh.png" alt="1232840-20190722163038904-1913883052.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/Z4UPGjCzmup51dh.png" alt="1232840-20190722163038904-1913883052.png"></p>
 <p>2.点击开发者选项</p>
-<p><img src="https://i.loli.net/2020/08/10/e42BHK9IpdQGDhv.png" alt="1232840-20190722163107203-695917822.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/e42BHK9IpdQGDhv.png" alt="1232840-20190722163107203-695917822.png"></p>
 <p>3.在指针位置 ，将这个属性开启之后，当手指在屏幕上滑动的时候，就可以在顶部看到当前触摸点的 X、Y 轴的坐标，这就是我们需要的。</p>
-<p><img src="https://i.loli.net/2020/08/10/drSNfP8DcqKkIzJ.png" alt="1232840-20190722163146866-1546921374.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/drSNfP8DcqKkIzJ.png" alt="1232840-20190722163146866-1546921374.png"></p>
 <p>注意：开发者选项不是默认可见的，你需要自行开启开发者模式，之后再进行此操作。（这不是可以上网自已查一下，如果是夜神模拟器，可以参考宏哥的小结部分开启开发者选项）</p>
 <h4 id="3-小结"><a href="#3-小结" class="headerlink" title="3.小结"></a>3.小结</h4><p>1、安卓系统开启开发者模式方法很多，我们模拟器是6.3.0.0版本这里只讲适合夜神模拟器的方法，</p>
 <p>接下来进入图文教程：</p>
 <p>1.点击设置</p>
-<p><img src="https://i.loli.net/2020/08/10/giwhWlfj6AZytIK.png" alt="CqtxtVkVivGATw9sAARxM2Vi9dM911.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/giwhWlfj6AZytIK.png" alt="CqtxtVkVivGATw9sAARxM2Vi9dM911.png"></p>
 <p>2.点击关于平板电脑</p>
-<p><img src="https://i.loli.net/2020/08/10/eALaG6ql9YcZmVo.png" alt="CqtxtVkVivaAZ0gzAADi_oszheM842.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/eALaG6ql9YcZmVo.png" alt="CqtxtVkVivaAZ0gzAADi_oszheM842.png"></p>
 <p>3.点击7下版本号（手残请点击20下）,点击箭头指向处的版本号（最底下的版本号），而不是上面的Android版本号</p>
-<p><img src="https://i.loli.net/2020/08/10/dPVCklrQv31pa4B.png" alt="CqsbdFkVivqATCyYAADukR9fYnE573.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/dPVCklrQv31pa4B.png" alt="CqsbdFkVivqATCyYAADukR9fYnE573.png"></p>
 <p>4.返回设置菜单</p>
-<p><img src="https://i.loli.net/2020/08/10/K1dO5jRxstUTioL.png" alt="CqsbdFkViv6AGhTAAADmEJVbeqg254.png"><br><img src="https://i.loli.net/2020/08/10/GtjPc13Aq672Z8Q.png" alt="CqtxtVkViwOAWrJdAAIP9YFFg4s283.png"><br><img src="https://i.loli.net/2020/08/10/SDVmZvBpjHRChTg.png" alt="CqtxtVkViwmAI0rvAAGWUp47CbM840.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/K1dO5jRxstUTioL.png" alt="CqsbdFkViv6AGhTAAADmEJVbeqg254.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/GtjPc13Aq672Z8Q.png" alt="CqtxtVkViwOAWrJdAAIP9YFFg4s283.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/SDVmZvBpjHRChTg.png" alt="CqtxtVkViwmAI0rvAAGWUp47CbM840.png"></p>
 <p>这里补充一点，如果感觉开发者这个选项碍眼，可以选择关闭，关闭方法：</p>
 <p>设置–应用–全部–找到设置软件，点击进入–清除数据<br>这样开发者模式又隐藏了~~</p>
-<p><img src="https://i.loli.net/2020/08/10/ALRV2K7SsHeNDUf.png" alt="CqsbdFkViw6AIiNuAAEvoQmIO3Y420.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/ALRV2K7SsHeNDUf.png" alt="CqsbdFkViw6AIiNuAAEvoQmIO3Y420.png"></p>
 <p>教程到此结束O(∩_∩)O~~</p>
 <p>2、好了，今天关于控件坐标点获取就到这里了！哈哈！最后祝大家都能熟练掌握！！！</p>
 
@@ -1200,10 +1210,10 @@ window.Canvas= new Universe(element);</script>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1623,7 +1633,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="python+appium自动化测试23">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/20.jpg" class="responsive-img" alt="python+appium自动化测试23">
                         
                         <span class="card-title">python+appium自动化测试23</span>
                     </div>
@@ -1676,7 +1686,7 @@ window.Canvas= new Universe(element);</script>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="python+appium自动化测试21">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/18.jpg" class="responsive-img" alt="python+appium自动化测试21">
                         
                         <span class="card-title">python+appium自动化测试21</span>
                     </div>
@@ -1817,9 +1827,21 @@ window.Canvas= new Universe(element);</script>
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1953,7 +1975,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1998,7 +2019,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

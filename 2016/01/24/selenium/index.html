@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1013,9 +1023,9 @@ window.Canvas= new Universe(element);</script>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　今天我们还是继续练习练习基本功，各位小伙伴要耐住住性子，要耐得住寂寞啊，不要急躁，后面你会感谢你在前边的不断练习的。到后面也是检验你前边的学习成果的一次很好实践。</p>
 <p>本文介绍如何通过link text、partial link text、class name和name 来定位页面元素。</p>
 <h4 id="2-link-text定位元素"><a href="#2-link-text定位元素" class="headerlink" title="2.link text定位元素"></a>2.link text定位元素</h4><p>我们打开网页，一些可以点击的链接跳转上面的文字，就是link text，用百度首页举例来看：</p>
-<p><img src="https://i.loli.net/2020/07/31/BGyxzV8KrjLTIfa.png" alt="1232840-20191129090718060-1494196760.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/BGyxzV8KrjLTIfa.png" alt="1232840-20191129090718060-1494196760.png"></p>
 <p>在上面图中，这一排上面的文字都是link text，例如我们要通过“新闻”这个文本字段来定义这个跳转链接元素。</p>
-<h5 id="2-1-代码实现"><a href="#2-1-代码实现" class="headerlink" title="2.1 代码实现"></a>2.1 代码实现</h5><p><img src="https://i.loli.net/2020/07/31/CDhUX4KubfZrqv2.png" alt="1232840-20191129091411114-2033642373.png"></p>
+<h5 id="2-1-代码实现"><a href="#2-1-代码实现" class="headerlink" title="2.1 代码实现"></a>2.1 代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/CDhUX4KubfZrqv2.png" alt="1232840-20191129091411114-2033642373.png"></p>
 <h5 id="2-2-参考代码"><a href="#2-2-参考代码" class="headerlink" title="2.2 参考代码"></a>2.2 参考代码</h5><pre><code># coding=utf-8🔥
 
 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1042,12 +1052,12 @@ except Exception as e:
     print (&quot;Exception found&quot;, format(e))
 
 driver.quit()</code></pre><h5 id="2-3运行结果"><a href="#2-3运行结果" class="headerlink" title="2.3运行结果"></a>2.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/07/31/85UxCLlNw41jueA.png" alt="1232840-20191129091935090-657135687.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/85UxCLlNw41jueA.png" alt="1232840-20191129091935090-657135687.png"></p>
 <p>总结：凡是看到链接元素上面有文字描述的都可以采取find_element_by_link_text（）方法来进行元素定位。这里提一下前面XPath定位中的知识，通过text()这个XPath中的函数也可以达到类似link text定位的目的。</p>
 <p>这个“新闻”链接元素的XPath表达式可以这样写：//*/div[@id=’u1’]/a[text()=’新闻’]</p>
 <h4 id="3-partial-link-text定位元素"><a href="#3-partial-link-text定位元素" class="headerlink" title="3.partial link text定位元素"></a>3.partial link text定位元素</h4><p>这里我们来介绍如何通过partial link text来定位页面元素。看到这个，有点和前一篇文字link text有点类似。字面意思，确实和link text相类似，partial link text就是选择这个元素的link text中一部分字段。</p>
 <p> 还是用百度首页输入框下有一个添加首页“把百度设为主页”。</p>
-<h5 id="3-1代码实现"><a href="#3-1代码实现" class="headerlink" title="3.1代码实现"></a>3.1代码实现</h5><p><img src="https://i.loli.net/2020/07/31/gXIcTiJwZzDpMP9.png" alt="1232840-20191129092143907-1908559756.png"></p>
+<h5 id="3-1代码实现"><a href="#3-1代码实现" class="headerlink" title="3.1代码实现"></a>3.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/gXIcTiJwZzDpMP9.png" alt="1232840-20191129092143907-1908559756.png"></p>
 <h5 id="3-2参考代码"><a href="#3-2参考代码" class="headerlink" title="3.2参考代码"></a>3.2参考代码</h5><pre><code># coding=utf-8🔥
 
 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1074,12 +1084,12 @@ except Exception as e:
     print (&quot;Exception found&quot;, format(e))
 
 driver.quit()</code></pre><h5 id="3-3运行结果"><a href="#3-3运行结果" class="headerlink" title="3.3运行结果"></a>3.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/07/31/aZnIhrRmtVP8pJN.png" alt="1232840-20191129092422343-1996916318.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/aZnIhrRmtVP8pJN.png" alt="1232840-20191129092422343-1996916318.png"></p>
 <p>为了更好的验证是否找到了“把百度添加到首页”这个元素，我在这个地方添加了一个click(),运行代码，可以看到确实点击了这个元素，代表找到了这个元素。选择partial link text的时候，需要选择一个比较唯一的字段，来区分这个元素。</p>
 <h4 id="4-class-name的值来定位页面元素"><a href="#4-class-name的值来定位页面元素" class="headerlink" title="4.class name的值来定位页面元素"></a>4.class name的值来定位页面元素</h4><p>有时候，我们在用firepath（不会的请点这里）查看元素的XPath信息，发现没有可以用来定位的id信息，这个时候我们就需要考虑用其他的可用的来定位元素。本文介绍如何通过元素节点中class name的值来定位页面元素。还是以百度首页，搜索输入框定位举例：</p>
 <p>XPath截图</p>
-<p><img src="https://i.loli.net/2020/07/31/fNjUmMbJxVsiKr1.png" alt="1232840-20191129093000406-133275055.png"></p>
-<h5 id="4-1代码实现"><a href="#4-1代码实现" class="headerlink" title="4.1代码实现"></a>4.1代码实现</h5><p><img src="https://i.loli.net/2020/07/31/vO9sjBGuSkT5IwF.png" alt="1232840-20191129094222785-2023324744.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/fNjUmMbJxVsiKr1.png" alt="1232840-20191129093000406-133275055.png"></p>
+<h5 id="4-1代码实现"><a href="#4-1代码实现" class="headerlink" title="4.1代码实现"></a>4.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/vO9sjBGuSkT5IwF.png" alt="1232840-20191129094222785-2023324744.png"></p>
 <h5 id="4-2参考代码"><a href="#4-2参考代码" class="headerlink" title="4.2参考代码"></a>4.2参考代码</h5><pre><code># coding=utf-8🔥
 
 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1106,10 +1116,10 @@ except Exception as e:
     print (&quot;Exception found&quot;, format(e))
 
 driver.quit()</code></pre><h5 id="4-3-运行结果"><a href="#4-3-运行结果" class="headerlink" title="4.3 运行结果"></a>4.3 运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/07/31/edwcb6fiJYBsrha.png" alt="1232840-20191129093340095-1397538852.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/edwcb6fiJYBsrha.png" alt="1232840-20191129093340095-1397538852.png"></p>
 <p>参考意见：很多情况下，class利用要比id多，如果class中出现了太长的字符，和可变化的数字，那么请回到用XPath定位方法。</p>
 <h4 id="5-name的值来定位元素"><a href="#5-name的值来定位元素" class="headerlink" title="5.name的值来定位元素"></a>5.name的值来定位元素</h4><p>这里介绍如何通过节点中name的值来定位这个web元素。还是来看百度首页搜索输入框，通过name的值来定位。</p>
-<h5 id="5-1代码实现"><a href="#5-1代码实现" class="headerlink" title="5.1代码实现"></a>5.1代码实现</h5><p><img src="https://i.loli.net/2020/07/31/lunYfH48UWtELKB.png" alt="1232840-20191129093924816-197814250.png"></p>
+<h5 id="5-1代码实现"><a href="#5-1代码实现" class="headerlink" title="5.1代码实现"></a>5.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/lunYfH48UWtELKB.png" alt="1232840-20191129093924816-197814250.png"></p>
 <h5 id="5-2参考代码"><a href="#5-2参考代码" class="headerlink" title="5.2参考代码"></a>5.2参考代码</h5><pre><code># coding=utf-8🔥
 
 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1136,7 +1146,7 @@ except Exception as e:
     print (&quot;Exception found&quot;, format(e))
 
 driver.quit()</code></pre><h5 id="5-3运行结果"><a href="#5-3运行结果" class="headerlink" title="5.3运行结果"></a>5.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/07/31/JVcDXSF9kuvTo1r.png" alt="1232840-20191129093830173-1570485091.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/07/31/JVcDXSF9kuvTo1r.png" alt="1232840-20191129093830173-1570485091.png"></p>
 <p>总结：name这个属性不是所有的节点都有，如果有建议采用name的值来定位，就和by_id, by_class一样的效果。</p>
 <h4 id="6-小结"><a href="#6-小结" class="headerlink" title="6.小结"></a>6.小结</h4><p>好了，今天的练习就到这里，希望大家好好的练习和理解。</p>
 
@@ -1251,10 +1261,10 @@ driver.quit()</code></pre><h5 id="5-3运行结果"><a href="#5-3运行结果" cl
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1674,7 +1684,7 @@ driver.quit()</code></pre><h5 id="5-3运行结果"><a href="#5-3运行结果" cl
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="python+selenium自动化测试7">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/6.jpg" class="responsive-img" alt="python+selenium自动化测试7">
                         
                         <span class="card-title">python+selenium自动化测试7</span>
                     </div>
@@ -1728,7 +1738,7 @@ driver.quit()</code></pre><h5 id="5-3运行结果"><a href="#5-3运行结果" cl
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="python+selenium自动化测试5">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/8.jpg" class="responsive-img" alt="python+selenium自动化测试5">
                         
                         <span class="card-title">python+selenium自动化测试5</span>
                     </div>
@@ -1869,9 +1879,21 @@ driver.quit()</code></pre><h5 id="5-3运行结果"><a href="#5-3运行结果" cl
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2005,7 +2027,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2050,7 +2071,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

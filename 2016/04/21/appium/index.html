@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1011,22 +1021,22 @@ window.Canvas= new Universe(element);</script>
             <div id="articleContent">
                 <p><strong>🔥 Appium+python自动化（二十六）- 烟花一瞬，昙花一现 -Toast提示（超详解）</strong></p>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　今天宏哥在这里首先给小伙伴们和童鞋们分享一个有关昙花的小典故：话说昙花原是一位花神，她每天都开花，四季都灿烂。她还爱上了每天给她浇水除草的年轻人。后来，此事给玉帝得知。于是，玉帝大发雷霆，要拆散鸳鸯。他将花神抓了起来，把她贬为每年只能开一瞬间的昙花，不让她再和情郎相见，还把那年轻人送去灵鹫山出家，赐名韦陀，让他忘记前尘，忘记花神。<br>　　多年过去了，韦陀果真忘了花神，潜心习佛，渐有所成。而花神却怎么也忘不了那个曾经照顾她的小伙子。她知道每年暮春时分，韦陀总要下山来为佛祖采集朝露煎茶。所以，昙花就选择在那个时候开放。她把集聚了整整一年的精气绽放在那一瞬间，希望韦陀能回头看她一眼，能记起她。可是，千百年间过去了，韦陀一年年的下山来采集朝露，昙花一年年的默默绽放，韦陀始终没有记起她。直到有一天，一名枯瘦的男子从昙花身边走过，看到花神忧郁孤苦之情，便停下脚步问花神：“你为什么哀伤？”。花神惊异，因为凡人是看不到花神的真身。如果是大罗金仙头上有金光、如果是妖魔头上有黑气、如果而凡人头上是无任何灵光。刚刚从身边走过的明明是一个凡人，如何看得见自己的真身。花神犹豫片刻，只是答到：“你帮不了我”。又默默等待韦陀，不再回答那个男子的话。40年后，那个枯瘦男子又从昙花身边走过，重复问了40年前的那句话：“你为什么哀伤？”花神再次犹豫片刻，只是答道“你也许帮不了我”。枯瘦的男子笑了笑离开。再40年后，一个枯瘦的老人再次出现在花神那里，原本枯瘦的老人看起来更是奄奄一息。当年的男子已经变成老人，但是他依旧问了和80年前一样的话：“你为什么哀伤？”。昙花答道：“谢谢你这个凡人，在你一生问过我3次，但是你毕竟是凡人，而且已经奄奄一息，还怎么帮我，我是因爱而被天罚的花神”。老人笑了笑，说“我是聿明氏，我只是来了断80年前没有结果的那段缘分。花神，我只送你一句‘缘起缘灭缘终尽、花开花落花归尘’”。说完老人闭目坐下。时间渐渐过去，夕阳的最后一缕光线开始从老人的头发向眼睛划去。老人笑道：“昙花一现为韦陀，这般情缘何有错，天罚地诛我来受，苍天无眼我来开”。说罢，老人一把抓住花神。此时的夕阳正好滑到了老人的眼睛，老人随即圆寂，抓着花神一同去往佛国去。花神在佛国见到了韦陀，韦陀也终于想起来前世因缘。佛祖知道后准韦陀下凡了断未了的因缘。<br>　　昙花一现，只为韦陀。所以，昙花又名韦陀花。也因为昙花是在夕阳后见到韦陀，所以昙花都是夜间开放。<br>　　好了，到此故事结束了，开始今天的主题 - 获取toast提示<br>在日常使用App过程中，经常会看到App界面有一些弹窗提示（如下图所示）这些提示元素出现后等待3秒左右就会自动消失，这个和我日常生活中看到的烟花和昙花是多么的相似，那么我们该如何获取这些元素文字内容呢？</p>
-<p><img src="https://i.loli.net/2020/08/10/EqBuIQNHJ6LjU21.png" alt="1232840-20190731104711784-83084378.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/EqBuIQNHJ6LjU21.png" alt="1232840-20190731104711784-83084378.png"></p>
 <h4 id="2-Toast简介"><a href="#2-Toast简介" class="headerlink" title="2.Toast简介"></a>2.Toast简介</h4><p>Android中的Toast是一种简易的消息提示框。 当视图显示给用户，在应用程序中显示为浮动。和Dialog不一样的是，它永远不会获得焦点，无法被点击。<br>Toast类的思想就是尽可能不引人注意，同时还向用户显示信息，希望他们看到。而且Toast显示的时间有限，一般3秒左右就消失了。因此使用传统的元素定位工具，我们是无法定位到Toast元素的（传说中低调奢华有内涵）。</p>
 <h4 id="3-Appium-Toast内容获取"><a href="#3-Appium-Toast内容获取" class="headerlink" title="3.Appium Toast内容获取"></a>3.Appium Toast内容获取</h4><p>Add ability to verify TOAST messages (these can’t be interacted with, only text retrieval allowed)</p>
 <p>1.Appium 1.6.3开始支持识别Toast内容，主要是基于UiAutomator2，因此需要在Capablity配置如下参数：</p>
 <pre><code>&#39;automationName&#39;:&#39;uiautomator2&#39;</code></pre><p>或者：</p>
 <pre><code>desired_caps[&#39;automationName&#39;]=&#39;uiautomator2&#39;</code></pre><p>2.安装appium-uiautomator2-driver: 安装命令如下：</p>
-<pre><code>cnpm install appium-uiautomator2-driver</code></pre><p><img src="https://i.loli.net/2020/08/10/1jDlFtd9Ir4Pe5i.png" alt="1232840-20190731103440974-1800808696.png"></p>
+<pre><code>cnpm install appium-uiautomator2-driver</code></pre><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/1jDlFtd9Ir4Pe5i.png" alt="1232840-20190731103440974-1800808696.png"></p>
 <p>安装成功后可以在 C:\Users\Administrator\node_modules看到对应的文件：</p>
 <pre><code>_appium-uiautomator2-driver@1.12.0@appium-uiautomator2-driver
-_appium-uiautomator2-server@1.10.0@appium-uiautomator2-server</code></pre><p><img src="https://i.loli.net/2020/08/10/t7zySCXNLY2qQ3P.png" alt="1232840-20190731103815142-88803420.png"></p>
+_appium-uiautomator2-server@1.10.0@appium-uiautomator2-server</code></pre><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/t7zySCXNLY2qQ3P.png" alt="1232840-20190731103815142-88803420.png"></p>
 <h4 id="4-测试环境"><a href="#4-测试环境" class="headerlink" title="4.测试环境"></a>4.测试环境</h4><p>1.宏哥的系统环境是Windows 10版本 64位系统</p>
-<p><img src="https://i.loli.net/2020/08/10/kfQgNhMGaOFzu3V.png" alt="1232840-20190731105030392-1196142956.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/kfQgNhMGaOFzu3V.png" alt="1232840-20190731105030392-1196142956.png"></p>
 <p>2.j宏哥的dk版本：”1.8.0_181”</p>
-<p><img src="https://i.loli.net/2020/08/10/VZhp18m4g2eOkqf.png" alt="1232840-20190731105159707-2120356275.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/VZhp18m4g2eOkqf.png" alt="1232840-20190731105159707-2120356275.png"></p>
 <p>3.宏哥的appium版本：1.4.16 </p>
-<p><img src="https://i.loli.net/2020/08/10/9M5OWAE7NXf1UiY.png" alt="1232840-20190731132025095-1135239812.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/9M5OWAE7NXf1UiY.png" alt="1232840-20190731132025095-1135239812.png"></p>
 <p>经查询appium1.6.3以上才能识别toast，之前安装appium版本是1.4.X,于是重整了测试环境</p>
 <p>官方文档是这么说的</p>
 <p>Firstly you should install appium server. Appium getting started. The version 1.6.3 or greater is recommended.</p>
@@ -1040,12 +1050,12 @@ _appium-uiautomator2-server@1.10.0@appium-uiautomator2-server</code></pre><p><im
 <p>安装selenium：</p>
 <p>输入指令pip install selenium</p>
 <p>验证安装成功：pip show selenium</p>
-<p><img src="https://i.loli.net/2020/08/10/yFkvdpQ8XmtKM6f.png" alt="1232840-20190731132334499-1229339080.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/yFkvdpQ8XmtKM6f.png" alt="1232840-20190731132334499-1229339080.png"></p>
 <p>5.测试设备：Android 5.1.1 (不能低于5.0版本)</p>
-<p><img src="https://i.loli.net/2020/08/10/MNFspubJTtxLcwV.png" alt="1232840-20190731132705354-1797960705.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/MNFspubJTtxLcwV.png" alt="1232840-20190731132705354-1797960705.png"></p>
 <p>6.Python：3.7.2</p>
 <p>命令：python -V  ，回车即可。</p>
-<p><img src="https://i.loli.net/2020/08/10/bSX8sEfL2CaBrkH.png" alt="1232840-20190731132853085-35333743.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/bSX8sEfL2CaBrkH.png" alt="1232840-20190731132853085-35333743.png"></p>
 <p>7.测试App：考研帮Android app V3.1.0</p>
 <p>8.测试场景</p>
 <p>进入登录界面输入错误的用户名或者密码，获取Toast内容：</p>
@@ -1056,7 +1066,7 @@ _appium-uiautomator2-server@1.10.0@appium-uiautomator2-server</code></pre><p><im
 <p>（1）定义toast文本内容</p>
 <p>（2）定义路径</p>
 <p>（3）组合文本内容和路径进行定位：用format（）连接路径和文本内容</p>
-<p><img src="https://i.loli.net/2020/08/10/Pt68QLIDmSYF7pU.png" alt="1232840-20190731150029479-725568348.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/Pt68QLIDmSYF7pU.png" alt="1232840-20190731150029479-725568348.png"></p>
 <h4 id="6-参考代码"><a href="#6-参考代码" class="headerlink" title="6.参考代码"></a>6.参考代码</h4><pre><code> 1 # coding=utf-8
  2 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
  3 
@@ -1225,12 +1235,12 @@ _appium-uiautomator2-server@1.10.0@appium-uiautomator2-server</code></pre><p><im
 <ol start="2">
 <li>用npm安装appium-uiautomator2-driver ，会出现错误，卡顿之后安装不成功。</li>
 </ol>
-<p><img src="https://i.loli.net/2020/08/10/zYiBvN8G1pC2Hkc.png" alt="1232840-20190731102139408-1017101660.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/zYiBvN8G1pC2Hkc.png" alt="1232840-20190731102139408-1017101660.png"></p>
 <p>解决办法</p>
 <p>（1）首先执行这个命令：npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a>       安装cnpm（完成后如下图）</p>
-<p><img src="https://i.loli.net/2020/08/10/OgerB5RzymTqtLc.png" alt="1232840-20190731102051112-22613674.png"><br><img src="https://i.loli.net/2020/08/10/Dq4hgr8nsLyYdPW.png" alt="1232840-20190731102139408-1017101660.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/OgerB5RzymTqtLc.png" alt="1232840-20190731102051112-22613674.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/Dq4hgr8nsLyYdPW.png" alt="1232840-20190731102139408-1017101660.png"></p>
 <p>（2）然后通过这个命令： cnpm install appium-uiautomator2-driver   安装uiautomator2的配置文件，如图</p>
-<p><img src="https://i.loli.net/2020/08/10/1jDlFtd9Ir4Pe5i.png" alt="1232840-20190731102139408-1017101660.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/1jDlFtd9Ir4Pe5i.png" alt="1232840-20190731102139408-1017101660.png"></p>
 <p>3.cnpm与npm的区别：</p>
 <p>（1）npm介绍</p>
 <p>说明：npm（node package manager）是nodejs的包管理器，用于node插件管理（包括安装、卸载、管理依赖等）<br>（2）使用npm安装插件：命令提示符执行npm install [-g] [–save-dev]<br>：node插件名称。<br>例：npm install gulp-less –save-dev<br>-g：全局安装。<br>将会安装在C:\Users\Administrator\AppData\Roaming\npm，并且写入系统环境变量； 非全局安装：将会安装在当前定位目录； 全局安装可以通过命令行在任何地方调用它，本地安装将安装在定位目录的node_modules文件夹下，通过require()调用；</p>
@@ -1354,10 +1364,10 @@ _appium-uiautomator2-server@1.10.0@appium-uiautomator2-server</code></pre><p><im
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1777,7 +1787,7 @@ _appium-uiautomator2-server@1.10.0@appium-uiautomator2-server</code></pre><p><im
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="python+appium自动化测试27">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="python+appium自动化测试27">
                         
                         <span class="card-title">python+appium自动化测试27</span>
                     </div>
@@ -1830,7 +1840,7 @@ _appium-uiautomator2-server@1.10.0@appium-uiautomator2-server</code></pre><p><im
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="python+appium自动化测试25">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="python+appium自动化测试25">
                         
                         <span class="card-title">python+appium自动化测试25</span>
                     </div>
@@ -1971,9 +1981,21 @@ _appium-uiautomator2-server@1.10.0@appium-uiautomator2-server</code></pre><p><im
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2107,7 +2129,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2152,7 +2173,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

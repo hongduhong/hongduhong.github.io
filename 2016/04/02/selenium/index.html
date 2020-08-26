@@ -96,7 +96,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -181,7 +181,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -290,7 +290,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -828,7 +833,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1048,26 +1058,26 @@ adb logcat | grep ActivityManager：查看当前正在运行的Activity
 
 adb logcat | grep Displayed：查看当前正在运行的Activity</code></pre><p>1、 连接真机或者模拟器 – 这里是琵琶女手指和琵琶如何接触连接</p>
 <p>1）连接手机时注意选择手机的开发者模式，cmd打开命令行窗口，输入adb devices获取到设备的deviceName。</p>
-<p><img src="https://i.loli.net/2020/08/07/6kotRSnm7ZPLJ2X.png" alt="1232840-20190619103751758-1707327553.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/6kotRSnm7ZPLJ2X.png" alt="1232840-20190619103751758-1707327553.png"></p>
 <p>2）启动模拟器，连接模拟器AVD（Google自带），cmd打开命令行窗口，输入adb devices获取到设备的deviceName</p>
-<p><img src="https://i.loli.net/2020/08/07/RVi6pfUDIgZJewt.png" alt="1232840-20190619105318119-270266549.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/RVi6pfUDIgZJewt.png" alt="1232840-20190619105318119-270266549.png"></p>
 <p>3）启动模拟器，连接夜神模拟器，要注意先输入  nox_adb.exe connect 127.0.0.1:62001（相当于插入数据线），再继续，输入adb devices</p>
-<p><img src="https://i.loli.net/2020/08/07/q5olUDcjwreFG7k.png" alt="1232840-20190619104637455-153639092.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/q5olUDcjwreFG7k.png" alt="1232840-20190619104637455-153639092.png"></p>
 <p>2、获取Activity（获取曲谱中曲调，就和我们现在音乐中的“到瑞秘法扫垃圾”差不多）</p>
 <p>1）cmd打开命令行窗口，输入aapt dump badging D:\XXX.apk（xxx指安装包名，D:\是指路径）直接查看需要测试app安装包的具体信息。</p>
-<p><img src="https://i.loli.net/2020/08/07/bP9JDSA1MIKgqUi.png" alt="1232840-20190614155149448-1723130700.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/bP9JDSA1MIKgqUi.png" alt="1232840-20190614155149448-1723130700.png"></p>
 <p>2）标记的就是包名，继续往下拖拽，可以找到activity的信息。</p>
-<p><img src="https://i.loli.net/2020/08/07/4kTPbZHqzSshUKR.png" alt="1232840-20190614155232548-285018810.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/4kTPbZHqzSshUKR.png" alt="1232840-20190614155232548-285018810.png"></p>
 <p>这里的红圈就可以看到activity的信息。这两个值，在appium脚本中都需要提前获取到，所以需要提前介绍这个获取方法。如果你觉得在cmd里面不好看，你可以把cmd信息导出到一个txt文件，例如 aapt dump badging shoujibaidu.apk &gt; 123.txt 回车后，会在桌面生成一个123.txt文件，你可以打开，通过查询找到这些信息。通过上面的方法，只要我们有android SDK环境，那么我们就可以获取到任意一个包的包名和Activity信息。</p>
 <p>3、启动Appium </p>
 <p>1）  双击桌面上的appium图标打开，点击Android Settings进行设置。</p>
-<p><img src="https://i.loli.net/2020/08/07/Y5cL4nRtqyjGoVk.png" alt="1232840-20190619110047431-1859703806.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/Y5cL4nRtqyjGoVk.png" alt="1232840-20190619110047431-1859703806.png"></p>
 <p>2）将上方获取到的真机的deviceName填入 ，选择platformName和platformVersion</p>
-<p><img src="https://i.loli.net/2020/08/07/plb1TEQaKW23JU8.png" alt="1232840-20190619110548074-674886506.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/plb1TEQaKW23JU8.png" alt="1232840-20190619110548074-674886506.png"></p>
 <p>3）将服务的session配置成可重写（非必要的配置）</p>
-<p><img src="https://i.loli.net/2020/08/07/SfUAHOyG1VWi5bX.png" alt="1232840-20190619110717846-493778346.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/SfUAHOyG1VWi5bX.png" alt="1232840-20190619110717846-493778346.png"></p>
 <p>4）配置好后，点击右上角的启动按钮进行启动即可。</p>
-<p><img src="https://i.loli.net/2020/08/07/aF1T2L98AoYZ3xQ.png" alt="1232840-20190619110827187-788752480.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/aF1T2L98AoYZ3xQ.png" alt="1232840-20190619110827187-788752480.png"></p>
 <p>5）启动成功，下一步该写代码了。</p>
 <p>4、将上方得到的设备和安装包信息写入脚本中</p>
 <pre><code> 1 # coding=utf-8
@@ -1091,13 +1101,13 @@ adb logcat | grep Displayed：查看当前正在运行的Activity</code></pre><p
 19 # desired_caps[&#39;unicodeKeyboard&#39;] = True   #使用unicodeKeyboard的编码方式来发送字符串
 20 # desired_caps[&#39;resetKeyboard&#39;] = True   #将键盘给隐藏起来</code></pre><p>5、查找app定位元素</p>
 <p>1）启动Android SDK中的一个神器可以查找app的定位元素进行脚本的编写。在Android SDK中的tools中有一个uiautomatorviewer.bat，如下图所示：</p>
-<p><img src="https://i.loli.net/2020/08/07/4n7f1oedmjOtSa2.png" alt="1232840-20190619111411997-94911353.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/4n7f1oedmjOtSa2.png" alt="1232840-20190619111411997-94911353.png"></p>
 <p>2）点击uiautomatorviewer.bat进行启动，左上角一共四个按钮，作用分别是打开本地文件（open）、Device Screenshot (uiautomator dump)dump页面、dump压缩格式的页面、保存；启动后点击左上角第三个图标进行真机界面的呈现。</p>
-<p><img src="https://i.loli.net/2020/08/07/twYAX1NbBulExkg.png" alt="1232840-20190619112715187-276626247.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/twYAX1NbBulExkg.png" alt="1232840-20190619112715187-276626247.png"></p>
 <p>3)选择设备模拟器或者真机</p>
-<p><img src="https://i.loli.net/2020/08/07/OyoVkhbK5UL4eNt.png" alt="1232840-20190619112934908-60124758.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/OyoVkhbK5UL4eNt.png" alt="1232840-20190619112934908-60124758.png"></p>
 <p>4）第一次连接会比较慢，耐心等候一下，连接好后以后就快了。我这里以百度界面为例。</p>
-<p><img src="https://i.loli.net/2020/08/07/3CRKiySGro1EUsV.png" alt="1232840-20190619114348531-1591437863.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/3CRKiySGro1EUsV.png" alt="1232840-20190619114348531-1591437863.png"></p>
 <p>这是连接夜神模拟器后的界面显示。这样就可以根据id、class、text等定位元素进行定位了。</p>
 <pre><code>1 driver = webdriver.Remote(&#39;http://localhost:4723/wd/hub&#39;, desired_caps)
 2 driver.find_element_by_id(&quot;index-kw&quot;).click()
@@ -1107,13 +1117,13 @@ adb logcat | grep Displayed：查看当前正在运行的Activity</code></pre><p
 6 7 driver.find_element_by_id(&quot;index-bn&quot;).click()
 8 
 9 driver.quit()</code></pre><h4 id="4-以淘宝APP为实例"><a href="#4-以淘宝APP为实例" class="headerlink" title="4.以淘宝APP为实例"></a>4.以淘宝APP为实例</h4><p>1、实例代码</p>
-<p><img src="https://i.loli.net/2020/08/07/xb7EDi6gPSjQOsK.png" alt="1232840-20190619144459786-1926403195.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/xb7EDi6gPSjQOsK.png" alt="1232840-20190619144459786-1926403195.png"></p>
 <p>2、代码运行结果</p>
-<p><img src="https://i.loli.net/2020/08/07/4us2Z7QpehbkayT.png" alt="1232840-20190619145623724-705313216.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/4us2Z7QpehbkayT.png" alt="1232840-20190619145623724-705313216.png"></p>
 <p>3、appium运行结果</p>
-<p><img src="https://i.loli.net/2020/08/07/a6iLpyUG9EdDOgh.png" alt="1232840-20190619145648773-485339275.png"> </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/a6iLpyUG9EdDOgh.png" alt="1232840-20190619145648773-485339275.png"> </p>
 <p>4、模拟器运行结果</p>
-<p><img src="https://i.loli.net/2020/08/07/CA3E5wreJFsfdIK.png" alt="1232840-20190619145747986-545715058.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/07/CA3E5wreJFsfdIK.png" alt="1232840-20190619145747986-545715058.png"></p>
 <p>5、参考代码</p>
 <pre><code> 1 # coding=utf-8
  2 # 1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1262,10 +1272,10 @@ adb logcat | grep Displayed：查看当前正在运行的Activity</code></pre><p
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1685,7 +1695,7 @@ adb logcat | grep Displayed：查看当前正在运行的Activity</code></pre><p
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="python+appium自动化测试8">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/5.jpg" class="responsive-img" alt="python+appium自动化测试8">
                         
                         <span class="card-title">python+appium自动化测试8</span>
                     </div>
@@ -1738,7 +1748,7 @@ adb logcat | grep Displayed：查看当前正在运行的Activity</code></pre><p
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="python+appium自动化测试6">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="python+appium自动化测试6">
                         
                         <span class="card-title">python+appium自动化测试6</span>
                     </div>
@@ -1879,9 +1889,21 @@ adb logcat | grep Displayed：查看当前正在运行的Activity</code></pre><p
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -2015,7 +2037,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -2060,7 +2081,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>

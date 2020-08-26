@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
             <div class="brand-logo" >
                 <a  href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                      <span class="logo-span">北京-宏哥</span>
                 </a>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 
     <div class="mobile-head bg-color">
         
-       <img src="/medias/logo.png" class="logo-img circle responsive-img">
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">北京-宏哥</div>
         <div class="logo-desc">
@@ -291,7 +291,12 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 <body>
     
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
     window.requestAnimationFrame = (function(){
         return window.requestAnimationFrame ||
@@ -829,7 +834,12 @@ console.clear();
 var element = document.querySelector('#canvas1');
 window.Canvas= new Universe(element);</script>
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
@@ -1011,12 +1021,12 @@ window.Canvas= new Universe(element);</script>
             <div id="articleContent">
                 <p><strong>🔥《一头扎进》系列之Python+Selenium框架实战篇7-年底升职加薪，年终奖全靠它！</strong></p>
 <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><pre><code>截止到上一篇文章为止，框架基本完全搭建完成。那么今天我们要做什么呢？？？？聪明如你的小伙伴或者是童鞋一定已经猜到了，都测试完了，当然是要生成一份高端大气上档次的测试报告了。没错的，今天宏哥就带领你们将这部分内容也集成到这个框架中。本文来介绍如何生成自动化测试报告，前面文章尾部提到了利用HTMLTestRunner.py来生成自动化测试报告。关于HTMLTestRunner不过多介绍，只需要知道是一个能生成一个HTML格式的网页报告就可以，其他的如果你特别感兴趣可以自己去搜索查询资料。我们需要在宏哥前边介绍的自动化框架里面继承一个报告输出，直接来看看效果。</code></pre><h4 id="2-测试报告效果"><a href="#2-测试报告效果" class="headerlink" title="2.测试报告效果"></a>2.测试报告效果</h4><h5 id="2-1测试报告文件"><a href="#2-1测试报告文件" class="headerlink" title="2.1测试报告文件"></a>2.1测试报告文件</h5><p>　　我们从下图中，可以清楚地看到在test_report文件夹下生成的测试报告</p>
-<p><img src="https://i.loli.net/2020/08/04/BwSHpgm9yCNcUFT.png" alt="1232840-20191225101738291-455174797.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/BwSHpgm9yCNcUFT.png" alt="1232840-20191225101738291-455174797.png"></p>
 <h5 id="2-2浏览器预览效果"><a href="#2-2浏览器预览效果" class="headerlink" title="2.2浏览器预览效果"></a>2.2浏览器预览效果</h5><p>　　因为生成的是.html文件，所以这里用浏览器打开我们看一下效果如下图：</p>
-<p><img src="https://i.loli.net/2020/08/04/ovIEXbL5SYzwNhx.png" alt="1232840-20191225104053939-876176632.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/ovIEXbL5SYzwNhx.png" alt="1232840-20191225104053939-876176632.png"></p>
 <h4 id="2-3实现"><a href="#2-3实现" class="headerlink" title="2.3实现"></a>2.3实现</h4><p>　　这里我们报告输出代码写到了，负责执行测试套件TestRunner.py这个文件。相关代码如下：</p>
 <p>TestRunner.py</p>
-<h5 id="2-3-1代码实现"><a href="#2-3-1代码实现" class="headerlink" title="2.3.1代码实现"></a>2.3.1代码实现</h5><p><img src="https://i.loli.net/2020/08/04/YiCOXdWl3nDuvet.png" alt="1232840-20191225104707272-1698353446.png"></p>
+<h5 id="2-3-1代码实现"><a href="#2-3-1代码实现" class="headerlink" title="2.3.1代码实现"></a>2.3.1代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/YiCOXdWl3nDuvet.png" alt="1232840-20191225104707272-1698353446.png"></p>
 <h5 id="2-3-2参考代码"><a href="#2-3-2参考代码" class="headerlink" title="2.3.2参考代码"></a>2.3.2参考代码</h5><pre><code>#-*-coding:utf-8-*-
 
 #1.先设置编码，utf-8可支持中英文，如上，一般放在第一行
@@ -1063,21 +1073,21 @@ runner.run(suite)
 #runner=unittest.TextTestRunner()
 #runner.run(suite)
 fp.close()</code></pre><h5 id="2-3-3运行结果"><a href="#2-3-3运行结果" class="headerlink" title="2.3.3运行结果"></a>2.3.3运行结果</h5><p>运行代码后，控制台打印如下图的结果</p>
-<p><img src="https://i.loli.net/2020/08/04/WN7ORKugJ6FTpME.png" alt="1232840-20191225110559083-366348877.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/WN7ORKugJ6FTpME.png" alt="1232840-20191225110559083-366348877.png"></p>
 <h5 id="2-3-4测试报告预览"><a href="#2-3-4测试报告预览" class="headerlink" title="2.3.4测试报告预览"></a>2.3.4测试报告预览</h5><p>测试报告用浏览器打开截图，在你项目文件路径下，找到这个HTML的报告，用本地浏览器打开。</p>
-<p><img src="https://i.loli.net/2020/08/04/JLGuH4a1RSpBOio.png" alt="1232840-20191225110745632-240361636.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/JLGuH4a1RSpBOio.png" alt="1232840-20191225110745632-240361636.png"></p>
 <p>如何生成自动化测试报告就介绍到这里。</p>
 <h4 id="3-测试报告模板插件"><a href="#3-测试报告模板插件" class="headerlink" title="3.测试报告模板插件"></a>3.测试报告模板插件</h4><p>　　宏哥这里为了方便，直接将测试报告的模板插件，直接放在了testsuits的文件下，如图：</p>
-<p><img src="https://i.loli.net/2020/08/04/JlwyRHDcOk3Z24P.png" alt="1232840-20191225112002675-1812521548.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/JlwyRHDcOk3Z24P.png" alt="1232840-20191225112002675-1812521548.png"></p>
 <p>　　如果有洁癖的小伙伴或者童鞋们，可以自己建一个文件夹专门来存储这个模板插件也可以的，但是不要忘记了最重要的一条就是将其导入，否则可能会报找不到的错误哦！</p>
 <h4 id="4-导入测试报告模板插件"><a href="#4-导入测试报告模板插件" class="headerlink" title="4.导入测试报告模板插件"></a>4.导入测试报告模板插件</h4><p>　　如何导入？其实很简单的，就像python导入其他模块一样。例如宏哥这里的导入方法如下：</p>
-<p><img src="https://i.loli.net/2020/08/04/m2s1LUW5KlRAJrQ.png" alt="1232840-20191225112251075-1997478372.png"></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/m2s1LUW5KlRAJrQ.png" alt="1232840-20191225112251075-1997478372.png"></p>
 <p>　　宏哥总结如下：</p>
 <p>from文件夹路径import插件名字.py</p>
 <h4 id="5-执行所有测试用例"><a href="#5-执行所有测试用例" class="headerlink" title="5.执行所有测试用例"></a>5.执行所有测试用例</h4><p>　　除了上一篇那种找到文件夹，执行所有测试用例，我们还有别的方法执行所有测试用例吗？当然有，但是对测试用例的名字的命名有要求，其实也不是硬性要求，只不过是为了后边我们的正则表达式好写，这里命名就规范一些。</p>
 <h5 id="5-1命名规则"><a href="#5-1命名规则" class="headerlink" title="5.1命名规则"></a>5.1命名规则</h5><p>　　所有测试用例的名字都以test开头，例如：test_login.py。</p>
 <h5 id="5-2正则表达式"><a href="#5-2正则表达式" class="headerlink" title="5.2正则表达式"></a>5.2正则表达式</h5><p>　　正则表达式：test*.py</p>
-<h5 id="5-3代码实现"><a href="#5-3代码实现" class="headerlink" title="5.3代码实现"></a>5.3代码实现</h5><p><img src="https://i.loli.net/2020/08/04/NGDYkuqCjKEtdiS.png" alt="1232840-20191225114324614-417827525.png"></p>
+<h5 id="5-3代码实现"><a href="#5-3代码实现" class="headerlink" title="5.3代码实现"></a>5.3代码实现</h5><p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/NGDYkuqCjKEtdiS.png" alt="1232840-20191225114324614-417827525.png"></p>
 <h5 id="5-4参考代码"><a href="#5-4参考代码" class="headerlink" title="5.4参考代码"></a>5.4参考代码</h5><pre><code>#构建suite
 #suite=unittest.TestLoader().discover(case_path,&quot;test_baidu_search.py&quot;,top_level_dir=None)
 suite=unittest.TestLoader().discover(case_path,&quot;test*.py&quot;,top_level_dir=None)</code></pre><h4 id="6-小结"><a href="#6-小结" class="headerlink" title="6.小结"></a>6.小结</h4><p>　　好了，今天的分享就到这里吧！！！谢谢各位的耐心阅读。有问题加群交流讨论！！！</p>
@@ -1193,10 +1203,10 @@ suite=unittest.TestLoader().discover(case_path,&quot;test*.py&quot;,top_level_di
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1616,7 +1626,7 @@ suite=unittest.TestLoader().discover(case_path,&quot;test*.py&quot;,top_level_di
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="python+selenium自动化测试25">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/8.jpg" class="responsive-img" alt="python+selenium自动化测试25">
                         
                         <span class="card-title">python+selenium自动化测试25</span>
                     </div>
@@ -1670,7 +1680,7 @@ suite=unittest.TestLoader().discover(case_path,&quot;test*.py&quot;,top_level_di
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="python+selenium自动化测试23">
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/10.jpg" class="responsive-img" alt="python+selenium自动化测试23">
                         
                         <span class="card-title">python+selenium自动化测试23</span>
                     </div>
@@ -1810,9 +1820,21 @@ suite=unittest.TestLoader().discover(case_path,&quot;test*.py&quot;,top_level_di
 </main>
 
 
-
-
-
+//引用了jquery百度的 cdn 源，也可替换其他的
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+//也可替换其他的lazyload源
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1946,7 +1968,6 @@ $(document).ready(function(){
 </script>
 <div class="progress-bar"></div>
 
-
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1991,7 +2012,12 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 <script>
 $("#loading").fadeOut(5000);
 </script>
