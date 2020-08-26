@@ -1098,7 +1098,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Python","value":118},{"name":"Appium","value":27},{"name":"Selenium","value":45},{"name":"Chrome","value":20},{"name":"Chrome","value":4},{"name":"Eclipse","value":1},{"name":"Jmeter","value":1},{"name":"Firefox","value":1},{"name":"Pycharm","value":6},{"name":"Interface","value":42},{"name":"Java","value":12},{"name":"TestNG","value":12}],
+                data: [{"name":"Python","value":118},{"name":"Appium","value":27},{"name":"Selenium","value":45},{"name":"Chrome","value":20},{"name":"Chrome","value":4},{"name":"Interface","value":42},{"name":"Eclipse","value":1},{"name":"Pycharm","value":6},{"name":"Jmeter","value":1},{"name":"Firefox","value":1},{"name":"Java","value":12},{"name":"TestNG","value":12}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -1122,7 +1122,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         xAxis: [
             {
                 type: 'category',
-                data: ["Python","Selenium","Interface","Appium","Chrome","TestNG","Java","Pycharm","Firefox","Eclipse"]
+                data: ["Python","Selenium","Interface","Appium","Chrome","TestNG","Java","Pycharm","Jmeter","Firefox"]
             }
         ],
         yAxis: [
@@ -1327,8 +1327,20 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
+            <a href="/tags/Interface/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">Interface</span>
+            </a>
+            
+            
+            
             <a href="/tags/Eclipse/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">Eclipse</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Pycharm/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">Pycharm</span>
             </a>
             
             
@@ -1341,18 +1353,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             <a href="/tags/Firefox/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">Firefox</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Pycharm/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">Pycharm</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Interface/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">Interface</span>
             </a>
             
             
@@ -1418,10 +1418,9 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         </div>
     </div>
 </main>
-//引用了jquery百度的 cdn 源，也可替换其他的
-<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-//也可替换其他的lazyload源
-<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+
+<script type="text/javascript" src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
 <script type="text/javascript">
 	$(function() {  
 		//对所有 img 标签进行懒加载        
