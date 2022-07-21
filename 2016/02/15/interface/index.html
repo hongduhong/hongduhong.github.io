@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="python接口自动化2, 北京-宏哥 python  自动化测试  接口 JMeter Appium">
+    <meta name="description" content="🔥 python接口自动化（二）–什么是接口测试、为什么要做接口测试（详解）
+1.简介　　上一篇和大家一起科普扫盲接口">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>python接口自动化2 | 北京-宏哥</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/aos/2.3.4/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+
+
+    <script src="https://cdn.staticfile.org/jquery/2.2.0/jquery.min.js"></script>	
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d62256055258ddb12716821c285aadab";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?716046d3a903bfe6a910f6b68a93271d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!--推送-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'https://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!--广告-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3736773013312638",
+    enable_page_level_ads: true
+  });
+</script>
+<!--onlinetk-->
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/011b3025.js","daovoice")</script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+
+<style>
+  @media only screen and (max-width: 422px){
+    nav .brand-logo {left: 41%;}
+    nav a {margin: 0px -38px 0px 0px;}
+    nav ul a {padding: 0px; margin-left: -42px;}
+    .bg-cover .title{fone-size:3rem;}
+  }
+ </style>
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo" >
+                <a  href="/" class="waves-effect waves-light">
+                    
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                     <span class="logo-span">北京-宏哥</span>
+                </a>
+				
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/galleries" class="waves-effect waves-light">
+            
+            <i class="fa fa-photo"></i>
+            
+            <span>相册</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/lyb" class="waves-effect waves-light">
+            
+            <i class="fa fa-paper-plane-o"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">北京-宏哥</div>
+        <div class="logo-desc">
+            
+            不积跬步无以至千里，不积小流无以成江海。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/galleries" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-photo"></i>
+                
+                相册
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/lyb" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-paper-plane-o"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/hongduhong" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>GITHUB
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/hongduhong" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="GITHUB" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+ 
+
+
+</header>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #canvas111{
+		 position: fixed;
+         background: #ccc;
+		 overflow: auto;
+		 z-index: -1;
+    }
+    </style> 
+
+	<canvas id="canvas111"></canvas>
+	
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<body>
+    
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script type="text/javascript">
+    window.requestAnimationFrame = (function(){
+        return window.requestAnimationFrame ||
+               window.webkitRequestAnimationFrame ||
+               window.mozRequestAnimationFrame ||
+               function( callback ){
+                    window.setTimeout( callback, 1000/2 );
+               };
+    })();
+    var myCanvas = document.getElementById("canvas111");
+    var ctx = myCanvas.getContext("2d");//getContext 设置画笔
+    var num;
+    var w,h;
+    var duixiang = [];
+    var move = {};
+    function widthheight(){
+        w = myCanvas.width = window.innerWidth;
+        h = myCanvas.height = window.innerHeight;
+		num= Math.floor(w*h*0.0001);
+        for(var i = 0;i < num;i++){
+            duixiang[i] = {
+                x:Math.random()*w,
+                y:Math.random()*h,
+                cX:Math.random()*0.6-0.3,
+                cY:Math.random()*0.6-0.3,
+				R:Math.floor(Math.random()*5)+2,
+				//CC:Math.floor(Math.random()*3)+2,
+			    r: Math.floor(Math.random() * 254),   
+                g: Math.floor(Math.random() * 254),  
+                b:Math.floor(Math.random() * 254)   
+            } 
+           // console.log(duixiang[i])
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+			 //Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].CC);
+        }
+    };widthheight();//获取浏览器的等宽度等高
+
+    function Cricle(x,y,R,r,g,b){
+        ctx.save();//保存路径
+       if(Math.random()>0.991) {ctx.globalAlpha= 0.9;}//ctx.fillStyle = "#CCC";}//填充的背景颜色
+	    else { ctx.globalAlpha=0.47;}
+		 
+		ctx.fillStyle = "rgb("+ r +","+ g +","+ b +")";
+        ctx.beginPath();//开始绘画
+		ctx.arc(x,y,R,Math.PI*2,0);//绘画圆 x y 半径（大小） 角度  一个PI 是180 * 2 = 360    真假 0/1 true/false
+        ctx.closePath();//结束绘画
+        ctx.fill();//填充背景颜色
+        ctx.restore();//回复路径
+    };Cricle();
+
+
+    !function draw(){
+        ctx.clearRect(0,0,w,h)//先清除画布上的点
+        for(var i = 0;i < num;i++){
+            duixiang[i].x += duixiang[i].cX;
+            duixiang[i].y += duixiang[i].cY;
+            if(duixiang[i].x>w || duixiang[i].x<0){
+                duixiang[i].cX = -duixiang[i].cX;
+            }
+            if(duixiang[i].y>h || duixiang[i].y<0){
+                duixiang[i].cY = -duixiang[i].cY;
+            }
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+            //勾股定理判断两点是否连线
+            for(var j = i + 1;j < num;j++){
+                if( (duixiang[i].x-duixiang[j].x)*(duixiang[i].x-duixiang[j].x)+(duixiang[i].y-duixiang[j].y)*(duixiang[i].y-duixiang[j].y) <= 55*55 ){
+                    line(duixiang[i].x,duixiang[i].y,duixiang[j].x,duixiang[j].y,0,i,j)
+                }
+                if(move.x){
+                    if( (duixiang[i].x-move.x)*(duixiang[i].x-move.x)+(duixiang[i].y-move.y)*(duixiang[i].y-move.y) <= 100*100 ){
+                        line(duixiang[i].x,duixiang[i].y,move.x,move.y,1,i,1)
+                    }
+                }
+            }
+        }
+        window.requestAnimationFrame(draw)
+    }();
+
+    //绘制线条
+    function line(x1,y1,x2,y2,flag,i,j){
+        
+		if (flag){var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.5;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(0.8,"#019ee5");
+		        }
+				else
+				{
+				
+				var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.9;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(1,"rgb("+ duixiang[j].r +","+ duixiang[j].g +","+ duixiang[j].b +")");
+				}
+        ctx.save();
+        ctx.strokeStyle = color;
+		ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        ctx.stroke();
+        //ctx.restore();
+    }
+
+
+    //document.onmousemove = function(e){
+     //   move.x = e.clientX;
+      //  move.y = e.clientY;
+    //}
+    //console.log(move)
+
+    /*window.onresize = function(){
+        location.reload();
+    }*/
+</script>
+
+
+
+
+
+
+
+
+
+
+<style>
+		#canvas1 {
+ position: fixed;
+ pointer-events:none;//鼠标多层响应事件
+        // background: 	#ccc;
+		 /*透明度*/
+		 width: 100%;
+        height: 100%;
+     // opacity: 0;
+		 overflow: auto;
+		 z-index: 999;
+
+    }
+</style>
+<!--<body>-->
+<canvas id="canvas1" style="whdth: 100%;height: 100%"></canvas>
+
+<script>
+var _createClass = function () {function defineProperties(target, props) 
+{ for (var i = 0; i < props.length; i++) 
+ {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) 
+ descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}
+ return function (Constructor, protoProps, staticProps) 
+ {if (protoProps) defineProperties(Constructor.prototype, protoProps);
+ if (staticProps) defineProperties(Constructor, staticProps);
+ return Constructor;};}();function _classCallCheck(instance, Constructor) 
+ {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}
+ var getRandom = function getRandom(min, max) {
+  return Math.random() * (max - min) + min;
+};
+
+var getRandomInt = function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
+var getRandomColor = function getRandomColor() {
+  var colors = [
+  'rgba(231, 76, 60, 1)', // red
+  'rgba(241, 196, 15, 1)', // yellow
+  'rgba(46, 204, 113, 1)', // green
+  'rgba(52, 152, 219, 1)', // blue
+  'rgba(155, 89, 182, 1)' // purple
+  ];
+
+  return colors[getRandomInt(0, colors.length)];
+};
+
+// Particle//粒子模块
+var
+Particle = function () {
+
+  function Particle(system, x, y) {_classCallCheck(this, Particle);
+    this.system = system;
+    this.universe = this.system.world.universe;
+    this.x = x;
+    this.y = y;
+    this.color = getRandomColor();
+    this.life = 1;
+    this.aging = getRandom(0.990, 0.999); // 0.99, 0.999 || 0.999, 0.9999
+
+    this.r = getRandomInt(12, 16);//初始粒子半径范围
+    this.speed = getRandom(18, 18.5);//粒子爆炸速度范围
+    this.velocity = [
+    getRandom(-this.speed, this.speed),
+    getRandom(-this.speed, this.speed)];
+
+  }_createClass(Particle, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (
+      this.r < 0.1 ||
+      this.life === 0 ||
+      this.x + this.r < 0 ||
+      this.x - this.r > this.universe.width ||
+      this.y + this.r < 0 ||
+      this.y - this.r > this.universe.height)
+      {
+        this.system.removeObject(this);
+      }
+
+      this.r *= this.life;
+      this.x += this.velocity[0];
+      this.y += this.velocity[1];
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      // Main circle //亮圈模块
+
+      ctx.fillStyle = this.color;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r*1.2, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+
+      var r = this.color.match(/([0-9]+)/g)[0];
+      var g = this.color.match(/([0-9]+)/g)[1];
+      var b = this.color.match(/([0-9]+)/g)[2];
+
+      // Gradient//梯度变化曲线
+
+      var spread = 1.5;
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r,
+      this.x, this.y, this.r * spread);
+
+      gradient.addColorStop(0, 'rgba(' + r + ', ' + g + ', ' + b + ', 0.5)');
+      gradient.addColorStop(1, 'rgba(' + r + ', ' + g + ', ' + b + ', 0)');
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r * spread, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+
+      // Aberration//偏差
+
+      var offset = this.r * 0.5;
+      var color = 'rgba(' + g + ', ' + b + ', ' + r + ', 0.5)';
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(this.x + offset, this.y + offset, this.r, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+    } }]);return Particle;}();
+
+
+
+// Crown //水波纹圈模块
+var
+Crown = function () {
+
+  function Crown(system, x, y) {_classCallCheck(this, Crown);
+    this.system = system;
+    this.x = x;
+    this.y = y;
+    this.r = getRandomInt(5, 15); // 5, 20  水波纹圈半径范围
+    this.mod = 1.1;
+    this.life = 0.5; //水波纹线
+    this.aging = getRandom(0.830, 0.899);
+    this.speed = getRandom(8, 9);
+    this.color = {
+      r: getRandomInt(236, 242),
+      g: getRandomInt(70, 80),
+      b: getRandomInt(50, 70) };
+
+
+    this.angle1 = Math.PI * getRandom(0, 2);
+    this.angle2 = this.angle1 + Math.PI * getRandom(0.3, 0.4);//水波纹圈完整度
+  }_createClass(Crown, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (this.life <= 0.0001) this.system.removeObject(this);
+
+      this.r += Math.abs(1 - this.life) * this.speed;
+
+      this.x1 = this.x + this.r * Math.cos(this.angle1);
+      this.y1 = this.y + this.r * Math.sin(this.angle1);
+
+      this.angle3 = this.angle1 + (this.angle2 - this.angle1) / 2;
+      this.x2 = this.x + this.r * this.mod * Math.cos(this.angle3);
+      this.y2 = this.y + this.r * this.mod * Math.sin(this.angle3);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r * 0.9,
+      this.x, this.y, this.r);
+
+      gradient.addColorStop(0, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life + ')');
+      gradient.addColorStop(1, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life * 0.5 + ')');
+
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, this.angle1, this.angle2, false);
+      ctx.quadraticCurveTo(this.x2, this.y2, this.x1, this.y1);
+      ctx.fill();
+      ctx.closePath();
+    } }]);return Crown;}();
+
+
+
+// Explosion //爆炸模块
+var
+Explosion = function () {
+
+  function Explosion(world, x, y) {_classCallCheck(this, Explosion);
+    this.world = world;
+    this.x = x;
+    this.y = y;
+    this.objects = [];
+
+    var particles = getRandomInt(10, 30); // 10, 30 amount of particles//爆炸 粒子数量
+    var crowns = particles * getRandom(0.4, 0.5);
+
+    while (crowns-- > 0) {this.addCrown();}
+    while (particles-- > 0) {this.addParticle();}
+  }_createClass(Explosion, [{ key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      if (this.objects.length <= 0) {
+        this.world.clearExplosion(this);
+      }
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'addCrown', value: function addCrown()
+
+    {
+      this.objects.push(new Crown(this, this.x, this.y));
+    } }, { key: 'addParticle', value: function addParticle()
+
+    {
+      this.objects.push(new Particle(this, this.x, this.y));
+    } }, { key: 'removeObject', value: function removeObject(
+
+    obj) {
+      var index = this.objects.indexOf(obj);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return Explosion;}();
+
+
+
+// World 
+var
+ConfettiWorld = function () {function ConfettiWorld() 
+{_classCallCheck(this, ConfettiWorld);}_createClass(ConfettiWorld, [{ key: 'init', value: function init()
+
+    {
+      this.objects = [];
+      window.addEventListener('click', this.explode.bind(this));
+
+      // Initial explosion //初始爆炸
+      var counter = 0;
+      while (counter-- > 0) {
+        this.explode({
+          clientX: window.event.clientX, //getRandomInt(10, this.universe.width) ,          //this.universe.width / 2,
+          clientY: window.event.clientY //getRandomInt(10, 50) //this.universe.height / 2 
+		  });
+
+      }
+    } }, { key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      var amount = this.objects.reduce(function (sum, explosion) {
+        return sum += explosion.objects.length;
+      }, 0);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'explode', value: function explode(
+
+    event) {
+      var x = event.clientX;
+      var y = event.clientY;
+
+      this.objects.push(new Explosion(this, x, y));
+    } }, { key: 'clearExplosion', value: function clearExplosion(
+
+    explosion) {
+      var index = this.objects.indexOf(explosion);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return ConfettiWorld;}();
+
+
+
+// Time
+var
+Time = function () {
+
+  function Time() {_classCallCheck(this, Time);
+    this.now = 0; // current tick time
+    this.prev = 0; // prev tick time
+    this.elapsed = 0; // elapsed time from last tick
+    this.delta = 0; // time from last update
+    this.fps = 60; // desired fps
+    this.step = 1 / 60; // step duration
+  }_createClass(Time, [{ key: 'update', value: function update(
+
+    time) {
+      this.now = time;
+      this.elapsed = (this.now - this.prev) / 1000;
+      this.prev = this.now;
+      this.delta += this.elapsed;
+    } }, { key: 'raf', value: function raf(
+
+    func) {
+      window.requestAnimationFrame(func);
+    } }, { key: 'hasFrames', value: function hasFrames()
+
+    {
+      return this.delta >= this.step;
+    } }, { key: 'processFrame', value: function processFrame()
+
+    {
+      this.delta -= this.step;
+    } }]);return Time;}();
+
+
+
+// Canvas
+var
+Universe = function () {
+
+  function Universe(element) {_classCallCheck(this, Universe);
+    this.el = element;
+    this.ctx = this.el.getContext('2d');
+    this.pixelRatio = window.devicePixelRatio;
+    this.time = new Time();
+
+    this.worlds = {};
+    this.world = null; // current state
+
+    this.updateSize();
+    window.addEventListener('resize', this.updateSize.bind(this));
+
+    this.addWorld('confetti', ConfettiWorld);
+    this.setWorld('confetti');
+
+    this.start();
+  }_createClass(Universe, [{ key: 'start', value: function start()
+
+    {
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'tick', value: function tick(
+
+    time) {
+      this.time.update(time);
+
+      if (this.time.hasFrames()) {
+        this.update();
+        this.time.processFrame();
+      }
+
+      this.render();
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'update', value: function update()
+
+    {
+      this.world.update(this.time.step);
+    } }, { key: 'render', value: function render()
+
+    {
+      var gradient = this.ctx.createLinearGradient(0, 0, this.width, this.height);
+     // gradient.addColorStop(0, '#34495e');
+      //gradient.addColorStop(1, '#2c3e50');
+
+      this.ctx.clearRect(0, 0, this.width, this.height);
+      // this.ctx.fillStyle = '#2c3e50'
+     // //this.ctx.fillStyle = gradient;
+    // // this.ctx.fillRect(0, 0, this.width, this.height);
+      this.world.render(this.ctx);
+    }
+
+    // Helpers 库
+  }, { key: 'updateSize', value: function updateSize()
+    {
+      this.width = window.innerWidth;
+      this.height = window.innerHeight;
+      this.el.width = this.width * this.pixelRatio;
+      this.el.height = this.height * this.pixelRatio;
+      this.el.style.width = window.innerWidth + 'px';
+      this.el.style.height = window.innerHeight + 'px';
+      this.ctx.scale(this.pixelRatio, this.pixelRatio);
+    } }, { key: 'addWorld', value: function addWorld(
+
+    worldName, World) {
+      this.worlds[worldName] = new World();
+      this.worlds[worldName].universe = this;
+      this.worlds[worldName].init();
+    } }, { key: 'setWorld', value: function setWorld(
+
+    worldName) {
+      this.world = this.worlds[worldName];
+    } }]);return Universe;}();
+
+
+
+// Main
+
+console.clear();
+var element = document.querySelector('#canvas1');
+window.Canvas= new Universe(element);</script>
+
+<!--<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>-->
+
+
+<script src="https://cdn.staticfile.org/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        python接口自动化2
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Python/" target="_blank">
+                                <span class="chip bg-color">Python</span>
+                            </a>
+                        
+                            <a href="/tags/Interface/" target="_blank">
+                                <span class="chip bg-color">Interface</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                Python
+                            </a>
+                        
+                            <a href="/categories/Python/Interface/" class="post-category" target="_blank">
+                                Interface
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    <span id="page__date">2016-02-15</sapn>
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        2.3k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        7 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><strong>🔥 python接口自动化（二）–什么是接口测试、为什么要做接口测试（详解）</strong></p>
+<h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　上一篇和大家一起科普扫盲接口后，知道什么是接口，接口类型等，对其有了大致了解之后，我们就回到主题-接口测试。</p>
+<h4 id="2-什么是接口测试"><a href="#2-什么是接口测试" class="headerlink" title="2.什么是接口测试"></a>2.什么是接口测试</h4><p>　　接口测试是测试系统组件间接口的一种测试。接口测试主要用于检测外部系统与系统之间以及内部各个子系统之间的交互点。测试的重点是要检查数据的交换，传递和控制管理过程，以及系统间的相互逻辑依赖关系等。　<br>　　一般来说，测试接口，就是指测试接口的功能，性能和稳定性测试，当然可能还有安全性测试。这个入门系列会让你掌握接口的功能测试。一般，来说我们听说到的接口基本上都是指HTTP或者HTTPS协议的接口测试，也就是一些web服务请求。一个软件项目中，<br>有很多接口，少的有几十个，多的有几百上千个接口。这个时候，我们没有软件界面，没有具体的测试场景，只有一个接口描述文档。我们需要把接口这样抽象的东西，通过软件测试的理论和方法去测试接口，找出接口的功能和安全性的缺陷。接口有内部接口和外部<br>接口。内部接口就是开发人员自己开发的接口。外部接口，好比网站调用微信支付和支付宝支付接口。还有一些模块与模块之间的接口。学习过Java或者用过selenium的人，应该对接口有了解。你的自动化脚本调用了很多selenium的接口。</p>
+<h4 id="3-为什么要做接口测试"><a href="#3-为什么要做接口测试" class="headerlink" title="3.为什么要做接口测试"></a>3.为什么要做接口测试</h4><p>1、现在很多系统前后端架构是分离的，因为不同端（前段，后端）的工作进度不一样，所以我们要针对最开始出来的接口，以及需要调用其他公司的（银行，支付宝，微信，qq等）一些接口进行接口测试及验证数据，从安全层面来说，只依赖前端进行限制已经完全不能满足系统的安全要求（绕过前端太容易了）， 需要后端同样进行控制，在这种情况下就需要从接口层面进行验证。在这种情况下就需要从接口层面进行验证。前后端传输、日志打印等信息是否加密传输也是需要验证的，特别是涉及到用户的隐私信息，如身份证，银行卡等。</p>
+<p>2、如今系统越来越复杂，传统的靠前端测试已经大大降低了效率，而且现在我们都推崇测试前移也叫测试左移，希望测试能更早的介入测试，那接口测试就是一种及早介入的方式。例如传统测试，你是不是得等前后端都完成你才能进行测试，才能进行自动化代码编写。 而如果是接口测试，只需要前后端定义好接口，那这时自动化就可以介入编写接口自动化测试代码，手工测试只需要后端代码完成就可以介入测试后端逻辑而不用等待前端工作完成。<br>　　测试左移这个是一次偶然的机会在群里看到的，孤陋寡闻的我，第一次看到，也是一知半解，后来查了一些资料供大家参考。<br>　　测试左移的原则支持测试团队在软件开发周期早期和所有干系人合作。因此他们能清晰地理解需求以及设计测试用例去帮助软件“快速失败”，促使团队更早的修改所有的bug。　　<br>　　测试左移并没有什么独特的，只是让测试人员在软件开发生命周期内更早的参与进来，同时让他们去理解需求、软件设计、软件架构以及软件功能，也让他们去向客户、商业分析师和开发人员问问题，寻找答案，提供反馈结果已达到支持团队的工作得可能性。参与和理解会使测试人员获取产品完整的知识，彻底想清楚各种场景，根据软件行为设计实时的场景，这些都会帮助团队在编码完成之前识别出一些缺陷。这样也可以更好的的体现我们作为一个QA的价值体                                                                </p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/jmKF6hX5nJS4skf.png" alt="1232840-20190312085202817-981337531.png"></p>
+<p>​                                                                         金字塔模型<br>通过之前对金字塔结构的学习，大概了解到了金字塔模型想告诉我们的几个道理：</p>
+<p>　　1.越底层，越稳定。</p>
+<p>　　金字塔主要观点认为单元测试的稳定性高，需要多投入。</p>
+<p>　　2.越底层，越高效。</p>
+<p>　　程序的问题，最终还得落在具体的代码上，所以底层的测试更容易发现问题。</p>
+<p>　　3.越底层，越低成本。</p>
+<p>　　越底层测试能越早发现问题，越早发现问题，修复的成本自然越低。</p>
+<p>　　4.越底层，越难实施。</p>
+<p>　　越底层的实现对技术专业性要求越高，这点跟第三点有点矛盾，往往越专业的人才也意味着人力成本越高。</p>
+<p>　　综合下金字塔模型，随着前后端分离越来越清晰，我个人愚见提出了灯笼模型，拿接口测试和UI层测试以及单元测试做了比较，从图中各部分所占有的比重，可以一目了然的看出并最终认定接口（API）测试可以获得较高的投资回报。</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/04/keSiMygwFYq2BZH.png" alt="1232840-20190312084032485-331187664.png"></p>
+<p>​                                                                            灯笼模型<br>　　个人愚见，如有过错，请批评指正：<br>　　接口将前端和后端进行很好的分离，帮前后端实现数据交互，这样在项目初期就可以和前端工程师讨论需要的后端数据，然后后端根据需求开发后接口，将数据返回给前端，测试人员提前进入测试接口，前后端然后在各自开发自己模块。</p>
+<p> 项目迁移，以及后期维护，接口带来的便利性，试想一下，如果没有项目交付以后，后端人员将数据库的某个字段的长度、类型修改后发版，而由于某些原因没有及时通知前端工程师，而此时前端的获取的这个字段的类型、长度是以前的，那么就可能引发线上事故。如</p>
+<p>果前端技术牛叉，存储获取字段是一个变量，工作量还小点。只需要改变变量类型、长度即可，如果是一个差一点的没有用变量，而前端又是好几百个页面都用到这个字段，这样就造成后果无法想象的，但是用到接口就有不一样了，如果出现类似的情况，后端人员只需</p>
+<p>要将这个字段通过接口做处理是返回的字段保持一致即可，也就是分分钟的事，可能用户都没有察觉就修复了。而且前端、后端、测试也很好排查问题，跑一下接口，查看接口文档返回数据有差异，修给接口就可以，这样处理问题效率也会大大提高。</p>
+<p>　　简单概括：</p>
+<p>①.越底层发现bug，它的修复成本是越低的。</p>
+<p>②.前端随便变，接口测好了，后端不用变，前后端是两拨人开发的。</p>
+<p>③.检查系统的安全性、稳定性，前端传参不可信，比如京东购物，前端价格不可能传入-1元，但是通过接口可以传入-1元。</p>
+<p>④.如今的系统复杂度不断上升，传统的测试方法成本急剧增加且测试效率大幅下降，接口测试可以提供这种情况下的解决方案。</p>
+<p>⑤. 接口测试相对容易实现自动化持续集成，且相对UI自动化也比较稳定，可以减少人工回归测试人力成本与时间，缩短测试周期，支持后端快速发版需求。接口持续集成是为什么能低成本高收益的根源。</p>
+<p>⑥.   现在很多系统前后端架构是分离的，从安全层面来说：</p>
+<p>(1)、只依赖前端进行限制已经完全不能满足系统的安全要求（绕过前面实在太容易）， 需要后端同样进行控制，在这种情况下就需要从接口层面进行验证。</p>
+<p>(2)、前后端传输、日志打印等信息是否加密传输也是需要验证的，特别是涉及到用户的隐私信息，如身份证，银行卡等。</p>
+
+            </div>
+			
+            <hr/>
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">博主不易，靠赏过日！！！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+			<style>
+				.reprint {
+					margin: 2em 0 0;
+					padding: 0.5em 1em;
+					border-left: 3px solid #FF1700;
+					background-color: #F9F9F9;
+					list-style: none;
+				}
+
+				.reprint li {
+					line-height: 30px;
+				}
+			</style>
+            <div class="reprint">
+                <!--<p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="https://hongduhong.github.io" class="b-link-green">北京-宏哥</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2016/02/15/interface/" class="b-link-green">python接口自动化2</a>
+                </p>-->
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>作者:  </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>文章链接:  </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>版权声明:   </strong>
+					本网志所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					许可协议。转载请注明出处!
+				  </li>
+				</ul>
+            </div>
+			<style>
+				.article-end-text-wrap-gzh {
+					margin: 5px 0;
+				}
+					
+				.article-end-text-gzh {
+					font-family: "微软雅黑";
+					font-weight: bold;
+					color: red;
+					font-size: 50px;
+					line-height: 1.6em;
+					text-align:center;
+					padding: 1em 2em;
+					background: color-widget-background;
+					box-shadow: 1px 2px 3px color-border;
+					border: 1px solid color-widget-border;
+					border-radius: 3px;
+				}  
+			</style>
+			<div class="article-end-text-wrap-gzh">
+			  <div class="article-end-text-gzh">
+				<p>扫码关注公众号，更多干货秒得到</p>
+				<img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/26/4hCH391xM65ENtu.png" width="200">
+			  </div>
+			</div>
+			<!--<div>
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>copyright.author </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>copyright.link </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>copyright.license_title  </strong>
+					copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					copyright.right_license_content
+				  </li>
+				</ul>
+			<div>
+			<div>
+				 <style>
+.reprint {
+    margin: 2em 0 0;
+    padding: 0.5em 1em;
+    border-left: 3px solid #FF1700;
+    background-color: #F9F9F9;
+    list-style: none;
+}
+
+.reprint li {
+    line-height: 30px;
+}
+</style>
+<div>
+	<ul class="reprint">
+		<li class="reprint-author">
+          <strong>copyright.author </strong>北京-宏哥</a>
+          </li>
+          <li class="reprint-link">
+          <strong>copyright.link </strong>
+          <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+        </li>
+        <li class="reprint-license">
+            <strong>copyright.license_title  </strong>
+            copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+            copyright.right_license_content
+        </li>
+	</ul>
+<div>
+
+			</div>-->
+
+        </div>
+		
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'f198ff3418cff1b4beb1',
+        clientSecret: '4381fdcb7742eb697e6214ca4ccacbbc78620722',
+        repo: 'hongduhong.github.io',
+        owner: 'hongduhong',
+        admin: "hongduhong",
+        id: '2016-02-15T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+	.v .txt-right{ display: none;}
+
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+ <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'QTjhAL7gTPGjIK1RQM2TlxDR-gzGzoHsz',
+        appKey: 'aBlfRinOLK3x6GKoYWr02qWj',
+        notify: 'true' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '留下你足迹吧O(∩_∩)O\n各位站长也留下你的交友申请 \n(申请格式：网站链接 + 一句话简介站点;)\n(如：five-great.coding.me + 互联网爱好者,撸代码,技术交流。)\n( ╯□╰ )建议不要匿名评论,建议填写邮箱便于接收回复信息'
+    });
+</script>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2016/02/16/interface/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/21.jpg" class="responsive-img" alt="python接口自动化3">
+                        
+                        <span class="card-title">python接口自动化3</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">🔥 python接口自动化（三）–如何设计接口测试用例（详解）
+1.简介　上篇我们已经介绍了什么是接口测试和接口测试的</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2016-02-16
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                    Python
+                                </a>
+                            
+                            <a href="/categories/Python/Interface/" class="post-category" target="_blank">
+                                    Interface
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/Interface/" target="_blank">
+                        <span class="chip bg-color">Interface</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2016/02/14/interface/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/19.jpg" class="responsive-img" alt="python接口自动化1">
+                        
+                        <span class="card-title">python接口自动化1</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">🔥 python接口自动化（一）–什么是接口、接口优势、类型（详解）
+1.简介　　经常听别人说接口测试，接口测试自动化</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-02-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                    Python
+                                </a>
+                            
+                            <a href="/categories/Python/Interface/" class="post-category" target="_blank">
+                                    Interface
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/Interface/" target="_blank">
+                        <span class="chip bg-color">Interface</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 北京-宏哥<br />'
+            + '作者: 北京-宏哥<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h4, h5, h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h4, h5, h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<!--<script type="text/javascript" src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  if(window.outerHeight <500&&window.outerWidth<400){
+  $("#p1").hide();
+ 
+   }else{
+  $("#p1").show();
+  
+  }
+});
+</script>
+<footer class="page-footer bg-color">
+	<div  style="text-align: center;">
+	<li class="col s12 m8 l8 copy-right">
+  友链：
+         
+            
+                
+                
+				
+             <a href="https://www.jianshu.com/u/c6e85b30966e" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 简书
+               </a>
+                
+                
+				
+             <a href="https://www.cnblogs.com/du-hong" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 博客园
+               </a>
+                
+                
+				
+             <a href="https://www.zhihu.com/people/bei-jing-hong-ge" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 知乎
+               </a>
+                
+                
+				
+             <a href="https://cloud.tencent.com/developer/user/5695339" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 腾讯云
+               </a>
+                
+              		  
+		<span id="busuanzi_container_site_uv" style="float:right"> 
+			恭喜您成为第 
+			<span id="busuanzi_value_site_uv" class="white-color">
+			</span>
+			位访客&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>
+	  </li>
+	</div>
+	<div class="container row center-align">
+		<div class="col s12 m8 l8 copy-right">  
+         <span id ="p1">&nbsp;&nbsp;&nbsp;</span>
+            
+			
+                
+                
+                <span id="busuanzi_container_site_pv">
+                       <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color">1212112121</span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次&nbsp;
+                </span>
+                
+              
+			
+			
+                <i class="fa fa-area-chart"></i>站点总字数:
+                <span class="white-color">292.3k</span>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			本站由&copy;<a href="https://hongduhong.github.io" target="_blank">北京-宏哥</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 搭建.
+			
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hongduhong/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1918991791@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1918991791" class="tooltipped" data-tooltip="QQ联系我: 1918991791" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+
+
+</div>
+    </div>
+</footer>
+<script type="text/javascript">
+
+        //获取输入框的文本
+        function getdata(){
+        var i=document.getElementById('page__date');
+        
+        
+         var a=new Date();var b=new Date('2019-8-20');var count_s=parseInt((a.getTime()-b)/(1000 * 3600 * 24));
+      
+         }
+        setTimeout("getdata()","2000");
+
+</script>
+<div class="progress-bar"></div>
+<script src="//code.tidio.co/nrzrwmino0xirhbbord6owqnmk7duacv.js" async></script>
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+
+<div id="backTop" class="top-scroll">
+<a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.staticfile.org/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script src="https://cdn.staticfile.org/masonry/4.0.0/masonry.pkgd.js"></script>
+<script src="https://cdn.staticfile.org/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.staticfile.org/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://cdn.staticfile.org/lightgallery/1.6.12/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+	<script type="text/javascript">
+		$("#loading").fadeOut(5000);
+	</script>
+</html>

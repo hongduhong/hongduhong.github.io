@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Pycharm使用教程-02, 北京-宏哥 python  自动化测试  接口 JMeter Appium">
+    <meta name="description" content="🔥 手把手的教你激活PyCharm –Pycharm激活详细教程（二）（非常详细，非常实用）
+1.简介Pycharm安">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Pycharm使用教程-02 | 北京-宏哥</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/aos/2.3.4/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+
+
+    <script src="https://cdn.staticfile.org/jquery/2.2.0/jquery.min.js"></script>	
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d62256055258ddb12716821c285aadab";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?716046d3a903bfe6a910f6b68a93271d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!--推送-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'https://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!--广告-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3736773013312638",
+    enable_page_level_ads: true
+  });
+</script>
+<!--onlinetk-->
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/011b3025.js","daovoice")</script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+
+<style>
+  @media only screen and (max-width: 422px){
+    nav .brand-logo {left: 41%;}
+    nav a {margin: 0px -38px 0px 0px;}
+    nav ul a {padding: 0px; margin-left: -42px;}
+    .bg-cover .title{fone-size:3rem;}
+  }
+ </style>
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo" >
+                <a  href="/" class="waves-effect waves-light">
+                    
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                     <span class="logo-span">北京-宏哥</span>
+                </a>
+				
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/galleries" class="waves-effect waves-light">
+            
+            <i class="fa fa-photo"></i>
+            
+            <span>相册</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/lyb" class="waves-effect waves-light">
+            
+            <i class="fa fa-paper-plane-o"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">北京-宏哥</div>
+        <div class="logo-desc">
+            
+            不积跬步无以至千里，不积小流无以成江海。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/galleries" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-photo"></i>
+                
+                相册
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/lyb" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-paper-plane-o"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/hongduhong" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>GITHUB
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/hongduhong" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="GITHUB" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+ 
+
+
+</header>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #canvas111{
+		 position: fixed;
+         background: #ccc;
+		 overflow: auto;
+		 z-index: -1;
+    }
+    </style> 
+
+	<canvas id="canvas111"></canvas>
+	
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<body>
+    
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script type="text/javascript">
+    window.requestAnimationFrame = (function(){
+        return window.requestAnimationFrame ||
+               window.webkitRequestAnimationFrame ||
+               window.mozRequestAnimationFrame ||
+               function( callback ){
+                    window.setTimeout( callback, 1000/2 );
+               };
+    })();
+    var myCanvas = document.getElementById("canvas111");
+    var ctx = myCanvas.getContext("2d");//getContext 设置画笔
+    var num;
+    var w,h;
+    var duixiang = [];
+    var move = {};
+    function widthheight(){
+        w = myCanvas.width = window.innerWidth;
+        h = myCanvas.height = window.innerHeight;
+		num= Math.floor(w*h*0.0001);
+        for(var i = 0;i < num;i++){
+            duixiang[i] = {
+                x:Math.random()*w,
+                y:Math.random()*h,
+                cX:Math.random()*0.6-0.3,
+                cY:Math.random()*0.6-0.3,
+				R:Math.floor(Math.random()*5)+2,
+				//CC:Math.floor(Math.random()*3)+2,
+			    r: Math.floor(Math.random() * 254),   
+                g: Math.floor(Math.random() * 254),  
+                b:Math.floor(Math.random() * 254)   
+            } 
+           // console.log(duixiang[i])
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+			 //Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].CC);
+        }
+    };widthheight();//获取浏览器的等宽度等高
+
+    function Cricle(x,y,R,r,g,b){
+        ctx.save();//保存路径
+       if(Math.random()>0.991) {ctx.globalAlpha= 0.9;}//ctx.fillStyle = "#CCC";}//填充的背景颜色
+	    else { ctx.globalAlpha=0.47;}
+		 
+		ctx.fillStyle = "rgb("+ r +","+ g +","+ b +")";
+        ctx.beginPath();//开始绘画
+		ctx.arc(x,y,R,Math.PI*2,0);//绘画圆 x y 半径（大小） 角度  一个PI 是180 * 2 = 360    真假 0/1 true/false
+        ctx.closePath();//结束绘画
+        ctx.fill();//填充背景颜色
+        ctx.restore();//回复路径
+    };Cricle();
+
+
+    !function draw(){
+        ctx.clearRect(0,0,w,h)//先清除画布上的点
+        for(var i = 0;i < num;i++){
+            duixiang[i].x += duixiang[i].cX;
+            duixiang[i].y += duixiang[i].cY;
+            if(duixiang[i].x>w || duixiang[i].x<0){
+                duixiang[i].cX = -duixiang[i].cX;
+            }
+            if(duixiang[i].y>h || duixiang[i].y<0){
+                duixiang[i].cY = -duixiang[i].cY;
+            }
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+            //勾股定理判断两点是否连线
+            for(var j = i + 1;j < num;j++){
+                if( (duixiang[i].x-duixiang[j].x)*(duixiang[i].x-duixiang[j].x)+(duixiang[i].y-duixiang[j].y)*(duixiang[i].y-duixiang[j].y) <= 55*55 ){
+                    line(duixiang[i].x,duixiang[i].y,duixiang[j].x,duixiang[j].y,0,i,j)
+                }
+                if(move.x){
+                    if( (duixiang[i].x-move.x)*(duixiang[i].x-move.x)+(duixiang[i].y-move.y)*(duixiang[i].y-move.y) <= 100*100 ){
+                        line(duixiang[i].x,duixiang[i].y,move.x,move.y,1,i,1)
+                    }
+                }
+            }
+        }
+        window.requestAnimationFrame(draw)
+    }();
+
+    //绘制线条
+    function line(x1,y1,x2,y2,flag,i,j){
+        
+		if (flag){var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.5;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(0.8,"#019ee5");
+		        }
+				else
+				{
+				
+				var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.9;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(1,"rgb("+ duixiang[j].r +","+ duixiang[j].g +","+ duixiang[j].b +")");
+				}
+        ctx.save();
+        ctx.strokeStyle = color;
+		ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        ctx.stroke();
+        //ctx.restore();
+    }
+
+
+    //document.onmousemove = function(e){
+     //   move.x = e.clientX;
+      //  move.y = e.clientY;
+    //}
+    //console.log(move)
+
+    /*window.onresize = function(){
+        location.reload();
+    }*/
+</script>
+
+
+
+
+
+
+
+
+
+
+<style>
+		#canvas1 {
+ position: fixed;
+ pointer-events:none;//鼠标多层响应事件
+        // background: 	#ccc;
+		 /*透明度*/
+		 width: 100%;
+        height: 100%;
+     // opacity: 0;
+		 overflow: auto;
+		 z-index: 999;
+
+    }
+</style>
+<!--<body>-->
+<canvas id="canvas1" style="whdth: 100%;height: 100%"></canvas>
+
+<script>
+var _createClass = function () {function defineProperties(target, props) 
+{ for (var i = 0; i < props.length; i++) 
+ {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) 
+ descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}
+ return function (Constructor, protoProps, staticProps) 
+ {if (protoProps) defineProperties(Constructor.prototype, protoProps);
+ if (staticProps) defineProperties(Constructor, staticProps);
+ return Constructor;};}();function _classCallCheck(instance, Constructor) 
+ {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}
+ var getRandom = function getRandom(min, max) {
+  return Math.random() * (max - min) + min;
+};
+
+var getRandomInt = function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
+var getRandomColor = function getRandomColor() {
+  var colors = [
+  'rgba(231, 76, 60, 1)', // red
+  'rgba(241, 196, 15, 1)', // yellow
+  'rgba(46, 204, 113, 1)', // green
+  'rgba(52, 152, 219, 1)', // blue
+  'rgba(155, 89, 182, 1)' // purple
+  ];
+
+  return colors[getRandomInt(0, colors.length)];
+};
+
+// Particle//粒子模块
+var
+Particle = function () {
+
+  function Particle(system, x, y) {_classCallCheck(this, Particle);
+    this.system = system;
+    this.universe = this.system.world.universe;
+    this.x = x;
+    this.y = y;
+    this.color = getRandomColor();
+    this.life = 1;
+    this.aging = getRandom(0.990, 0.999); // 0.99, 0.999 || 0.999, 0.9999
+
+    this.r = getRandomInt(12, 16);//初始粒子半径范围
+    this.speed = getRandom(18, 18.5);//粒子爆炸速度范围
+    this.velocity = [
+    getRandom(-this.speed, this.speed),
+    getRandom(-this.speed, this.speed)];
+
+  }_createClass(Particle, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (
+      this.r < 0.1 ||
+      this.life === 0 ||
+      this.x + this.r < 0 ||
+      this.x - this.r > this.universe.width ||
+      this.y + this.r < 0 ||
+      this.y - this.r > this.universe.height)
+      {
+        this.system.removeObject(this);
+      }
+
+      this.r *= this.life;
+      this.x += this.velocity[0];
+      this.y += this.velocity[1];
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      // Main circle //亮圈模块
+
+      ctx.fillStyle = this.color;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r*1.2, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+
+      var r = this.color.match(/([0-9]+)/g)[0];
+      var g = this.color.match(/([0-9]+)/g)[1];
+      var b = this.color.match(/([0-9]+)/g)[2];
+
+      // Gradient//梯度变化曲线
+
+      var spread = 1.5;
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r,
+      this.x, this.y, this.r * spread);
+
+      gradient.addColorStop(0, 'rgba(' + r + ', ' + g + ', ' + b + ', 0.5)');
+      gradient.addColorStop(1, 'rgba(' + r + ', ' + g + ', ' + b + ', 0)');
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r * spread, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+
+      // Aberration//偏差
+
+      var offset = this.r * 0.5;
+      var color = 'rgba(' + g + ', ' + b + ', ' + r + ', 0.5)';
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(this.x + offset, this.y + offset, this.r, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+    } }]);return Particle;}();
+
+
+
+// Crown //水波纹圈模块
+var
+Crown = function () {
+
+  function Crown(system, x, y) {_classCallCheck(this, Crown);
+    this.system = system;
+    this.x = x;
+    this.y = y;
+    this.r = getRandomInt(5, 15); // 5, 20  水波纹圈半径范围
+    this.mod = 1.1;
+    this.life = 0.5; //水波纹线
+    this.aging = getRandom(0.830, 0.899);
+    this.speed = getRandom(8, 9);
+    this.color = {
+      r: getRandomInt(236, 242),
+      g: getRandomInt(70, 80),
+      b: getRandomInt(50, 70) };
+
+
+    this.angle1 = Math.PI * getRandom(0, 2);
+    this.angle2 = this.angle1 + Math.PI * getRandom(0.3, 0.4);//水波纹圈完整度
+  }_createClass(Crown, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (this.life <= 0.0001) this.system.removeObject(this);
+
+      this.r += Math.abs(1 - this.life) * this.speed;
+
+      this.x1 = this.x + this.r * Math.cos(this.angle1);
+      this.y1 = this.y + this.r * Math.sin(this.angle1);
+
+      this.angle3 = this.angle1 + (this.angle2 - this.angle1) / 2;
+      this.x2 = this.x + this.r * this.mod * Math.cos(this.angle3);
+      this.y2 = this.y + this.r * this.mod * Math.sin(this.angle3);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r * 0.9,
+      this.x, this.y, this.r);
+
+      gradient.addColorStop(0, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life + ')');
+      gradient.addColorStop(1, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life * 0.5 + ')');
+
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, this.angle1, this.angle2, false);
+      ctx.quadraticCurveTo(this.x2, this.y2, this.x1, this.y1);
+      ctx.fill();
+      ctx.closePath();
+    } }]);return Crown;}();
+
+
+
+// Explosion //爆炸模块
+var
+Explosion = function () {
+
+  function Explosion(world, x, y) {_classCallCheck(this, Explosion);
+    this.world = world;
+    this.x = x;
+    this.y = y;
+    this.objects = [];
+
+    var particles = getRandomInt(10, 30); // 10, 30 amount of particles//爆炸 粒子数量
+    var crowns = particles * getRandom(0.4, 0.5);
+
+    while (crowns-- > 0) {this.addCrown();}
+    while (particles-- > 0) {this.addParticle();}
+  }_createClass(Explosion, [{ key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      if (this.objects.length <= 0) {
+        this.world.clearExplosion(this);
+      }
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'addCrown', value: function addCrown()
+
+    {
+      this.objects.push(new Crown(this, this.x, this.y));
+    } }, { key: 'addParticle', value: function addParticle()
+
+    {
+      this.objects.push(new Particle(this, this.x, this.y));
+    } }, { key: 'removeObject', value: function removeObject(
+
+    obj) {
+      var index = this.objects.indexOf(obj);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return Explosion;}();
+
+
+
+// World 
+var
+ConfettiWorld = function () {function ConfettiWorld() 
+{_classCallCheck(this, ConfettiWorld);}_createClass(ConfettiWorld, [{ key: 'init', value: function init()
+
+    {
+      this.objects = [];
+      window.addEventListener('click', this.explode.bind(this));
+
+      // Initial explosion //初始爆炸
+      var counter = 0;
+      while (counter-- > 0) {
+        this.explode({
+          clientX: window.event.clientX, //getRandomInt(10, this.universe.width) ,          //this.universe.width / 2,
+          clientY: window.event.clientY //getRandomInt(10, 50) //this.universe.height / 2 
+		  });
+
+      }
+    } }, { key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      var amount = this.objects.reduce(function (sum, explosion) {
+        return sum += explosion.objects.length;
+      }, 0);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'explode', value: function explode(
+
+    event) {
+      var x = event.clientX;
+      var y = event.clientY;
+
+      this.objects.push(new Explosion(this, x, y));
+    } }, { key: 'clearExplosion', value: function clearExplosion(
+
+    explosion) {
+      var index = this.objects.indexOf(explosion);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return ConfettiWorld;}();
+
+
+
+// Time
+var
+Time = function () {
+
+  function Time() {_classCallCheck(this, Time);
+    this.now = 0; // current tick time
+    this.prev = 0; // prev tick time
+    this.elapsed = 0; // elapsed time from last tick
+    this.delta = 0; // time from last update
+    this.fps = 60; // desired fps
+    this.step = 1 / 60; // step duration
+  }_createClass(Time, [{ key: 'update', value: function update(
+
+    time) {
+      this.now = time;
+      this.elapsed = (this.now - this.prev) / 1000;
+      this.prev = this.now;
+      this.delta += this.elapsed;
+    } }, { key: 'raf', value: function raf(
+
+    func) {
+      window.requestAnimationFrame(func);
+    } }, { key: 'hasFrames', value: function hasFrames()
+
+    {
+      return this.delta >= this.step;
+    } }, { key: 'processFrame', value: function processFrame()
+
+    {
+      this.delta -= this.step;
+    } }]);return Time;}();
+
+
+
+// Canvas
+var
+Universe = function () {
+
+  function Universe(element) {_classCallCheck(this, Universe);
+    this.el = element;
+    this.ctx = this.el.getContext('2d');
+    this.pixelRatio = window.devicePixelRatio;
+    this.time = new Time();
+
+    this.worlds = {};
+    this.world = null; // current state
+
+    this.updateSize();
+    window.addEventListener('resize', this.updateSize.bind(this));
+
+    this.addWorld('confetti', ConfettiWorld);
+    this.setWorld('confetti');
+
+    this.start();
+  }_createClass(Universe, [{ key: 'start', value: function start()
+
+    {
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'tick', value: function tick(
+
+    time) {
+      this.time.update(time);
+
+      if (this.time.hasFrames()) {
+        this.update();
+        this.time.processFrame();
+      }
+
+      this.render();
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'update', value: function update()
+
+    {
+      this.world.update(this.time.step);
+    } }, { key: 'render', value: function render()
+
+    {
+      var gradient = this.ctx.createLinearGradient(0, 0, this.width, this.height);
+     // gradient.addColorStop(0, '#34495e');
+      //gradient.addColorStop(1, '#2c3e50');
+
+      this.ctx.clearRect(0, 0, this.width, this.height);
+      // this.ctx.fillStyle = '#2c3e50'
+     // //this.ctx.fillStyle = gradient;
+    // // this.ctx.fillRect(0, 0, this.width, this.height);
+      this.world.render(this.ctx);
+    }
+
+    // Helpers 库
+  }, { key: 'updateSize', value: function updateSize()
+    {
+      this.width = window.innerWidth;
+      this.height = window.innerHeight;
+      this.el.width = this.width * this.pixelRatio;
+      this.el.height = this.height * this.pixelRatio;
+      this.el.style.width = window.innerWidth + 'px';
+      this.el.style.height = window.innerHeight + 'px';
+      this.ctx.scale(this.pixelRatio, this.pixelRatio);
+    } }, { key: 'addWorld', value: function addWorld(
+
+    worldName, World) {
+      this.worlds[worldName] = new World();
+      this.worlds[worldName].universe = this;
+      this.worlds[worldName].init();
+    } }, { key: 'setWorld', value: function setWorld(
+
+    worldName) {
+      this.world = this.worlds[worldName];
+    } }]);return Universe;}();
+
+
+
+// Main
+
+console.clear();
+var element = document.querySelector('#canvas1');
+window.Canvas= new Universe(element);</script>
+
+<!--<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>-->
+
+
+<script src="https://cdn.staticfile.org/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Pycharm使用教程-02
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Pycharm/" target="_blank">
+                                <span class="chip bg-color">Pycharm</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Pycharm/" class="post-category" target="_blank">
+                                Pycharm
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    <span id="page__date">2016-05-25</sapn>
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        1.3k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        4 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><strong>🔥 手把手的教你激活PyCharm –Pycharm激活详细教程（二）（非常详细，非常实用）</strong></p>
+<h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>Pycharm安装以后必须激活后，才能正常的使用。否则就不能使用。</p>
+<blockquote>
+<p><font color="red"> <strong>pycharm激活码，由于那台服务器不维护了，不好使了，你可以关注宏哥的公众号发送：激活码，Ctrl+A，Ctrl+C，然后Ctrl+V，就可以了。</strong></font></p>
+</blockquote>
+<h4 id="2-激活PyCharm"><a href="#2-激活PyCharm" class="headerlink" title="2.激活PyCharm"></a>2.激活PyCharm</h4><h5 id="1、Activation-code激活"><a href="#1、Activation-code激活" class="headerlink" title="1、Activation code激活"></a>1、Activation code激活</h5><p>优点：Window、Mac、Ubantu都稳定有效，关键是这种激活方式不会产生其他影响</p>
+<p>缺点：需要修改hosts文件</p>
+<p>第一步：点击‘Activation code’，授权激活pycharm，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/VgmsbyIdh6atlE1.png" alt="1232840-20190109150211381-1273247550.png"></p>
+<p>第二步：修改C:\Windows\System32\drivers\etc 目录下的hosts文件；将hosts文件复制到其他文件夹下，打开hosts文件，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/N9lnGEezFWikvcI.png" alt="1232840-20190109150359410-161100911.png"></p>
+<p>在文件的末尾添加“0.0.0.0 account.jetbrains.com”，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/7bJxekWtNzMPrO3.png" alt="1232840-20190109150432105-2027005139.png"></p>
+<p>随后将修改后的hosts文件，重新复制到C:\Windows\System32\drivers\etc 目录下，并将原来的hosts文件覆盖</p>
+<p>第三步： 打开网址：<a href="http://idea.lanyus.com/" target="_blank" rel="noopener">http://idea.lanyus.com/</a></p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/mpwzOrgKPyek42L.png" alt="1232840-20190109150522768-294476463.png"></p>
+<p>第四步：点击获取注册码，并复制</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/iVPuCYbwMZaAmed.png" alt="1232840-20190109150602656-1396293699.png"></p>
+<p>第五步：将注册码复制到Activation code的文本框中，点击ok！</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/6G5zU9SynW7OpNR.png" alt="1232840-20190109150904913-1654474696.png"></p>
+<p>如果出现此种情况：</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/ebpLmIUki4fyBjS.png" alt="1232840-20190110095238090-747005073.png"></p>
+<p>说明此文件权限不够，不能对此文件进行修改，解决方法如下：</p>
+<ol>
+<li><p>在桌面新建一个hosts文件，然后把 0.0.0.0 account.jetbrains.com  加到最后，保存，在直接复制到此文件夹，替换一下即可。</p>
+</li>
+<li><p>修改权限方法如下：</p>
+</li>
+</ol>
+<p>右键，属性，安全，点击编辑，修改的权限（不同电脑计算机名字是不一样的，根据自己的计算机名来改）如下图，分别给修改和写入后边打上对勾</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/lT6rq85Pdm3fH2E.png" alt="1232840-20190110095256391-298540788.png"><br><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/EIbujmZQweLk2Kf.png" alt="1232840-20190110095317731-807686940.png"></p>
+<p>点击应用，确定，然后重复上边操作即可。</p>
+<p>第六步：PyCharm激活后，如下界面：</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/wI7Az8WRGuxfVhF.png" alt="1232840-20190109150958137-1791073148.png"></p>
+<p>第七步：激活之后会自动跳转到下图界面，创建项目路径：Create New Project</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/heuq7lOaGL9njzN.png" alt="1232840-20190109151127837-912089017.png"></p>
+<p>第八步：项目设置，在电脑的D盘、E盘等等创建一个空的文件夹（磁盘空间充足的位置），找到你的项目文件夹，直接点击右下角Create</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/K6oVzh4MtT3R5ms.png" alt="1232840-20190109151337755-1554528427.png"></p>
+<p>第九步：IDE提供的提示，直接close即可，不用理会。</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/mEbgvoA2fKH8yqV.png" alt="1232840-20190110093250778-715773510.png"></p>
+<p>第十步：进入的界面如下图所示，鼠标右击图中箭头指向的地方，然后选择New，最后选择python file，在弹出的框中填写文件名（任意填写），本例填写：helloworld。</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/I3CcxrmpsGUfbd5.jpg" alt="5b5b00014f03cd95e86d.jpg"></p>
+<p>第十一步：之后得到下图，然后点击OK即可：</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/5QGZYWThHRPScEL.jpg" alt="5b570004e64fb14fc584.jpg"></p>
+<p>第十二步：文件创建成功后便进入如下的界面，便可以编写自己的程序了。</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/RyI8OYfGkjd7uML.jpg" alt="5b5900019196067eda92.jpg"></p>
+<p>第十三步：这个界面是Pycharm默认的界面，大家完全可以自己去setting中设置自己喜欢的背景和字体大小、格式等等。</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/LHMRkjpPAt3SdEi.jpg" alt="5b5a00018131817c3500.jpg"></p>
+<p>第十四步：在这里我就不一一赘述了，起码到这里我相信大家已经实现了Pycharm的安装和激活。</p>
+<p>第十五步：查看激活，点击“Help”</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/6ca3EidPruo4NsW.png" alt="1232840-20190110094557543-1270265519.png"></p>
+<p>第十六步：点击“Register”，看到激活到2019年5月5日，如图：</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/TKkWopcgYIryu25.png" alt="1232840-20190110094732145-1166596981.png"></p>
+<p>附录：Pycharm中的部分快捷键</p>
+<p>1、Ctrl + Enter：在下方新建行但不移动光标；</p>
+<p>2、Shift + Enter：在下方新建行并移到新行行首；</p>
+<p>3、Ctrl + /：注释(取消注释)选择的行；</p>
+<p>4、Ctrl+d：对光标所在行的代码进行复制。</p>
+<p>最后小编祝大家能够顺利的完成Python和Pycharm的安装，提前^<em>^祝大家周末愉快^</em>^</p>
+<h5 id="2、License-server激活"><a href="#2、License-server激活" class="headerlink" title="2、License server激活"></a>2、License server激活</h5><p>优点：方便快捷</p>
+<p>缺点：激活的人数多了就容易被封杀，所以可能经常需要去激活</p>
+<p>选择License server激活，然后填入： idea.qmanga.com或<a href="http://xidea.online，然后点Activate激活即可，如果这几个服务器都无法激活，建议使用第一种激活码方式激活。" target="_blank" rel="noopener">http://xidea.online，然后点Activate激活即可，如果这几个服务器都无法激活，建议使用第一种激活码方式激活。</a></p>
+<h5 id="3、破解补丁激活"><a href="#3、破解补丁激活" class="headerlink" title="3、破解补丁激活"></a>3、破解补丁激活</h5><p>优点：到期时间为2099年，基本为永久啦</p>
+<p>缺点：相对服务器激活麻烦些，但是一共只需要3个步骤，其实并不麻烦</p>
+<p>1.下载链接: <a href="https://pan.baidu.com/s/1DJffBulrABZDa8nV1ntxug" target="_blank" rel="noopener">https://pan.baidu.com/s/1DJffBulrABZDa8nV1ntxug</a> 提取码: 6789 </p>
+<p>2.将JetbrainsCrack-2.6.10-release-enc.jar放置到 pycharm安装目录的\bin目录下（位置可随意，只要配置文件填写相对应的路径）。</p>
+<p>3.在 Pycharm安装目录的\bin目录下找到 pycharm.exe.vmoptions 和 pycharm64.exe.vmoptions (如果你是idea激活则是：idea.exe.vmoptions和idea64.exe.vmoptions)，以文本格式打开并同时在两个文件最后追加  -javaagent:E:\software\PyCharm 2018.3.2\bin\JetbrainsCrack-2.6.10-release-enc.jar，注意路径修改成你的pycharm安装路径（ 注意：标红处是你自己的安装目录），然后保存。</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/E3dWjGovrZmScib.png" alt="1232840-20190110140030380-1271697762.png"></p>
+<p>4.重启PyCharm </p>
+<p>注意！如果之前已经存在注册码，可以直接跳到第5步，如果没有注册码，则填写下面的注册码！</p>
+<pre><code>BIG3CLIK6F-eyJsaWNlbnNlSWQiOiJCSUczQ0xJSzZGIiwibGljZW5zZWVOYW1lIjoibGFuIHl1IiwiYXNzaWduZWVOYW1lIjoiIiwiYXNzaWduZWVFbWFpbCI6IiIsImxpY2Vuc2VSZXN0cmljdGlvbiI6IkZvciBlZHVjYXRpb25hbCB1c2Ugb25seSIsImNoZWNrQ29uY3VycmVudFVzZSI6ZmFsc2UsInByb2R1Y3RzIjpbeyJjb2RlIjoiQUMiLCJwYWlkVXBUbyI6IjIwMTctMTEtMjMifSx7ImNvZGUiOiJETSIsInBhaWRVcFRvIjoiMjAxNy0xMS0yMyJ9LHsiY29kZSI6IklJIiwicGFpZFVwVG8iOiIyMDE3LTExLTIzIn0seyJjb2RlIjoiUlMwIiwicGFpZFVwVG8iOiIyMDE3LTExLTIzIn0seyJjb2RlIjoiV1MiLCJwYWlkVXBUbyI6IjIwMTctMTEtMjMifSx7ImNvZGUiOiJEUE4iLCJwYWlkVXBUbyI6IjIwMTctMTEtMjMifSx7ImNvZGUiOiJSQyIsInBhaWRVcFRvIjoiMjAxNy0xMS0yMyJ9LHsiY29kZSI6IlBTIiwicGFpZFVwVG8iOiIyMDE3LTExLTIzIn0seyJjb2RlIjoiREMiLCJwYWlkVXBUbyI6IjIwMTctMTEtMjMifSx7ImNvZGUiOiJEQiIsInBhaWRVcFRvIjoiMjAxNy0xMS0yMyJ9LHsiY29kZSI6IlJNIiwicGFpZFVwVG8iOiIyMDE3LTExLTIzIn0seyJjb2RlIjoiUEMiLCJwYWlkVXBUbyI6IjIwMTctMTEtMjMifSx7ImNvZGUiOiJDTCIsInBhaWRVcFRvIjoiMjAxNy0xMS0yMyJ9XSwiaGFzaCI6IjQ3NzU1MTcvMCIsImdyYWNlUGVyaW9kRGF5cyI6MCwiYXV0b1Byb2xvbmdhdGVkIjpmYWxzZSwiaXNBdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlfQ==-iygsIMXTVeSyYkUxAqpHmymrgwN5InkOfeRhhPIPa88FO9FRuZosIBTY18tflChACznk3qferT7iMGKm7pumDTR4FbVVlK/3n1ER0eMKu2NcaXb7m10xT6kLW1Xb3LtuZEnuis5pYuEwT1zR7GskeNWdYZ0dAJpNDLFrqPyAPo5s1KLDHKpw+VfVd4uf7RMjOIzuJhAAYAG+amyivQt61I9aYiwpHQvUphvTwi0X0qL/oDJHAQbIv4Qwscyo4aYZJBKutYioZH9rgOP6Yw/sCltpoPWlJtDOcw/iEWYiCVG1pH9AWjCYXZ9AbbEBOWV71IQr5VWrsqFZ7cg7hLEJ3A==-MIIEPjCCAiagAwIBAgIBBTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTE1MTEwMjA4MjE0OFoXDTE4MTEwMTA4MjE0OFowETEPMA0GA1UEAwwGcHJvZDN5MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxcQkq+zdxlR2mmRYBPzGbUNdMN6OaXiXzxIWtMEkrJMO/5oUfQJbLLuMSMK0QHFmaI37WShyxZcfRCidwXjot4zmNBKnlyHodDij/78TmVqFl8nOeD5+07B8VEaIu7c3E1N+e1doC6wht4I4+IEmtsPAdoaj5WCQVQbrI8KeT8M9VcBIWX7fD0fhexfg3ZRt0xqwMcXGNp3DdJHiO0rCdU+Itv7EmtnSVq9jBG1usMSFvMowR25mju2JcPFp1+I4ZI+FqgR8gyG8oiNDyNEoAbsR3lOpI7grUYSvkB/xVy/VoklPCK2h0f0GJxFjnye8NT1PAywoyl7RmiAVRE/EKwIDAQABo4GZMIGWMAkGA1UdEwQCMAAwHQYDVR0OBBYEFGEpG9oZGcfLMGNBkY7SgHiMGgTcMEgGA1UdIwRBMD+AFKOetkhnQhI2Qb1t4Lm0oFKLl/GzoRykGjAYMRYwFAYDVQQDDA1KZXRQcm9</code></pre><p>5.验证是否是有效期是否截止到2099年    点击 pycharm的help-&gt;about查看:</p>
+<p>没有永久激活时如图：</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/F2XblutVrAanZji.png" alt="1232840-20190110142008443-1455818116.png"></p>
+<p>永久激活以后，如图：</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/12/ehk8UysDaVTE7ji.png" alt="1232840-20190110152720900-1259027352.png"></p>
+
+            </div>
+			
+            <hr/>
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">博主不易，靠赏过日！！！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+			<style>
+				.reprint {
+					margin: 2em 0 0;
+					padding: 0.5em 1em;
+					border-left: 3px solid #FF1700;
+					background-color: #F9F9F9;
+					list-style: none;
+				}
+
+				.reprint li {
+					line-height: 30px;
+				}
+			</style>
+            <div class="reprint">
+                <!--<p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="https://hongduhong.github.io" class="b-link-green">北京-宏哥</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2016/05/25/pycharm/" class="b-link-green">Pycharm使用教程-02</a>
+                </p>-->
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>作者:  </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>文章链接:  </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>版权声明:   </strong>
+					本网志所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					许可协议。转载请注明出处!
+				  </li>
+				</ul>
+            </div>
+			<style>
+				.article-end-text-wrap-gzh {
+					margin: 5px 0;
+				}
+					
+				.article-end-text-gzh {
+					font-family: "微软雅黑";
+					font-weight: bold;
+					color: red;
+					font-size: 50px;
+					line-height: 1.6em;
+					text-align:center;
+					padding: 1em 2em;
+					background: color-widget-background;
+					box-shadow: 1px 2px 3px color-border;
+					border: 1px solid color-widget-border;
+					border-radius: 3px;
+				}  
+			</style>
+			<div class="article-end-text-wrap-gzh">
+			  <div class="article-end-text-gzh">
+				<p>扫码关注公众号，更多干货秒得到</p>
+				<img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/26/4hCH391xM65ENtu.png" width="200">
+			  </div>
+			</div>
+			<!--<div>
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>copyright.author </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>copyright.link </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>copyright.license_title  </strong>
+					copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					copyright.right_license_content
+				  </li>
+				</ul>
+			<div>
+			<div>
+				 <style>
+.reprint {
+    margin: 2em 0 0;
+    padding: 0.5em 1em;
+    border-left: 3px solid #FF1700;
+    background-color: #F9F9F9;
+    list-style: none;
+}
+
+.reprint li {
+    line-height: 30px;
+}
+</style>
+<div>
+	<ul class="reprint">
+		<li class="reprint-author">
+          <strong>copyright.author </strong>北京-宏哥</a>
+          </li>
+          <li class="reprint-link">
+          <strong>copyright.link </strong>
+          <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+        </li>
+        <li class="reprint-license">
+            <strong>copyright.license_title  </strong>
+            copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+            copyright.right_license_content
+        </li>
+	</ul>
+<div>
+
+			</div>-->
+
+        </div>
+		
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'f198ff3418cff1b4beb1',
+        clientSecret: '4381fdcb7742eb697e6214ca4ccacbbc78620722',
+        repo: 'hongduhong.github.io',
+        owner: 'hongduhong',
+        admin: "hongduhong",
+        id: '2016-05-25T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+	.v .txt-right{ display: none;}
+
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+ <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'QTjhAL7gTPGjIK1RQM2TlxDR-gzGzoHsz',
+        appKey: 'aBlfRinOLK3x6GKoYWr02qWj',
+        notify: 'true' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '留下你足迹吧O(∩_∩)O\n各位站长也留下你的交友申请 \n(申请格式：网站链接 + 一句话简介站点;)\n(如：five-great.coding.me + 互联网爱好者,撸代码,技术交流。)\n( ╯□╰ )建议不要匿名评论,建议填写邮箱便于接收回复信息'
+    });
+</script>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2016/05/26/pycharm/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/1.jpg" class="responsive-img" alt="Pycharm使用教程-03">
+                        
+                        <span class="card-title">Pycharm使用教程-03</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">🔥 Pycharm使用教程（三）（非常详细，非常实用）
+1.简介工具汉化，宏哥一般都是不推荐的，就那么记得常用的单词，</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2016-05-26
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Pycharm/" class="post-category" target="_blank">
+                                    Pycharm
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Pycharm/" target="_blank">
+                        <span class="chip bg-color">Pycharm</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2016/05/24/pycharm/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="Pycharm使用教程-01">
+                        
+                        <span class="card-title">Pycharm使用教程-01</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">🔥 手把手的教你安装PyCharm –Pycharm安装详细教程（一）（非常详细，非常实用）
+1.简介Jetbrain</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-05-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Pycharm/" class="post-category" target="_blank">
+                                    Pycharm
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Pycharm/" target="_blank">
+                        <span class="chip bg-color">Pycharm</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 北京-宏哥<br />'
+            + '作者: 北京-宏哥<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h4, h5, h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h4, h5, h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<!--<script type="text/javascript" src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  if(window.outerHeight <500&&window.outerWidth<400){
+  $("#p1").hide();
+ 
+   }else{
+  $("#p1").show();
+  
+  }
+});
+</script>
+<footer class="page-footer bg-color">
+	<div  style="text-align: center;">
+	<li class="col s12 m8 l8 copy-right">
+  友链：
+         
+            
+                
+                
+				
+             <a href="https://www.jianshu.com/u/c6e85b30966e" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 简书
+               </a>
+                
+                
+				
+             <a href="https://www.cnblogs.com/du-hong" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 博客园
+               </a>
+                
+                
+				
+             <a href="https://www.zhihu.com/people/bei-jing-hong-ge" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 知乎
+               </a>
+                
+                
+				
+             <a href="https://cloud.tencent.com/developer/user/5695339" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 腾讯云
+               </a>
+                
+              		  
+		<span id="busuanzi_container_site_uv" style="float:right"> 
+			恭喜您成为第 
+			<span id="busuanzi_value_site_uv" class="white-color">
+			</span>
+			位访客&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>
+	  </li>
+	</div>
+	<div class="container row center-align">
+		<div class="col s12 m8 l8 copy-right">  
+         <span id ="p1">&nbsp;&nbsp;&nbsp;</span>
+            
+			
+                
+                
+                <span id="busuanzi_container_site_pv">
+                       <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color">1212112121</span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次&nbsp;
+                </span>
+                
+              
+			
+			
+                <i class="fa fa-area-chart"></i>站点总字数:
+                <span class="white-color">292.3k</span>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			本站由&copy;<a href="https://hongduhong.github.io" target="_blank">北京-宏哥</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 搭建.
+			
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hongduhong/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1918991791@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1918991791" class="tooltipped" data-tooltip="QQ联系我: 1918991791" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+
+
+</div>
+    </div>
+</footer>
+<script type="text/javascript">
+
+        //获取输入框的文本
+        function getdata(){
+        var i=document.getElementById('page__date');
+        
+        
+         var a=new Date();var b=new Date('2019-8-20');var count_s=parseInt((a.getTime()-b)/(1000 * 3600 * 24));
+      
+         }
+        setTimeout("getdata()","2000");
+
+</script>
+<div class="progress-bar"></div>
+<script src="//code.tidio.co/nrzrwmino0xirhbbord6owqnmk7duacv.js" async></script>
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+
+<div id="backTop" class="top-scroll">
+<a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.staticfile.org/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script src="https://cdn.staticfile.org/masonry/4.0.0/masonry.pkgd.js"></script>
+<script src="https://cdn.staticfile.org/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.staticfile.org/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://cdn.staticfile.org/lightgallery/1.6.12/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+	<script type="text/javascript">
+		$("#loading").fadeOut(5000);
+	</script>
+</html>

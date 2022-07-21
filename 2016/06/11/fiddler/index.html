@@ -1,0 +1,2281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(3)-再识Fiddler让你感性认识一下 -03, 北京-宏哥 python  自动化测试  接口 JMeter Appium">
+    <meta name="description" content="**🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(3)-再识Fiddler让你感性认识一下
+1.简介上一">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(3)-再识Fiddler让你感性认识一下 -03 | 北京-宏哥</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/aos/2.3.4/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+
+
+    <script src="https://cdn.staticfile.org/jquery/2.2.0/jquery.min.js"></script>	
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d62256055258ddb12716821c285aadab";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?716046d3a903bfe6a910f6b68a93271d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!--推送-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'https://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!--广告-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3736773013312638",
+    enable_page_level_ads: true
+  });
+</script>
+<!--onlinetk-->
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/011b3025.js","daovoice")</script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+
+<style>
+  @media only screen and (max-width: 422px){
+    nav .brand-logo {left: 41%;}
+    nav a {margin: 0px -38px 0px 0px;}
+    nav ul a {padding: 0px; margin-left: -42px;}
+    .bg-cover .title{fone-size:3rem;}
+  }
+ </style>
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo" >
+                <a  href="/" class="waves-effect waves-light">
+                    
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                     <span class="logo-span">北京-宏哥</span>
+                </a>
+				
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/galleries" class="waves-effect waves-light">
+            
+            <i class="fa fa-photo"></i>
+            
+            <span>相册</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/lyb" class="waves-effect waves-light">
+            
+            <i class="fa fa-paper-plane-o"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">北京-宏哥</div>
+        <div class="logo-desc">
+            
+            不积跬步无以至千里，不积小流无以成江海。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/galleries" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-photo"></i>
+                
+                相册
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/lyb" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-paper-plane-o"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/hongduhong" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>GITHUB
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/hongduhong" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="GITHUB" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+ 
+
+
+</header>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #canvas111{
+		 position: fixed;
+         background: #ccc;
+		 overflow: auto;
+		 z-index: -1;
+    }
+    </style> 
+
+	<canvas id="canvas111"></canvas>
+	
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<body>
+    
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script type="text/javascript">
+    window.requestAnimationFrame = (function(){
+        return window.requestAnimationFrame ||
+               window.webkitRequestAnimationFrame ||
+               window.mozRequestAnimationFrame ||
+               function( callback ){
+                    window.setTimeout( callback, 1000/2 );
+               };
+    })();
+    var myCanvas = document.getElementById("canvas111");
+    var ctx = myCanvas.getContext("2d");//getContext 设置画笔
+    var num;
+    var w,h;
+    var duixiang = [];
+    var move = {};
+    function widthheight(){
+        w = myCanvas.width = window.innerWidth;
+        h = myCanvas.height = window.innerHeight;
+		num= Math.floor(w*h*0.0001);
+        for(var i = 0;i < num;i++){
+            duixiang[i] = {
+                x:Math.random()*w,
+                y:Math.random()*h,
+                cX:Math.random()*0.6-0.3,
+                cY:Math.random()*0.6-0.3,
+				R:Math.floor(Math.random()*5)+2,
+				//CC:Math.floor(Math.random()*3)+2,
+			    r: Math.floor(Math.random() * 254),   
+                g: Math.floor(Math.random() * 254),  
+                b:Math.floor(Math.random() * 254)   
+            } 
+           // console.log(duixiang[i])
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+			 //Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].CC);
+        }
+    };widthheight();//获取浏览器的等宽度等高
+
+    function Cricle(x,y,R,r,g,b){
+        ctx.save();//保存路径
+       if(Math.random()>0.991) {ctx.globalAlpha= 0.9;}//ctx.fillStyle = "#CCC";}//填充的背景颜色
+	    else { ctx.globalAlpha=0.47;}
+		 
+		ctx.fillStyle = "rgb("+ r +","+ g +","+ b +")";
+        ctx.beginPath();//开始绘画
+		ctx.arc(x,y,R,Math.PI*2,0);//绘画圆 x y 半径（大小） 角度  一个PI 是180 * 2 = 360    真假 0/1 true/false
+        ctx.closePath();//结束绘画
+        ctx.fill();//填充背景颜色
+        ctx.restore();//回复路径
+    };Cricle();
+
+
+    !function draw(){
+        ctx.clearRect(0,0,w,h)//先清除画布上的点
+        for(var i = 0;i < num;i++){
+            duixiang[i].x += duixiang[i].cX;
+            duixiang[i].y += duixiang[i].cY;
+            if(duixiang[i].x>w || duixiang[i].x<0){
+                duixiang[i].cX = -duixiang[i].cX;
+            }
+            if(duixiang[i].y>h || duixiang[i].y<0){
+                duixiang[i].cY = -duixiang[i].cY;
+            }
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+            //勾股定理判断两点是否连线
+            for(var j = i + 1;j < num;j++){
+                if( (duixiang[i].x-duixiang[j].x)*(duixiang[i].x-duixiang[j].x)+(duixiang[i].y-duixiang[j].y)*(duixiang[i].y-duixiang[j].y) <= 55*55 ){
+                    line(duixiang[i].x,duixiang[i].y,duixiang[j].x,duixiang[j].y,0,i,j)
+                }
+                if(move.x){
+                    if( (duixiang[i].x-move.x)*(duixiang[i].x-move.x)+(duixiang[i].y-move.y)*(duixiang[i].y-move.y) <= 100*100 ){
+                        line(duixiang[i].x,duixiang[i].y,move.x,move.y,1,i,1)
+                    }
+                }
+            }
+        }
+        window.requestAnimationFrame(draw)
+    }();
+
+    //绘制线条
+    function line(x1,y1,x2,y2,flag,i,j){
+        
+		if (flag){var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.5;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(0.8,"#019ee5");
+		        }
+				else
+				{
+				
+				var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.9;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(1,"rgb("+ duixiang[j].r +","+ duixiang[j].g +","+ duixiang[j].b +")");
+				}
+        ctx.save();
+        ctx.strokeStyle = color;
+		ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        ctx.stroke();
+        //ctx.restore();
+    }
+
+
+    //document.onmousemove = function(e){
+     //   move.x = e.clientX;
+      //  move.y = e.clientY;
+    //}
+    //console.log(move)
+
+    /*window.onresize = function(){
+        location.reload();
+    }*/
+</script>
+
+
+
+
+
+
+
+
+
+
+<style>
+		#canvas1 {
+ position: fixed;
+ pointer-events:none;//鼠标多层响应事件
+        // background: 	#ccc;
+		 /*透明度*/
+		 width: 100%;
+        height: 100%;
+     // opacity: 0;
+		 overflow: auto;
+		 z-index: 999;
+
+    }
+</style>
+<!--<body>-->
+<canvas id="canvas1" style="whdth: 100%;height: 100%"></canvas>
+
+<script>
+var _createClass = function () {function defineProperties(target, props) 
+{ for (var i = 0; i < props.length; i++) 
+ {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) 
+ descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}
+ return function (Constructor, protoProps, staticProps) 
+ {if (protoProps) defineProperties(Constructor.prototype, protoProps);
+ if (staticProps) defineProperties(Constructor, staticProps);
+ return Constructor;};}();function _classCallCheck(instance, Constructor) 
+ {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}
+ var getRandom = function getRandom(min, max) {
+  return Math.random() * (max - min) + min;
+};
+
+var getRandomInt = function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
+var getRandomColor = function getRandomColor() {
+  var colors = [
+  'rgba(231, 76, 60, 1)', // red
+  'rgba(241, 196, 15, 1)', // yellow
+  'rgba(46, 204, 113, 1)', // green
+  'rgba(52, 152, 219, 1)', // blue
+  'rgba(155, 89, 182, 1)' // purple
+  ];
+
+  return colors[getRandomInt(0, colors.length)];
+};
+
+// Particle//粒子模块
+var
+Particle = function () {
+
+  function Particle(system, x, y) {_classCallCheck(this, Particle);
+    this.system = system;
+    this.universe = this.system.world.universe;
+    this.x = x;
+    this.y = y;
+    this.color = getRandomColor();
+    this.life = 1;
+    this.aging = getRandom(0.990, 0.999); // 0.99, 0.999 || 0.999, 0.9999
+
+    this.r = getRandomInt(12, 16);//初始粒子半径范围
+    this.speed = getRandom(18, 18.5);//粒子爆炸速度范围
+    this.velocity = [
+    getRandom(-this.speed, this.speed),
+    getRandom(-this.speed, this.speed)];
+
+  }_createClass(Particle, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (
+      this.r < 0.1 ||
+      this.life === 0 ||
+      this.x + this.r < 0 ||
+      this.x - this.r > this.universe.width ||
+      this.y + this.r < 0 ||
+      this.y - this.r > this.universe.height)
+      {
+        this.system.removeObject(this);
+      }
+
+      this.r *= this.life;
+      this.x += this.velocity[0];
+      this.y += this.velocity[1];
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      // Main circle //亮圈模块
+
+      ctx.fillStyle = this.color;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r*1.2, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+
+      var r = this.color.match(/([0-9]+)/g)[0];
+      var g = this.color.match(/([0-9]+)/g)[1];
+      var b = this.color.match(/([0-9]+)/g)[2];
+
+      // Gradient//梯度变化曲线
+
+      var spread = 1.5;
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r,
+      this.x, this.y, this.r * spread);
+
+      gradient.addColorStop(0, 'rgba(' + r + ', ' + g + ', ' + b + ', 0.5)');
+      gradient.addColorStop(1, 'rgba(' + r + ', ' + g + ', ' + b + ', 0)');
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r * spread, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+
+      // Aberration//偏差
+
+      var offset = this.r * 0.5;
+      var color = 'rgba(' + g + ', ' + b + ', ' + r + ', 0.5)';
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(this.x + offset, this.y + offset, this.r, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+    } }]);return Particle;}();
+
+
+
+// Crown //水波纹圈模块
+var
+Crown = function () {
+
+  function Crown(system, x, y) {_classCallCheck(this, Crown);
+    this.system = system;
+    this.x = x;
+    this.y = y;
+    this.r = getRandomInt(5, 15); // 5, 20  水波纹圈半径范围
+    this.mod = 1.1;
+    this.life = 0.5; //水波纹线
+    this.aging = getRandom(0.830, 0.899);
+    this.speed = getRandom(8, 9);
+    this.color = {
+      r: getRandomInt(236, 242),
+      g: getRandomInt(70, 80),
+      b: getRandomInt(50, 70) };
+
+
+    this.angle1 = Math.PI * getRandom(0, 2);
+    this.angle2 = this.angle1 + Math.PI * getRandom(0.3, 0.4);//水波纹圈完整度
+  }_createClass(Crown, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (this.life <= 0.0001) this.system.removeObject(this);
+
+      this.r += Math.abs(1 - this.life) * this.speed;
+
+      this.x1 = this.x + this.r * Math.cos(this.angle1);
+      this.y1 = this.y + this.r * Math.sin(this.angle1);
+
+      this.angle3 = this.angle1 + (this.angle2 - this.angle1) / 2;
+      this.x2 = this.x + this.r * this.mod * Math.cos(this.angle3);
+      this.y2 = this.y + this.r * this.mod * Math.sin(this.angle3);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r * 0.9,
+      this.x, this.y, this.r);
+
+      gradient.addColorStop(0, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life + ')');
+      gradient.addColorStop(1, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life * 0.5 + ')');
+
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, this.angle1, this.angle2, false);
+      ctx.quadraticCurveTo(this.x2, this.y2, this.x1, this.y1);
+      ctx.fill();
+      ctx.closePath();
+    } }]);return Crown;}();
+
+
+
+// Explosion //爆炸模块
+var
+Explosion = function () {
+
+  function Explosion(world, x, y) {_classCallCheck(this, Explosion);
+    this.world = world;
+    this.x = x;
+    this.y = y;
+    this.objects = [];
+
+    var particles = getRandomInt(10, 30); // 10, 30 amount of particles//爆炸 粒子数量
+    var crowns = particles * getRandom(0.4, 0.5);
+
+    while (crowns-- > 0) {this.addCrown();}
+    while (particles-- > 0) {this.addParticle();}
+  }_createClass(Explosion, [{ key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      if (this.objects.length <= 0) {
+        this.world.clearExplosion(this);
+      }
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'addCrown', value: function addCrown()
+
+    {
+      this.objects.push(new Crown(this, this.x, this.y));
+    } }, { key: 'addParticle', value: function addParticle()
+
+    {
+      this.objects.push(new Particle(this, this.x, this.y));
+    } }, { key: 'removeObject', value: function removeObject(
+
+    obj) {
+      var index = this.objects.indexOf(obj);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return Explosion;}();
+
+
+
+// World 
+var
+ConfettiWorld = function () {function ConfettiWorld() 
+{_classCallCheck(this, ConfettiWorld);}_createClass(ConfettiWorld, [{ key: 'init', value: function init()
+
+    {
+      this.objects = [];
+      window.addEventListener('click', this.explode.bind(this));
+
+      // Initial explosion //初始爆炸
+      var counter = 0;
+      while (counter-- > 0) {
+        this.explode({
+          clientX: window.event.clientX, //getRandomInt(10, this.universe.width) ,          //this.universe.width / 2,
+          clientY: window.event.clientY //getRandomInt(10, 50) //this.universe.height / 2 
+		  });
+
+      }
+    } }, { key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      var amount = this.objects.reduce(function (sum, explosion) {
+        return sum += explosion.objects.length;
+      }, 0);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'explode', value: function explode(
+
+    event) {
+      var x = event.clientX;
+      var y = event.clientY;
+
+      this.objects.push(new Explosion(this, x, y));
+    } }, { key: 'clearExplosion', value: function clearExplosion(
+
+    explosion) {
+      var index = this.objects.indexOf(explosion);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return ConfettiWorld;}();
+
+
+
+// Time
+var
+Time = function () {
+
+  function Time() {_classCallCheck(this, Time);
+    this.now = 0; // current tick time
+    this.prev = 0; // prev tick time
+    this.elapsed = 0; // elapsed time from last tick
+    this.delta = 0; // time from last update
+    this.fps = 60; // desired fps
+    this.step = 1 / 60; // step duration
+  }_createClass(Time, [{ key: 'update', value: function update(
+
+    time) {
+      this.now = time;
+      this.elapsed = (this.now - this.prev) / 1000;
+      this.prev = this.now;
+      this.delta += this.elapsed;
+    } }, { key: 'raf', value: function raf(
+
+    func) {
+      window.requestAnimationFrame(func);
+    } }, { key: 'hasFrames', value: function hasFrames()
+
+    {
+      return this.delta >= this.step;
+    } }, { key: 'processFrame', value: function processFrame()
+
+    {
+      this.delta -= this.step;
+    } }]);return Time;}();
+
+
+
+// Canvas
+var
+Universe = function () {
+
+  function Universe(element) {_classCallCheck(this, Universe);
+    this.el = element;
+    this.ctx = this.el.getContext('2d');
+    this.pixelRatio = window.devicePixelRatio;
+    this.time = new Time();
+
+    this.worlds = {};
+    this.world = null; // current state
+
+    this.updateSize();
+    window.addEventListener('resize', this.updateSize.bind(this));
+
+    this.addWorld('confetti', ConfettiWorld);
+    this.setWorld('confetti');
+
+    this.start();
+  }_createClass(Universe, [{ key: 'start', value: function start()
+
+    {
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'tick', value: function tick(
+
+    time) {
+      this.time.update(time);
+
+      if (this.time.hasFrames()) {
+        this.update();
+        this.time.processFrame();
+      }
+
+      this.render();
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'update', value: function update()
+
+    {
+      this.world.update(this.time.step);
+    } }, { key: 'render', value: function render()
+
+    {
+      var gradient = this.ctx.createLinearGradient(0, 0, this.width, this.height);
+     // gradient.addColorStop(0, '#34495e');
+      //gradient.addColorStop(1, '#2c3e50');
+
+      this.ctx.clearRect(0, 0, this.width, this.height);
+      // this.ctx.fillStyle = '#2c3e50'
+     // //this.ctx.fillStyle = gradient;
+    // // this.ctx.fillRect(0, 0, this.width, this.height);
+      this.world.render(this.ctx);
+    }
+
+    // Helpers 库
+  }, { key: 'updateSize', value: function updateSize()
+    {
+      this.width = window.innerWidth;
+      this.height = window.innerHeight;
+      this.el.width = this.width * this.pixelRatio;
+      this.el.height = this.height * this.pixelRatio;
+      this.el.style.width = window.innerWidth + 'px';
+      this.el.style.height = window.innerHeight + 'px';
+      this.ctx.scale(this.pixelRatio, this.pixelRatio);
+    } }, { key: 'addWorld', value: function addWorld(
+
+    worldName, World) {
+      this.worlds[worldName] = new World();
+      this.worlds[worldName].universe = this;
+      this.worlds[worldName].init();
+    } }, { key: 'setWorld', value: function setWorld(
+
+    worldName) {
+      this.world = this.worlds[worldName];
+    } }]);return Universe;}();
+
+
+
+// Main
+
+console.clear();
+var element = document.querySelector('#canvas1');
+window.Canvas= new Universe(element);</script>
+
+<!--<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>-->
+
+
+<script src="https://cdn.staticfile.org/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(3)-再识Fiddler让你感性认识一下 -03
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Fiddler/" target="_blank">
+                                <span class="chip bg-color">Fiddler</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Fiddler/" class="post-category" target="_blank">
+                                Fiddler
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    <span id="page__date">2016-06-11</sapn>
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        4.6k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        16 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>**🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(3)-再识Fiddler让你感性认识一下</p>
+<h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>上一篇通过宏哥的介绍想必各位小伙伴或者童鞋们对Fiddler已经有了一个理性地认识，今天宏哥在从Fiddler的外貌介绍和分享一下，让小伙伴们或者童鞋们再对Fiddler有一个感性的认识，今天主要是对Fiddler的界面进行一个详细的介绍。</p>
+<h4 id="2-Fiddler主界面"><a href="#2-Fiddler主界面" class="headerlink" title="2.Fiddler主界面"></a>2.Fiddler主界面</h4><p>Fiddler的主界面分为：菜单栏（①）、工具面板（②）、会话面板（③）、监控面板（④）和状态面板（⑤）四部分组成，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/9qzSKF1iRWm3b4V.png" alt></p>
+<h5 id="2-1Fiddler主界面概览"><a href="#2-1Fiddler主界面概览" class="headerlink" title="2.1Fiddler主界面概览"></a>2.1Fiddler主界面概览</h5><p>Fiddler的主界面概览，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/9pH7h2SQYFXigrG.png" alt></p>
+<h4 id="3-Fiddler主界面详解"><a href="#3-Fiddler主界面详解" class="headerlink" title="3.Fiddler主界面详解"></a>3.Fiddler主界面详解</h4><p>Fiddler的主界面详解，说明注释、重新请求、删除会话、继续执行、流模式/缓冲模式、解码、保留会话、监控指定进程、寻找、保存会话、切图、计时、打开浏览器、清除IE缓存、编码/解码工具、弹出控制监控面板、MSDN、帮助。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/NxVWObzCmatq5jo.png" alt></p>
+<h5 id="3-1菜单栏"><a href="#3-1菜单栏" class="headerlink" title="3.1菜单栏"></a>3.1菜单栏</h5><p>菜单栏的功能其实很简单主要包含：File(文件)、Edit(编辑)、Rules(规则)、 Tools(工具) 、View(视图) 和Help(帮助)六个板块。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/1I3k7zWSJweBuXZ.png" alt></p>
+<h6 id="3-1-1-File"><a href="#3-1-1-File" class="headerlink" title="3.1.1 File"></a>3.1.1 File</h6><p>File菜单主要包含新建视图、加载一个保存好的抓包会话文件、保存所有会话列表数据到一个.saz文件中等等。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/gnONIC2ktLcyDpj.png" alt></p>
+<p><strong>各个按钮功能说明：</strong></p>
+<pre><code>Capture Traffic：默认勾选，勾选此项才可抓包，与点击左下角状态栏的 Capture 效果一样。
+
+New Viewer：开启一个新的 fiddler 的 viewer，注意这里不是再开一个新的 fiddler，而是开一个新的fiddler的viewer。
+
+Load Archive…：用于重新加载之前捕获到的 SAZ 文件格式保存的流量。Session Archive Zip 文件，用于保存 http 请求信息。
+
+Recent Archives：查看最近之前捕获到的 SAZ 文件格式保存的流量。
+
+Save：保存。
+
+Import Sessions…：从目标文件夹及其子文件夹加载所有 SAZ 文件。缓存和重用密码。支持导入从其他工具获得的流量。
+
+Export sessions：支持用fiddler把捕捉到的 sesison 用多种方式保存。CURL 脚本由 CURL 回放。
+
+Exit：退出 Fiddler。</code></pre><h6 id="3-1-2-Edit"><a href="#3-1-2-Edit" class="headerlink" title="3.1.2 Edit"></a>3.1.2 Edit</h6><p>Edit菜单主要包含一些编辑的功能,例如对会话的:复制 粘贴 拷贝等操作。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/6mTq9fibFwvRlhC.png" alt></p>
+<p> <strong>各个按钮功能说明：</strong></p>
+<pre><code>Copy：用来拷贝请求的相关信息。有用于复制在 web session 列表中选中的 session 信息，包括 just URL（选中的 session 的 URL 复制到剪切板中）、this column（拷贝菜单所在列的文本）、terse summary（选中 session 的简要说明复制到剪切板里）、header only （把 session 请求头复制到剪切板里）、session（把整个的 session 列表都复制到剪切板里）、full summary（把列表中显示的所有 session 信息复制到剪切板里）这些功能。
+
+Remove：主要是用来移除左侧边栏中的session。
+
+Select All：全选左侧边栏中 session。
+
+Undelete：恢复之前删除的 session。
+
+Paste as Sessions：把剪切板里的 sesisongs 复制到 web sessions 中，把以前的会话粘贴回来.
+
+Mark：自定义不同 session 的显示颜色.
+
+Unlock for Editing：把锁定的 session 进行解锁，可以进行编辑，默认情况下是不可进行编辑的，默认可以看到选定的 session 前是“锁”的图形 ，点击此按钮后变成可编辑按钮 。
+
+Find Sessions…：搜索 session.</code></pre><h6 id="3-1-3-Rules"><a href="#3-1-3-Rules" class="headerlink" title="3.1.3 Rules"></a>3.1.3 Rules</h6><p>Rules规则菜单所谓规则 指的也就是抓包的规则, 按照设置的一系列规则来显示抓取的数据会话。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/8aX43RxosMJ9Qtg.png" alt></p>
+<p> <strong>各个按钮功能说明：</strong></p>
+<pre><code>Hide Image Requests：可以隐藏图片请求，让图片类的 session 不在 session 框中显示出来。
+
+Hide CONNECTs：可以隐藏 CONNECT 方法的请求，让这类 session 不在 session 框中显示出来。
+
+Automatic Breakpoints：自动断点，控制是否自动在 Before Request 或 After Request 处断点，来修改请求或响应的内容。
+
+Customize Rules…：来打开 fiddler script 工具，调取脚本操作，多用于网络修改，其他自定义时使用。
+
+Require proxy authentication：若选中此项，则所有未提交 Require proxy authentication 的请求头的请求会返回 HTTP/407 响应，要求客户安装证书。
+
+Apply GZIP Encoding：请求 GZIP 编码，若选中此项，则只要请求包含了 gzip 标识的 Accept-Encoding 请求头就会对除了图片以外的所有相应使用 GZIP HTTP 进行压缩。
+
+Remove All Encoding：若选中此项，会删除所有请求相应的 http 内容编码和传输编码。
+
+Hide 304s：在session框中隐藏所有的 304 的 session。
+
+Request Japanese Content：把所有的 Accept-Encoding 请求头设置替换成 ja 标示，标示客户端希望以日语的形式发送。
+
+Automatically Authenticate：自动进行身份验证。
+
+User-Agents：选择相应的用户代理模式，默认是选择 disabled。那什么是 user-agent 呢？ua 是头域的组成部分，简单来说就是你向访问的网站提供你所用的浏览器的类型等信息，ua 字符串在每次浏览器 http 请求时发送到服务器端。
+
+Performance：此项提供影响 web 性能的简单选项。若选中了 simulate modem speeds，它会设置所有后续 session 的 flag，把 request-trickle-delay 标志设置为 300，所有上传数据延迟 300ms/kb，若把 response-trickle-delay 标志位设为 150，会使所有下载数据延迟 150ms/kb。若选中了 disable caching，将会删除所有 If-None-Match和If-Modified-Since 请求头，并添加 Pragma:no-cache 请求头，选中该项还会删除响应中的所有 Expires 头，并把 Cache-Control 响应头设置成 no-cache，该项无法阻止浏览器重用在所用该选项之前所缓存的响应，在选中该选项后，为了得到最佳结果，最好是清空浏览器中缓存。若选择 Catch Always Fresh 会自动响应所有包含 http/304 响应的有条件的 http 请求，表示客户端缓存是最新的，当访问的站点无法正确的设置缓存失效日期时，该选项可以极大的提高性能。</code></pre><h6 id="3-1-4-Tools"><a href="#3-1-4-Tools" class="headerlink" title="3.1.4 Tools"></a>3.1.4 Tools</h6><p>Tools(工具菜单) 这个菜单多数是针对fiddler这款工具本身的一些网络设置。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/dvegKUpPsjI2CWz.png" alt></p>
+<p> <strong>各个按钮功能说明：</strong></p>
+<pre><code>Options…：打开 Options 窗口，是 fiddler 抓包的一些设置项，包括对抓取接口是 http 还是 https 的设置，获取证书，设置代理端口号等功能。
+
+WinINET Options…：打开IE浏览器的 options 进行设置。
+
+Clear WinINET Catch：清空 IE 和其他应用中所使用的 WinINET 的缓存文件。
+
+Clear WinINET Cookies：清空 IE 和其他应用中所使用的 WinINET 的 Cookies 文件。
+
+TextWizard：文本向导工具，是一个非常好用的可以轻松将 text 文本 encode 和 decode 的小工具。
+
+Compare Sessions：比较 session，可以在 session 框中选中两个 session，然后点击此按钮，可以来比较两个 session，正常情况下需要安装插件。
+
+Reset Script：重置脚本。
+
+Sandbox：fiddler sanbox 官方文档。
+
+View IE Cache：打开本地文件系统，查看ie缓存。
+
+Win8 Loopback Exemptions：Win8 回环豁免工具，这个时候会弹出一个“AppContainer 回环豁免实用程序”的窗口，若要将所有的程序使用豁免，点击“全部免除”，然后点击“保存更改”
+
+New Session Clipboard…：打开一个新的 session 剪贴板，可以把侧边栏中的 session 拖到这个剪贴板中具体来查看。
+
+HOSTS…：主机重定向工具。若在其中勾选 Enable 框，然后在下面加入 host 配置，点击保存之后，这个配置并不会修改到本地 hosts 中，取消勾选就会失效，若点击 Import Windows Hosts File 将会导入本地的 host 文件内容。</code></pre><h6 id="3-1-5-View"><a href="#3-1-5-View" class="headerlink" title="3.1.5 View"></a>3.1.5 View</h6><p>View(视图菜单) 这个菜单是针对fiddler显示界面与视图的一些设置，如果有些工具栏和按钮没有显示，就可以在这里来查找。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/va6LNGKcj2tA83Y.png" alt></p>
+<p>  <strong>各个按钮功能说明：</strong></p>
+<pre><code>Show Toolbar：显示工具栏，默认是勾选的。
+
+Default Layout：默认 layout，session 在左，请求和响应在右边的上下处。
+
+Stacked Layout：session 在上，请求在下方。
+
+Wide layout：session 在上，请求和响应在下方的左右处。
+
+Tabs：打开标签页面，其中有三个标签可以打开，分别是 Preferences（fiddler 偏好属性），AutoSave（fiddler 自动保存的设置），APITest（api 的测试）。
+
+Statistics：查看一个请求的统计数据。
+
+Inspectors：嗅探，用来查看会话的内容，上面是请求，下面是响应
+
+Composer：设计构造，在 Composer 中进行请求的修改，可以把 session 框中的数据先清除，然后点击 Composer 中的 Excute 按钮来发送请求，请求出现在 session 框中
+
+Minimize To Tray：最小化托盘。
+
+Stay On Top：保持置顶。
+
+Squish Session List：挤压 session 框。
+
+AutoScroll Session List：自动滚动会话列表，默认是勾选此项的，勾选此项后，session 框中的每出现新的 session，session 框中就会不断向下滚动，若不勾选此项，就很方便具体某一个 session 的定位，即使出现了新的 session 也不会自动向下滚动。
+
+Refresh：刷新功能，按 F5 刷新。</code></pre><h6 id="3-1-6-Help"><a href="#3-1-6-Help" class="headerlink" title="3.1.6 Help"></a>3.1.6 Help</h6><p>Help(帮助菜单) 一些关于fiddler和网络的帮助信息文档,有兴趣的可以去查查看。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/Meg8XyULT24JWrt.png" alt></p>
+<p>  <strong>各个按钮功能说明：</strong></p>
+<pre><code>Help：进入 fiddler 的帮助的网页中。
+
+Get Fiddler Book…：fiddler book 的网页。
+
+Discussions：fiddler 的讨论网页，这个需要魔法上网。
+
+Http Preferences：进入 http preferences 相关网站。
+
+Troubleshoot…：会捕获所有请求，对于哪些被过滤的请求用删除线表示出来并给出原因，使用时候会打开一个网页。
+
+Get Priority Support…：打开网页购买 fiddler 的优先级服务。
+
+Check for Updates…：检查软件更新情况。
+
+Send Feedback…：意见反馈。
+
+About：当前 fiddler 的相关信息。</code></pre><h5 id="3-2工具栏"><a href="#3-2工具栏" class="headerlink" title="3.2工具栏"></a>3.2工具栏</h5><p>工具栏上的快捷按钮，也是平常我们在抓包过程当中经常会使用到的。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/bQejOdmT8h7Bzty.png" alt></p>
+<h6 id="3-2-1-WinConfig"><a href="#3-2-1-WinConfig" class="headerlink" title="3.2.1 WinConfig"></a>3.2.1 WinConfig</h6><p>给win电脑上的应用程序 配置fiddler权限。windows 使用了一种叫做“AppContainer”的隔离技术，使得一些流量无法正常捕获，在 fiddler 中点击 WinConfig 按钮可以解除这个诅咒，这个与菜单栏 Tools→Win8 Loopback Exemptions 功能是一致的。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/xL8VJoO3Y2EkXWB.gif" alt></p>
+<h6 id="3-2-2气泡图标"><a href="#3-2-2气泡图标" class="headerlink" title="3.2.2气泡图标"></a>3.2.2气泡图标</h6><p>此按钮来给选定的 session 添加注释或者給会话添加备注。使用这个工具按钮你可以给某个会话添加一些描述或者备注信息。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/NJWPtvscxSTp7mM.gif" alt></p>
+<h6 id="3-2-3-Replay"><a href="#3-2-3-Replay" class="headerlink" title="3.2.3 Replay"></a>3.2.3 Replay</h6><p>重发按钮，选定请求重发按钮。</p>
+<p>（1）这个按钮的作用其实就是,重新发一次当前你所选择的会话请求, 也就是说你点击一下Replay就会通过Fiddler来帮你发一次请求到服务器去，也可以通过选择一个会话之后点击键盘上的R键进行快速重放操作，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/mSCML9Ddl4HRAPe.webp" alt></p>
+<p> （2）如果你想一次性向某个会话发送n次请求, 那么可以先选择一个会话，然后按住shift+R 或者 按住shift+Replay按钮或者shift + u来输入一个请求的次数。这种操作可以对一些普通的基础服务器做一个压力测试, 也就相当于一个简单并发测试。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/xJNwGFVZWLRIbYu.webp" alt></p>
+<h6 id="3-2-3-Remove"><a href="#3-2-3-Remove" class="headerlink" title="3.2.3 Remove"></a>3.2.3 Remove</h6><p>删除会话按钮顾名思义就是用来删除列表中的会话, 它这个按钮内部包含了删除会话的一些过滤方法。移除按钮，其中有 Remove all 移除所有，Images，CONNECTs，Non-200s，Non-Browser，Complete &amp; Unmarked，Duplicate response bodies，这些都是移除 session 中的这些状态的选项。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/SZ8193sIHnupPTA.gif" alt></p>
+<p>选项的含义如下表:</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Remove All</code></td>
+<td>删除全部会话 快捷键为ctrl+x</td>
+</tr>
+<tr>
+<td><code>Images</code></td>
+<td>删除图片相关的请求会话</td>
+</tr>
+<tr>
+<td><code>CONNECTs</code></td>
+<td>删除连接相关的请求会话</td>
+</tr>
+<tr>
+<td><code>Non-200s</code></td>
+<td>删除非200状态的请求会话</td>
+</tr>
+<tr>
+<td><code>Non-Browser</code></td>
+<td>删除非浏览器的请求会话</td>
+</tr>
+<tr>
+<td><code>Complete &amp; Unmarked</code></td>
+<td>删除已完成且未添加备注的请求</td>
+</tr>
+<tr>
+<td><code>Duplicate response bodies</code></td>
+<td>删除没有响应bodies或者重复响应bodies的请求</td>
+</tr>
+</tbody></table>
+<h6 id="3-2-4-Go"><a href="#3-2-4-Go" class="headerlink" title="3.2.4 Go"></a>3.2.4 Go</h6><p>重跑 sessions，依据断点暂停。打断点时使用。</p>
+<h6 id="3-2-5-Stream"><a href="#3-2-5-Stream" class="headerlink" title="3.2.5 Stream"></a>3.2.5 Stream</h6><p>流模式是一种实时通信模式，请求之后实时的返回，更接近浏览器真实行为，但 fiddler 默认是缓冲模式而不是流模式。</p>
+<p><strong>Fiddler两种抓包模式</strong></p>
+<p>缓冲模式（Buffering Mode）Fiddler直到HTTP响应完成时才将数据返回给应用程序。可以控制响应，修改响应数据。但是时序图有时候会出现异常。</p>
+<p>流模式（Streaming Mode）Fiddler会即时将HTTP响应的数据返回给应用程序。更接近真实浏览器的性能。时序图更准确,但是不能控制响应。</p>
+<p>缓冲模式： 服务器把所有内容全部返回到Fiddler之后，Fiddler在一次性发送到客户端。可以控制响应，修改响应数据，但是时序图有时候会出现异常。（这样就支持断点功能，伪造请求，伪造响应等）。</p>
+<p>Fiddler默认的模式为缓冲模式。</p>
+<p>在缓冲模式下，可以进行Fiddler的其他功能，比如支持断点功能，伪造请求，伪造响应等。</p>
+<p>流模式： Fiddler会把收到内容立即发送给客户端。更接近真实浏览器的性能，速度快，时序图更准确（比如瀑布图），但是不能控制响应。换句话说，与浏览器实际请求的模式一致，服务器响应什么数据，立即返回前端。</p>
+<p>如果不需要AutoResponse和Fileters功能的话，一般使用缓冲模式。</p>
+<h6 id="3-2-6Decode"><a href="#3-2-6Decode" class="headerlink" title="3.2.6Decode"></a>3.2.6Decode</h6><p>解码，这里可以将 session 中乱码进行解码方便查看。当把这个按钮点击上了之后，会对所有返回的请求会话进行解码。</p>
+<p>第一种方法：要知道http有的时候返回的正文内容是被编码之后的，若要解码全部会话中的响应报文可以先把这个按钮点选上, 再抓包的时候响应报文就会自动解码其中的正文内容。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/sdBm7HCKyNJjGUo.gif" alt></p>
+<p>第二种方法：你也可以不用点选这个按钮，要解码那个会话,再选择会话的时候点击右边响应报文中的黄色部分提醒你解码：Response body is encoded click to decode(解码响应报文) 就可以了，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/DxBkSoPOAe37wHt.gif" alt></p>
+<h6 id="3-2-7Keep-All-sessions"><a href="#3-2-7Keep-All-sessions" class="headerlink" title="3.2.7Keep All sessions"></a>3.2.7Keep All sessions</h6><p>All sessions：这里可以保持 session 框中存在多少个 sessions。</p>
+<h6 id="3-2-8Any-Process"><a href="#3-2-8Any-Process" class="headerlink" title="3.2.8Any Process"></a>3.2.8Any Process</h6><p>点击此按钮并且拖动到你想要捕获的浏览器从而实现只捕获某个浏览器的请求。这个功能有点意思, 可以瞄准你想要抓取的对象。比如说: 我们现在要抓取一个<code>ie浏览器</code>的请求数据包, 那么可以以下操作，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/zZOptJsUPHAW8lo.gif" alt></p>
+<h6 id="3-2-9Find"><a href="#3-2-9Find" class="headerlink" title="3.2.9Find"></a>3.2.9Find</h6><p>这个望远镜的图标是用来查询的，其他软件有类似的图标，调用这个查询功能的快捷键（Ctrl + F）。可以查找包含指定内容的请求（可单独指定请求过程或者响应过程，检测header或body），默认以黄色高亮显示。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/WCRgE2QwrzD8ktc.gif" alt></p>
+<p>一些其他选项的含义如下表:</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Match case</code></td>
+<td>表示区分大小写</td>
+</tr>
+<tr>
+<td><code>Regular Expression</code></td>
+<td>正则表达式</td>
+</tr>
+<tr>
+<td><code>Search binaries</code></td>
+<td>搜索二进制文件</td>
+</tr>
+<tr>
+<td><code>Decode compressed content</code></td>
+<td>解码压缩内容</td>
+</tr>
+<tr>
+<td><code>Search only selected sessions</code></td>
+<td>只搜索选择的请求</td>
+</tr>
+<tr>
+<td><code>Result Highlight</code></td>
+<td>搜索结果的强调颜色</td>
+</tr>
+</tbody></table>
+<h6 id="3-2-10Save"><a href="#3-2-10Save" class="headerlink" title="3.2.10Save"></a>3.2.10Save</h6><p>保存按钮，保存所有的 session 成 SAZ 文件。</p>
+<h6 id="3-2-11相机"><a href="#3-2-11相机" class="headerlink" title="3.2.11相机"></a>3.2.11相机</h6><p>这里可不是用来拍照的而是用来截图的。把当前的屏幕截图以jpg的格式，添加到web sessions列表中如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/UC4nrdvY7G6lcgw.gif" alt></p>
+<h6 id="3-2-12钟表图标"><a href="#3-2-12钟表图标" class="headerlink" title="3.2.12钟表图标"></a>3.2.12钟表图标</h6><p>简单的计时功能。点击一下开始计时，再点击一下停止计时。</p>
+<h6 id="3-2-13Browser"><a href="#3-2-13Browser" class="headerlink" title="3.2.13Browser"></a>3.2.13Browser</h6><p>快捷的打开一个浏览器，打开浏览器来查看响应数据。如果选中了一个会话，会在浏览器中打开目标URL。如果没有选中任何会话或者选中了多个会话，在浏览器中打开about:blank。</p>
+<h6 id="3-2-14Clear-Cache"><a href="#3-2-14Clear-Cache" class="headerlink" title="3.2.14Clear Cache"></a>3.2.14Clear Cache</h6><p>清除 WinINET 的缓存，按住 CTRL 键并点击该按钮可以清除WinINET中保存永久的 cookies。</p>
+<h6 id="3-2-15TextWizard"><a href="#3-2-15TextWizard" class="headerlink" title="3.2.15TextWizard"></a>3.2.15TextWizard</h6><p>打开文本编码/解码小工具，以使文本在多种编码间转换。此工具可以将某一编码过的或者未编码过的字串拿到此处解码和编码，在菜单栏中的 Tools 中也有此项可以打开。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/ugrclRQ4FeoD7P6.webp" alt></p>
+<h6 id="3-2-16Tearoff"><a href="#3-2-16Tearoff" class="headerlink" title="3.2.16Tearoff"></a>3.2.16Tearoff</h6><p>此功能用来将右边栏里的请求和响应部分给单独拆成一个新窗口，方便视察。点击分离出的窗口X关闭按钮，即可复原窗口。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/xEylcLw8qTJkdUO.gif" alt></p>
+<h6 id="3-2-17MSDN-Search…"><a href="#3-2-17MSDN-Search…" class="headerlink" title="3.2.17MSDN Search…"></a>3.2.17MSDN Search…</h6><p>在网页版的微软开发中去搜索。在MSDN的web sessions区域进行搜索，在微软开发者社区的搜索，一般都不会用。</p>
+<h6 id="3-2-18问号图标"><a href="#3-2-18问号图标" class="headerlink" title="3.2.18问号图标"></a>3.2.18问号图标</h6><p>fiddler 的在线帮助网站。</p>
+<h6 id="3-2-19Online"><a href="#3-2-19Online" class="headerlink" title="3.2.19Online"></a>3.2.19Online</h6><p>鼠标放在上面，会显示一些本机的在线信息。如IP信息。用来指示当前是在线的还是离线的。如果在线，把光标停留在该按钮上方会显示包含本地计算机的主机名和IP的提示。双击该按钮会打开系统的Network Connections控制面板。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/eInYQPHSLopR7Jk.gif" alt></p>
+<h6 id="3-2-19叉号（删除工具栏）"><a href="#3-2-19叉号（删除工具栏）" class="headerlink" title="3.2.19叉号（删除工具栏）"></a>3.2.19叉号（删除工具栏）</h6><p>用来关闭工具栏的按钮，在 View 中可以打开工具栏。如果要恢复工具栏，可以点击菜单栏<strong>View —&gt; Show Toolbar</strong>，进行恢复。</p>
+<h4 id="4-小结"><a href="#4-小结" class="headerlink" title="4.小结"></a>4.小结</h4><p>好了，到此宏哥就将Fiddler的工具栏常用的基本上全都讲解和分享完了，今天时间也不早了，就到这里！感谢您耐心的阅读~~</p>
+
+            </div>
+			
+            <hr/>
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">博主不易，靠赏过日！！！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+			<style>
+				.reprint {
+					margin: 2em 0 0;
+					padding: 0.5em 1em;
+					border-left: 3px solid #FF1700;
+					background-color: #F9F9F9;
+					list-style: none;
+				}
+
+				.reprint li {
+					line-height: 30px;
+				}
+			</style>
+            <div class="reprint">
+                <!--<p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="https://hongduhong.github.io" class="b-link-green">北京-宏哥</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2016/06/11/fiddler/" class="b-link-green">《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(3)-再识Fiddler让你感性认识一下 -03</a>
+                </p>-->
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>作者:  </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>文章链接:  </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>版权声明:   </strong>
+					本网志所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					许可协议。转载请注明出处!
+				  </li>
+				</ul>
+            </div>
+			<style>
+				.article-end-text-wrap-gzh {
+					margin: 5px 0;
+				}
+					
+				.article-end-text-gzh {
+					font-family: "微软雅黑";
+					font-weight: bold;
+					color: red;
+					font-size: 50px;
+					line-height: 1.6em;
+					text-align:center;
+					padding: 1em 2em;
+					background: color-widget-background;
+					box-shadow: 1px 2px 3px color-border;
+					border: 1px solid color-widget-border;
+					border-radius: 3px;
+				}  
+			</style>
+			<div class="article-end-text-wrap-gzh">
+			  <div class="article-end-text-gzh">
+				<p>扫码关注公众号，更多干货秒得到</p>
+				<img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/26/4hCH391xM65ENtu.png" width="200">
+			  </div>
+			</div>
+			<!--<div>
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>copyright.author </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>copyright.link </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>copyright.license_title  </strong>
+					copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					copyright.right_license_content
+				  </li>
+				</ul>
+			<div>
+			<div>
+				 <style>
+.reprint {
+    margin: 2em 0 0;
+    padding: 0.5em 1em;
+    border-left: 3px solid #FF1700;
+    background-color: #F9F9F9;
+    list-style: none;
+}
+
+.reprint li {
+    line-height: 30px;
+}
+</style>
+<div>
+	<ul class="reprint">
+		<li class="reprint-author">
+          <strong>copyright.author </strong>北京-宏哥</a>
+          </li>
+          <li class="reprint-link">
+          <strong>copyright.link </strong>
+          <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+        </li>
+        <li class="reprint-license">
+            <strong>copyright.license_title  </strong>
+            copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+            copyright.right_license_content
+        </li>
+	</ul>
+<div>
+
+			</div>-->
+
+        </div>
+		
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'f198ff3418cff1b4beb1',
+        clientSecret: '4381fdcb7742eb697e6214ca4ccacbbc78620722',
+        repo: 'hongduhong.github.io',
+        owner: 'hongduhong',
+        admin: "hongduhong",
+        id: '2016-06-11T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+	.v .txt-right{ display: none;}
+
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+ <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'QTjhAL7gTPGjIK1RQM2TlxDR-gzGzoHsz',
+        appKey: 'aBlfRinOLK3x6GKoYWr02qWj',
+        notify: 'true' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '留下你足迹吧O(∩_∩)O\n各位站长也留下你的交友申请 \n(申请格式：网站链接 + 一句话简介站点;)\n(如：five-great.coding.me + 互联网爱好者,撸代码,技术交流。)\n( ╯□╰ )建议不要匿名评论,建议填写邮箱便于接收回复信息'
+    });
+</script>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2016/06/12/fiddler/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/19.jpg" class="responsive-img" alt="《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(4)-会话面板和HTTP会话数据操作详解 -04">
+                        
+                        <span class="card-title">《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(4)-会话面板和HTTP会话数据操作详解 -04</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">**🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(4)-会话面板和HTTP会话数据操作详解
+1.简介 按</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2016-06-12
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Fiddler/" class="post-category" target="_blank">
+                                    Fiddler
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Fiddler/" target="_blank">
+                        <span class="chip bg-color">Fiddler</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2016/06/10/fiddler/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/20.jpg" class="responsive-img" alt="《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(2)-初识Fiddler让你理性认识一下 -02">
+                        
+                        <span class="card-title">《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(2)-初识Fiddler让你理性认识一下 -02</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">**🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(2)-初识Fiddler让你理性认识一下 
+1.前言　</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-06-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Fiddler/" class="post-category" target="_blank">
+                                    Fiddler
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Fiddler/" target="_blank">
+                        <span class="chip bg-color">Fiddler</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 北京-宏哥<br />'
+            + '作者: 北京-宏哥<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h4, h5, h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h4, h5, h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<!--<script type="text/javascript" src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  if(window.outerHeight <500&&window.outerWidth<400){
+  $("#p1").hide();
+ 
+   }else{
+  $("#p1").show();
+  
+  }
+});
+</script>
+<footer class="page-footer bg-color">
+	<div  style="text-align: center;">
+	<li class="col s12 m8 l8 copy-right">
+  友链：
+         
+            
+                
+                
+				
+             <a href="https://www.jianshu.com/u/c6e85b30966e" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 简书
+               </a>
+                
+                
+				
+             <a href="https://www.cnblogs.com/du-hong" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 博客园
+               </a>
+                
+                
+				
+             <a href="https://www.zhihu.com/people/bei-jing-hong-ge" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 知乎
+               </a>
+                
+                
+				
+             <a href="https://cloud.tencent.com/developer/user/5695339" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 腾讯云
+               </a>
+                
+              		  
+		<span id="busuanzi_container_site_uv" style="float:right"> 
+			恭喜您成为第 
+			<span id="busuanzi_value_site_uv" class="white-color">
+			</span>
+			位访客&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>
+	  </li>
+	</div>
+	<div class="container row center-align">
+		<div class="col s12 m8 l8 copy-right">  
+         <span id ="p1">&nbsp;&nbsp;&nbsp;</span>
+            
+			
+                
+                
+                <span id="busuanzi_container_site_pv">
+                       <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color">1212112121</span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次&nbsp;
+                </span>
+                
+              
+			
+			
+                <i class="fa fa-area-chart"></i>站点总字数:
+                <span class="white-color">292.3k</span>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			本站由&copy;<a href="https://hongduhong.github.io" target="_blank">北京-宏哥</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 搭建.
+			
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hongduhong/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1918991791@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1918991791" class="tooltipped" data-tooltip="QQ联系我: 1918991791" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+
+
+</div>
+    </div>
+</footer>
+<script type="text/javascript">
+
+        //获取输入框的文本
+        function getdata(){
+        var i=document.getElementById('page__date');
+        
+        
+         var a=new Date();var b=new Date('2019-8-20');var count_s=parseInt((a.getTime()-b)/(1000 * 3600 * 24));
+      
+         }
+        setTimeout("getdata()","2000");
+
+</script>
+<div class="progress-bar"></div>
+<script src="//code.tidio.co/nrzrwmino0xirhbbord6owqnmk7duacv.js" async></script>
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+
+<div id="backTop" class="top-scroll">
+<a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.staticfile.org/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script src="https://cdn.staticfile.org/masonry/4.0.0/masonry.pkgd.js"></script>
+<script src="https://cdn.staticfile.org/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.staticfile.org/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://cdn.staticfile.org/lightgallery/1.6.12/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+	<script type="text/javascript">
+		$("#loading").fadeOut(5000);
+	</script>
+</html>

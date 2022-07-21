@@ -1,0 +1,2117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(2)-初识Fiddler让你理性认识一下 -02, 北京-宏哥 python  自动化测试  接口 JMeter Appium">
+    <meta name="description" content="**🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(2)-初识Fiddler让你理性认识一下 
+1.前言　">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(2)-初识Fiddler让你理性认识一下 -02 | 北京-宏哥</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/aos/2.3.4/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+
+
+    <script src="https://cdn.staticfile.org/jquery/2.2.0/jquery.min.js"></script>	
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d62256055258ddb12716821c285aadab";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?716046d3a903bfe6a910f6b68a93271d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!--推送-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'https://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!--广告-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3736773013312638",
+    enable_page_level_ads: true
+  });
+</script>
+<!--onlinetk-->
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/011b3025.js","daovoice")</script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+
+<style>
+  @media only screen and (max-width: 422px){
+    nav .brand-logo {left: 41%;}
+    nav a {margin: 0px -38px 0px 0px;}
+    nav ul a {padding: 0px; margin-left: -42px;}
+    .bg-cover .title{fone-size:3rem;}
+  }
+ </style>
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo" >
+                <a  href="/" class="waves-effect waves-light">
+                    
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                     <span class="logo-span">北京-宏哥</span>
+                </a>
+				
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/galleries" class="waves-effect waves-light">
+            
+            <i class="fa fa-photo"></i>
+            
+            <span>相册</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/lyb" class="waves-effect waves-light">
+            
+            <i class="fa fa-paper-plane-o"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">北京-宏哥</div>
+        <div class="logo-desc">
+            
+            不积跬步无以至千里，不积小流无以成江海。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/galleries" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-photo"></i>
+                
+                相册
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/lyb" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-paper-plane-o"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/hongduhong" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>GITHUB
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/hongduhong" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="GITHUB" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+ 
+
+
+</header>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #canvas111{
+		 position: fixed;
+         background: #ccc;
+		 overflow: auto;
+		 z-index: -1;
+    }
+    </style> 
+
+	<canvas id="canvas111"></canvas>
+	
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<body>
+    
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script type="text/javascript">
+    window.requestAnimationFrame = (function(){
+        return window.requestAnimationFrame ||
+               window.webkitRequestAnimationFrame ||
+               window.mozRequestAnimationFrame ||
+               function( callback ){
+                    window.setTimeout( callback, 1000/2 );
+               };
+    })();
+    var myCanvas = document.getElementById("canvas111");
+    var ctx = myCanvas.getContext("2d");//getContext 设置画笔
+    var num;
+    var w,h;
+    var duixiang = [];
+    var move = {};
+    function widthheight(){
+        w = myCanvas.width = window.innerWidth;
+        h = myCanvas.height = window.innerHeight;
+		num= Math.floor(w*h*0.0001);
+        for(var i = 0;i < num;i++){
+            duixiang[i] = {
+                x:Math.random()*w,
+                y:Math.random()*h,
+                cX:Math.random()*0.6-0.3,
+                cY:Math.random()*0.6-0.3,
+				R:Math.floor(Math.random()*5)+2,
+				//CC:Math.floor(Math.random()*3)+2,
+			    r: Math.floor(Math.random() * 254),   
+                g: Math.floor(Math.random() * 254),  
+                b:Math.floor(Math.random() * 254)   
+            } 
+           // console.log(duixiang[i])
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+			 //Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].CC);
+        }
+    };widthheight();//获取浏览器的等宽度等高
+
+    function Cricle(x,y,R,r,g,b){
+        ctx.save();//保存路径
+       if(Math.random()>0.991) {ctx.globalAlpha= 0.9;}//ctx.fillStyle = "#CCC";}//填充的背景颜色
+	    else { ctx.globalAlpha=0.47;}
+		 
+		ctx.fillStyle = "rgb("+ r +","+ g +","+ b +")";
+        ctx.beginPath();//开始绘画
+		ctx.arc(x,y,R,Math.PI*2,0);//绘画圆 x y 半径（大小） 角度  一个PI 是180 * 2 = 360    真假 0/1 true/false
+        ctx.closePath();//结束绘画
+        ctx.fill();//填充背景颜色
+        ctx.restore();//回复路径
+    };Cricle();
+
+
+    !function draw(){
+        ctx.clearRect(0,0,w,h)//先清除画布上的点
+        for(var i = 0;i < num;i++){
+            duixiang[i].x += duixiang[i].cX;
+            duixiang[i].y += duixiang[i].cY;
+            if(duixiang[i].x>w || duixiang[i].x<0){
+                duixiang[i].cX = -duixiang[i].cX;
+            }
+            if(duixiang[i].y>h || duixiang[i].y<0){
+                duixiang[i].cY = -duixiang[i].cY;
+            }
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+            //勾股定理判断两点是否连线
+            for(var j = i + 1;j < num;j++){
+                if( (duixiang[i].x-duixiang[j].x)*(duixiang[i].x-duixiang[j].x)+(duixiang[i].y-duixiang[j].y)*(duixiang[i].y-duixiang[j].y) <= 55*55 ){
+                    line(duixiang[i].x,duixiang[i].y,duixiang[j].x,duixiang[j].y,0,i,j)
+                }
+                if(move.x){
+                    if( (duixiang[i].x-move.x)*(duixiang[i].x-move.x)+(duixiang[i].y-move.y)*(duixiang[i].y-move.y) <= 100*100 ){
+                        line(duixiang[i].x,duixiang[i].y,move.x,move.y,1,i,1)
+                    }
+                }
+            }
+        }
+        window.requestAnimationFrame(draw)
+    }();
+
+    //绘制线条
+    function line(x1,y1,x2,y2,flag,i,j){
+        
+		if (flag){var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.5;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(0.8,"#019ee5");
+		        }
+				else
+				{
+				
+				var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.9;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(1,"rgb("+ duixiang[j].r +","+ duixiang[j].g +","+ duixiang[j].b +")");
+				}
+        ctx.save();
+        ctx.strokeStyle = color;
+		ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        ctx.stroke();
+        //ctx.restore();
+    }
+
+
+    //document.onmousemove = function(e){
+     //   move.x = e.clientX;
+      //  move.y = e.clientY;
+    //}
+    //console.log(move)
+
+    /*window.onresize = function(){
+        location.reload();
+    }*/
+</script>
+
+
+
+
+
+
+
+
+
+
+<style>
+		#canvas1 {
+ position: fixed;
+ pointer-events:none;//鼠标多层响应事件
+        // background: 	#ccc;
+		 /*透明度*/
+		 width: 100%;
+        height: 100%;
+     // opacity: 0;
+		 overflow: auto;
+		 z-index: 999;
+
+    }
+</style>
+<!--<body>-->
+<canvas id="canvas1" style="whdth: 100%;height: 100%"></canvas>
+
+<script>
+var _createClass = function () {function defineProperties(target, props) 
+{ for (var i = 0; i < props.length; i++) 
+ {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) 
+ descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}
+ return function (Constructor, protoProps, staticProps) 
+ {if (protoProps) defineProperties(Constructor.prototype, protoProps);
+ if (staticProps) defineProperties(Constructor, staticProps);
+ return Constructor;};}();function _classCallCheck(instance, Constructor) 
+ {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}
+ var getRandom = function getRandom(min, max) {
+  return Math.random() * (max - min) + min;
+};
+
+var getRandomInt = function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
+var getRandomColor = function getRandomColor() {
+  var colors = [
+  'rgba(231, 76, 60, 1)', // red
+  'rgba(241, 196, 15, 1)', // yellow
+  'rgba(46, 204, 113, 1)', // green
+  'rgba(52, 152, 219, 1)', // blue
+  'rgba(155, 89, 182, 1)' // purple
+  ];
+
+  return colors[getRandomInt(0, colors.length)];
+};
+
+// Particle//粒子模块
+var
+Particle = function () {
+
+  function Particle(system, x, y) {_classCallCheck(this, Particle);
+    this.system = system;
+    this.universe = this.system.world.universe;
+    this.x = x;
+    this.y = y;
+    this.color = getRandomColor();
+    this.life = 1;
+    this.aging = getRandom(0.990, 0.999); // 0.99, 0.999 || 0.999, 0.9999
+
+    this.r = getRandomInt(12, 16);//初始粒子半径范围
+    this.speed = getRandom(18, 18.5);//粒子爆炸速度范围
+    this.velocity = [
+    getRandom(-this.speed, this.speed),
+    getRandom(-this.speed, this.speed)];
+
+  }_createClass(Particle, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (
+      this.r < 0.1 ||
+      this.life === 0 ||
+      this.x + this.r < 0 ||
+      this.x - this.r > this.universe.width ||
+      this.y + this.r < 0 ||
+      this.y - this.r > this.universe.height)
+      {
+        this.system.removeObject(this);
+      }
+
+      this.r *= this.life;
+      this.x += this.velocity[0];
+      this.y += this.velocity[1];
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      // Main circle //亮圈模块
+
+      ctx.fillStyle = this.color;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r*1.2, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+
+      var r = this.color.match(/([0-9]+)/g)[0];
+      var g = this.color.match(/([0-9]+)/g)[1];
+      var b = this.color.match(/([0-9]+)/g)[2];
+
+      // Gradient//梯度变化曲线
+
+      var spread = 1.5;
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r,
+      this.x, this.y, this.r * spread);
+
+      gradient.addColorStop(0, 'rgba(' + r + ', ' + g + ', ' + b + ', 0.5)');
+      gradient.addColorStop(1, 'rgba(' + r + ', ' + g + ', ' + b + ', 0)');
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r * spread, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+
+      // Aberration//偏差
+
+      var offset = this.r * 0.5;
+      var color = 'rgba(' + g + ', ' + b + ', ' + r + ', 0.5)';
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(this.x + offset, this.y + offset, this.r, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+    } }]);return Particle;}();
+
+
+
+// Crown //水波纹圈模块
+var
+Crown = function () {
+
+  function Crown(system, x, y) {_classCallCheck(this, Crown);
+    this.system = system;
+    this.x = x;
+    this.y = y;
+    this.r = getRandomInt(5, 15); // 5, 20  水波纹圈半径范围
+    this.mod = 1.1;
+    this.life = 0.5; //水波纹线
+    this.aging = getRandom(0.830, 0.899);
+    this.speed = getRandom(8, 9);
+    this.color = {
+      r: getRandomInt(236, 242),
+      g: getRandomInt(70, 80),
+      b: getRandomInt(50, 70) };
+
+
+    this.angle1 = Math.PI * getRandom(0, 2);
+    this.angle2 = this.angle1 + Math.PI * getRandom(0.3, 0.4);//水波纹圈完整度
+  }_createClass(Crown, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (this.life <= 0.0001) this.system.removeObject(this);
+
+      this.r += Math.abs(1 - this.life) * this.speed;
+
+      this.x1 = this.x + this.r * Math.cos(this.angle1);
+      this.y1 = this.y + this.r * Math.sin(this.angle1);
+
+      this.angle3 = this.angle1 + (this.angle2 - this.angle1) / 2;
+      this.x2 = this.x + this.r * this.mod * Math.cos(this.angle3);
+      this.y2 = this.y + this.r * this.mod * Math.sin(this.angle3);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r * 0.9,
+      this.x, this.y, this.r);
+
+      gradient.addColorStop(0, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life + ')');
+      gradient.addColorStop(1, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life * 0.5 + ')');
+
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, this.angle1, this.angle2, false);
+      ctx.quadraticCurveTo(this.x2, this.y2, this.x1, this.y1);
+      ctx.fill();
+      ctx.closePath();
+    } }]);return Crown;}();
+
+
+
+// Explosion //爆炸模块
+var
+Explosion = function () {
+
+  function Explosion(world, x, y) {_classCallCheck(this, Explosion);
+    this.world = world;
+    this.x = x;
+    this.y = y;
+    this.objects = [];
+
+    var particles = getRandomInt(10, 30); // 10, 30 amount of particles//爆炸 粒子数量
+    var crowns = particles * getRandom(0.4, 0.5);
+
+    while (crowns-- > 0) {this.addCrown();}
+    while (particles-- > 0) {this.addParticle();}
+  }_createClass(Explosion, [{ key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      if (this.objects.length <= 0) {
+        this.world.clearExplosion(this);
+      }
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'addCrown', value: function addCrown()
+
+    {
+      this.objects.push(new Crown(this, this.x, this.y));
+    } }, { key: 'addParticle', value: function addParticle()
+
+    {
+      this.objects.push(new Particle(this, this.x, this.y));
+    } }, { key: 'removeObject', value: function removeObject(
+
+    obj) {
+      var index = this.objects.indexOf(obj);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return Explosion;}();
+
+
+
+// World 
+var
+ConfettiWorld = function () {function ConfettiWorld() 
+{_classCallCheck(this, ConfettiWorld);}_createClass(ConfettiWorld, [{ key: 'init', value: function init()
+
+    {
+      this.objects = [];
+      window.addEventListener('click', this.explode.bind(this));
+
+      // Initial explosion //初始爆炸
+      var counter = 0;
+      while (counter-- > 0) {
+        this.explode({
+          clientX: window.event.clientX, //getRandomInt(10, this.universe.width) ,          //this.universe.width / 2,
+          clientY: window.event.clientY //getRandomInt(10, 50) //this.universe.height / 2 
+		  });
+
+      }
+    } }, { key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      var amount = this.objects.reduce(function (sum, explosion) {
+        return sum += explosion.objects.length;
+      }, 0);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'explode', value: function explode(
+
+    event) {
+      var x = event.clientX;
+      var y = event.clientY;
+
+      this.objects.push(new Explosion(this, x, y));
+    } }, { key: 'clearExplosion', value: function clearExplosion(
+
+    explosion) {
+      var index = this.objects.indexOf(explosion);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return ConfettiWorld;}();
+
+
+
+// Time
+var
+Time = function () {
+
+  function Time() {_classCallCheck(this, Time);
+    this.now = 0; // current tick time
+    this.prev = 0; // prev tick time
+    this.elapsed = 0; // elapsed time from last tick
+    this.delta = 0; // time from last update
+    this.fps = 60; // desired fps
+    this.step = 1 / 60; // step duration
+  }_createClass(Time, [{ key: 'update', value: function update(
+
+    time) {
+      this.now = time;
+      this.elapsed = (this.now - this.prev) / 1000;
+      this.prev = this.now;
+      this.delta += this.elapsed;
+    } }, { key: 'raf', value: function raf(
+
+    func) {
+      window.requestAnimationFrame(func);
+    } }, { key: 'hasFrames', value: function hasFrames()
+
+    {
+      return this.delta >= this.step;
+    } }, { key: 'processFrame', value: function processFrame()
+
+    {
+      this.delta -= this.step;
+    } }]);return Time;}();
+
+
+
+// Canvas
+var
+Universe = function () {
+
+  function Universe(element) {_classCallCheck(this, Universe);
+    this.el = element;
+    this.ctx = this.el.getContext('2d');
+    this.pixelRatio = window.devicePixelRatio;
+    this.time = new Time();
+
+    this.worlds = {};
+    this.world = null; // current state
+
+    this.updateSize();
+    window.addEventListener('resize', this.updateSize.bind(this));
+
+    this.addWorld('confetti', ConfettiWorld);
+    this.setWorld('confetti');
+
+    this.start();
+  }_createClass(Universe, [{ key: 'start', value: function start()
+
+    {
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'tick', value: function tick(
+
+    time) {
+      this.time.update(time);
+
+      if (this.time.hasFrames()) {
+        this.update();
+        this.time.processFrame();
+      }
+
+      this.render();
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'update', value: function update()
+
+    {
+      this.world.update(this.time.step);
+    } }, { key: 'render', value: function render()
+
+    {
+      var gradient = this.ctx.createLinearGradient(0, 0, this.width, this.height);
+     // gradient.addColorStop(0, '#34495e');
+      //gradient.addColorStop(1, '#2c3e50');
+
+      this.ctx.clearRect(0, 0, this.width, this.height);
+      // this.ctx.fillStyle = '#2c3e50'
+     // //this.ctx.fillStyle = gradient;
+    // // this.ctx.fillRect(0, 0, this.width, this.height);
+      this.world.render(this.ctx);
+    }
+
+    // Helpers 库
+  }, { key: 'updateSize', value: function updateSize()
+    {
+      this.width = window.innerWidth;
+      this.height = window.innerHeight;
+      this.el.width = this.width * this.pixelRatio;
+      this.el.height = this.height * this.pixelRatio;
+      this.el.style.width = window.innerWidth + 'px';
+      this.el.style.height = window.innerHeight + 'px';
+      this.ctx.scale(this.pixelRatio, this.pixelRatio);
+    } }, { key: 'addWorld', value: function addWorld(
+
+    worldName, World) {
+      this.worlds[worldName] = new World();
+      this.worlds[worldName].universe = this;
+      this.worlds[worldName].init();
+    } }, { key: 'setWorld', value: function setWorld(
+
+    worldName) {
+      this.world = this.worlds[worldName];
+    } }]);return Universe;}();
+
+
+
+// Main
+
+console.clear();
+var element = document.querySelector('#canvas1');
+window.Canvas= new Universe(element);</script>
+
+<!--<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>-->
+
+
+<script src="https://cdn.staticfile.org/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(2)-初识Fiddler让你理性认识一下 -02
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Fiddler/" target="_blank">
+                                <span class="chip bg-color">Fiddler</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Fiddler/" class="post-category" target="_blank">
+                                Fiddler
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    <span id="page__date">2016-06-10</sapn>
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        4.5k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        15 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>**🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(2)-初识Fiddler让你理性认识一下 </p>
+<h4 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h4><p>　　今天的理性认识主要就是讲解和分享Fiddler的一些理论基础知识。其实这部分也没有什么，主要是给小伙伴或者童鞋们讲一些实际工作中的场景，然后隆重推出我们的猪脚（主角）-Fiddler。</p>
+<h5 id="1-1工作场景"><a href="#1-1工作场景" class="headerlink" title="1.1工作场景"></a>1.1工作场景</h5><p><strong>做app测试，你是否有过这样的经历？</strong></p>
+<p>1.后端开发同事在调试解决bug时 ，总找你拿着手机点点点，然后他在后台看数据是否异常。（一个上午，一不小心过去了）</p>
+<p>2.前端开发同事在调试解决bug时，也找你过来帮忙造几个数据，于是你辛辛苦苦造了个数据，他点一下，数据用完了，bug没解决。于是乎又找你造数据。（一个下午，又一不小心过去了）</p>
+<p>3.你曾经是否遇到过这种情况，当你发现一个bug提交给前端开发时，他说是后端返回数据的问题。于是你找到后端开发，他说是前端数据提交的问题，让你找前端开发。（一个晚上过去了，bug没解决。。。）</p>
+<p>这个时候就有请我们的主角-Fiddler开始闪亮登场。前边这些他可以通通解决。</p>
+<p><strong><code>温馨提示:全程干货、内容比较多，建议新手朋友可以先点赞+收藏再慢慢观看!</code> 😇</strong></p>
+<h4 id="2-简介"><a href="#2-简介" class="headerlink" title="2.简介"></a>2.简介</h4><p>　　在这个网络信息时代里，计算机安全始终是一个让人揪心的问题，网络安全则有过之而无不及。许多电脑高手 经常利用 Fiddler 可以作为代理的这个功能去抓取会话并进行修改达到自己想要的目的。Fiddler是一个强大并且跨平台的HTTP(S)抓包神器，你可别拿去做坏事。它的英文名叫：Fiddler，中文名叫：小提琴。Fiddler 是一个 HTTP 协议调试代理工具。它能够记录并检查所有你的电脑和互联网之间的 HTTP、FTP、HTTPS 的数据包。通过设置断点，用户还可以修改 “进出”Fiddler 的数据。由于 Fiddler 具备强大的数据抓包和修改功能，所以 Fiddler 广泛应用 Web 渗透测试领域。</p>
+<p>Fiddler是最强大最好用的Web调试工具之一， 它能记录所有客户端和服务器的http和https请求。允许你监视、设置断点、甚至修改输入输出数据。Fiddler包含了一个强大的基于事件脚本的子系统，并且能使用.net语言进行扩展。换言之，你对HTTP 协议越了解，你就能越掌握Fiddler的使用方法。你越使用Fiddler，就越能帮助你了解HTTP协议。Fiddler无论对开发人员或者测试人员来说，都是非常有用的工具。</p>
+<p>Fiddler是以web proxy代理服务器的形式工作的 , 它也是一个http协议数据抓包与调试代理工具，它能够记录和检查当前你的电脑和互联网之间的http消息, 也就是说可以将网络传输发送与接受的数据包进行截获、重发、编辑、转存等操作 还可以用来检测网络安全。</p>
+<h4 id="3-抓包"><a href="#3-抓包" class="headerlink" title="3.抓包"></a>3.抓包</h4><p>　　抓包（packet capture）：用特定的工具获取客户端与服务端发送和返回的数据包。目的是分析数据包的内容与协议，从而来判断是否符合设计要求。其实就是将网络传输发送与接收的数据包进行截获、重发、编辑、转存等操作，也用来检查<strong>网络安全</strong>。</p>
+<h4 id="4-什么情况下需要抓包"><a href="#4-什么情况下需要抓包" class="headerlink" title="4.什么情况下需要抓包?"></a>4.什么情况下需要抓包?</h4><p>1.开发要你重现bug，截取数据，定位问题的时候</p>
+<p>2.判断一个问题是前端bug还是后端bug的时候</p>
+<p>3.开发要你做接口测试，但又不没给你接口文档的情况–》方法，接口地址，传递参数，头部，返回内容</p>
+<p>4.在不修改任何环境的情况下，修改返回的结果，即通常说的mock–》模拟接口</p>
+<h4 id="5-为什么要学习Fiddler"><a href="#5-为什么要学习Fiddler" class="headerlink" title="5.为什么要学习Fiddler?"></a>5.为什么要学习Fiddler?</h4><p>宏哥从三个角度给小伙伴们或者童鞋们来解剖一下：</p>
+<h5 id="5-1Fiddler本身优势"><a href="#5-1Fiddler本身优势" class="headerlink" title="5.1Fiddler本身优势"></a>5.1Fiddler本身优势</h5><p>1、功能强大，其他工具有的功能它也有，其他工具没有的功能它也有，支持http，https，ftp等协议；</p>
+<p>2、完全免费，长期免费。</p>
+<p>3、所有的浏览器可以使用，所有的平台都可以使用。就冲着这三点，就值得拥有。</p>
+<h5 id="5-2同类产品对比"><a href="#5-2同类产品对比" class="headerlink" title="5.2同类产品对比"></a>5.2同类产品对比</h5><p>除了Fiddler还有哪些能抓包？</p>
+<p>抓包工具：wireshark、fiddler、httpwatch、charles、chrome开发者工具(F12)，各工具的对比，</p>
+<p>说到抓包工具，有Fiddler、Charles、HttpWatch、WIRESHARK等知名、不知名的……当然工具没有强弱好坏之分，只是看在什么场景下使用更为适合！Fiddler和同种类型的抓包工具对比，如下图所示：<img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/4XJBCEWD7hVUuHY.png" alt></p>
+<p>从上图我们可以看出：我们为什么选择Fiddler进行抓包，可以看一下它的比较。</p>
+<p>　　首先第一个Fiddler它的优势，独立运行，第二个支持移动设备（是否能抓移动APP的包，）在这一块的话wireshark、httpwatch就不支持，因此在这一块就可以排除掉前连个，因为我们有时候去进行测试的时候，除了测web端，也会要去测app端，在企业里经常去要做的事情。</p>
+<p>　　然后Fiddler是免费的，charles是收费的。当然我知道大家都能够各显神通，做坏事的时候，记得带上你的负罪感。</p>
+<p>　　当然你选择这个免费工具的前提是，它满足你的需求，能够解决你的问题，并不是说我随便找一个不能解决我问题的工具，这个肯定是不行的，至于说在这一块想去用一下wireshark、httpwatch可以自行去下载使用，我们今天主要分享Fiddler。（需要软件测试相关安装包，可以微信公众号主页点击领取资料，安装包，教程都给你准备好了，免费）</p>
+<h5 id="5-3用户"><a href="#5-3用户" class="headerlink" title="5.3用户"></a>5.3用户</h5><p>　　在测试中，不管是做手工测试，还是接口测试，我们都需要查看后端返回的数据。有的时候，我们也需要调试，或者mock一下后端的返回，来验证前端是否达到预期。为了捕获这些请求，抓包工具不可少。熟练掌握一些抓包工具，可以方便我们测试，调试，分析问题。</p>
+<p>　　不管是在开发、还是在测试阶段中，“抓包”都是定位bug的主要方法之一。特别是当你提交bug给对应的开发同学，如果没有“铁证”，他们通常都拒绝修改。甚至还会高傲的对你说“你抓个包看看，是不是后台或者接口的问题啊，憋有事没事给我提bug<del>”。这个时候，Fiddler就可以帮助你快速打脸回去了</del>当然，打脸不是目的，帮助开发同学快速精准的定位bug原因，才是王道！</p>
+<h4 id="6-Fiddler是什么？"><a href="#6-Fiddler是什么？" class="headerlink" title="6.Fiddler是什么？"></a>6.Fiddler是什么？</h4><p>那么Fiddler究竟是什么？能干什么呢？</p>
+<p>《度娘宝典》如是说：<br>　　Fiddler是一个http协议调试代理工具，它能够记录并检查所有你的电脑和互联网之间的http通讯，设置断点，查看所有的“进出”Fiddler的数据（指cookie,html,js,css等文件，这些都可以让你胡乱修改的意思）。 Fiddler 要比其他的网络调试器要更加简单，因为它不仅仅暴露http通讯还提供了一个用户友好的格式。</p>
+<h5 id="6-1宏哥推荐的原因"><a href="#6-1宏哥推荐的原因" class="headerlink" title="6.1宏哥推荐的原因　　"></a>6.1宏哥推荐的原因　　</h5><p>1.安装配置简单，快速上手（别说咸鱼，菜鸟都会<del>）；基本功能强大，新手必备（简直不要太好用</del>）；</p>
+<p>2.能记录所有客户端（PC端和手机客户端）和服务器间的Http和Https请求，可监视、设置断点、修改response和request，模拟低速网速环境，还能够使用.net框架语言扩展）</p>
+<h4 id="7-Fiddler支持和不支持的功能"><a href="#7-Fiddler支持和不支持的功能" class="headerlink" title="7.Fiddler支持和不支持的功能"></a>7.Fiddler支持和不支持的功能</h4><p>　　宏哥经常会遇到的一些小伙伴或者童鞋们的私信或者留言的问题类似于：“宏哥，我可以使用Fiddler来完成XXX吗？Fiddler适用于很多场景中。但是，对于一些场景，Fiddler是不合适的。绝大多数情况下，人们所使用的是Fiddler的少数几个功能。一下将简单说明Fiddler所适用的场景。</p>
+<h5 id="7-1Fiddler支持功能的不完整列表"><a href="#7-1Fiddler支持功能的不完整列表" class="headerlink" title="7.1Fiddler支持功能的不完整列表"></a>7.1Fiddler支持功能的不完整列表</h5><p>1.查看几乎所有的浏览器、客户端应用或者服务之间的web数据流。监控我们浏览器所有的http/https的信息和流量，也就是所有的请求或者响应，所有的流量都可以监听。</p>
+<p>2.手动或者自动修改任意的请求或者响应。当监听截取到http请求之后，就可以做一些查看 分析浏览器请求的内容细节,就可以伪造一些请求 伪造一个服务器的响应都是可以的!</p>
+<p>3.解密HTTPS数据流以便查看和修改</p>
+<p>4.归档捕获到的数据流，支持不同计算机上加载这些数据</p>
+<p>5.给客户端应用“回放（play back）”先前捕获到的响应，即使当前服务器处于脱机状态。</p>
+<p>6.绝大多数PC和各种设备之间的Web数据流的调试，包括Mac/Linux系统、智能手机和平板电脑。</p>
+<p>7.挂接到（chain to）上游代理服务器，包括TOR网络（TOR是专门防范对流量探嗅分析的软件项目。它通过由遍及全球的中继所组成的分布式网络转发通信，可以实现匿名访问网络。）</p>
+<p>8.还可以测试网站的性能</p>
+<p>9.作为反向代理运行，在不需要配置客户端计算机或者设备的情况下，在服务端捕获的数据流。</p>
+<p>10.全局、局部断点功能。</p>
+<p>11.第三方插件</p>
+<h5 id="7-2Fiddler不支持功能的不完整列表"><a href="#7-2Fiddler不支持功能的不完整列表" class="headerlink" title="7.2Fiddler不支持功能的不完整列表"></a>7.2Fiddler不支持功能的不完整列表</h5><p>Fiddler是一个非常灵活强大的工具，但某些功能目前还不支持。</p>
+<p>1.调试非网络协议数据流</p>
+<p>（1）Fiddler支持HTTP、HTTPS和FTP数据流以及相关协议，如HTML5 WebSockets和ICY流。</p>
+<p>（2）Fiddler无法监测或修改基于其他协议的数据，如SMTP、POP3、Telnet、IRC等。</p>
+<p>2.处理超大请求和响应</p>
+<p>（1）超过2GB的请求，Fiddler无法处理</p>
+<p>（2）超过2GB的响应，Fiddler的处理能力有限</p>
+<p>（3）Fiddler使用系统内存和页面文件（pagefile）来保存会话数据。保存大量的会话或者超大的请求和响应会导致性能急剧下降。</p>
+<p>3.“神奇”地修复网站的错误（bug）</p>
+<p>（1）Fiddler可以用来协助识别网络问题，但通常不能独立修复这些bug。</p>
+<h4 id="8-Fiddler应用场景"><a href="#8-Fiddler应用场景" class="headerlink" title="8.Fiddler应用场景"></a>8.Fiddler应用场景</h4><p>Fiddler的应用场景也很广泛，具体应用场景如下：</p>
+<p>1.接口调试</p>
+<p>2.接口测试</p>
+<p>3.线上环境调试</p>
+<p>4.web性能分析</p>
+<p>5.判断前后端bug</p>
+<p>6.开发环境hosts配置</p>
+<p>7.mock模拟测试</p>
+<p>8.弱网断网测试</p>
+<p>要知道Fiddler作为系统代理，所有的来自互联网服务的http（Https）请求在到达目标Web服务器之前都会经过Fiddler，同样的，所有的Http（Https）响应都会在返回客户端之前也会经过Fiddler。</p>
+<h4 id="9-Fiddler部署"><a href="#9-Fiddler部署" class="headerlink" title="9.Fiddler部署"></a>9.Fiddler部署</h4><h5 id="9-1Fiddler环境部署"><a href="#9-1Fiddler环境部署" class="headerlink" title="9.1Fiddler环境部署"></a>9.1Fiddler环境部署</h5><p>1.下载Fiddler，官方下载地址：<a href="https://www.telerik.com/download/fiddler填写好电子邮箱和国家地区" target="_blank" rel="noopener">https://www.telerik.com/download/fiddler填写好电子邮箱和国家地区</a> 点击Download for windows就可以下载了。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/Ln1kARpit3GSfOd.png" alt></p>
+<p>2.安装：傻瓜式安装，一直点下一步，直达完成为止。安装成功会显示如下界面，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/wN65xFyjDKX8mRY.png" alt></p>
+<h5 id="9-2Fiddler更新"><a href="#9-2Fiddler更新" class="headerlink" title="9.2Fiddler更新"></a>9.2Fiddler更新</h5><p>1.Fiddler在启动时，会自动查询是否有新版本。当发现有新版本时，会有更新提示。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/Tm5hKG8j1k7HSNB.png" alt></p>
+<p>2.点击“Yes”按钮，Fiddler会启动浏览器，下载最新的安装程序。下载完成后，关闭正在运行的Fiddler，手动安装新下载的程序。如果点击的是“Next Time”下一次安装这个按钮，下一次启动Fiddler时，它会自动下载安装最新版本。如果点击“No”，弹出的对话框就会关闭，不会安装新的版本，下一次启动Fiddler时，还会弹出这个提示。</p>
+<p>3.Fiddler提示更新，傻瓜式更新，一直点下一步，直达完成为止。更新成功会显示如下界面，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/ecfqXypS28hvYRQ.png" alt></p>
+<h5 id="9-3Fiddler退出"><a href="#9-3Fiddler退出" class="headerlink" title="9.3Fiddler退出"></a>9.3Fiddler退出</h5><p>可能有的小伙伴觉得没有必要介绍Fiddler退出，这么简单我直接关闭不就直接退出了，但是有时候你的退出操作却是不正常的退出操作，这个就会产生一系列的问题。当Fiddler是以代理服务器形式工作的，默认ip地址是127.0.0.1:8888,如果Fiddler是非正常退出，那么仍会占用端口，导致其他网页访问失败，因此大家退出Fiddler的时候，要点击File，点击Exit，正常退出Fiddler，而不是直接点击右上角的叉号关闭。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/AtGJEpSz6bfcLRj.gif" alt></p>
+<h5 id="9-4Fiddler卸载"><a href="#9-4Fiddler卸载" class="headerlink" title="9.4Fiddler卸载"></a>9.4Fiddler卸载</h5><p>可以使用控制面板中的“添加/删除”来卸载Fiddler。卸载后，系统并不会被清理干净，因此卸载无法解决配置问题。</p>
+<h4 id="10-Fiddler工作原理"><a href="#10-Fiddler工作原理" class="headerlink" title="10.Fiddler工作原理"></a>10.Fiddler工作原理</h4><p>　　在介绍fiddler使用方法之前，我想先介绍一下fiddler原理，明白原理后，使用起来会更得心应手。</p>
+<p>　　Fiddler是位于客户端和服务器端之间的HTTP代理， 它能够记录客户端和服务器之间的所有 HTTP(S)请求，可以针对特定的HTTP(S)请求，分析网络传输的数据，还可以设置断点、修改请求的数据和服务器返回的数据。<br>　　Fiddler在客户端与服务器之间建立一个代理服务器，Fiddler工作于七层中的应用层，能够捕获通过的HTTP(S)请求。Fiddler启动后会自动将代理服务器设置成本机，默认端口为8888。Fiddler不仅能记录PC上浏览器的网络请求数据，还可以记录同一网络中的其他设备的HTTP(S)请求数据。数据传递流程大致如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/bazTcI21NtCnuiG.png" alt></p>
+<p>　　由上图可以看出，Fiddler使用代理方式，让客户端所有数据流都发给它，然后由fiddler转发给目标server，目标server的回包发给fiddler，再由fiddler转发给客户端。所以不管是Request还是Respone数据包都经过了fiddler，fiddler能进行截获和分析。正是他这样架构优势，才有其其他工具无法做到的强大功能，其不光是支持这些<a href="http://fiddler2.com/documentation/Configure-Fiddler/Tasks/ConfigureBrowsers#ie,-chrome,-safari,-and-opera" target="_blank" rel="noopener">IE, Chrome, Safari, and Opera</a>浏览器的抓包，还支持一些客户端的http(s)抓包，前提是这些client支持http代理配置。</p>
+<p> <img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/Q4IbYRjN1nXxGc9.png" alt></p>
+<h5 id="10-1图解"><a href="#10-1图解" class="headerlink" title="10.1图解"></a>10.1图解</h5><p>1) 客户端向服务器发送HTTP(S)请求时，请求会先经过代理Fiddler代理服务器。<br>2) Fiddler代理服务器截取客户端的请求报文，再转发到服务器，转发之前可以做一些请求报文参数修改的操作。<br>3) 服务器处理完请求以后返回响应报文，Fiddler代理服务器会截取服务器的响应报文。<br>4) Fiddler处理完响应报文后再返回给客户端。</p>
+<p>Fiddler的原理简单点说就是通过改写HTTP代理然后让网络数据从Fiddler这边通过 这样子来监控并且截取到网络信息数据。当你打开Fiddler的时候, 就已经设置好了浏览器的代理了。当你关闭的时候，它会自动的帮你把代理还原。这里还要清楚一点的就是 浏览器默认走的是我们的系统代理，其实这里的代理监听 就是在 请求和响应之间插了一脚, 让fiddler成为系统代理。</p>
+<p>1.在你安装好Fiddler之后启动，并可以打开菜单栏中的<strong>Tools—&gt;options—&gt;Connections</strong> ，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/hNflD3G45x8Jaib.gif" alt></p>
+<p>2.从上图可以看到：有一句<strong>Act as system proxy on startup</strong>意思就是(在启动时充当系统代理),并且默认监听端口设置为了8888。Fiddler就是一个中间的proxy(代理服务器)，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/1OUsIR7NcqKtWez.png" alt></p>
+<p>3.查看自己电脑系统是否在启动Fiddler后，开启了代理，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/dyiZ8Ownx2cfuXt.png" alt></p>
+<p>4.当正常退出fiddler的时候，再次查看系统手动设置代理选项就会被清空并关闭，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/ivBX9K5wyoQWquY.png" alt></p>
+<h4 id="11-小结"><a href="#11-小结" class="headerlink" title="11.小结"></a>11.小结</h4><p>注意：这个Fiddler工具是基于.NET Framework的 ,因为Fiddler是c#开发的，如果是比较老的windows系统要保证运行环境!☺️Fiddler的安装方法也很简单 获取到安装包之后,直接选择安装路径 或 无脑下一步就可以了!☺️</p>
+<p>Fiddler是以代理WEB服务器的形式工作的,浏览器与服务器之间通过建立TCP连接以HTTP协议进行通信，浏览器默认通过自己发送HTTP请求到服务器，本地使用代理地址:127.0.0.1, 端口:8888.而当Fiddler开启会自动设置系统代理， 正常退出的时候它会自动注销代理，这样就不会影响别的程序。但是如果Fiddler非正常退出，这时可能会因为Fiddler没有自动注销，而会造成网页无法访问。</p>
+<p>解决的办法是重新启动下Fiddler，然后正常退出就可以了, 这也是有很多新手安装了Fiddler之后导致一些网络无法访问的原因之一。</p>
+
+            </div>
+			
+            <hr/>
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">博主不易，靠赏过日！！！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+			<style>
+				.reprint {
+					margin: 2em 0 0;
+					padding: 0.5em 1em;
+					border-left: 3px solid #FF1700;
+					background-color: #F9F9F9;
+					list-style: none;
+				}
+
+				.reprint li {
+					line-height: 30px;
+				}
+			</style>
+            <div class="reprint">
+                <!--<p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="https://hongduhong.github.io" class="b-link-green">北京-宏哥</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2016/06/10/fiddler/" class="b-link-green">《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(2)-初识Fiddler让你理性认识一下 -02</a>
+                </p>-->
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>作者:  </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>文章链接:  </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>版权声明:   </strong>
+					本网志所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					许可协议。转载请注明出处!
+				  </li>
+				</ul>
+            </div>
+			<style>
+				.article-end-text-wrap-gzh {
+					margin: 5px 0;
+				}
+					
+				.article-end-text-gzh {
+					font-family: "微软雅黑";
+					font-weight: bold;
+					color: red;
+					font-size: 50px;
+					line-height: 1.6em;
+					text-align:center;
+					padding: 1em 2em;
+					background: color-widget-background;
+					box-shadow: 1px 2px 3px color-border;
+					border: 1px solid color-widget-border;
+					border-radius: 3px;
+				}  
+			</style>
+			<div class="article-end-text-wrap-gzh">
+			  <div class="article-end-text-gzh">
+				<p>扫码关注公众号，更多干货秒得到</p>
+				<img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/26/4hCH391xM65ENtu.png" width="200">
+			  </div>
+			</div>
+			<!--<div>
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>copyright.author </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>copyright.link </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>copyright.license_title  </strong>
+					copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					copyright.right_license_content
+				  </li>
+				</ul>
+			<div>
+			<div>
+				 <style>
+.reprint {
+    margin: 2em 0 0;
+    padding: 0.5em 1em;
+    border-left: 3px solid #FF1700;
+    background-color: #F9F9F9;
+    list-style: none;
+}
+
+.reprint li {
+    line-height: 30px;
+}
+</style>
+<div>
+	<ul class="reprint">
+		<li class="reprint-author">
+          <strong>copyright.author </strong>北京-宏哥</a>
+          </li>
+          <li class="reprint-link">
+          <strong>copyright.link </strong>
+          <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+        </li>
+        <li class="reprint-license">
+            <strong>copyright.license_title  </strong>
+            copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+            copyright.right_license_content
+        </li>
+	</ul>
+<div>
+
+			</div>-->
+
+        </div>
+		
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'f198ff3418cff1b4beb1',
+        clientSecret: '4381fdcb7742eb697e6214ca4ccacbbc78620722',
+        repo: 'hongduhong.github.io',
+        owner: 'hongduhong',
+        admin: "hongduhong",
+        id: '2016-06-10T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+	.v .txt-right{ display: none;}
+
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+ <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'QTjhAL7gTPGjIK1RQM2TlxDR-gzGzoHsz',
+        appKey: 'aBlfRinOLK3x6GKoYWr02qWj',
+        notify: 'true' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '留下你足迹吧O(∩_∩)O\n各位站长也留下你的交友申请 \n(申请格式：网站链接 + 一句话简介站点;)\n(如：five-great.coding.me + 互联网爱好者,撸代码,技术交流。)\n( ╯□╰ )建议不要匿名评论,建议填写邮箱便于接收回复信息'
+    });
+</script>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2016/06/11/fiddler/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/21.jpg" class="responsive-img" alt="《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(3)-再识Fiddler让你感性认识一下 -03">
+                        
+                        <span class="card-title">《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(3)-再识Fiddler让你感性认识一下 -03</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">**🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(3)-再识Fiddler让你感性认识一下
+1.简介上一</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2016-06-11
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Fiddler/" class="post-category" target="_blank">
+                                    Fiddler
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Fiddler/" target="_blank">
+                        <span class="chip bg-color">Fiddler</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2016/06/09/fiddler/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(1)-HTTP和HTTPS基础知识 -01">
+                        
+                        <span class="card-title">《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(1)-HTTP和HTTPS基础知识 -01</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(1)-HTTP和HTTPS基础知识 ）
+1.简介有的小伙伴</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-06-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Fiddler/" class="post-category" target="_blank">
+                                    Fiddler
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Fiddler/" target="_blank">
+                        <span class="chip bg-color">Fiddler</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 北京-宏哥<br />'
+            + '作者: 北京-宏哥<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h4, h5, h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h4, h5, h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<!--<script type="text/javascript" src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  if(window.outerHeight <500&&window.outerWidth<400){
+  $("#p1").hide();
+ 
+   }else{
+  $("#p1").show();
+  
+  }
+});
+</script>
+<footer class="page-footer bg-color">
+	<div  style="text-align: center;">
+	<li class="col s12 m8 l8 copy-right">
+  友链：
+         
+            
+                
+                
+				
+             <a href="https://www.jianshu.com/u/c6e85b30966e" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 简书
+               </a>
+                
+                
+				
+             <a href="https://www.cnblogs.com/du-hong" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 博客园
+               </a>
+                
+                
+				
+             <a href="https://www.zhihu.com/people/bei-jing-hong-ge" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 知乎
+               </a>
+                
+                
+				
+             <a href="https://cloud.tencent.com/developer/user/5695339" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 腾讯云
+               </a>
+                
+              		  
+		<span id="busuanzi_container_site_uv" style="float:right"> 
+			恭喜您成为第 
+			<span id="busuanzi_value_site_uv" class="white-color">
+			</span>
+			位访客&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>
+	  </li>
+	</div>
+	<div class="container row center-align">
+		<div class="col s12 m8 l8 copy-right">  
+         <span id ="p1">&nbsp;&nbsp;&nbsp;</span>
+            
+			
+                
+                
+                <span id="busuanzi_container_site_pv">
+                       <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color">1212112121</span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次&nbsp;
+                </span>
+                
+              
+			
+			
+                <i class="fa fa-area-chart"></i>站点总字数:
+                <span class="white-color">292.3k</span>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			本站由&copy;<a href="https://hongduhong.github.io" target="_blank">北京-宏哥</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 搭建.
+			
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hongduhong/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1918991791@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1918991791" class="tooltipped" data-tooltip="QQ联系我: 1918991791" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+
+
+</div>
+    </div>
+</footer>
+<script type="text/javascript">
+
+        //获取输入框的文本
+        function getdata(){
+        var i=document.getElementById('page__date');
+        
+        
+         var a=new Date();var b=new Date('2019-8-20');var count_s=parseInt((a.getTime()-b)/(1000 * 3600 * 24));
+      
+         }
+        setTimeout("getdata()","2000");
+
+</script>
+<div class="progress-bar"></div>
+<script src="//code.tidio.co/nrzrwmino0xirhbbord6owqnmk7duacv.js" async></script>
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+
+<div id="backTop" class="top-scroll">
+<a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.staticfile.org/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script src="https://cdn.staticfile.org/masonry/4.0.0/masonry.pkgd.js"></script>
+<script src="https://cdn.staticfile.org/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.staticfile.org/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://cdn.staticfile.org/lightgallery/1.6.12/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+	<script type="text/javascript">
+		$("#loading").fadeOut(5000);
+	</script>
+</html>

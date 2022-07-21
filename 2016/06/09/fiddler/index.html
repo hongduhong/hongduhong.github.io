@@ -1,0 +1,2567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(1)-HTTP和HTTPS基础知识 -01, 北京-宏哥 python  自动化测试  接口 JMeter Appium">
+    <meta name="description" content="🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(1)-HTTP和HTTPS基础知识 ）
+1.简介有的小伙伴">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(1)-HTTP和HTTPS基础知识 -01 | 北京-宏哥</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/aos/2.3.4/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+
+
+    <script src="https://cdn.staticfile.org/jquery/2.2.0/jquery.min.js"></script>	
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d62256055258ddb12716821c285aadab";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?716046d3a903bfe6a910f6b68a93271d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!--推送-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'https://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!--广告-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3736773013312638",
+    enable_page_level_ads: true
+  });
+</script>
+<!--onlinetk-->
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/011b3025.js","daovoice")</script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+
+<style>
+  @media only screen and (max-width: 422px){
+    nav .brand-logo {left: 41%;}
+    nav a {margin: 0px -38px 0px 0px;}
+    nav ul a {padding: 0px; margin-left: -42px;}
+    .bg-cover .title{fone-size:3rem;}
+  }
+ </style>
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo" >
+                <a  href="/" class="waves-effect waves-light">
+                    
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                     <span class="logo-span">北京-宏哥</span>
+                </a>
+				
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/galleries" class="waves-effect waves-light">
+            
+            <i class="fa fa-photo"></i>
+            
+            <span>相册</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/lyb" class="waves-effect waves-light">
+            
+            <i class="fa fa-paper-plane-o"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">北京-宏哥</div>
+        <div class="logo-desc">
+            
+            不积跬步无以至千里，不积小流无以成江海。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/galleries" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-photo"></i>
+                
+                相册
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/lyb" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-paper-plane-o"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/hongduhong" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>GITHUB
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/hongduhong" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="GITHUB" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+ 
+
+
+</header>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #canvas111{
+		 position: fixed;
+         background: #ccc;
+		 overflow: auto;
+		 z-index: -1;
+    }
+    </style> 
+
+	<canvas id="canvas111"></canvas>
+	
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<body>
+    
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script type="text/javascript">
+    window.requestAnimationFrame = (function(){
+        return window.requestAnimationFrame ||
+               window.webkitRequestAnimationFrame ||
+               window.mozRequestAnimationFrame ||
+               function( callback ){
+                    window.setTimeout( callback, 1000/2 );
+               };
+    })();
+    var myCanvas = document.getElementById("canvas111");
+    var ctx = myCanvas.getContext("2d");//getContext 设置画笔
+    var num;
+    var w,h;
+    var duixiang = [];
+    var move = {};
+    function widthheight(){
+        w = myCanvas.width = window.innerWidth;
+        h = myCanvas.height = window.innerHeight;
+		num= Math.floor(w*h*0.0001);
+        for(var i = 0;i < num;i++){
+            duixiang[i] = {
+                x:Math.random()*w,
+                y:Math.random()*h,
+                cX:Math.random()*0.6-0.3,
+                cY:Math.random()*0.6-0.3,
+				R:Math.floor(Math.random()*5)+2,
+				//CC:Math.floor(Math.random()*3)+2,
+			    r: Math.floor(Math.random() * 254),   
+                g: Math.floor(Math.random() * 254),  
+                b:Math.floor(Math.random() * 254)   
+            } 
+           // console.log(duixiang[i])
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+			 //Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].CC);
+        }
+    };widthheight();//获取浏览器的等宽度等高
+
+    function Cricle(x,y,R,r,g,b){
+        ctx.save();//保存路径
+       if(Math.random()>0.991) {ctx.globalAlpha= 0.9;}//ctx.fillStyle = "#CCC";}//填充的背景颜色
+	    else { ctx.globalAlpha=0.47;}
+		 
+		ctx.fillStyle = "rgb("+ r +","+ g +","+ b +")";
+        ctx.beginPath();//开始绘画
+		ctx.arc(x,y,R,Math.PI*2,0);//绘画圆 x y 半径（大小） 角度  一个PI 是180 * 2 = 360    真假 0/1 true/false
+        ctx.closePath();//结束绘画
+        ctx.fill();//填充背景颜色
+        ctx.restore();//回复路径
+    };Cricle();
+
+
+    !function draw(){
+        ctx.clearRect(0,0,w,h)//先清除画布上的点
+        for(var i = 0;i < num;i++){
+            duixiang[i].x += duixiang[i].cX;
+            duixiang[i].y += duixiang[i].cY;
+            if(duixiang[i].x>w || duixiang[i].x<0){
+                duixiang[i].cX = -duixiang[i].cX;
+            }
+            if(duixiang[i].y>h || duixiang[i].y<0){
+                duixiang[i].cY = -duixiang[i].cY;
+            }
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+            //勾股定理判断两点是否连线
+            for(var j = i + 1;j < num;j++){
+                if( (duixiang[i].x-duixiang[j].x)*(duixiang[i].x-duixiang[j].x)+(duixiang[i].y-duixiang[j].y)*(duixiang[i].y-duixiang[j].y) <= 55*55 ){
+                    line(duixiang[i].x,duixiang[i].y,duixiang[j].x,duixiang[j].y,0,i,j)
+                }
+                if(move.x){
+                    if( (duixiang[i].x-move.x)*(duixiang[i].x-move.x)+(duixiang[i].y-move.y)*(duixiang[i].y-move.y) <= 100*100 ){
+                        line(duixiang[i].x,duixiang[i].y,move.x,move.y,1,i,1)
+                    }
+                }
+            }
+        }
+        window.requestAnimationFrame(draw)
+    }();
+
+    //绘制线条
+    function line(x1,y1,x2,y2,flag,i,j){
+        
+		if (flag){var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.5;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(0.8,"#019ee5");
+		        }
+				else
+				{
+				
+				var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.9;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(1,"rgb("+ duixiang[j].r +","+ duixiang[j].g +","+ duixiang[j].b +")");
+				}
+        ctx.save();
+        ctx.strokeStyle = color;
+		ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        ctx.stroke();
+        //ctx.restore();
+    }
+
+
+    //document.onmousemove = function(e){
+     //   move.x = e.clientX;
+      //  move.y = e.clientY;
+    //}
+    //console.log(move)
+
+    /*window.onresize = function(){
+        location.reload();
+    }*/
+</script>
+
+
+
+
+
+
+
+
+
+
+<style>
+		#canvas1 {
+ position: fixed;
+ pointer-events:none;//鼠标多层响应事件
+        // background: 	#ccc;
+		 /*透明度*/
+		 width: 100%;
+        height: 100%;
+     // opacity: 0;
+		 overflow: auto;
+		 z-index: 999;
+
+    }
+</style>
+<!--<body>-->
+<canvas id="canvas1" style="whdth: 100%;height: 100%"></canvas>
+
+<script>
+var _createClass = function () {function defineProperties(target, props) 
+{ for (var i = 0; i < props.length; i++) 
+ {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) 
+ descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}
+ return function (Constructor, protoProps, staticProps) 
+ {if (protoProps) defineProperties(Constructor.prototype, protoProps);
+ if (staticProps) defineProperties(Constructor, staticProps);
+ return Constructor;};}();function _classCallCheck(instance, Constructor) 
+ {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}
+ var getRandom = function getRandom(min, max) {
+  return Math.random() * (max - min) + min;
+};
+
+var getRandomInt = function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
+var getRandomColor = function getRandomColor() {
+  var colors = [
+  'rgba(231, 76, 60, 1)', // red
+  'rgba(241, 196, 15, 1)', // yellow
+  'rgba(46, 204, 113, 1)', // green
+  'rgba(52, 152, 219, 1)', // blue
+  'rgba(155, 89, 182, 1)' // purple
+  ];
+
+  return colors[getRandomInt(0, colors.length)];
+};
+
+// Particle//粒子模块
+var
+Particle = function () {
+
+  function Particle(system, x, y) {_classCallCheck(this, Particle);
+    this.system = system;
+    this.universe = this.system.world.universe;
+    this.x = x;
+    this.y = y;
+    this.color = getRandomColor();
+    this.life = 1;
+    this.aging = getRandom(0.990, 0.999); // 0.99, 0.999 || 0.999, 0.9999
+
+    this.r = getRandomInt(12, 16);//初始粒子半径范围
+    this.speed = getRandom(18, 18.5);//粒子爆炸速度范围
+    this.velocity = [
+    getRandom(-this.speed, this.speed),
+    getRandom(-this.speed, this.speed)];
+
+  }_createClass(Particle, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (
+      this.r < 0.1 ||
+      this.life === 0 ||
+      this.x + this.r < 0 ||
+      this.x - this.r > this.universe.width ||
+      this.y + this.r < 0 ||
+      this.y - this.r > this.universe.height)
+      {
+        this.system.removeObject(this);
+      }
+
+      this.r *= this.life;
+      this.x += this.velocity[0];
+      this.y += this.velocity[1];
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      // Main circle //亮圈模块
+
+      ctx.fillStyle = this.color;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r*1.2, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+
+      var r = this.color.match(/([0-9]+)/g)[0];
+      var g = this.color.match(/([0-9]+)/g)[1];
+      var b = this.color.match(/([0-9]+)/g)[2];
+
+      // Gradient//梯度变化曲线
+
+      var spread = 1.5;
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r,
+      this.x, this.y, this.r * spread);
+
+      gradient.addColorStop(0, 'rgba(' + r + ', ' + g + ', ' + b + ', 0.5)');
+      gradient.addColorStop(1, 'rgba(' + r + ', ' + g + ', ' + b + ', 0)');
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r * spread, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+
+      // Aberration//偏差
+
+      var offset = this.r * 0.5;
+      var color = 'rgba(' + g + ', ' + b + ', ' + r + ', 0.5)';
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(this.x + offset, this.y + offset, this.r, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+    } }]);return Particle;}();
+
+
+
+// Crown //水波纹圈模块
+var
+Crown = function () {
+
+  function Crown(system, x, y) {_classCallCheck(this, Crown);
+    this.system = system;
+    this.x = x;
+    this.y = y;
+    this.r = getRandomInt(5, 15); // 5, 20  水波纹圈半径范围
+    this.mod = 1.1;
+    this.life = 0.5; //水波纹线
+    this.aging = getRandom(0.830, 0.899);
+    this.speed = getRandom(8, 9);
+    this.color = {
+      r: getRandomInt(236, 242),
+      g: getRandomInt(70, 80),
+      b: getRandomInt(50, 70) };
+
+
+    this.angle1 = Math.PI * getRandom(0, 2);
+    this.angle2 = this.angle1 + Math.PI * getRandom(0.3, 0.4);//水波纹圈完整度
+  }_createClass(Crown, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (this.life <= 0.0001) this.system.removeObject(this);
+
+      this.r += Math.abs(1 - this.life) * this.speed;
+
+      this.x1 = this.x + this.r * Math.cos(this.angle1);
+      this.y1 = this.y + this.r * Math.sin(this.angle1);
+
+      this.angle3 = this.angle1 + (this.angle2 - this.angle1) / 2;
+      this.x2 = this.x + this.r * this.mod * Math.cos(this.angle3);
+      this.y2 = this.y + this.r * this.mod * Math.sin(this.angle3);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r * 0.9,
+      this.x, this.y, this.r);
+
+      gradient.addColorStop(0, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life + ')');
+      gradient.addColorStop(1, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life * 0.5 + ')');
+
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, this.angle1, this.angle2, false);
+      ctx.quadraticCurveTo(this.x2, this.y2, this.x1, this.y1);
+      ctx.fill();
+      ctx.closePath();
+    } }]);return Crown;}();
+
+
+
+// Explosion //爆炸模块
+var
+Explosion = function () {
+
+  function Explosion(world, x, y) {_classCallCheck(this, Explosion);
+    this.world = world;
+    this.x = x;
+    this.y = y;
+    this.objects = [];
+
+    var particles = getRandomInt(10, 30); // 10, 30 amount of particles//爆炸 粒子数量
+    var crowns = particles * getRandom(0.4, 0.5);
+
+    while (crowns-- > 0) {this.addCrown();}
+    while (particles-- > 0) {this.addParticle();}
+  }_createClass(Explosion, [{ key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      if (this.objects.length <= 0) {
+        this.world.clearExplosion(this);
+      }
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'addCrown', value: function addCrown()
+
+    {
+      this.objects.push(new Crown(this, this.x, this.y));
+    } }, { key: 'addParticle', value: function addParticle()
+
+    {
+      this.objects.push(new Particle(this, this.x, this.y));
+    } }, { key: 'removeObject', value: function removeObject(
+
+    obj) {
+      var index = this.objects.indexOf(obj);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return Explosion;}();
+
+
+
+// World 
+var
+ConfettiWorld = function () {function ConfettiWorld() 
+{_classCallCheck(this, ConfettiWorld);}_createClass(ConfettiWorld, [{ key: 'init', value: function init()
+
+    {
+      this.objects = [];
+      window.addEventListener('click', this.explode.bind(this));
+
+      // Initial explosion //初始爆炸
+      var counter = 0;
+      while (counter-- > 0) {
+        this.explode({
+          clientX: window.event.clientX, //getRandomInt(10, this.universe.width) ,          //this.universe.width / 2,
+          clientY: window.event.clientY //getRandomInt(10, 50) //this.universe.height / 2 
+		  });
+
+      }
+    } }, { key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      var amount = this.objects.reduce(function (sum, explosion) {
+        return sum += explosion.objects.length;
+      }, 0);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'explode', value: function explode(
+
+    event) {
+      var x = event.clientX;
+      var y = event.clientY;
+
+      this.objects.push(new Explosion(this, x, y));
+    } }, { key: 'clearExplosion', value: function clearExplosion(
+
+    explosion) {
+      var index = this.objects.indexOf(explosion);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return ConfettiWorld;}();
+
+
+
+// Time
+var
+Time = function () {
+
+  function Time() {_classCallCheck(this, Time);
+    this.now = 0; // current tick time
+    this.prev = 0; // prev tick time
+    this.elapsed = 0; // elapsed time from last tick
+    this.delta = 0; // time from last update
+    this.fps = 60; // desired fps
+    this.step = 1 / 60; // step duration
+  }_createClass(Time, [{ key: 'update', value: function update(
+
+    time) {
+      this.now = time;
+      this.elapsed = (this.now - this.prev) / 1000;
+      this.prev = this.now;
+      this.delta += this.elapsed;
+    } }, { key: 'raf', value: function raf(
+
+    func) {
+      window.requestAnimationFrame(func);
+    } }, { key: 'hasFrames', value: function hasFrames()
+
+    {
+      return this.delta >= this.step;
+    } }, { key: 'processFrame', value: function processFrame()
+
+    {
+      this.delta -= this.step;
+    } }]);return Time;}();
+
+
+
+// Canvas
+var
+Universe = function () {
+
+  function Universe(element) {_classCallCheck(this, Universe);
+    this.el = element;
+    this.ctx = this.el.getContext('2d');
+    this.pixelRatio = window.devicePixelRatio;
+    this.time = new Time();
+
+    this.worlds = {};
+    this.world = null; // current state
+
+    this.updateSize();
+    window.addEventListener('resize', this.updateSize.bind(this));
+
+    this.addWorld('confetti', ConfettiWorld);
+    this.setWorld('confetti');
+
+    this.start();
+  }_createClass(Universe, [{ key: 'start', value: function start()
+
+    {
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'tick', value: function tick(
+
+    time) {
+      this.time.update(time);
+
+      if (this.time.hasFrames()) {
+        this.update();
+        this.time.processFrame();
+      }
+
+      this.render();
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'update', value: function update()
+
+    {
+      this.world.update(this.time.step);
+    } }, { key: 'render', value: function render()
+
+    {
+      var gradient = this.ctx.createLinearGradient(0, 0, this.width, this.height);
+     // gradient.addColorStop(0, '#34495e');
+      //gradient.addColorStop(1, '#2c3e50');
+
+      this.ctx.clearRect(0, 0, this.width, this.height);
+      // this.ctx.fillStyle = '#2c3e50'
+     // //this.ctx.fillStyle = gradient;
+    // // this.ctx.fillRect(0, 0, this.width, this.height);
+      this.world.render(this.ctx);
+    }
+
+    // Helpers 库
+  }, { key: 'updateSize', value: function updateSize()
+    {
+      this.width = window.innerWidth;
+      this.height = window.innerHeight;
+      this.el.width = this.width * this.pixelRatio;
+      this.el.height = this.height * this.pixelRatio;
+      this.el.style.width = window.innerWidth + 'px';
+      this.el.style.height = window.innerHeight + 'px';
+      this.ctx.scale(this.pixelRatio, this.pixelRatio);
+    } }, { key: 'addWorld', value: function addWorld(
+
+    worldName, World) {
+      this.worlds[worldName] = new World();
+      this.worlds[worldName].universe = this;
+      this.worlds[worldName].init();
+    } }, { key: 'setWorld', value: function setWorld(
+
+    worldName) {
+      this.world = this.worlds[worldName];
+    } }]);return Universe;}();
+
+
+
+// Main
+
+console.clear();
+var element = document.querySelector('#canvas1');
+window.Canvas= new Universe(element);</script>
+
+<!--<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>-->
+
+
+<script src="https://cdn.staticfile.org/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(1)-HTTP和HTTPS基础知识 -01
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Fiddler/" target="_blank">
+                                <span class="chip bg-color">Fiddler</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Fiddler/" class="post-category" target="_blank">
+                                Fiddler
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    <span id="page__date">2016-06-09</sapn>
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        6.9k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        25 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><strong>🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(1)-HTTP和HTTPS基础知识 ）</strong></p>
+<h5 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h5><p>有的小伙伴或者童鞋们可能会好奇地问宏哥，不是讲解和分享抓包工具了怎么这里开始讲解HTTP和HTTPS协议了。这是因为你对HTTP协议越了解，你就能越掌握Fiddler的使用方法，反过来你越使用Fiddler，就越能帮助你了解HTTP协议。</p>
+<p>Fiddler无论对开发人员或者测试人员来说，都是非常有用的工具。</p>
+<h4 id="2-前言"><a href="#2-前言" class="headerlink" title="2.前言"></a>2.前言</h4><p>超文本传输协议HTTP协议被用于在Web浏览器和网站服务器之间传递信息，HTTP协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。</p>
+<p>为了解决HTTP协议的这一缺陷，需要使用另一种协议：安全套接字层超文本传输协议HTTPS，为了数据传输的安全，HTTPS在HTTP的基础上加入了SSL协议，SSL依靠证书来验证服务器的身份，并为浏览器和服务器之间的通信加密。</p>
+<h4 id="3-HTTP和HTTPS基本概念"><a href="#3-HTTP和HTTPS基本概念" class="headerlink" title="3.HTTP和HTTPS基本概念"></a>3.HTTP和HTTPS基本概念</h4><p><strong>HTTP</strong>（HyperText Transfer Protocol：超文本传输协议）是一种用于分布式、协作式和超媒体信息系统的应用层协议。 简单来说就是一种发布和接收 HTML 页面的方法，被用于在 Web 浏览器和网站服务器之间传递信息。是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少。</p>
+<p>HTTP 默认工作在 TCP 协议 80 端口，用户访问网站 http:// 打头的都是标准 HTTP 服务。</p>
+<p>HTTP 协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。</p>
+<p><strong>HTTPS</strong>（Hypertext Transfer Protocol Secure：超文本传输安全协议）是一种透过计算机网络进行安全通信的传输协议。HTTPS 经由 HTTP 进行通信，但利用 SSL/TLS 来加密数据包。HTTPS 开发的主要目的，是提供对网站服务器的身份认证，保护交换数据的隐私与完整性。是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/IXbTaPRAuCDg3k8.png" alt></p>
+<p><strong>HTTPS协议的主要作用可以分为两种：</strong></p>
+<p>一种是建立一个信息安全通道，来保证数据传输的安全；</p>
+<p>另一种就是确认网站的真实性。</p>
+<h4 id="4-什么是http请求和响应"><a href="#4-什么是http请求和响应" class="headerlink" title="4.什么是http请求和响应?"></a>4.什么是http请求和响应?</h4><p>http的工作方式为一个简单的客户端请求与服务端响应的应答过程。它指定了客户端发送给服务器什么样的消息形式以及得到什么样的消息响应，所有的www文件都必须遵循这个标准协议, 目的是提供一种发布和接收html页面的方法。举个例子比如说 客户端（浏览器）向服务器提交一个http请求, 那么服务器又会向客户端这边返回响应信息。而这些响应信息包含关于客户端请求的状态信息以及客户端所需要的内容信息。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/3t9qHn4GRWcUXEK.png" alt></p>
+<h4 id="5-http协议和web之间的本质"><a href="#5-http协议和web之间的本质" class="headerlink" title="5.http协议和web之间的本质"></a>5.http协议和web之间的本质</h4><p>http协议和web之间的本质说白了就是就是浏览器和服务器打交道的。客户端向服务器端发送Http请求,然后服务器端向客户端返回http响应!</p>
+<p>http协议：所谓协议，就是指双方遵循的规范。http协议，就是浏览器和服务器之间进行“沟通”的一种规范。, 也就是以这个规范来向服务器发起请求, 服务器才会给客户端进行正确的响应, 所以http有的时候也可以理解为是一种 规范、规则、标准。http协议是属于“应用层的协议”,而且是基于TCP/IP协议的, 也就是说http通信发生在TCP/IP链接之上。</p>
+<p>通俗一点说http协议就是基于TCP的一种应用层协议 它不会关系数据传输的细节问题,也就是说你不用去关心它下层TCP的运行逻辑, 它的核心只在于用来规定客户端和服务端的数据传输格式。最早http是用来向客户端传输html文件内容,默认的端口80</p>
+<h5 id="5-1扩展"><a href="#5-1扩展" class="headerlink" title="5.1扩展"></a>5.1扩展</h5><p>有兴趣的朋友可以自行了解一下iso网络七层模型。</p>
+<p>如果你接触过socket网络编程，就应该明白TCP和UDP这两种使用广泛的通信协议（建立连接、三次握 手等等，当然，这不是本文讨论的重点）。</p>
+<p>既然TCP/UDP是广泛使用的网络通信协议，那为啥有多出个http协议来呢？</p>
+<p>笔者曾自己动手写过一个简单的web服务器处理软件，根据我的推断（不一定准确）。UDP协议具有不可靠性和不安全性，显然这很难满足web应用的需要。</p>
+<p>而TCP协议是基于连接和三次握手的，虽然具有可靠性，但人具有一定的缺陷。但试想一下，普通的C/S架构软件，顶多上千个Client同时连接，而B/S架构的网站，十万人同时在线也是很平常的事儿。如果十万个客户端和服务器一直保持连接状态，那服务器如何满足承载呢？</p>
+<p>这就衍生出了http协议。基于TCP的可靠性连接。通俗点说，就是在请求之后，服务器端立即关闭连接、释放资源。这样既保证了资源可用，也吸取了TCP的可靠性的优点。</p>
+<p>正因为这点，所以大家通常说http协议是“无状态”的，也就是“服务器不知道你客户端干了啥”，其实很大程度上是基于性能考虑的。以至于后来有了session之类的玩意。</p>
+<p>通俗点说http，就是在请求和响应之后，服务器端立即关闭连接，并释放资源，这样既保证了资源可显示与可用性，也吸取了TCP协议的可靠性优点,但是缺点就无法跟踪用户的操作了,所以我们在后端开发的学习中才会接触一个东西叫session和cookie技术</p>
+<p>所以你也可以理解为http是基于请求与响应的模式, 并且是无状态的应用层协议。</p>
+<h4 id="6-http请求和响应的基本原理"><a href="#6-http请求和响应的基本原理" class="headerlink" title="6.http请求和响应的基本原理"></a>6.http请求和响应的基本原理</h4><p>HTTP 消息是服务器和客户端之间交换数据的方式。有两种类型的消息︰ 请求（requests）– 由客户端发送用来触发一个服务器上的动作；响应（responses）– 来自服务器的应答。</p>
+<p>任何一个http请求都只会分为两个部分: 一个请求报文另外一个是响应报文。</p>
+<p>请求报文是客户端按照一定的格式生成一段文本,然后发给我们的服务端, 而服务器接收到了这样一个请求报文就会解析里面的内容进行处理,然后做出反馈，也就是响应。</p>
+<p>响应报文也就是服务器端根据请求报文反馈给客户端的文本信息。</p>
+<h5 id="6-1http请求-request-报文基本结构"><a href="#6-1http请求-request-报文基本结构" class="headerlink" title="6.1http请求(request)报文基本结构"></a>6.1http请求(request)报文基本结构</h5><p>http请求(request)也叫请求报文，一个基本的HTTP请求报文由请求行（request line）、请求头部（request header）、空行和请求数据4个部分构成。</p>
+<pre><code>1.请求行（request line）:就是请求方式和协议,也就是说用于描述客户端的请求方式,例如post/get方式, 以及请求的资源名称和HTTP协议的版本号!
+2.若干个请求头（request header）: 这些也叫消息头告诉服务器发送的是什么数据类型，编码类型、请求的是哪台主机、以及客户端浏览器的一些系统环境 等等， 这些消息头中有很多头部字段名 和 对应的值它的格式为 name:value
+3.空白行
+4.请求正文内容</code></pre><p>说了这么多是不是有点懵有点晕，那宏哥就使用抓包工具抓取实际例子，我们具体看一下：</p>
+<p>那么我们在学习http知识的时候 就可以先直接使用Fiddler来抓取一个http请求和http响应来先看看到底是什么东西!这样也有助于我们来更好地理解http。我们可以通过Fiddler抓取网络数据包的手段，就可以看到一个基本的http请求结构都包含哪些信息!例如一个GET方式的请求(Request)信息，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/4w7Jel1pfxz8AMn.png" alt></p>
+<h5 id="6-2http响应-response-报文基本结构"><a href="#6-2http响应-response-报文基本结构" class="headerlink" title="6.2http响应(response)报文基本结构"></a>6.2http响应(response)报文基本结构</h5><p>http响应(response)也叫响应报文，一个基本的HTTP响应报文由响应行、响应头、空行和响应体4个部分构成。</p>
+<pre><code>1.响应行：响应行一般由协议版本、状态码及其描述组成 比如 HTTP/1.1 200 OK
+2.响应头：响应头用于描述服务器的基本信息，以及数据的描述，服务器通过这些数据的描述信息，可以通知客户端如何处理等一会儿它回送的数据。
+3.空白行：
+4.响应体：响应体就是响应的消息体，如果是纯数据就是返回纯数据，如果请求的是HTML页面，那么返回的就是HTML代码，如果是JS就是JS代码，如此之类。</code></pre><p>其实响应报文比请求报文更加简单, 你只要能够搞懂请求报文 那么响应报文就很容易搞懂，同样的道理，我们可以通过Fiddler抓取网络数据包的手段，就可以看到一个基本的http响应结构都包含哪些信息。</p>
+<p>例如一个POST方式的请求(Request)信息 如下:例如一个POST方式的请求(Request)信息，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/l53LnySJPIerWaf.png" alt></p>
+<p>怎么样是不是看这一大堆脑壳都大了一直稳稳地响个不停呢 ？感觉无从下手，更不用说学习里， 哈哈哈不要着急，跟着宏哥慢慢来学!😁😁😁</p>
+<h4 id="7-Http请求-Request-报文结构图解"><a href="#7-Http请求-Request-报文结构图解" class="headerlink" title="7.Http请求(Request)报文结构图解"></a>7.Http请求(Request)报文结构图解</h4><p>我们先来看一张请求(Request)图解，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/AnI4P37Cwv1plZs.jpg" alt></p>
+<p><strong>然后宏哥来逐一解剖上图中的各个部分，解剖结果如下：</strong></p>
+<h5 id="7-1请求方法-Request-method"><a href="#7-1请求方法-Request-method" class="headerlink" title="7.1请求方法 (Request method)"></a>7.1请求方法 (Request method)</h5><p>我们常见的一些请求方式也就是POST/GET,当然还有其他的一些请求方式, 如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>请求方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>GET</code></td>
+<td><code>请求资源</code> 比如常见的就是输入一个<code>URL</code>去请求一个资源下来, 它也可以带上一定的参数一起请求</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>提交资源</code> 比如说我们想把用户名和密码 提交到服务器去,这个时候用<code>POST</code>比较好</td>
+</tr>
+<tr>
+<td><code>HEAD</code></td>
+<td><code>获取响应头，检查一个对象是否存在</code></td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td>替换资源，向服务器发送数据，并存储服务器内部</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>删除资源</td>
+</tr>
+<tr>
+<td><code>OPTIONS</code></td>
+<td>允许客户端查看服务器的性能</td>
+</tr>
+<tr>
+<td><code>TRACE</code></td>
+<td>显示服务器收到的请求 常见于测试和调试诊断!</td>
+</tr>
+<tr>
+<td><code>CONNECT</code></td>
+<td>对通道提供支持</td>
+</tr>
+</tbody></table>
+<h5 id="7-2URL-Uniform-Resource-Locator）"><a href="#7-2URL-Uniform-Resource-Locator）" class="headerlink" title="7.2URL (Uniform Resource Locator）"></a>7.2URL (Uniform Resource Locator）</h5><p>URL中文名为统一资源定位符 英文全称Uniform Resource Locator ,可以使用一个URL地址来描述一个网络上的资源，而HTTP的<code>GET</code>、<code>POST</code>、<code>PUT</code>、<code>DELETE</code>对应着对这个资源的查、改、增、删四个操作。我们网络中的每一信息资源都有统一的且在网上唯一的地址!</p>
+<p>URL具体由4部分组成：协议、主机、域名、端口、路径文件、[附加资源]</p>
+<p>URL的一般语法格式为：</p>
+<pre><code>protocol :// hostname[:port] / path / [?query-parameters][#anchor]</code></pre><p>1.协议 (protocol)：指底层使用的协议类型，如：http、ftp、https、等…</p>
+<p>2.主机名 (hostname) + 域名：HTTP服务器的IP或者域名。主机名+域名 例如: <a href="http://www.xsphp.com" target="_blank" rel="noopener">www.xsphp.com</a></p>
+<p>3.端口 (port)：HTTP服务器端口，端口是一个数字, 端口是可选的 省略时使用方案是服务器默认配置的端口。例如 80、8080、..各种传输协议都有默认的端口号，如http协议的默认端口为80，如果URL地址省略端口，则使用默认端口号。</p>
+<p>注意：有时候出于安全或其他考虑，可以在服务器配置上对端口进行重新定义，也就是采用非标准端口号，那么此时，URL地址中就不能省略端口号这一项。</p>
+<p>4.路径文件 (path)：访问资源的路径。由零或多个/符号隔开的字符串，一般用来表示主机上的一个目录或文件地址。例如: /tpl/index.php</p>
+<p>5.查询参数 附加资源 (query-parameters)：发送给HTTP服务器的数据。</p>
+<p>这一项在URL中也是可选的 用于给动态网页如 PHP/JSP/ASP/ASP.NET等后端页面 传递参数的一种方式，并且如果是GET请求方法, 那么可有多个参数, 它们彼此用&amp;符号隔开，每个参数的名和值用=符号隔开</p>
+<p>语法格式: ?参数=值&amp;参数2=值 以此类推。例如: ?id=33&amp;age=25&amp;name=zhangsan。举个例子：一个比较常见的url地址， 如：<a href="https://www.xxxx.net/xxxx/xxxx/xxxx/100?num=1001.2014.3001.5501" target="_blank" rel="noopener">https://www.xxxx.net/xxxx/xxxx/xxxx/100?num=1001.2014.3001.5501</a></p>
+<p>6.anchor：锚点</p>
+<h5 id="7-3请消息求头-Request-Header"><a href="#7-3请消息求头-Request-Header" class="headerlink" title="7.3请消息求头 (Request Header)"></a>7.3请消息求头 (Request Header)</h5><p>1.请求消息头也叫消息头告诉服务器发送的是什么数据类型，编码类型、请求的是哪台主机、以及客户端浏览器的一些系统环境 等等前面已经说过了, 并且请求头是可以由开发人员根据需求去进行自定义的。</p>
+<p>这些消息头中有很多头部字段名 和 对应的值它的格式为 name:value。我们常见的一些请求头如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>请求头</th>
+<th>描述</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Host</code></td>
+<td>主机IP地址或域名</td>
+<td></td>
+</tr>
+<tr>
+<td><code>User-Agent</code></td>
+<td>提交一些<code>客户端</code>相关信息，例如: <code>操作系统、浏览器</code>等一些版本信息给<code>服务器</code>, 而这些信息可能会让<code>服务器</code>按照一定的规则给<code>客户端</code>返回兼容性比较好的信息!</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Accept</code></td>
+<td>指定<code>客户端</code>接收的信息类型，<br>例如:<code>image/jpg,text/html,application/json</code><br>也就是可以让<code>客户端</code>告诉<code>服务器</code> 之后客户端这一边想接收到什么样的数据格式</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Accept-Charset</code></td>
+<td>告诉<code>服务器</code>等一会这边<code>客户端</code>需要接收的<code>字符集编码格式</code>，</td>
+<td><br>例如:<code>gb2312、iso-8859-1、utf-8</code></td>
+</tr>
+<tr>
+<td><code>Accept-Encoding</code></td>
+<td>告诉<code>服务器</code>， 客户端这边可接受的<code>内容压缩编码</code>，例如<code>gzip</code> 可以在一定程度上节省流量!</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Accept-Language</code></td>
+<td>告诉服务器, <code>客户端</code>可接受的语言，例如<code>Accept-Language：zh-cn</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td>客户端提供给服务端进行权限认证的信息, 也就是要告诉服务器端一些认证的信息，服务器才能返回响应的数据!</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Cookie</code></td>
+<td>携带的COOKIE信息, 普通情况下，当一个用户登录成功，就会在本地保存一份<code>cookie</code>,下次请求就会直接带上这个<code>cookie</code>信息，也就是这个用户的相关信息</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Referer</code></td>
+<td>当前文档的<code>URL</code> 也就是纪录下从哪个<code>链接地址</code>提交到<code>服务器</code>的</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Content-Type</code></td>
+<td>向<code>服务器</code>提交内容的格式<br>例如：<code>Content-Type：application/x-www-form-urlencoded</code><br>总而言之,就是告诉<code>服务器</code>,<code>客户端</code>传递的内容属于什么格式 或 其他编码格式!</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Content-Length</code></td>
+<td>数据长度, 也就是<code>客户端</code>向<code>服务器端</code>提交内容的数据长度有多少字节!</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Cache-Control</code></td>
+<td>缓存机制，例如：<code>Cache-Control:no-cache</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>pragma</code></td>
+<td>防止页面被缓存，与<code>Cache-Control:no-cache</code>作用一样</td>
+<td></td>
+</tr>
+<tr>
+<td>……………………………………….</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>2.我们可以用Fiddler截取一个请求头看看，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/M9ezPEO3BHycWo5.png" alt></p>
+<h5 id="7-4空行"><a href="#7-4空行" class="headerlink" title="7.4空行"></a>7.4空行</h5><p>空白行：也就是在消息头结束的下方，会存在一个空白行, 这是必须存在的, 是由HTTP标准规定的!</p>
+<h5 id="7-5请求体"><a href="#7-5请求体" class="headerlink" title="7.5请求体"></a>7.5请求体</h5><p>请求体它的出现是要根据请求的方式不同而不同, 也就是如果是POST那么就会以键与值的形式进行发送, 如果是GET请求那么这里就不会包含请求正文内容。</p>
+<p>从7.3宏哥抓包可以看出这里是一个json数据：</p>
+<pre><code>{&quot;email&quot;:&quot;xxxxxxx@qq.com&quot;,&quot;password&quot;:&quot;xxxxxxx&quot;,&quot;remember&quot;:&quot;0&quot;,&quot;code&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;&quot;,&quot;type&quot;:&quot;login&quot;,&quot;reqtimestamp&quot;:1647506402551}</code></pre><h4 id="8-http响应-Response-报文结构图解"><a href="#8-http响应-Response-报文结构图解" class="headerlink" title="8.http响应(Response)报文结构图解"></a>8.http响应(Response)报文结构图解</h4><p>同样我们先来看一张http响应(response)图解，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/Qt2IVyjv6GZ3Tg1.jpg" alt></p>
+<p><strong>然后宏哥来逐一解剖上图中的各个部分，解剖结果如下：</strong></p>
+<h5 id="8-1响应行"><a href="#8-1响应行" class="headerlink" title="8.1响应行"></a>8.1响应行</h5><p>响应行也叫状态行， 上图中响应行内部其实包含了3个重要的信息部分:</p>
+<p>HTTP协议的版本、HTTP状态码、HTTP的状态描述</p>
+<p>1.HTTP协议的版本现目前都是HTTP/1.1 版本 这个没什么好说的!</p>
+<p>2.HTTP状态码 可以用来表示网页服务器端给客户端返回的HTTP响应状态, 通常都是3位数字的代码, 而这些常见的状态码又可以分为几种提示类型: 🙂 如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>类别状态码</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>1xx</code></td>
+<td>这种类别的<code>状态码</code> 为<code>提示消息类型</code> 通常表示<code>请求被服务器端成功接收</code></td>
+</tr>
+<tr>
+<td><code>2xx</code></td>
+<td>这种类别的<code>状态码</code> 为<code>成功消息类型</code>通常表示<code>请求被服务器端成功处理</code></td>
+</tr>
+<tr>
+<td><code>3xx</code></td>
+<td>这种类别的<code>状态码</code> 为<code>重定向类型</code>通常表示<code>被服务器端重新定义了请求方向,需要进一步的操作以完成请求</code></td>
+</tr>
+<tr>
+<td><code>4xx</code></td>
+<td>这种类别的<code>状态码</code> 为<code>客户端错误信息</code>通常表示<code>服务器告诉客户端的一些错误消息</code></td>
+</tr>
+<tr>
+<td><code>5xx</code></td>
+<td>这种类别的<code>状态码</code> 为<code>服务端错误信息</code>通常表示<code>告诉客户端 服务器这边出现的一些错误信息</code></td>
+</tr>
+</tbody></table>
+<p>3.HTTP的状态描述是紧跟在状态码后面的英文单词</p>
+<p>每一种具体类别状态码+状态描述可以参考下表:</p>
+<p><code>1xx: 提示消息类型</code></p>
+<table>
+<thead>
+<tr>
+<th>消息:</th>
+<th>状态描述</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>100</td>
+<td>Continue</td>
+<td>服务器仅接收到部分请求，但是一旦服务器并没有拒绝该请求，客户端应该继续发送其余的请求。</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Switching Protocols</td>
+<td>服务器转换协议：服务器将遵从客户的请求转换到另外一种协议。</td>
+</tr>
+</tbody></table>
+<p><code>2xx: 成功消息类型</code></p>
+<table>
+<thead>
+<tr>
+<th>消息:</th>
+<th>状态描述</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>200</td>
+<td>OK</td>
+<td>请求成功（其后是对GET和POST请求的应答文档。）</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td>请求被创建完成，同时新的资源被创建。</td>
+</tr>
+<tr>
+<td>202</td>
+<td>Accepted</td>
+<td>供处理的请求已被接受，但是处理未完成。</td>
+</tr>
+<tr>
+<td>203</td>
+<td>Non-authoritative Information</td>
+<td>文档已经正常地返回，但一些应答头可能不正确，因为使用的是文档的拷贝。</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+<td>没有新文档。浏览器应该继续显示原来的文档。如果用户定期地刷新页面，而Servlet可以确定用户文档足够新，这个状态代码是很有用的。</td>
+</tr>
+<tr>
+<td>205</td>
+<td>Reset Content</td>
+<td>没有新文档。但浏览器应该重置它所显示的内容。用来强制浏览器清除表单输入内容。</td>
+</tr>
+<tr>
+<td>206</td>
+<td>Partial Content</td>
+<td>客户发送了一个带有Range头的GET请求，服务器完成了它。</td>
+</tr>
+</tbody></table>
+<p><code>3xx: 重定向类型</code></p>
+<table>
+<thead>
+<tr>
+<th>消息:</th>
+<th>状态描述</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>300</td>
+<td>Multiple Choices</td>
+<td>多重选择。链接列表。用户可以选择某链接到达目的地。最多允许五个地址。</td>
+</tr>
+<tr>
+<td>301</td>
+<td>Moved Permanently</td>
+<td>所请求的页面已经转移至新的url, 说通俗一点表示请求的资源分配了url，以后就应该使用这个url</td>
+</tr>
+<tr>
+<td>302</td>
+<td>Found</td>
+<td>所请求的页面已经临时转移至新的url, 也就是说请求的资源临时分配了url，本次请求暂且使用这个url， 这里<code>302与301</code>的区别是，302表示临时性重定向，重定向的url还有可能还会改变。</td>
+</tr>
+<tr>
+<td>303</td>
+<td>See Other</td>
+<td>表示请求的资源路径发生改变，请使用<code>GET</code>方法请求url。其实与302一样，但是明确指出让我们使用<code>GET</code>方法请求url</td>
+</tr>
+<tr>
+<td>304</td>
+<td>Not Modified</td>
+<td>未按预期修改文档。客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。</td>
+</tr>
+<tr>
+<td>305</td>
+<td>Use Proxy</td>
+<td>客户请求的文档应该通过Location头所指明的代理服务器提取。</td>
+</tr>
+<tr>
+<td>306</td>
+<td>Unused</td>
+<td>此代码被用于前一版本。目前已不再使用，但是代码依然被保留。</td>
+</tr>
+<tr>
+<td>307</td>
+<td>Temporary Redirect</td>
+<td>被请求的页面已经临时移至新的url。</td>
+</tr>
+</tbody></table>
+<p><code>4xx: 客户端错误信息</code></p>
+<table>
+<thead>
+<tr>
+<th>消息:</th>
+<th>状态描述</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>400</td>
+<td>Bad Request</td>
+<td>服务器未能理解请求，通常为表示请求的报文中存在<code>语法错误</code> ，比如: 提交<code>json</code>数据的时候，如果<code>json</code>格式有问题，接收端接收<code>json</code>，也会出现<code>400 bad request</code></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td>被请求的页面需要用户名和密码。</td>
+</tr>
+<tr>
+<td>402</td>
+<td>Payment Required</td>
+<td>此代码尚无法使用。</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>对被请求页面的访问被禁止。</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td>服务器无法找到被请求的页面。</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed</td>
+<td>请求中指定的方法不被允许, 请求的方式<code>get、post、delete</code>方法与后台规定的方式不符合 例如: 比如： 后台方法规定的请求方式只接受<code>get</code>，如果用<code>post</code>请求，就会出现 <code>405 method not allowed</code>的提示</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable</td>
+<td>服务器生成的响应无法被客户端所接受。</td>
+</tr>
+<tr>
+<td>407</td>
+<td>Proxy Authentication Required</td>
+<td>用户必须首先使用代理服务器进行验证，这样请求才会被处理。</td>
+</tr>
+<tr>
+<td>408</td>
+<td>Request Timeout</td>
+<td>请求超出了服务器的等待时间。</td>
+</tr>
+<tr>
+<td>409</td>
+<td>Conflict</td>
+<td>由于冲突，请求无法被完成。</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone</td>
+<td>被请求的页面不可用。</td>
+</tr>
+<tr>
+<td>411</td>
+<td>Length Required</td>
+<td>“Content-Length” 未被定义。如果无此内容，服务器不会接受请求。</td>
+</tr>
+<tr>
+<td>412</td>
+<td>Precondition Failed</td>
+<td>请求中的前提条件被服务器评估为失败。</td>
+</tr>
+<tr>
+<td>413</td>
+<td>Request Entity Too Large</td>
+<td>由于所请求的实体的太大，服务器不会接受请求。</td>
+</tr>
+<tr>
+<td>414</td>
+<td>Request-url Too Long</td>
+<td>由于url太长，服务器不会接受请求。当post请求被转换为带有很长的查询信息的get请求时，就会发生这种情况。</td>
+</tr>
+<tr>
+<td>415</td>
+<td>Unsupported Media Type</td>
+<td>由于媒介类型不被支持，服务器不会接受请求, 例如: 后台程序不支持提交的<code>content-type</code>类型，就会返回<code>415</code></td>
+</tr>
+<tr>
+<td>416</td>
+<td></td>
+<td>服务器不能满足客户在请求中指定的Range头。</td>
+</tr>
+<tr>
+<td>417</td>
+<td>Expectation Failed</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><code>5xx: 服务器错误信息</code></p>
+<table>
+<thead>
+<tr>
+<th>消息:</th>
+<th>状态描述</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>500</td>
+<td>Internal Server Error</td>
+<td>请求未完成。服务器遇到不可预知的情况。</td>
+</tr>
+<tr>
+<td>501</td>
+<td>Not Implemented</td>
+<td>请求未完成。服务器不支持所请求的功能。</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Bad Gateway</td>
+<td>请求未完成。服务器从上游服务器收到一个无效的响应。</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable</td>
+<td>请求未完成。服务器临时过载或当机。</td>
+</tr>
+<tr>
+<td>504</td>
+<td>Gateway Timeout</td>
+<td>网关超时。</td>
+</tr>
+<tr>
+<td>505</td>
+<td>HTTP Version Not Supported</td>
+<td>服务器不支持请求中指明的HTTP协议版本。</td>
+</tr>
+</tbody></table>
+<h5 id="8-2响应头-Response-Header"><a href="#8-2响应头-Response-Header" class="headerlink" title="8.2响应头 (Response Header)"></a>8.2响应头 (Response Header)</h5><p>1.响应头也叫消息报头 也就是服务器端要告诉客户端的一些附加信息, 但是也有可能这些响应头是由后端开发人员进行自定义的!</p>
+<p>而且这里的响应头跟请消头 很类似, 格式也基本一样, 它的格式为 name:value。具体宏哥这里也列举了一些常见的响应头 如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>响应头</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Server</code></td>
+<td>HTTP服务器的软件信息</td>
+</tr>
+<tr>
+<td><code>Date</code></td>
+<td>响应报文的时间, 要注意返回时间的时区</td>
+</tr>
+<tr>
+<td><code>Expiros</code></td>
+<td>服务器指定的一个缓存过期时间</td>
+</tr>
+<tr>
+<td><code>Set-Cookie</code></td>
+<td>设置Cookie, 也就是<code>服务器</code>返回的一段文本给<code>客户端</code>,让<code>客户端</code>保存好,下次请求就把这个<code>cookie</code>文本带上!</td>
+</tr>
+<tr>
+<td><code>Last-Modified</code></td>
+<td>资源最后修改时间 ，也就是客户端有缓冲的文档并发出了一个条件性的请求, 服务器告诉客户，原来缓冲的文档还可以继续使用, 也就是说不用在从服务器中进行返回</td>
+</tr>
+<tr>
+<td><code>Content-Type</code></td>
+<td><code>服务器</code>返回给<code>客户端</code>的响应类型和编码字符集<br>例如：<code>Content-Type:text/html;charset=utf-8</code></td>
+</tr>
+<tr>
+<td><code>Content-Length</code></td>
+<td>内容长度, 也就是<code>服务器</code>返回给<code>客户端</code>返回的内容是多少字节</td>
+</tr>
+<tr>
+<td><code>Connection</code></td>
+<td>例如<code>Keep-Alive</code>，表示保持<code>tcp链接不会关闭</code>，当然它不会永久保持链接，我们在服务器端中是可以设置的</td>
+</tr>
+<tr>
+<td><code>Location</code></td>
+<td>指明<code>服务器</code>给<code>客户端</code>重定向的位置，也就是新的URL地址 如:304的情况</td>
+</tr>
+<tr>
+<td>………………………………..</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>宏哥这里只例举一下常见和常用的，其实还有更多的<code>响应头</code>这里就不一一列举了!有兴趣的自己可以百度一下！</p>
+<p>2.我们可以用Fiddler截取一个响应头看看，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/CKfxtheDIMjumFZ.png" alt></p>
+<h5 id="8-3空白行"><a href="#8-3空白行" class="headerlink" title="8.3空白行"></a>8.3空白行</h5><p>空白行也就是http规范制定的必须存在的一个空行, 空行的目的就是一种格式，也就是要告诉用户接下来的内容就是正文内容了!</p>
+<h5 id="8-4响应体"><a href="#8-4响应体" class="headerlink" title="8.4响应体"></a>8.4响应体</h5><p>响应体也就是实际从服务器返回给客户端的正文内容,也可能是一些字符串， 也可以是任意的格式:</p>
+<p>响应体大多数情况下都是html、json、文本、xml 这些格式!</p>
+<p>从8.2宏哥抓包可以看出这里是一个json数据：</p>
+<pre><code>{&quot;status&quot;:1,&quot;code&quot;:10000,&quot;message&quot;:&quot;\u8bbf\u95ee\u6210\u529f&quot;,&quot;data&quot;:{&quot;url&quot;:&quot;&quot;,&quot;token&quot;:&quot; xxxxxxxx&quot;,&quot;isenterprise&quot;:0,&quot;uid&quot;:&quot; xxxxxxxxx&quot;}}</code></pre><h4 id="9-小结"><a href="#9-小结" class="headerlink" title="9.小结"></a>9.小结</h4><p>1.HTTP 请求和响应具有相似的结构，由以下部分组成︰</p>
+<p>（1）一行起始行用于描述要执行的请求，或者是对应的状态，成功或失败。这个起始行总是单行的。</p>
+<p>（2）一个可选的 HTTP 头集合指明请求或描述消息正文。</p>
+<p>（3）一个空行指示所有关于请求的元数据已经发送完毕。</p>
+<p>（4）一个可选的包含请求相关数据的正文 (比如 HTML 表单内容), 或者响应相关的文档。 正文的大小有起始行的 HTTP 头来指定。</p>
+<p>起始行和 HTTP 消息中的 HTTP 头统称为请求头，而其有效负载被称为消息正文。</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/3U6pIOgwt2yNQT7.png" alt></p>
+<p>好了，对于Http和Https相关的的知识点宏哥就说这么多了,对于学习fiddler足够了！</p>
+<p>接下来你就可以愉快的学习Fiddler了🤗</p>
+
+            </div>
+			
+            <hr/>
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">博主不易，靠赏过日！！！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+			<style>
+				.reprint {
+					margin: 2em 0 0;
+					padding: 0.5em 1em;
+					border-left: 3px solid #FF1700;
+					background-color: #F9F9F9;
+					list-style: none;
+				}
+
+				.reprint li {
+					line-height: 30px;
+				}
+			</style>
+            <div class="reprint">
+                <!--<p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="https://hongduhong.github.io" class="b-link-green">北京-宏哥</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2016/06/09/fiddler/" class="b-link-green">《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(1)-HTTP和HTTPS基础知识 -01</a>
+                </p>-->
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>作者:  </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>文章链接:  </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>版权声明:   </strong>
+					本网志所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					许可协议。转载请注明出处!
+				  </li>
+				</ul>
+            </div>
+			<style>
+				.article-end-text-wrap-gzh {
+					margin: 5px 0;
+				}
+					
+				.article-end-text-gzh {
+					font-family: "微软雅黑";
+					font-weight: bold;
+					color: red;
+					font-size: 50px;
+					line-height: 1.6em;
+					text-align:center;
+					padding: 1em 2em;
+					background: color-widget-background;
+					box-shadow: 1px 2px 3px color-border;
+					border: 1px solid color-widget-border;
+					border-radius: 3px;
+				}  
+			</style>
+			<div class="article-end-text-wrap-gzh">
+			  <div class="article-end-text-gzh">
+				<p>扫码关注公众号，更多干货秒得到</p>
+				<img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/26/4hCH391xM65ENtu.png" width="200">
+			  </div>
+			</div>
+			<!--<div>
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>copyright.author </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>copyright.link </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>copyright.license_title  </strong>
+					copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					copyright.right_license_content
+				  </li>
+				</ul>
+			<div>
+			<div>
+				 <style>
+.reprint {
+    margin: 2em 0 0;
+    padding: 0.5em 1em;
+    border-left: 3px solid #FF1700;
+    background-color: #F9F9F9;
+    list-style: none;
+}
+
+.reprint li {
+    line-height: 30px;
+}
+</style>
+<div>
+	<ul class="reprint">
+		<li class="reprint-author">
+          <strong>copyright.author </strong>北京-宏哥</a>
+          </li>
+          <li class="reprint-link">
+          <strong>copyright.link </strong>
+          <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+        </li>
+        <li class="reprint-license">
+            <strong>copyright.license_title  </strong>
+            copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+            copyright.right_license_content
+        </li>
+	</ul>
+<div>
+
+			</div>-->
+
+        </div>
+		
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'f198ff3418cff1b4beb1',
+        clientSecret: '4381fdcb7742eb697e6214ca4ccacbbc78620722',
+        repo: 'hongduhong.github.io',
+        owner: 'hongduhong',
+        admin: "hongduhong",
+        id: '2016-06-09T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+	.v .txt-right{ display: none;}
+
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+ <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'QTjhAL7gTPGjIK1RQM2TlxDR-gzGzoHsz',
+        appKey: 'aBlfRinOLK3x6GKoYWr02qWj',
+        notify: 'true' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '留下你足迹吧O(∩_∩)O\n各位站长也留下你的交友申请 \n(申请格式：网站链接 + 一句话简介站点;)\n(如：five-great.coding.me + 互联网爱好者,撸代码,技术交流。)\n( ╯□╰ )建议不要匿名评论,建议填写邮箱便于接收回复信息'
+    });
+</script>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2016/06/10/fiddler/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/20.jpg" class="responsive-img" alt="《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(2)-初识Fiddler让你理性认识一下 -02">
+                        
+                        <span class="card-title">《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(2)-初识Fiddler让你理性认识一下 -02</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">**🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(2)-初识Fiddler让你理性认识一下 
+1.前言　</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2016-06-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Fiddler/" class="post-category" target="_blank">
+                                    Fiddler
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Fiddler/" target="_blank">
+                        <span class="chip bg-color">Fiddler</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2016/06/08/python/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/17.jpg" class="responsive-img" alt="Python相关知识-04">
+                        
+                        <span class="card-title">Python相关知识-04</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">🔥 python学习 -女神或者男神把微信消息撤回后好慌，有了这个妈妈再也不担心你看不到女神或者男神撤回的消息了（超详</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-06-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 北京-宏哥<br />'
+            + '作者: 北京-宏哥<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h4, h5, h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h4, h5, h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<!--<script type="text/javascript" src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  if(window.outerHeight <500&&window.outerWidth<400){
+  $("#p1").hide();
+ 
+   }else{
+  $("#p1").show();
+  
+  }
+});
+</script>
+<footer class="page-footer bg-color">
+	<div  style="text-align: center;">
+	<li class="col s12 m8 l8 copy-right">
+  友链：
+         
+            
+                
+                
+				
+             <a href="https://www.jianshu.com/u/c6e85b30966e" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 简书
+               </a>
+                
+                
+				
+             <a href="https://www.cnblogs.com/du-hong" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 博客园
+               </a>
+                
+                
+				
+             <a href="https://www.zhihu.com/people/bei-jing-hong-ge" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 知乎
+               </a>
+                
+                
+				
+             <a href="https://cloud.tencent.com/developer/user/5695339" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 腾讯云
+               </a>
+                
+              		  
+		<span id="busuanzi_container_site_uv" style="float:right"> 
+			恭喜您成为第 
+			<span id="busuanzi_value_site_uv" class="white-color">
+			</span>
+			位访客&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>
+	  </li>
+	</div>
+	<div class="container row center-align">
+		<div class="col s12 m8 l8 copy-right">  
+         <span id ="p1">&nbsp;&nbsp;&nbsp;</span>
+            
+			
+                
+                
+                <span id="busuanzi_container_site_pv">
+                       <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color">1212112121</span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次&nbsp;
+                </span>
+                
+              
+			
+			
+                <i class="fa fa-area-chart"></i>站点总字数:
+                <span class="white-color">292.3k</span>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			本站由&copy;<a href="https://hongduhong.github.io" target="_blank">北京-宏哥</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 搭建.
+			
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hongduhong/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1918991791@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1918991791" class="tooltipped" data-tooltip="QQ联系我: 1918991791" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+
+
+</div>
+    </div>
+</footer>
+<script type="text/javascript">
+
+        //获取输入框的文本
+        function getdata(){
+        var i=document.getElementById('page__date');
+        
+        
+         var a=new Date();var b=new Date('2019-8-20');var count_s=parseInt((a.getTime()-b)/(1000 * 3600 * 24));
+      
+         }
+        setTimeout("getdata()","2000");
+
+</script>
+<div class="progress-bar"></div>
+<script src="//code.tidio.co/nrzrwmino0xirhbbord6owqnmk7duacv.js" async></script>
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+
+<div id="backTop" class="top-scroll">
+<a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.staticfile.org/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script src="https://cdn.staticfile.org/masonry/4.0.0/masonry.pkgd.js"></script>
+<script src="https://cdn.staticfile.org/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.staticfile.org/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://cdn.staticfile.org/lightgallery/1.6.12/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+	<script type="text/javascript">
+		$("#loading").fadeOut(5000);
+	</script>
+</html>

@@ -1,0 +1,2468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(5)-Fiddler监控面板详解-05, 北京-宏哥 python  自动化测试  接口 JMeter Appium">
+    <meta name="description" content="**🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(5)-Fiddler监控面板详解
+1.简介 按照从上往">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(5)-Fiddler监控面板详解-05 | 北京-宏哥</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/aos/2.3.4/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+
+
+    <script src="https://cdn.staticfile.org/jquery/2.2.0/jquery.min.js"></script>	
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d62256055258ddb12716821c285aadab";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?716046d3a903bfe6a910f6b68a93271d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!--推送-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'https://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!--广告-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3736773013312638",
+    enable_page_level_ads: true
+  });
+</script>
+<!--onlinetk-->
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/011b3025.js","daovoice")</script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+
+<style>
+  @media only screen and (max-width: 422px){
+    nav .brand-logo {left: 41%;}
+    nav a {margin: 0px -38px 0px 0px;}
+    nav ul a {padding: 0px; margin-left: -42px;}
+    .bg-cover .title{fone-size:3rem;}
+  }
+ </style>
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo" >
+                <a  href="/" class="waves-effect waves-light">
+                    
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                     <span class="logo-span">北京-宏哥</span>
+                </a>
+				
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/galleries" class="waves-effect waves-light">
+            
+            <i class="fa fa-photo"></i>
+            
+            <span>相册</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/lyb" class="waves-effect waves-light">
+            
+            <i class="fa fa-paper-plane-o"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">北京-宏哥</div>
+        <div class="logo-desc">
+            
+            不积跬步无以至千里，不积小流无以成江海。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/galleries" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-photo"></i>
+                
+                相册
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/lyb" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-paper-plane-o"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/hongduhong" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>GITHUB
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/hongduhong" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="GITHUB" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+ 
+
+
+</header>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #canvas111{
+		 position: fixed;
+         background: #ccc;
+		 overflow: auto;
+		 z-index: -1;
+    }
+    </style> 
+
+	<canvas id="canvas111"></canvas>
+	
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<body>
+    
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script type="text/javascript">
+    window.requestAnimationFrame = (function(){
+        return window.requestAnimationFrame ||
+               window.webkitRequestAnimationFrame ||
+               window.mozRequestAnimationFrame ||
+               function( callback ){
+                    window.setTimeout( callback, 1000/2 );
+               };
+    })();
+    var myCanvas = document.getElementById("canvas111");
+    var ctx = myCanvas.getContext("2d");//getContext 设置画笔
+    var num;
+    var w,h;
+    var duixiang = [];
+    var move = {};
+    function widthheight(){
+        w = myCanvas.width = window.innerWidth;
+        h = myCanvas.height = window.innerHeight;
+		num= Math.floor(w*h*0.0001);
+        for(var i = 0;i < num;i++){
+            duixiang[i] = {
+                x:Math.random()*w,
+                y:Math.random()*h,
+                cX:Math.random()*0.6-0.3,
+                cY:Math.random()*0.6-0.3,
+				R:Math.floor(Math.random()*5)+2,
+				//CC:Math.floor(Math.random()*3)+2,
+			    r: Math.floor(Math.random() * 254),   
+                g: Math.floor(Math.random() * 254),  
+                b:Math.floor(Math.random() * 254)   
+            } 
+           // console.log(duixiang[i])
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+			 //Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].CC);
+        }
+    };widthheight();//获取浏览器的等宽度等高
+
+    function Cricle(x,y,R,r,g,b){
+        ctx.save();//保存路径
+       if(Math.random()>0.991) {ctx.globalAlpha= 0.9;}//ctx.fillStyle = "#CCC";}//填充的背景颜色
+	    else { ctx.globalAlpha=0.47;}
+		 
+		ctx.fillStyle = "rgb("+ r +","+ g +","+ b +")";
+        ctx.beginPath();//开始绘画
+		ctx.arc(x,y,R,Math.PI*2,0);//绘画圆 x y 半径（大小） 角度  一个PI 是180 * 2 = 360    真假 0/1 true/false
+        ctx.closePath();//结束绘画
+        ctx.fill();//填充背景颜色
+        ctx.restore();//回复路径
+    };Cricle();
+
+
+    !function draw(){
+        ctx.clearRect(0,0,w,h)//先清除画布上的点
+        for(var i = 0;i < num;i++){
+            duixiang[i].x += duixiang[i].cX;
+            duixiang[i].y += duixiang[i].cY;
+            if(duixiang[i].x>w || duixiang[i].x<0){
+                duixiang[i].cX = -duixiang[i].cX;
+            }
+            if(duixiang[i].y>h || duixiang[i].y<0){
+                duixiang[i].cY = -duixiang[i].cY;
+            }
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+            //勾股定理判断两点是否连线
+            for(var j = i + 1;j < num;j++){
+                if( (duixiang[i].x-duixiang[j].x)*(duixiang[i].x-duixiang[j].x)+(duixiang[i].y-duixiang[j].y)*(duixiang[i].y-duixiang[j].y) <= 55*55 ){
+                    line(duixiang[i].x,duixiang[i].y,duixiang[j].x,duixiang[j].y,0,i,j)
+                }
+                if(move.x){
+                    if( (duixiang[i].x-move.x)*(duixiang[i].x-move.x)+(duixiang[i].y-move.y)*(duixiang[i].y-move.y) <= 100*100 ){
+                        line(duixiang[i].x,duixiang[i].y,move.x,move.y,1,i,1)
+                    }
+                }
+            }
+        }
+        window.requestAnimationFrame(draw)
+    }();
+
+    //绘制线条
+    function line(x1,y1,x2,y2,flag,i,j){
+        
+		if (flag){var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.5;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(0.8,"#019ee5");
+		        }
+				else
+				{
+				
+				var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.9;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(1,"rgb("+ duixiang[j].r +","+ duixiang[j].g +","+ duixiang[j].b +")");
+				}
+        ctx.save();
+        ctx.strokeStyle = color;
+		ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        ctx.stroke();
+        //ctx.restore();
+    }
+
+
+    //document.onmousemove = function(e){
+     //   move.x = e.clientX;
+      //  move.y = e.clientY;
+    //}
+    //console.log(move)
+
+    /*window.onresize = function(){
+        location.reload();
+    }*/
+</script>
+
+
+
+
+
+
+
+
+
+
+<style>
+		#canvas1 {
+ position: fixed;
+ pointer-events:none;//鼠标多层响应事件
+        // background: 	#ccc;
+		 /*透明度*/
+		 width: 100%;
+        height: 100%;
+     // opacity: 0;
+		 overflow: auto;
+		 z-index: 999;
+
+    }
+</style>
+<!--<body>-->
+<canvas id="canvas1" style="whdth: 100%;height: 100%"></canvas>
+
+<script>
+var _createClass = function () {function defineProperties(target, props) 
+{ for (var i = 0; i < props.length; i++) 
+ {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) 
+ descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}
+ return function (Constructor, protoProps, staticProps) 
+ {if (protoProps) defineProperties(Constructor.prototype, protoProps);
+ if (staticProps) defineProperties(Constructor, staticProps);
+ return Constructor;};}();function _classCallCheck(instance, Constructor) 
+ {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}
+ var getRandom = function getRandom(min, max) {
+  return Math.random() * (max - min) + min;
+};
+
+var getRandomInt = function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
+var getRandomColor = function getRandomColor() {
+  var colors = [
+  'rgba(231, 76, 60, 1)', // red
+  'rgba(241, 196, 15, 1)', // yellow
+  'rgba(46, 204, 113, 1)', // green
+  'rgba(52, 152, 219, 1)', // blue
+  'rgba(155, 89, 182, 1)' // purple
+  ];
+
+  return colors[getRandomInt(0, colors.length)];
+};
+
+// Particle//粒子模块
+var
+Particle = function () {
+
+  function Particle(system, x, y) {_classCallCheck(this, Particle);
+    this.system = system;
+    this.universe = this.system.world.universe;
+    this.x = x;
+    this.y = y;
+    this.color = getRandomColor();
+    this.life = 1;
+    this.aging = getRandom(0.990, 0.999); // 0.99, 0.999 || 0.999, 0.9999
+
+    this.r = getRandomInt(12, 16);//初始粒子半径范围
+    this.speed = getRandom(18, 18.5);//粒子爆炸速度范围
+    this.velocity = [
+    getRandom(-this.speed, this.speed),
+    getRandom(-this.speed, this.speed)];
+
+  }_createClass(Particle, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (
+      this.r < 0.1 ||
+      this.life === 0 ||
+      this.x + this.r < 0 ||
+      this.x - this.r > this.universe.width ||
+      this.y + this.r < 0 ||
+      this.y - this.r > this.universe.height)
+      {
+        this.system.removeObject(this);
+      }
+
+      this.r *= this.life;
+      this.x += this.velocity[0];
+      this.y += this.velocity[1];
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      // Main circle //亮圈模块
+
+      ctx.fillStyle = this.color;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r*1.2, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+
+      var r = this.color.match(/([0-9]+)/g)[0];
+      var g = this.color.match(/([0-9]+)/g)[1];
+      var b = this.color.match(/([0-9]+)/g)[2];
+
+      // Gradient//梯度变化曲线
+
+      var spread = 1.5;
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r,
+      this.x, this.y, this.r * spread);
+
+      gradient.addColorStop(0, 'rgba(' + r + ', ' + g + ', ' + b + ', 0.5)');
+      gradient.addColorStop(1, 'rgba(' + r + ', ' + g + ', ' + b + ', 0)');
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r * spread, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+
+      // Aberration//偏差
+
+      var offset = this.r * 0.5;
+      var color = 'rgba(' + g + ', ' + b + ', ' + r + ', 0.5)';
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(this.x + offset, this.y + offset, this.r, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+    } }]);return Particle;}();
+
+
+
+// Crown //水波纹圈模块
+var
+Crown = function () {
+
+  function Crown(system, x, y) {_classCallCheck(this, Crown);
+    this.system = system;
+    this.x = x;
+    this.y = y;
+    this.r = getRandomInt(5, 15); // 5, 20  水波纹圈半径范围
+    this.mod = 1.1;
+    this.life = 0.5; //水波纹线
+    this.aging = getRandom(0.830, 0.899);
+    this.speed = getRandom(8, 9);
+    this.color = {
+      r: getRandomInt(236, 242),
+      g: getRandomInt(70, 80),
+      b: getRandomInt(50, 70) };
+
+
+    this.angle1 = Math.PI * getRandom(0, 2);
+    this.angle2 = this.angle1 + Math.PI * getRandom(0.3, 0.4);//水波纹圈完整度
+  }_createClass(Crown, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (this.life <= 0.0001) this.system.removeObject(this);
+
+      this.r += Math.abs(1 - this.life) * this.speed;
+
+      this.x1 = this.x + this.r * Math.cos(this.angle1);
+      this.y1 = this.y + this.r * Math.sin(this.angle1);
+
+      this.angle3 = this.angle1 + (this.angle2 - this.angle1) / 2;
+      this.x2 = this.x + this.r * this.mod * Math.cos(this.angle3);
+      this.y2 = this.y + this.r * this.mod * Math.sin(this.angle3);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r * 0.9,
+      this.x, this.y, this.r);
+
+      gradient.addColorStop(0, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life + ')');
+      gradient.addColorStop(1, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life * 0.5 + ')');
+
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, this.angle1, this.angle2, false);
+      ctx.quadraticCurveTo(this.x2, this.y2, this.x1, this.y1);
+      ctx.fill();
+      ctx.closePath();
+    } }]);return Crown;}();
+
+
+
+// Explosion //爆炸模块
+var
+Explosion = function () {
+
+  function Explosion(world, x, y) {_classCallCheck(this, Explosion);
+    this.world = world;
+    this.x = x;
+    this.y = y;
+    this.objects = [];
+
+    var particles = getRandomInt(10, 30); // 10, 30 amount of particles//爆炸 粒子数量
+    var crowns = particles * getRandom(0.4, 0.5);
+
+    while (crowns-- > 0) {this.addCrown();}
+    while (particles-- > 0) {this.addParticle();}
+  }_createClass(Explosion, [{ key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      if (this.objects.length <= 0) {
+        this.world.clearExplosion(this);
+      }
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'addCrown', value: function addCrown()
+
+    {
+      this.objects.push(new Crown(this, this.x, this.y));
+    } }, { key: 'addParticle', value: function addParticle()
+
+    {
+      this.objects.push(new Particle(this, this.x, this.y));
+    } }, { key: 'removeObject', value: function removeObject(
+
+    obj) {
+      var index = this.objects.indexOf(obj);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return Explosion;}();
+
+
+
+// World 
+var
+ConfettiWorld = function () {function ConfettiWorld() 
+{_classCallCheck(this, ConfettiWorld);}_createClass(ConfettiWorld, [{ key: 'init', value: function init()
+
+    {
+      this.objects = [];
+      window.addEventListener('click', this.explode.bind(this));
+
+      // Initial explosion //初始爆炸
+      var counter = 0;
+      while (counter-- > 0) {
+        this.explode({
+          clientX: window.event.clientX, //getRandomInt(10, this.universe.width) ,          //this.universe.width / 2,
+          clientY: window.event.clientY //getRandomInt(10, 50) //this.universe.height / 2 
+		  });
+
+      }
+    } }, { key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      var amount = this.objects.reduce(function (sum, explosion) {
+        return sum += explosion.objects.length;
+      }, 0);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'explode', value: function explode(
+
+    event) {
+      var x = event.clientX;
+      var y = event.clientY;
+
+      this.objects.push(new Explosion(this, x, y));
+    } }, { key: 'clearExplosion', value: function clearExplosion(
+
+    explosion) {
+      var index = this.objects.indexOf(explosion);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return ConfettiWorld;}();
+
+
+
+// Time
+var
+Time = function () {
+
+  function Time() {_classCallCheck(this, Time);
+    this.now = 0; // current tick time
+    this.prev = 0; // prev tick time
+    this.elapsed = 0; // elapsed time from last tick
+    this.delta = 0; // time from last update
+    this.fps = 60; // desired fps
+    this.step = 1 / 60; // step duration
+  }_createClass(Time, [{ key: 'update', value: function update(
+
+    time) {
+      this.now = time;
+      this.elapsed = (this.now - this.prev) / 1000;
+      this.prev = this.now;
+      this.delta += this.elapsed;
+    } }, { key: 'raf', value: function raf(
+
+    func) {
+      window.requestAnimationFrame(func);
+    } }, { key: 'hasFrames', value: function hasFrames()
+
+    {
+      return this.delta >= this.step;
+    } }, { key: 'processFrame', value: function processFrame()
+
+    {
+      this.delta -= this.step;
+    } }]);return Time;}();
+
+
+
+// Canvas
+var
+Universe = function () {
+
+  function Universe(element) {_classCallCheck(this, Universe);
+    this.el = element;
+    this.ctx = this.el.getContext('2d');
+    this.pixelRatio = window.devicePixelRatio;
+    this.time = new Time();
+
+    this.worlds = {};
+    this.world = null; // current state
+
+    this.updateSize();
+    window.addEventListener('resize', this.updateSize.bind(this));
+
+    this.addWorld('confetti', ConfettiWorld);
+    this.setWorld('confetti');
+
+    this.start();
+  }_createClass(Universe, [{ key: 'start', value: function start()
+
+    {
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'tick', value: function tick(
+
+    time) {
+      this.time.update(time);
+
+      if (this.time.hasFrames()) {
+        this.update();
+        this.time.processFrame();
+      }
+
+      this.render();
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'update', value: function update()
+
+    {
+      this.world.update(this.time.step);
+    } }, { key: 'render', value: function render()
+
+    {
+      var gradient = this.ctx.createLinearGradient(0, 0, this.width, this.height);
+     // gradient.addColorStop(0, '#34495e');
+      //gradient.addColorStop(1, '#2c3e50');
+
+      this.ctx.clearRect(0, 0, this.width, this.height);
+      // this.ctx.fillStyle = '#2c3e50'
+     // //this.ctx.fillStyle = gradient;
+    // // this.ctx.fillRect(0, 0, this.width, this.height);
+      this.world.render(this.ctx);
+    }
+
+    // Helpers 库
+  }, { key: 'updateSize', value: function updateSize()
+    {
+      this.width = window.innerWidth;
+      this.height = window.innerHeight;
+      this.el.width = this.width * this.pixelRatio;
+      this.el.height = this.height * this.pixelRatio;
+      this.el.style.width = window.innerWidth + 'px';
+      this.el.style.height = window.innerHeight + 'px';
+      this.ctx.scale(this.pixelRatio, this.pixelRatio);
+    } }, { key: 'addWorld', value: function addWorld(
+
+    worldName, World) {
+      this.worlds[worldName] = new World();
+      this.worlds[worldName].universe = this;
+      this.worlds[worldName].init();
+    } }, { key: 'setWorld', value: function setWorld(
+
+    worldName) {
+      this.world = this.worlds[worldName];
+    } }]);return Universe;}();
+
+
+
+// Main
+
+console.clear();
+var element = document.querySelector('#canvas1');
+window.Canvas= new Universe(element);</script>
+
+<!--<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>-->
+
+
+<script src="https://cdn.staticfile.org/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(5)-Fiddler监控面板详解-05
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Fiddler/" target="_blank">
+                                <span class="chip bg-color">Fiddler</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Fiddler/" class="post-category" target="_blank">
+                                Fiddler
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    <span id="page__date">2016-06-13</sapn>
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        7.5k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        27 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>**🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(5)-Fiddler监控面板详解</p>
+<h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p> 按照从上往下，从左往右的计划，今天就轮到介绍和分享Fiddler的监控面板了。监控面板主要是一些辅助标签工具栏。有了这些就会让你的会话请求和响应时刻处监控中毫无隐私可言。监控面板是fiddler最核心的功能之一。记录了来自于服务器端（webServer）的请求会话。包括页面的请求和静态文件的请求。状态面板主要显示的是会话及会话的状态。</p>
+<h4 id="2-监控面板概览"><a href="#2-监控面板概览" class="headerlink" title="2.监控面板概览"></a>2.监控面板概览</h4><p>位于软件界面右边的这一大块面板，即为辅助标签 + 工具，宏哥称之为监控面板，它拥有 10 个小标签，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/zJNx2TF3ulvnoq1.png" alt></p>
+<h4 id="3-辅助标签-工具详解"><a href="#3-辅助标签-工具详解" class="headerlink" title="3.辅助标签 + 工具详解"></a>3.辅助标签 + 工具详解</h4><p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/AY5ma6i9xpev7Du.png" alt></p>
+<h4 id="3-1Get-Started-欢迎页签"><a href="#3-1Get-Started-欢迎页签" class="headerlink" title="3.1Get Started 欢迎页签"></a>3.1Get Started 欢迎页签</h4><p>左侧START快速开始检查数据包、构建请求；右侧LEARN有Fiddler官方文档、推荐博客、学习Video；右侧TOP ARTICLES显示当前热门文章。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/FN8kWpMZuEIR5Ha.png" alt></p>
+<p>######## 3.2Statistics</p>
+<p>（Statistics）数据统计：显示一些性能指标，这些性能指标有助于分析和优化web性能。用于查看请求的性能数据,统计与分析, 也就是说它就是对当前请求的性能分析数据。Http或Https请求的性能和其他数据分析，如DNS解析时间，TCP/TP建立连接的时间（TCP三次握手的时间）、SSL连接的时间（针对https请求）等信息。当你点击一个HTTP请求会话的时候，就可以看到Statistics里面有关于当前HTTP请求的性能以及数据分析。</p>
+<p>（1）请求总数、请求包大小、响应包大小。</p>
+<p>（2）请求起始时间、响应结束时间、握手时间、等待时间、路由时间、TCP/IP、传输时间。</p>
+<p>（3）HTTP状态码统计。</p>
+<p>（4）返回的各种类型数据的大小统计以及饼图展现。</p>
+<p>1.例如: 一些TCP/IP的连接时间，DNS的解析时间、资源消耗、各个国家的请求网络带宽对比等信息。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/d3Khx6CM1i5GjmP.webp" alt></p>
+<p>2.Show chart：把请求的数据以饼图的形式显示，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/gFTp1Pza2wuY9tj.png" alt></p>
+<p>2.Copy this chart：可以将该饼图复制到剪贴板，粘贴到图形处理软件或者 WORD 中。</p>
+<p>3.Collapse Chart：收起饼图展示。</p>
+<p>通过陈列出所有的HTTP通信量，Fiddler可以很容易的向您展示哪些文件生成了您当前请求的页面。使用Statistics页签，用户可以通过选择多个会话来得来这几个会话的总的信息统计，比如多个请求和传输的字节数。</p>
+<p>选择第一个请求和最后一个请求，可获得整个页面加载所消耗的总体时间。从条形图表中还可以分别出哪些请求耗时最多，从而对页面的访问进行访问速度优化。</p>
+<p>RTT（往返时间）：一个请求从发送时间到返回来的时间。是衡量一个请求的性能的一个重要的数据指标。</p>
+<h5 id="3-3Inspectors"><a href="#3-3Inspectors" class="headerlink" title="3.3Inspectors"></a>3.3Inspectors</h5><p>（Inspectors）对请求解包：可以对抓到的请求包查看一些详细的内容，例如：请求头（Header）：包括用户的使用的浏览器、请求携带的cookies、以及发送请求的域名。以不同的形式展示请求或部分请求报文、响应或部分响应报文。</p>
+<p>你有没有想过在Fiddler中如何快速查看http请求与响应报文呢?</p>
+<p>其实当我们在会话列表中双击某一个会话请求就会自动跳转到Inspectors选项卡。</p>
+<p>也就是当抓包成功之后, 就可以在左侧窗口中选择你要查看的地址来进行查看抓取的http信息数据，当选择了相应的地址之后，在右侧选项卡中 选择Inspectors(检查器), 然后再点击一下Raw就可以按照原生形式来进行查看到相应的http请求报文与http响应报文, 分为上下两个部分，上半部分是请求头部分，下半部分是响应头部分。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/QprtKhEaUzyCIV2.webp" alt></p>
+<p>对于每一部分,提供了多种不同格式查看每个请求和响应的内容, <code>Inspectors</code>选项卡中还有其他的</p>
+<p><strong>Inspectors选项卡上半部分HTTP请求内容的子集选项卡如下表所示：</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Headers</code></td>
+<td>以层级的形式来显示HTTP请求头部的相关内容信息</td>
+</tr>
+<tr>
+<td><code>TextView</code></td>
+<td>以文本的形式展示</td>
+</tr>
+<tr>
+<td><code>SytaxView</code></td>
+<td>查看具体的请求体 或者附带的键与值</td>
+</tr>
+<tr>
+<td><code>WebForms</code></td>
+<td>可以通过它看到url提交的相关参数信息</td>
+</tr>
+<tr>
+<td><code>HexView</code></td>
+<td>以16进制进行查看请求!</td>
+</tr>
+<tr>
+<td><code>Auth</code></td>
+<td>查看请求数据权限</td>
+</tr>
+<tr>
+<td><code>Cookie</code></td>
+<td>查看请求<code>cookie</code>信息</td>
+</tr>
+<tr>
+<td><code>Raw</code></td>
+<td>原生查看http</td>
+</tr>
+<tr>
+<td><code>JSON</code></td>
+<td>以<code>JSON</code>格式展开查看请求信息!</td>
+</tr>
+<tr>
+<td><code>XML</code></td>
+<td>以<code>xml</code>格式展开查看请求信息!</td>
+</tr>
+</tbody></table>
+<p><strong>Inspectors选项卡下半部分HTTP响应内容 的子集选项卡如下表所示：</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Transformer</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Headers</code></td>
+<td>以<code>层级</code>方式来展示<code>HTTP响应头部</code>信息</td>
+</tr>
+<tr>
+<td><code>TextView</code></td>
+<td>以<code>文本</code>方式来展示<code>HTTP响应正文</code>信息</td>
+</tr>
+<tr>
+<td><code>SyntaxView</code></td>
+<td>以<code>语法高亮</code>来展示<code>HTTP响应正文</code>信息</td>
+</tr>
+<tr>
+<td><code>ImageView</code></td>
+<td>以<code>图片的形式</code>来展示响应信息, 前提是你选择的会话是一个图片响应</td>
+</tr>
+<tr>
+<td><code>HexView</code></td>
+<td>以<code>16进制</code>来查看响应信息</td>
+</tr>
+<tr>
+<td><code>Webview</code></td>
+<td>以<code>html编译显示之后</code>的形式来查看响应结果</td>
+</tr>
+<tr>
+<td><code>Auth</code></td>
+<td>查看响应权限</td>
+</tr>
+<tr>
+<td><code>Caching</code></td>
+<td>查看响应缓存相关信息</td>
+</tr>
+<tr>
+<td><code>cookie</code></td>
+<td>查看响应<code>cookie</code>信息</td>
+</tr>
+<tr>
+<td><code>Raw</code></td>
+<td>以<code>原生格式</code>展示响应信息</td>
+</tr>
+<tr>
+<td><code>JSON</code></td>
+<td>以<code>json</code>展示响应信息</td>
+</tr>
+<tr>
+<td><code>xml</code></td>
+<td>以<code>xml</code>展示响应信息</td>
+</tr>
+</tbody></table>
+<h5 id="3-4AutoResponder"><a href="#3-4AutoResponder" class="headerlink" title="3.4AutoResponder"></a>3.4AutoResponder</h5><p>（AutoResponder）文件代理：也叫自动拦截请求或者自动响应器，可以把想要的服务器上返回的文件使用本地的文件做代理。可以定位线上bug。可用于拦截某一请求，进行如下操作：1、重定向到本地的资源，2、使用Fiddler的内置响应，3、自定义响应</p>
+<p>它允许你拦截指定规则的请求，并把响应结果重定向到一个本地资源 或 直接使用Fiddler内置的资源，从而代替服务器来自定义一个你想要的响应。 说白一点就是篡改响应。这个功能在我们做测试的时候也是非常有用的 ，使用它我们可以不影响用户体验的前提下进行测试。此功能启用后，可以将某一请求的响应结果替换成指定的资源，可以是本地文件，也可以是 Fiddler 内置的各种 HTTP 响应。主要用于临时拦截某一请求的响应，而无需修改服务器上的环境和代码，保证在最真实的环境中进行调试，也无需在 BUG 查找的时候就寻求相关部门的配合。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/MvZg3WxSAErPKO4.png" alt></p>
+<p>启用该功能，请将 Enable rules打勾。Unmatched requests passthrough表示允许未匹配到的请求正常响应。应该打勾才能让其他的请求继续；否则其他未匹配到的请求都会以 404 状态返回。</p>
+<p>页签上部是一个规则编辑器，可以进行编辑当前用户选择的匹配规则、保存编辑、删除此匹配规则等操作。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://img2022.cnblogs.com/blog/1232840/202207/1232840-20220701101256712-1297382748.png" alt></p>
+<p> 上边Combox 要劫持的地址，是匹配的条件，可以自行输入字符串，也可以选择 Fiddler 内置的三个正则（都是匹配图片的，没什么用）。</p>
+<p>######## 3.4.1Fiddler支持几种匹配模式</p>
+<p>Fiddler支持几种匹配模式：</p>
+<p>（1）String Literals —— 字符匹配：这种模式将匹配指定的字符串，不存在大小写敏感。范例：</p>
+<pre><code>*
+通配符，匹配任何地址，如： http://www.example.com/Path1/query=example
+EXAMPLE
+匹配 http://www.example.com/Path1/query=example
+path1/
+匹配 http://www.example.com/Path1/query=example
+query
+匹配 http://www.example.com/Path1/q=Query</code></pre><p>（2）Exact Match —— 精确匹配：这种模式一 EXACT: 开头，将严格匹配字符串，包括大小写。范例：</p>
+<pre><code>EXACT:http://www.example.com/path
+匹配 http://www.example.com/path
+不匹配 http://www.example.com/Path（大小写不符）
+不匹配 http://www.example.com/path/q=Query（有多余字符串）</code></pre><p>（3）Regular Expressions —— 正则表达式：这种模式一 regex: 开头，使用正则表达式来匹配 session 的 URL。范例：</p>
+<pre><code>regex:.*
+通配符，匹配任何地址，如 http://www.example.com/Path1/query=example
+
+regex:.*\.jpg —— 匹配包含 .JPG 的 URL
+匹配 http://www.example.com/Path1/query=foo.jpg&amp;bar
+匹配 http://www.example.com/Path1/query=example.jpg
+
+regex:.*\.jpg$ —— 匹配 .jpg 结束的 URL
+不匹配 http://www.example.com/Path1/query=foo.jpg&amp;bar（不是 .jpg 结尾）
+匹配 http://www.example.com/Path1/query=example.jpg
+
+regex:.*\.(jpg|gif|bmp)$ —— 匹配 .jpg 或 .gif 或 .bmp 结束的 URL
+不匹配 http://www.example.com/Path1/query=foo.bmp&amp;bar（不是 .bmp 结尾）
+匹配 http://www.example.com/Path1/query=example.gif
+不匹配 http://www.example.com/Path1/query=example.Gif （是 .gif 结尾，但大小写不匹配）
+匹配 http://www.example.com/Path1/query=example.bmp
+
+regex:(?insx).*\.(jpg|gif|bmp)$ —— 匹配 .jpg 或 .gif 或 .bmp 结束的 URL，忽略大小写
+不匹配 http://www.example.com/Path1/query=foo.bmp&amp;bar（不是 .bmp 结尾）
+匹配 http://www.example.com/Path1/query=example.gif
+匹配 http://www.example.com/Path1/query=example.Gif
+匹配 http://www.example.com/Path1/query=example.bmp</code></pre><p> 其中：<br> i表示不区分大小写<br> n表示指定的唯一有效的捕获是显式命名或编号的形式<br> s表示单行模式<br> x表示空格说明</p>
+<p>下边Combox是响应的结果，是真正要访问的地址。可以选择：Fiddler 内置的 HTTP 200/204/302/303/304/307/401/403/404/407/502 等各种响应范例、*bpu 和 *bpafter（ 表示在此中断，关于 bpu 和 bpfater 见 QuickExec 命令参考）、本地文件 (Find a file…)。</p>
+<p>Save 按钮是保存对此匹配规则的修改，Remove 按钮是删除此匹配规则。</p>
+<p>页签中间是一个列表，显示当前创建的匹配规则，左侧是匹配的条件，右侧是响应的结果。即：如果请求的地址包含左侧的字符串，那么就用右边设定的资源来替换来自服务器的响应。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/uMN37W5T9iSXvEl.png" alt></p>
+<p>对匹配规则操作，可以选中匹配规则，右键点击对应的操作即可，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/RvTbrtLqiwfJHEQ.gif" alt></p>
+<p>######## 3.4.2增加匹配规则</p>
+<p><strong>具体操作步骤如下：</strong></p>
+<p>1.在AutoResponder面板下，点击<img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/d8WnlbTRaQjMpDm.png" alt>，单击选择需要拦截的请求，复制请求的URL（请求右键 &gt;&gt; Copy &gt;&gt; Just Url），粘贴至右侧面板Rule Editor（或者左键按住，并拖动需要请求的url到右侧面板，此时url自动填充在Rule Editor处）</p>
+<p>2.设置响应的内容，可以选择Fiddler的内置响应或者是用户本地文件（或者点击规则，鼠标右键，选择Edit Response，进行自定义响应）</p>
+<p>3.同时选中<img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/odJzuHUDSy9Oh1q.png" alt>（使用规则）和<img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/b4WVAdK3CUoMc52.png" alt="img">（放行未匹配的请求）。</p>
+<p><strong>或者这样操作也可以：</strong></p>
+<p>点击 Add rule,打勾Unmatche按钮，新增一条规则。</p>
+<p>此时会激活页签底部的 Rule Editor。如果你在 Web Sessions 面板里选择了一个 Session，则匹配规则是该 Session 的 URL，否则是 StringtoMatch[数字]。然后可以使用 Rule Editor 编辑它。</p>
+<p>点击 Import… 按钮，导入在 Web Sessions 中保存下来的压缩包 (*.saz)。</p>
+<p>在 Web Sessions 面板中选择你要捕获的请求，直接拖拽到 AutoResponder 的列表中。</p>
+<h5 id="3-5Composer"><a href="#3-5Composer" class="headerlink" title="3.5Composer"></a>3.5Composer</h5><p>（Composer）前后端接口联调：可以伪造数据进行请求。可以不介入写任何JavaScript代码的情况下就可以实现与服务器之间的接口调试。　设计请求，修改请求参数，进行简单的接口测试。具体操作：鼠标左键拖动请求的url至右侧Composer面板处，请求信息会自动填充，修改请求参数，点击Execute。做前后端的接口联调实际上就是用的Composer功能。</p>
+<p>我们可以把请求拖进去，我们就可以看到请求参数就调了进去，我们可以通过修改请求参数重新向服务器发送请求，比如删掉referer删掉，点击excute，实际上就算伪造了一个请求。</p>
+<p>它可以允许我们自定义请求报文来发送到服务端，当然也可以手动创建一个新的请求，也可以从会话列表中拖拽一个现有的请求去发送!</p>
+<p>在Parsed(解析模式)下我们只需要提供简单的URL地址就可以了, 并且还可以在RequestBody中去定制一些属性，例如模拟浏览器消息头User-Agent</p>
+<p>但是Composer通常在我们开发项目当中用于接口测试 也是经常用于测试一些api接口的最好方法!</p>
+<p>当然有时候也可以通过Composer来校验后端接口的严谨,从而跳过一些前端的限制,去直接访问后端代码的逻辑，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/SGt91iqoEZaI5Fv.png" alt></p>
+<p><strong>Composer下还有几个子集选项卡:Parsed、Raw、Scratchpad、Options。具体解释如下表所示:</strong></p>
+<table>
+<thead>
+<tr>
+<th>选项卡</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Parsed</code></td>
+<td>表示已经被解析的整个HTTP请求,包括请求行,请求头和请求体,说通俗一点也就是最直观的看到<code>Request请求</code>的详细展示</td>
+</tr>
+<tr>
+<td><code>Raw</code></td>
+<td>按照真实原生<code>HTTP</code>请求标准来进行展示的格式!</td>
+</tr>
+<tr>
+<td><code>Scratchpad</code></td>
+<td>可以存储已经收集好的HTTP请求，可存储多个不同的请求, 你可以理解为请求回放功能， 鼠标连续点击三次即可选中要选择的请求来进行发送!</td>
+</tr>
+<tr>
+<td><code>Options</code></td>
+<td>设置一些请求选项</td>
+</tr>
+</tbody></table>
+<p><strong>其中<code>options</code>中的设置项如下表:</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Inspect Session</td>
+<td>检查会话，当开启此功能并重放的时候，会自动跳入Inspectors功能模块，进行检查HTTP请求和响应。</td>
+</tr>
+<tr>
+<td>Fix Content-Length header</td>
+<td>当使用POST请求进行重放的时候，如果没有Content-Length的请求头，Fiddler会自动加上此请求头，如果有但是请求正文大小错误，则它会自动修正。默认勾选。</td>
+</tr>
+<tr>
+<td>Follow Redirects</td>
+<td>会自动重定向301，302的请求。</td>
+</tr>
+<tr>
+<td>Automatically Authenticate</td>
+<td>自动进行身份认证，包括认证NTLM，http 401，http 407</td>
+</tr>
+<tr>
+<td>UI Options</td>
+<td>此功能是在原有的Fiddler功能选项里面，将Composer这个功能弹出一个浮动窗口，如果不需要直接关闭这个窗口就会恢复原样。</td>
+</tr>
+</tbody></table>
+<p>######## 3.5.1Parsed(详细展示请求结构)</p>
+<p>我们用得最多的就是Parsed，详细展示请求结构如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/9hEOjIQqdXYcrZS.webp" alt></p>
+<h5 id="3-6Fiddler-Orchestra-Beta"><a href="#3-6Fiddler-Orchestra-Beta" class="headerlink" title="3.6Fiddler Orchestra Beta"></a>3.6Fiddler Orchestra Beta</h5><p>Fiddler Orchestra Beta页签是新版fiddler新增功能，用于抓包远程计算机的数据，其中Fiddler Orchestra涉及到两个角色，控制器（Controller）和客户端（Client），控制器就是我们正在使用的Fiddler软件，其功能是用来收集数据和控制任何一个客户端，而客户端则是向任何其运行所在的Windows，Linux，Mac主机上收集接收过来的流量将其通过加密的方式报告发送给控制器，控制器会在Fiddler软件上的会话端显示。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/EXVHG9JeSab8Wup.png" alt></p>
+<h5 id="3-7Fiddler-Script"><a href="#3-7Fiddler-Script" class="headerlink" title="3.7Fiddler Script"></a>3.7<strong>Fiddler Script</strong></h5><p>打开Fiddler脚本编辑。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/FTWRg5q6UXjwlQd.png" alt></p>
+<h5 id="3-8log"><a href="#3-8log" class="headerlink" title="3.8log"></a>3.8log</h5><p>记录Fiddler的log日志。用来收集日志消息字符串，这些字符串是由扩展、FiddlerScript或者Fiddler本身生成的。Fiddler会记录应用事件（如当保存或加载SAZ文件）以及系统事件（如系统的网络连接丢失或者恢复）的响应通知。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/k7OHPwmFao5NXts.png" alt></p>
+<p>Log支持简单的宏命令，可以从QuitExec文本框中调用这些命令。输入<a href="mailto:log@Log.Clear" target="_blank" rel="noopener">log@Log.Clear</a>可以清空日志。输入<a href="mailto:log@Log.Save" target="_blank" rel="noopener">log@Log.Save</a>可以在会话列表中生成新的会话，该会话的响应体包含Log选项卡的文本。输入log”@Log.Erport&quot;filename&quot;“可以把Log选项卡的文本保存到指定的文件。文件名以.rtf结尾，可将文件保存为富文本格式，保存大小和权重，或者以文件名以.txt结尾保存的纯文本。</p>
+<h5 id="3-9Filters"><a href="#3-9Filters" class="headerlink" title="3.9Filters"></a>3.9Filters</h5><p>Filters多维度的过滤规则，可根据主机、进程、请求头、响应头、状态码、响应类型和大小、断点进行请求的过滤。作用：忽略不想显示的请求，过滤出想要的请求，是一个多维度的过滤器。过滤器要起作用，必须选中<img src="/images/loading.gif" data-original="https://img2020.cnblogs.com/blog/2228199/202012/2228199-20201211114129660-1417238444.png" alt>。</p>
+<p>Filters中文意思就是过滤的意思, 它的主要作用就是用来过滤请求用的， 要知道有的时候 会话列表中或存在大量的请求会话, 那么有些时候会根据用户的条件进行一个会话筛选, 也就是说通过过滤规则来过滤掉那些不想看到的请求。</p>
+<p>Filters选项卡也是在我们抓包过程中使用频率非常高的，其中功能也比较多，这里我把它内部的功能逐一拆解分成7个部分来进行讲解。具体功能如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/GmKcfavSU8TbBeY.png" alt></p>
+<p>######## 3.9.1Hosts</p>
+<p>Hosts这是Filters对主机的过滤规则配置。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/2HUBvr5OhVRPmKs.png" alt></p>
+<p>1.使用Filters的时候就必须要勾选左上角的Use Filters(选择过滤器)开启过滤器, 勾选了之后Filters选项卡会出现绿色对钩, 记住这个勾选之后，过滤器才会生效，否则后边的7大部分都是灰色的不允许配置和操作。</p>
+<p>2.“Action”按钮功能如下图所示：</p>
+<p> <img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/ysjvaGEcUxNeikH.png" alt></p>
+<p>“Run Filterset now”：根据设置过滤已存在的Session列表；</p>
+<p>“Load Filterset”：打开本地Filters配置文件；</p>
+<p>“Save Filterset”：保存当前配置到本地；</p>
+<p>“Help”：打开官方文档；</p>
+<p>注：Filters配置后，是即时生效的。</p>
+<p>并且Hosts这里还有两个请求过滤条件:Zone和Host。</p>
+<p><strong>（1）Zone(区域): 下拉列表中可以选择如下:</strong></p>
+<p>　　①、No Zone Filter：无区域限制，不用区域过滤（默认设置，一般无特殊要求就用默认的）</p>
+<p>　　②、Show only Intranet Hosts：仅显示局域网的请求（一般不用）</p>
+<p>　　③、Show only Internet Hosts：仅显示广域网的请求（一般不用）</p>
+<p>如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/giMYl4PZr9XuNKo.png" alt></p>
+<p>接下来和宏哥通过一个请求百度这个例子来直观的看一下这几个选项到底什么意思了，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/wTvKN7QmprhAxfe.gif" alt></p>
+<p>从上图中我们可以清楚地看出：如果设置为了No Zone Filter那么内网和外网的请求都可以获取到，如果设置为了show only Intranet Hosts 那么外网的请求会话是无法获取到的,仅仅能获取内网请求，如果设置为了show only Internet Hosts那么相反也仅仅能获取外网的请求，而内网的请求是无法获取到的。</p>
+<p>平常如果我们没有其他特殊需求的情况下Zone都被默认设置为了No Zone Filter(不用区域过滤)</p>
+<p>注意:各位要留意 Intranet(内网) 和 Internet(因特网) 这两个单词很多人容易搞混!</p>
+<p><strong>（2）Host(主机):下拉列表中可以选择如下:</strong></p>
+<p>　　①、No Host Filter：无主机限制</p>
+<p>　　②、Hide the following Hosts：隐藏输入到下面文本框的主机（域名或者IP）的请求（选择请求，单击右键，Copy &gt;&gt; This Column）</p>
+<p>　　③、Show only the following Hosts：仅显示输入到下面文本框的主机（域名或者IP）的请求</p>
+<p>　　④、Flag the following Hosts：含有下面文本框的主机（域名或者IP）的请求做标记（即加粗显示）</p>
+<p> 如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/uNx6rap5eMAQzUo.png" alt></p>
+<p>同理为了直观宏哥这里再举例说明比如说: 我设置其中一个show only the following Hosts (仅展示以下指定主机的请求) 那么会话列表中只会出现我所指定的主机请求会话，其他一概不显示。</p>
+<p>注意: 这里设置之后 要点击一下Actions中的Run Filterset now(运行过滤)</p>
+<p>如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/HxzO6TGdqcQgmJo.gif" alt></p>
+<p>另外两个根据自己需求设置就行了, 平常没特殊需求我们也是设置的No Host Filter。</p>
+<p>######## 3.9.2Client Process（应用比较少）</p>
+<p> Client Process 这是对客户端进程的一些过滤配置。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/YktcyoFTZC79fvP.png" alt></p>
+<p>从上图可以清楚地看到有三个复选框：</p>
+<p>①、Show only traffic from：仅显示某一进程的请求</p>
+<p>②、Show only Internet Explorer traffic：仅显示IE浏览器发出的请求</p>
+<p>③、Hide traffic from Service Host：隐藏来自service host（即由svchost.exe进程）发出的请求</p>
+<p>宏哥这里勾选：Show only Internet Explorer traffic的选项，看一下是否是：仅显示ie浏览器的请求会话,其他浏览器的请求会话一概不显示。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/OnXNck2QFVjsdZh.gif" alt></p>
+<p>######## 3.9.3Request Headers</p>
+<p>Request Headers这是对请求头的一些过滤规则进行配置。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/jn4eCVtcPBloAL7.png" alt></p>
+<p>从上图可以清楚地看到有五个复选框：</p>
+<p>①、Show only if URL contains：仅显示url中包含输入的字符串的请求（可以是url的一部分、正则、或完整的URL）</p>
+<p>②、Hide if URL contains：与①相反，隐藏url中包含输入的字符串的请求</p>
+<p>③、Flag requests with headers：标记请求头中有指定内容的请求，用头标记请求, 标记带有特定header的请求，如果在web session列表中存在该请求,会加粗显示。 例如，我想突出显示header信息中带有cookie字段的URL请求,即可以勾选上这项,并在后面输入：cookie。</p>
+<p>④、Delete request headers：删除请求头中的指定内容，也就是说在请求的过程当中会删除指定的Header字段。我们在进行测试时非常有用，比如说去掉URL中的Content-Type信息。</p>
+<p>⑤、Set request header：设置请求头中添加指定的内容，也就是说可以在请求头中自定义请求头信息，前面输入字段，后面输入值, 这就是我们可以进行自定义请求头内容。</p>
+<p>宏哥这里勾选：show only if URL contains只会显示指定包含这个内容的响应会话，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/i9hQ4EsYjzLqtVW.gif" alt></p>
+<p>######## 3.9.4Breakpionts</p>
+<p> Breakpionts 断点配置，这个功能有的时候也非常重要。后边宏哥会详细介绍这一部分的内容的。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/cBZ94JAno1CmkMr.png" alt></p>
+<p>从上图可以清楚地看到有四个复选框：</p>
+<p>①、Break request on POST：在POST请求中设置断点（请求前设置断点）</p>
+<p>②、Break request on GET with query string：在带有请求参数的GET请求中设置断点（请求前设置断点）</p>
+<p>③、Break on XMLHTTpRequest：在Ajax请求中设置断点（请求前设置断点）</p>
+<p>④、Break response on Content-type：在响应中含有指定Content-type的请求中设置断点（响应后设置断点）</p>
+<p>######## 3.9.5Response Status Code</p>
+<p> Response Status Code(响应状态码过滤)，这一部分的功能，很简单就是看状态码进行会话的过滤配置。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/qkilPjNMZ1TKQ8C.png" alt></p>
+<p> 从上图可以清楚地看到有五个复选框：</p>
+<p>①、Hide success(2xx)：隐藏响应状态码为2XX的请求</p>
+<p>②、Hide non-2xx：隐藏响应状态码非2xx的请求</p>
+<p>③、Hide redirects(300, 301, 302, 303, 307)：隐藏状态码为300、301、302、303、307的重定向请求</p>
+<p>④、Hide Authentication demands(401,407)：隐藏状态码为401，407的响应。需要用户进一步确认证书的请求</p>
+<p>⑤、Hide Not Modified(304)：隐藏状态码为304的响应，隐藏不是缓存的状态码（304）的URL请求, 因为304是请求的资源从上次起没有发生变更返回的状态码。</p>
+<p>######## 3.9.6Response Type and Size</p>
+<p> Response Type and Size：根据响应类型和大小进行过滤配置。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/K7ysSDM8d1ZxYFP.png" alt></p>
+<p> 从上图可以清楚地看到有很多选项：</p>
+<p>Show all Content-Type 这一项比较常用, 意思为显示所有指定Content-Type类型的请求，其中的选项描述如下表:</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Show only IMAGE/*</code></td>
+<td>仅显示响应类型为图片的请求, 即响应header中Content-Type=IMAGE/的请求，*为通配符</td>
+</tr>
+<tr>
+<td><code>Show only HTML</code></td>
+<td>仅显示响应类型为<code>HTML</code>的请求。</td>
+</tr>
+<tr>
+<td><code>Show only TEXT/CSS</code></td>
+<td>仅显示响应类型为<code>text/css</code>的请求。</td>
+</tr>
+<tr>
+<td><code>Show only SCRIPTS</code></td>
+<td>仅显示响应类型为<code>Scripts</code>的请求</td>
+</tr>
+<tr>
+<td><code>Show only XML</code></td>
+<td>仅显示响应类型为<code>XML</code>的请求。</td>
+</tr>
+<tr>
+<td><code>Show only JSON</code></td>
+<td>仅显示响应类型为<code>json</code>的请求。</td>
+</tr>
+<tr>
+<td><code>Hide IMAGE/*</code></td>
+<td>隐藏所有响应类型为图片的请求。</td>
+</tr>
+</tbody></table>
+<p>其他功能项如下表：</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Hide smaller than</code></td>
+<td>隐藏小于指定大小响应结果的请求,大小可以在 Inpsectors 中响应结果部分的 Transformer 中查看</td>
+</tr>
+<tr>
+<td><code>Hide larger than</code></td>
+<td>隐藏大于指定大小响应结果的请求</td>
+</tr>
+<tr>
+<td><code>Time HeatMap</code></td>
+<td>时间的热图。</td>
+</tr>
+<tr>
+<td><code>Block script files</code></td>
+<td>阻止返回正常JS文件。如果响应是脚本文件，那么响应 404。</td>
+</tr>
+<tr>
+<td><code>Block image files</code></td>
+<td>阻止返回正常图片文件。如果响应是图片文件，那么响应 404</td>
+</tr>
+<tr>
+<td><code>Block SWF files</code></td>
+<td>阻止返回正常SWF文件。如果响应是SWF 文件，那么响应 404。科普一下<code>swf(shock wave flash)</code>：是<code>Macromedia公司的</code>目前已被adobe公司收购）公司的动画设计软件Flash的专用格式</td>
+</tr>
+<tr>
+<td><code>Block CSS files</code></td>
+<td>阻止返回正常CSS文件。如果响应是 CSS 文件，那么响应 404</td>
+</tr>
+</tbody></table>
+<p>1.宏哥禁止掉页面上的css js 图片等资源看看请求的结果，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/9yYOVuWIfZx3KS5.webp" alt></p>
+<p>2.那么此时请求的页面将会失去css 、js、图片等资源, 让他们都响应为404状态，看看响应结果，如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/WduxELNoDBwJf6A.webp" alt></p>
+<p>######## 3.9.7Response Headers</p>
+<p>Response Header ：根据响应头信息进行过滤配置。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/Nv7meSVTBYwPzCX.png" alt></p>
+<p> 从上图可以清楚地看到有四个复选框：</p>
+<p>①、Flag responses that setcookies：将响应中设置了cookies的请求标记显示（斜体显示）</p>
+<p>②、Flag responses with headers：将响应头中包含指定内容的请求标记显示（加粗显示）</p>
+<p>③、Delete responseheaders：删除响应中指定的响应头</p>
+<p>④、Set response header：将响应头中添加指定的内容</p>
+<h5 id="3-10Timeline"><a href="#3-10Timeline" class="headerlink" title="3.10Timeline"></a>3.10Timeline</h5><p>（Timeline）网站性能分析：需要选中网站的多条请求才有意义，是性能优化的重要依据之一。Timeline 页签：显示 session 请求到响应的时间表，横向为时间轴，纵向为 session 列表，鼠标移到 timeline 页签上，在底部会显示四个数据：session 编号和 URL、session 的响应类型、发送字节数和接收字节数。每个网络请求都会经历域名解析、建立连接、发送请求、接受数据等阶段。把多个请求以时间作为 X 轴，用图表的形式展现出来，就形成了瀑布图。在Fiddler中，只要在左侧选中一些请求，右侧选择Timeline标签，就可以看到这些请求的瀑布图。如下图所示：</p>
+<p><img src="/images/loading.gif" data-original="https://s2.loli.net/2022/07/19/YVs3U5hGlatg1Le.gif" alt></p>
+<p>时间轴</p>
+<p>绿色的请求表示这是一个“有条件的请求”。HTTP 协议定义了 5 个条件请求头部，最常见的两个是“If-Modified-Since”和“If-None-Match”。服务器根据这两个头部来验证本地缓存是否过期，如果过期则正常返回资源的最新版本；否则仅返回 304 Not Modified，浏览器继续使用本地缓存。包含条件请求头部的请求用绿色显示，否则用黑色。</p>
+<p>有阴影线的请求是缓冲模式下的请求，实心的是流模式下的请求。Fiddler 提供了缓冲（Buffering）和流（Streaming）两种抓包模式：缓冲模式下，Fiddler 会在响应完成时才将数据返回给应用程序（通常是浏览器），这种模式下可以控制响应，方便地修改响应内容；流模式下，Fiddler 会实时返回响应数据给浏览器，但没办法控制响应。一般使用流模式，瀑布图会更真实一些。这两种模式可以通过 Fiddler 的工具栏选择。特别的，通过 Fiddler 的“AutoResponder”功能返回的响应，只能是缓冲模式。</p>
+<p>请求条的不同颜色对应着不同类型的响应，根据响应头的 MIME Type 来归类。如浅绿色表示图片类型的响应；深绿色是 JavaScript；紫色是 CSS；其它都是蓝色。</p>
+<p>请求中的黑色竖线，表示的是浏览器收到服务端响应的第一个字节这一时刻。这个时间受 DNS 解析、建立连接、发送请求、等待服务端响应等步骤的影响。</p>
+<p>请求条后面的图标表示响应的某些特征。如软盘图标表示这个响应正文从本地获得，也就是说服务端返回了 304；闪电表示这是 Fiddler 的“AutoResponder”的响应；向下的箭头表示响应是 302，需要重定向；红色感叹号说明这个请求有错误发生（状态码是 4XX 或 5XX）。特别的，如果请求条后面有一个红色的X，说明服务端响应完这个请求之后，断开了连接。出现这种情况一般有两种可能：HTTP/1.0 的响应中没有 Connection: Keep-Alive；或者是 HTTP/1.1 的响应中包含了 Connection: close。使用持久连接可以省去建立连接的开销，也可以减小 TCP 慢启动和其它拥塞控制机制带来的影响，总之是好处多多。</p>
+<p>请求前面的红色圆圈表示这个连接是新建的，绿色表示是复用的。上面的圆圈表示的是浏览器到 Fiddler 的连接，下面的圆圈是 Fiddler 到服务端的连接。</p>
+<p><strong>关于请求的时间分析，HttpWatch 的时间线显得更为详尽和直观，不过它是收费的，且最新版本 6.0 + 也只支持 IE 和 Firefox。</strong></p>
+<h4 id="4-小结"><a href="#4-小结" class="headerlink" title="4.小结"></a>4.小结</h4><p>有些小伙伴或者童鞋们在使用Fiddler的时候出现抓包失灵的情况，可能就是你在Filters选项卡中勾选了什么东西才导致的! 所以使用过滤器要注意一下。</p>
+
+            </div>
+			
+            <hr/>
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">博主不易，靠赏过日！！！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+			<style>
+				.reprint {
+					margin: 2em 0 0;
+					padding: 0.5em 1em;
+					border-left: 3px solid #FF1700;
+					background-color: #F9F9F9;
+					list-style: none;
+				}
+
+				.reprint li {
+					line-height: 30px;
+				}
+			</style>
+            <div class="reprint">
+                <!--<p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="https://hongduhong.github.io" class="b-link-green">北京-宏哥</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2016/06/13/fiddler/" class="b-link-green">《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(5)-Fiddler监控面板详解-05</a>
+                </p>-->
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>作者:  </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>文章链接:  </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>版权声明:   </strong>
+					本网志所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					许可协议。转载请注明出处!
+				  </li>
+				</ul>
+            </div>
+			<style>
+				.article-end-text-wrap-gzh {
+					margin: 5px 0;
+				}
+					
+				.article-end-text-gzh {
+					font-family: "微软雅黑";
+					font-weight: bold;
+					color: red;
+					font-size: 50px;
+					line-height: 1.6em;
+					text-align:center;
+					padding: 1em 2em;
+					background: color-widget-background;
+					box-shadow: 1px 2px 3px color-border;
+					border: 1px solid color-widget-border;
+					border-radius: 3px;
+				}  
+			</style>
+			<div class="article-end-text-wrap-gzh">
+			  <div class="article-end-text-gzh">
+				<p>扫码关注公众号，更多干货秒得到</p>
+				<img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/26/4hCH391xM65ENtu.png" width="200">
+			  </div>
+			</div>
+			<!--<div>
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>copyright.author </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>copyright.link </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>copyright.license_title  </strong>
+					copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					copyright.right_license_content
+				  </li>
+				</ul>
+			<div>
+			<div>
+				 <style>
+.reprint {
+    margin: 2em 0 0;
+    padding: 0.5em 1em;
+    border-left: 3px solid #FF1700;
+    background-color: #F9F9F9;
+    list-style: none;
+}
+
+.reprint li {
+    line-height: 30px;
+}
+</style>
+<div>
+	<ul class="reprint">
+		<li class="reprint-author">
+          <strong>copyright.author </strong>北京-宏哥</a>
+          </li>
+          <li class="reprint-link">
+          <strong>copyright.link </strong>
+          <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+        </li>
+        <li class="reprint-license">
+            <strong>copyright.license_title  </strong>
+            copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+            copyright.right_license_content
+        </li>
+	</ul>
+<div>
+
+			</div>-->
+
+        </div>
+		
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'f198ff3418cff1b4beb1',
+        clientSecret: '4381fdcb7742eb697e6214ca4ccacbbc78620722',
+        repo: 'hongduhong.github.io',
+        owner: 'hongduhong',
+        admin: "hongduhong",
+        id: '2016-06-13T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+	.v .txt-right{ display: none;}
+
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+ <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'QTjhAL7gTPGjIK1RQM2TlxDR-gzGzoHsz',
+        appKey: 'aBlfRinOLK3x6GKoYWr02qWj',
+        notify: 'true' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '留下你足迹吧O(∩_∩)O\n各位站长也留下你的交友申请 \n(申请格式：网站链接 + 一句话简介站点;)\n(如：five-great.coding.me + 互联网爱好者,撸代码,技术交流。)\n( ╯□╰ )建议不要匿名评论,建议填写邮箱便于接收回复信息'
+    });
+</script>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2016/06/14/fiddler/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/13.jpg" class="responsive-img" alt="《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(6)-Fiddler状态面板详解 -06">
+                        
+                        <span class="card-title">《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(6)-Fiddler状态面板详解 -06</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">**🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(6)-Fiddler状态面板详解
+1.简介 按照从上往</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2016-06-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Fiddler/" class="post-category" target="_blank">
+                                    Fiddler
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Fiddler/" target="_blank">
+                        <span class="chip bg-color">Fiddler</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2016/06/12/fiddler/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/19.jpg" class="responsive-img" alt="《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(4)-会话面板和HTTP会话数据操作详解 -04">
+                        
+                        <span class="card-title">《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(4)-会话面板和HTTP会话数据操作详解 -04</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">**🔥 《吐血整理》保姆级系列教程-玩转Fiddler抓包教程(4)-会话面板和HTTP会话数据操作详解
+1.简介 按</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-06-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Fiddler/" class="post-category" target="_blank">
+                                    Fiddler
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Fiddler/" target="_blank">
+                        <span class="chip bg-color">Fiddler</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 北京-宏哥<br />'
+            + '作者: 北京-宏哥<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h4, h5, h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h4, h5, h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<!--<script type="text/javascript" src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  if(window.outerHeight <500&&window.outerWidth<400){
+  $("#p1").hide();
+ 
+   }else{
+  $("#p1").show();
+  
+  }
+});
+</script>
+<footer class="page-footer bg-color">
+	<div  style="text-align: center;">
+	<li class="col s12 m8 l8 copy-right">
+  友链：
+         
+            
+                
+                
+				
+             <a href="https://www.jianshu.com/u/c6e85b30966e" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 简书
+               </a>
+                
+                
+				
+             <a href="https://www.cnblogs.com/du-hong" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 博客园
+               </a>
+                
+                
+				
+             <a href="https://www.zhihu.com/people/bei-jing-hong-ge" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 知乎
+               </a>
+                
+                
+				
+             <a href="https://cloud.tencent.com/developer/user/5695339" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 腾讯云
+               </a>
+                
+              		  
+		<span id="busuanzi_container_site_uv" style="float:right"> 
+			恭喜您成为第 
+			<span id="busuanzi_value_site_uv" class="white-color">
+			</span>
+			位访客&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>
+	  </li>
+	</div>
+	<div class="container row center-align">
+		<div class="col s12 m8 l8 copy-right">  
+         <span id ="p1">&nbsp;&nbsp;&nbsp;</span>
+            
+			
+                
+                
+                <span id="busuanzi_container_site_pv">
+                       <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color">1212112121</span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次&nbsp;
+                </span>
+                
+              
+			
+			
+                <i class="fa fa-area-chart"></i>站点总字数:
+                <span class="white-color">292.3k</span>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			本站由&copy;<a href="https://hongduhong.github.io" target="_blank">北京-宏哥</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 搭建.
+			
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hongduhong/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1918991791@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1918991791" class="tooltipped" data-tooltip="QQ联系我: 1918991791" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+
+
+</div>
+    </div>
+</footer>
+<script type="text/javascript">
+
+        //获取输入框的文本
+        function getdata(){
+        var i=document.getElementById('page__date');
+        
+        
+         var a=new Date();var b=new Date('2019-8-20');var count_s=parseInt((a.getTime()-b)/(1000 * 3600 * 24));
+      
+         }
+        setTimeout("getdata()","2000");
+
+</script>
+<div class="progress-bar"></div>
+<script src="//code.tidio.co/nrzrwmino0xirhbbord6owqnmk7duacv.js" async></script>
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+
+<div id="backTop" class="top-scroll">
+<a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.staticfile.org/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script src="https://cdn.staticfile.org/masonry/4.0.0/masonry.pkgd.js"></script>
+<script src="https://cdn.staticfile.org/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.staticfile.org/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://cdn.staticfile.org/lightgallery/1.6.12/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+	<script type="text/javascript">
+		$("#loading").fadeOut(5000);
+	</script>
+</html>

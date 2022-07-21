@@ -1,0 +1,2428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="python+appium自动化测试23, 北京-宏哥 python  自动化测试  接口 JMeter Appium">
+    <meta name="description" content="🔥 Appium+python自动化（二十三）- 真假美猴王Monkeyrunner与Monkey傻傻的分不清楚（超详">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>python+appium自动化测试23 | 北京-宏哥</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/aos/2.3.4/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+
+
+    <script src="https://cdn.staticfile.org/jquery/2.2.0/jquery.min.js"></script>	
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d62256055258ddb12716821c285aadab";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--百度统计代码-->	
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?716046d3a903bfe6a910f6b68a93271d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!--推送-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'https://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!--广告-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3736773013312638",
+    enable_page_level_ads: true
+  });
+</script>
+<!--onlinetk-->
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/011b3025.js","daovoice")</script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+
+<style>
+  @media only screen and (max-width: 422px){
+    nav .brand-logo {left: 41%;}
+    nav a {margin: 0px -38px 0px 0px;}
+    nav ul a {padding: 0px; margin-left: -42px;}
+    .bg-cover .title{fone-size:3rem;}
+  }
+ </style>
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo" >
+                <a  href="/" class="waves-effect waves-light">
+                    
+                    <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                     <span class="logo-span">北京-宏哥</span>
+                </a>
+				
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/galleries" class="waves-effect waves-light">
+            
+            <i class="fa fa-photo"></i>
+            
+            <span>相册</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/lyb" class="waves-effect waves-light">
+            
+            <i class="fa fa-paper-plane-o"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+       <img src="/images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">北京-宏哥</div>
+        <div class="logo-desc">
+            
+            不积跬步无以至千里，不积小流无以成江海。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/galleries" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-photo"></i>
+                
+                相册
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/lyb" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-paper-plane-o"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/hongduhong" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>GITHUB
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/hongduhong" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="GITHUB" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+ 
+
+
+</header>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #canvas111{
+		 position: fixed;
+         background: #ccc;
+		 overflow: auto;
+		 z-index: -1;
+    }
+    </style> 
+
+	<canvas id="canvas111"></canvas>
+	
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<body>
+    
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+<script type="text/javascript">
+    window.requestAnimationFrame = (function(){
+        return window.requestAnimationFrame ||
+               window.webkitRequestAnimationFrame ||
+               window.mozRequestAnimationFrame ||
+               function( callback ){
+                    window.setTimeout( callback, 1000/2 );
+               };
+    })();
+    var myCanvas = document.getElementById("canvas111");
+    var ctx = myCanvas.getContext("2d");//getContext 设置画笔
+    var num;
+    var w,h;
+    var duixiang = [];
+    var move = {};
+    function widthheight(){
+        w = myCanvas.width = window.innerWidth;
+        h = myCanvas.height = window.innerHeight;
+		num= Math.floor(w*h*0.0001);
+        for(var i = 0;i < num;i++){
+            duixiang[i] = {
+                x:Math.random()*w,
+                y:Math.random()*h,
+                cX:Math.random()*0.6-0.3,
+                cY:Math.random()*0.6-0.3,
+				R:Math.floor(Math.random()*5)+2,
+				//CC:Math.floor(Math.random()*3)+2,
+			    r: Math.floor(Math.random() * 254),   
+                g: Math.floor(Math.random() * 254),  
+                b:Math.floor(Math.random() * 254)   
+            } 
+           // console.log(duixiang[i])
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+			 //Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].CC);
+        }
+    };widthheight();//获取浏览器的等宽度等高
+
+    function Cricle(x,y,R,r,g,b){
+        ctx.save();//保存路径
+       if(Math.random()>0.991) {ctx.globalAlpha= 0.9;}//ctx.fillStyle = "#CCC";}//填充的背景颜色
+	    else { ctx.globalAlpha=0.47;}
+		 
+		ctx.fillStyle = "rgb("+ r +","+ g +","+ b +")";
+        ctx.beginPath();//开始绘画
+		ctx.arc(x,y,R,Math.PI*2,0);//绘画圆 x y 半径（大小） 角度  一个PI 是180 * 2 = 360    真假 0/1 true/false
+        ctx.closePath();//结束绘画
+        ctx.fill();//填充背景颜色
+        ctx.restore();//回复路径
+    };Cricle();
+
+
+    !function draw(){
+        ctx.clearRect(0,0,w,h)//先清除画布上的点
+        for(var i = 0;i < num;i++){
+            duixiang[i].x += duixiang[i].cX;
+            duixiang[i].y += duixiang[i].cY;
+            if(duixiang[i].x>w || duixiang[i].x<0){
+                duixiang[i].cX = -duixiang[i].cX;
+            }
+            if(duixiang[i].y>h || duixiang[i].y<0){
+                duixiang[i].cY = -duixiang[i].cY;
+            }
+            Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+            //勾股定理判断两点是否连线
+            for(var j = i + 1;j < num;j++){
+                if( (duixiang[i].x-duixiang[j].x)*(duixiang[i].x-duixiang[j].x)+(duixiang[i].y-duixiang[j].y)*(duixiang[i].y-duixiang[j].y) <= 55*55 ){
+                    line(duixiang[i].x,duixiang[i].y,duixiang[j].x,duixiang[j].y,0,i,j)
+                }
+                if(move.x){
+                    if( (duixiang[i].x-move.x)*(duixiang[i].x-move.x)+(duixiang[i].y-move.y)*(duixiang[i].y-move.y) <= 100*100 ){
+                        line(duixiang[i].x,duixiang[i].y,move.x,move.y,1,i,1)
+                    }
+                }
+            }
+        }
+        window.requestAnimationFrame(draw)
+    }();
+
+    //绘制线条
+    function line(x1,y1,x2,y2,flag,i,j){
+        
+		if (flag){var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.5;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(0.8,"#019ee5");
+		        }
+				else
+				{
+				
+				var color = ctx.createLinearGradient(x1,y1,x2,y2);
+					ctx.globalAlpha=0.9;
+					color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+					color.addColorStop(1,"rgb("+ duixiang[j].r +","+ duixiang[j].g +","+ duixiang[j].b +")");
+				}
+        ctx.save();
+        ctx.strokeStyle = color;
+		ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(x1,y1);
+        ctx.lineTo(x2,y2);
+        ctx.stroke();
+        //ctx.restore();
+    }
+
+
+    //document.onmousemove = function(e){
+     //   move.x = e.clientX;
+      //  move.y = e.clientY;
+    //}
+    //console.log(move)
+
+    /*window.onresize = function(){
+        location.reload();
+    }*/
+</script>
+
+
+
+
+
+
+
+
+
+
+<style>
+		#canvas1 {
+ position: fixed;
+ pointer-events:none;//鼠标多层响应事件
+        // background: 	#ccc;
+		 /*透明度*/
+		 width: 100%;
+        height: 100%;
+     // opacity: 0;
+		 overflow: auto;
+		 z-index: 999;
+
+    }
+</style>
+<!--<body>-->
+<canvas id="canvas1" style="whdth: 100%;height: 100%"></canvas>
+
+<script>
+var _createClass = function () {function defineProperties(target, props) 
+{ for (var i = 0; i < props.length; i++) 
+ {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) 
+ descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}
+ return function (Constructor, protoProps, staticProps) 
+ {if (protoProps) defineProperties(Constructor.prototype, protoProps);
+ if (staticProps) defineProperties(Constructor, staticProps);
+ return Constructor;};}();function _classCallCheck(instance, Constructor) 
+ {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}
+ var getRandom = function getRandom(min, max) {
+  return Math.random() * (max - min) + min;
+};
+
+var getRandomInt = function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
+var getRandomColor = function getRandomColor() {
+  var colors = [
+  'rgba(231, 76, 60, 1)', // red
+  'rgba(241, 196, 15, 1)', // yellow
+  'rgba(46, 204, 113, 1)', // green
+  'rgba(52, 152, 219, 1)', // blue
+  'rgba(155, 89, 182, 1)' // purple
+  ];
+
+  return colors[getRandomInt(0, colors.length)];
+};
+
+// Particle//粒子模块
+var
+Particle = function () {
+
+  function Particle(system, x, y) {_classCallCheck(this, Particle);
+    this.system = system;
+    this.universe = this.system.world.universe;
+    this.x = x;
+    this.y = y;
+    this.color = getRandomColor();
+    this.life = 1;
+    this.aging = getRandom(0.990, 0.999); // 0.99, 0.999 || 0.999, 0.9999
+
+    this.r = getRandomInt(12, 16);//初始粒子半径范围
+    this.speed = getRandom(18, 18.5);//粒子爆炸速度范围
+    this.velocity = [
+    getRandom(-this.speed, this.speed),
+    getRandom(-this.speed, this.speed)];
+
+  }_createClass(Particle, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (
+      this.r < 0.1 ||
+      this.life === 0 ||
+      this.x + this.r < 0 ||
+      this.x - this.r > this.universe.width ||
+      this.y + this.r < 0 ||
+      this.y - this.r > this.universe.height)
+      {
+        this.system.removeObject(this);
+      }
+
+      this.r *= this.life;
+      this.x += this.velocity[0];
+      this.y += this.velocity[1];
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      // Main circle //亮圈模块
+
+      ctx.fillStyle = this.color;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r*1.2, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+
+      var r = this.color.match(/([0-9]+)/g)[0];
+      var g = this.color.match(/([0-9]+)/g)[1];
+      var b = this.color.match(/([0-9]+)/g)[2];
+
+      // Gradient//梯度变化曲线
+
+      var spread = 1.5;
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r,
+      this.x, this.y, this.r * spread);
+
+      gradient.addColorStop(0, 'rgba(' + r + ', ' + g + ', ' + b + ', 0.5)');
+      gradient.addColorStop(1, 'rgba(' + r + ', ' + g + ', ' + b + ', 0)');
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r * spread, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+
+      // Aberration//偏差
+
+      var offset = this.r * 0.5;
+      var color = 'rgba(' + g + ', ' + b + ', ' + r + ', 0.5)';
+
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(this.x + offset, this.y + offset, this.r, 0, 2 * Math.PI, false);
+      ctx.fill();
+      ctx.closePath();
+      ctx.globalCompositeOperation = 'source-over';
+    } }]);return Particle;}();
+
+
+
+// Crown //水波纹圈模块
+var
+Crown = function () {
+
+  function Crown(system, x, y) {_classCallCheck(this, Crown);
+    this.system = system;
+    this.x = x;
+    this.y = y;
+    this.r = getRandomInt(5, 15); // 5, 20  水波纹圈半径范围
+    this.mod = 1.1;
+    this.life = 0.5; //水波纹线
+    this.aging = getRandom(0.830, 0.899);
+    this.speed = getRandom(8, 9);
+    this.color = {
+      r: getRandomInt(236, 242),
+      g: getRandomInt(70, 80),
+      b: getRandomInt(50, 70) };
+
+
+    this.angle1 = Math.PI * getRandom(0, 2);
+    this.angle2 = this.angle1 + Math.PI * getRandom(0.3, 0.4);//水波纹圈完整度
+  }_createClass(Crown, [{ key: 'update', value: function update(
+
+    dt) {
+      this.life *= this.aging;
+
+      if (this.life <= 0.0001) this.system.removeObject(this);
+
+      this.r += Math.abs(1 - this.life) * this.speed;
+
+      this.x1 = this.x + this.r * Math.cos(this.angle1);
+      this.y1 = this.y + this.r * Math.sin(this.angle1);
+
+      this.angle3 = this.angle1 + (this.angle2 - this.angle1) / 2;
+      this.x2 = this.x + this.r * this.mod * Math.cos(this.angle3);
+      this.y2 = this.y + this.r * this.mod * Math.sin(this.angle3);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      var gradient = ctx.createRadialGradient(
+      this.x, this.y, this.r * 0.9,
+      this.x, this.y, this.r);
+
+      gradient.addColorStop(0, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life + ')');
+      gradient.addColorStop(1, 'rgba(' + this.color.r + ', ' + this.color.g + ', ' + this.color.b + ', ' + this.life * 0.5 + ')');
+
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, this.angle1, this.angle2, false);
+      ctx.quadraticCurveTo(this.x2, this.y2, this.x1, this.y1);
+      ctx.fill();
+      ctx.closePath();
+    } }]);return Crown;}();
+
+
+
+// Explosion //爆炸模块
+var
+Explosion = function () {
+
+  function Explosion(world, x, y) {_classCallCheck(this, Explosion);
+    this.world = world;
+    this.x = x;
+    this.y = y;
+    this.objects = [];
+
+    var particles = getRandomInt(10, 30); // 10, 30 amount of particles//爆炸 粒子数量
+    var crowns = particles * getRandom(0.4, 0.5);
+
+    while (crowns-- > 0) {this.addCrown();}
+    while (particles-- > 0) {this.addParticle();}
+  }_createClass(Explosion, [{ key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      if (this.objects.length <= 0) {
+        this.world.clearExplosion(this);
+      }
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'addCrown', value: function addCrown()
+
+    {
+      this.objects.push(new Crown(this, this.x, this.y));
+    } }, { key: 'addParticle', value: function addParticle()
+
+    {
+      this.objects.push(new Particle(this, this.x, this.y));
+    } }, { key: 'removeObject', value: function removeObject(
+
+    obj) {
+      var index = this.objects.indexOf(obj);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return Explosion;}();
+
+
+
+// World 
+var
+ConfettiWorld = function () {function ConfettiWorld() 
+{_classCallCheck(this, ConfettiWorld);}_createClass(ConfettiWorld, [{ key: 'init', value: function init()
+
+    {
+      this.objects = [];
+      window.addEventListener('click', this.explode.bind(this));
+
+      // Initial explosion //初始爆炸
+      var counter = 0;
+      while (counter-- > 0) {
+        this.explode({
+          clientX: window.event.clientX, //getRandomInt(10, this.universe.width) ,          //this.universe.width / 2,
+          clientY: window.event.clientY //getRandomInt(10, 50) //this.universe.height / 2 
+		  });
+
+      }
+    } }, { key: 'update', value: function update(
+
+    dt) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.update(dt);
+      });
+
+      var amount = this.objects.reduce(function (sum, explosion) {
+        return sum += explosion.objects.length;
+      }, 0);
+    } }, { key: 'render', value: function render(
+
+    ctx) {
+      this.objects.forEach(function (obj) {
+        if (obj) obj.render(ctx);
+      });
+    } }, { key: 'explode', value: function explode(
+
+    event) {
+      var x = event.clientX;
+      var y = event.clientY;
+
+      this.objects.push(new Explosion(this, x, y));
+    } }, { key: 'clearExplosion', value: function clearExplosion(
+
+    explosion) {
+      var index = this.objects.indexOf(explosion);
+
+      if (index !== -1) {
+        this.objects.splice(index, 1);
+      }
+    } }]);return ConfettiWorld;}();
+
+
+
+// Time
+var
+Time = function () {
+
+  function Time() {_classCallCheck(this, Time);
+    this.now = 0; // current tick time
+    this.prev = 0; // prev tick time
+    this.elapsed = 0; // elapsed time from last tick
+    this.delta = 0; // time from last update
+    this.fps = 60; // desired fps
+    this.step = 1 / 60; // step duration
+  }_createClass(Time, [{ key: 'update', value: function update(
+
+    time) {
+      this.now = time;
+      this.elapsed = (this.now - this.prev) / 1000;
+      this.prev = this.now;
+      this.delta += this.elapsed;
+    } }, { key: 'raf', value: function raf(
+
+    func) {
+      window.requestAnimationFrame(func);
+    } }, { key: 'hasFrames', value: function hasFrames()
+
+    {
+      return this.delta >= this.step;
+    } }, { key: 'processFrame', value: function processFrame()
+
+    {
+      this.delta -= this.step;
+    } }]);return Time;}();
+
+
+
+// Canvas
+var
+Universe = function () {
+
+  function Universe(element) {_classCallCheck(this, Universe);
+    this.el = element;
+    this.ctx = this.el.getContext('2d');
+    this.pixelRatio = window.devicePixelRatio;
+    this.time = new Time();
+
+    this.worlds = {};
+    this.world = null; // current state
+
+    this.updateSize();
+    window.addEventListener('resize', this.updateSize.bind(this));
+
+    this.addWorld('confetti', ConfettiWorld);
+    this.setWorld('confetti');
+
+    this.start();
+  }_createClass(Universe, [{ key: 'start', value: function start()
+
+    {
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'tick', value: function tick(
+
+    time) {
+      this.time.update(time);
+
+      if (this.time.hasFrames()) {
+        this.update();
+        this.time.processFrame();
+      }
+
+      this.render();
+      this.time.raf(this.tick.bind(this));
+    } }, { key: 'update', value: function update()
+
+    {
+      this.world.update(this.time.step);
+    } }, { key: 'render', value: function render()
+
+    {
+      var gradient = this.ctx.createLinearGradient(0, 0, this.width, this.height);
+     // gradient.addColorStop(0, '#34495e');
+      //gradient.addColorStop(1, '#2c3e50');
+
+      this.ctx.clearRect(0, 0, this.width, this.height);
+      // this.ctx.fillStyle = '#2c3e50'
+     // //this.ctx.fillStyle = gradient;
+    // // this.ctx.fillRect(0, 0, this.width, this.height);
+      this.world.render(this.ctx);
+    }
+
+    // Helpers 库
+  }, { key: 'updateSize', value: function updateSize()
+    {
+      this.width = window.innerWidth;
+      this.height = window.innerHeight;
+      this.el.width = this.width * this.pixelRatio;
+      this.el.height = this.height * this.pixelRatio;
+      this.el.style.width = window.innerWidth + 'px';
+      this.el.style.height = window.innerHeight + 'px';
+      this.ctx.scale(this.pixelRatio, this.pixelRatio);
+    } }, { key: 'addWorld', value: function addWorld(
+
+    worldName, World) {
+      this.worlds[worldName] = new World();
+      this.worlds[worldName].universe = this;
+      this.worlds[worldName].init();
+    } }, { key: 'setWorld', value: function setWorld(
+
+    worldName) {
+      this.world = this.worlds[worldName];
+    } }]);return Universe;}();
+
+
+
+// Main
+
+console.clear();
+var element = document.querySelector('#canvas1');
+window.Canvas= new Universe(element);</script>
+
+<!--<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>-->
+
+
+<script src="https://cdn.staticfile.org/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        python+appium自动化测试23
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Python/" target="_blank">
+                                <span class="chip bg-color">Python</span>
+                            </a>
+                        
+                            <a href="/tags/Appium/" target="_blank">
+                                <span class="chip bg-color">Appium</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                Python
+                            </a>
+                        
+                            <a href="/categories/Python/Appium/" class="post-category" target="_blank">
+                                Appium
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    <span id="page__date">2016-04-18</sapn>
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        5k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        20 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><strong>🔥 Appium+python自动化（二十三）- 真假美猴王Monkeyrunner与Monkey傻傻的分不清楚（超详解）</strong></p>
+<h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>　　看《西游记》第五十七回，说是“六耳猕猴”化作孙悟空的摸样，伤了唐僧，后又和孙悟空大打出手…… 这位假孙悟空，实力不用多说了吧，和真孙悟空一般无二，大战孙悟空，闹到上天入地下海。 在唐僧那：念紧箍咒，两个都喊疼，自然看不出哪个真假； 到天宫：拖塔天王拿照妖镜照，也看不出； 又到观音那：观音也看不出。最后到幽冥处阎罗那，经“谛听”听过之后，“谛听”却说：“我看出来了，却不敢说” 最后还是如来老佛爷道出六耳真身并用金钵盂罩住，才被孙悟空一棍子打死。想必各位小伙伴都看过这以精彩片段。不过据知情人士说真假美猴王存在阴谋，这里有黑幕：说是真的孙悟空被打死了，活下来的是假的。好了废话少说，还是回到今天的主题：真假美猴王Monkeyrunner与Monkey傻傻的分不清楚。</p>
+<p>　　今天宏哥就带着各位小伙伴和童鞋们再当一回和尚：如来佛祖辨一辨真假美猴王，前边我们已经对monkey做过一些详细的介绍和讲解，今天我们就再来介绍和讲解一下monkeyrunner。看看他们之间的到底是一样还是有区别的。</p>
+<h4 id="2-monkeyrunner简介"><a href="#2-monkeyrunner简介" class="headerlink" title="2.monkeyrunner简介"></a>2.monkeyrunner简介</h4><p>1.monkeyrunner工具使用Jython，这是一种使用Java编程语言的Python实现。Jython允许monkeyrunner API与Android框架轻松交互。使用Jython，您可以使用Python语法来访问API的常量，类和方法。MonkeyRunner工具是使用Jython(使用Java编程语言实现的</p>
+<p>Python)写出来的，它提供了多个API，通过monkeyrunner API 可以写一个Python的程序来模拟操作控制Android设备app,测试其稳定性并通过截屏可以方便地记录出现的问题。</p>
+<p>2.我们来看一下monkeyrunner官网是如何介绍monkeyrunner的：</p>
+<p>官网介绍（已翻译成中文）宏哥在这里给小伙伴截取一段翻译，如下：</p>
+<p>　　monkeyrunner工具提供了一个API，用于编写从Android代码外部控制Android设备或模拟器的程序。使用monkeyrunner，您可以编写一个Python程序，安装Android应用程序或测试包，运行它，向其发送击键，截取其用户界面，并在工作站上存储屏幕截图、</p>
+<p>monkeyrunner工具主要用于测试功能/框架级别的应用程序和设备以及运行单元测试套件，但您可以将其用于其他目的。</p>
+<p>monkeyrunner工具与UI / Application Exerciser Monkey无关 ，也称为monkey工具。该monkey工具adb直接在设备或仿真器上的shell中运行， 并生成用户和系统事件的伪随机流。相比之下，monkeyrunner工具通过从API发送特定命令和事件来控制工作站中的设备和</p>
+<p>仿真器。</p>
+<p>3.monkeyrunner即android SDK中自带的工具之一，此工具提供API可按制android设备或模拟器。</p>
+<p>4.有兴趣的小伙伴们或者童鞋可以查看一下monkeyrunner官网：<a href="https://www.android-doc.com/tools/help/monkeyrunner_concepts.html" target="_blank" rel="noopener">https://www.android-doc.com/tools/help/monkeyrunner_concepts.html</a></p>
+<p>5.monkeyrunner 路径：Andriod_SDK\tools</p>
+<h4 id="3-MonkeyRunner工具独特功能"><a href="#3-MonkeyRunner工具独特功能" class="headerlink" title="3.MonkeyRunner工具独特功能"></a>3.MonkeyRunner工具独特功能</h4><p>1.多设备控制：monkeyrunner API可以跨多个设备或仿真器应用一个或多个测试套件。您可以物理连接所有设备或立即启动所有模拟器（或两者），以编程方式依次连接到每个设备，然后运行一个或多个测试。您还可以以编程方式启动模拟器配置，运行一个或多个测试，然后关闭模拟器。</p>
+<p>2.功能测试：monkeyrunner可以对Android应用程序进行自动化的从头到尾的测试。您可以通过击键或触摸事件提供输入值，并将结果视为屏幕截图。</p>
+<p>3.回归测试 - monkeyrunner可以通过运行应用程序并将其输出屏幕截图与一组已知正确的屏幕截图进行比较来测试应用程序的稳定性。</p>
+<p>4.可扩展的自动化 - 由于monkeyrunner是一个API工具包，您可以开发一个基于Python的模块和程序的整个系统来控制Android设备。除了使用monkeyrunner API本身，您还可以使用标准的Python os和 subprocess 模块来调用Android工具，例如 Android Debug Bridge。</p>
+<p>您还可以将自己的类添加到monkeyrunner API中。这在“ 使用插件扩展monkeyrunner ”一节中有更详细的描述 。</p>
+<h4 id="4-Monkeyrunner与Monkey区别"><a href="#4-Monkeyrunner与Monkey区别" class="headerlink" title="4.Monkeyrunner与Monkey区别"></a>4.Monkeyrunner与Monkey区别</h4><p>monkeyrunner和money没有什么直接的关系，monkey是在设备直接运行adb shell命令生成随机事件来进行测试的。相比较而言，monkeyrunner则是通过API发送特定的命令和事件来控制设备。</p>
+<p>为了支持黑盒自动化测试的场景，Android SDK提供了monkey和monkeyrunner两个测试工具，这两个测试工具除了名字类似外，还都可以向待测应用发送按键等消息，往往容易产生混淆，以下是他俩的不同之处。</p>
+<h5 id="Monkey："><a href="#Monkey：" class="headerlink" title="Monkey："></a>Monkey：</h5><p>Monkey工具直接运行在设备或模拟器的adb shell中，生成用户或系统的伪随机事件流。</p>
+<p>1.monkey运行在设备或者模拟器上边，可以脱离PC运行，其运行时如下图所示。</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/951wVMAzuZUeoYX.png" alt="1232840-20190723151622115-2022255479.png"></p>
+<h5 id="Monkeyrunner："><a href="#Monkeyrunner：" class="headerlink" title="Monkeyrunner："></a>Monkeyrunner：</h5><p>Monkeyrunner工具是在工作站上通过API定义的特定命令和事件控制设备或模拟器。</p>
+<p>而monkeyrunner运行在PC上，需要通过服务器/客户端的的模式向设备或者模拟器上的android应用发送指令来执行测试，其运行时如下图所示。</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/lvykZCQ1jEYBbVe.png" alt="1232840-20190723152043213-171977450.png"></p>
+<p>2.普遍的做法是将monkey作为一个向待测应用发送随机按键消息的测试工具，验证待测应用在这些随机性的输入面前是否会有闪退或者崩溃。而monkeyrunner则接受一个明确的测试脚本（使用python语言编写的）。</p>
+<p>3.虽然monkey也可以根据一个指定的命令脚本发送按键消息，但其不支持条件判断，也不支持读取界面的信息来执行验证操作。而monkeyrunner的测试脚本中有明确 的条件判断等语句，可用来做功能测试。</p>
+<p> 总结：</p>
+<p>　　实际操作中，monkey由于缺少必要的条件判断等命令，难以在功能测试上有所作为，只能作为生成一些随机事件的工具，测试应用程序的健壮程度，待测应用崩溃后可以根据monkey打印的日志，再用monkey创建一个重现步骤，供开发调试。monkey服务器模式更适合用于黑盒测试，不建议用于自动化测试。</p>
+<p>　　而Monkeyrunner虽然有Python和Java类库的强大支持，但其自身提供的API有限，还得需要插件扩展其功能。</p>
+<h4 id="5-monkeyrunner-API"><a href="#5-monkeyrunner-API" class="headerlink" title="5.monkeyrunner API"></a>5.monkeyrunner API</h4><p>monkeyrunner API包含在包中的三个模块中 com.android.monkeyrunner：</p>
+<p>1.MonkeyRunner：monkeyrunner程序的一类实用方法。此类提供了将monkeyrunner连接到设备或模拟器的方法。它还提供了为monkeyrunner程序创建UI以及显示内置帮助的方法。</p>
+<p>2.MonkeyDevice：表示设备或模拟器。此类提供了安装和卸载软件包，启动Activity以及向应用程序发送键盘或触摸事件的方法。您还可以使用此类来运行测试包。</p>
+<p>3.MonkeyImage：表示屏幕捕获图像。此类提供捕获屏幕，将位图图像转换为各种格式，比较两个MonkeyImage对象以及将图像写入文件的方法。</p>
+<p>在Python程序中，您可以将每个类作为Python模块进行访问。monkeyrunner工具不会自动导入这些模块。要导入模块，请使用Python from语句：</p>
+<pre><code>1 from com.android.monkeyrunner import &lt;module&gt;</code></pre><p>&lt;module&gt;您要导入的类名 在哪里。from通过用逗号分隔模块名称，可以在同一语句中导入多个模块。</p>
+<h5 id="运行monkeyrunner"><a href="#运行monkeyrunner" class="headerlink" title="运行monkeyrunner"></a>运行monkeyrunner</h5><p>您可以从文件中运行monkeyrunner程序，也可以在交互式会话中输入monkeyrunner语句。您可以通过调用SDK目录子目录中的monkeyrunner命令来执行这两项操作tools/。如果提供文件名作为参数，则该monkeyrunner命令将文件的内容作为Python程序运行; 否则，它会启动一个交互式会话。</p>
+<p>该monkeyrunner命令的语法是</p>
+<pre><code>1 monkeyrunner -plugin &lt;plugin_jar&gt; &lt;program_filename&gt; &lt;program_options&gt;</code></pre><p>表1解释了标志和参数。</p>
+<p>表1. monkeyrunner标志和参数。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-plugin &lt;plugin_jar&gt;</td>
+<td>可选）指定.jar包含monkeyrunner插件的文件。要了解有关monkeyrunner插件的更多信息，请参阅 使用插件扩展monkeyrunner。要指定多个文件，请多次包含该参数。</td>
+</tr>
+<tr>
+<td>&lt;program_filename&gt;</td>
+<td>如果提供此参数，则该monkeyrunner命令将该文件的内容作为Python程序运行。如果未提供参数，则该命令将启动交互式会话。</td>
+</tr>
+<tr>
+<td>&lt;program_options&gt;</td>
+<td>（可选）&lt;program_file&gt;中程序的标志和参数。</td>
+</tr>
+</tbody></table>
+<p>运行monkeyrunner</p>
+<p>命令语法为：</p>
+<pre><code>monkeyrunner -plugin &lt;plugin_jar&gt; &lt;program_filename&gt; &lt;program_options&gt;</code></pre><p>方式一：在CMD命令窗口直接运行monkeyrunner</p>
+<p>方式二：使用Python编写测试代码文件，在CMD中执行monkeyrunner hongge.py运行</p>
+<p>不论使用哪种方式，您都需要调用SDK目录的tools子目录下的monkeyrunner命令。</p>
+<p>注意：在运行monkeyrunner之前必须先运行相应的模拟器或连接真机，否则monkeyrunner无法连接到设备</p>
+<p>运行模拟器有两种方法：1、通过eclipse中执行模拟器 2、在CMD中通过命令调用模拟器</p>
+<p>这里介绍通过命令，在CMD中执行模拟器的方法</p>
+<pre><code>emulator -avd test</code></pre><p>上面命令中test是指模拟器的名称。</p>
+<p>附：这部分前边已经讲解过，在这里就不再赘述）</p>
+<p>问题：CMD运行提示monkeyrunner不是内部或外部命令，也不是可运行的程序或批处理文件。</p>
+<p>解决：电脑环境变量未配置，将monkeyrunner所在目录配在环境变量里。</p>
+<p>变量名：Path</p>
+<p>变量值：D:\android\android-sdk-windows\tools;D:\android\android-sdk-windows\platform-tools</p>
+<h5 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h5><blockquote>
+<p>实例一：卸载旧的APP，安装新的APP </p>
+</blockquote>
+<p>*准备</p>
+<p>a. 连接安卓夜神模拟器设备</p>
+<p>b. 运行CMD，检测是否连接成功</p>
+<p>CMD&gt;adb devices</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/YxjSRVulCUqvm29.png" alt="1232840-20190724140453547-1677769529.png"></p>
+<p>附：（这部分前边已经讲解过，在这里就不再赘述）</p>
+<p>问题：CMD运行提示adb不是内部或外部命令，也不是可运行的程序或批处理文件。</p>
+<p>解决：电脑环境变量未配置，将adb所在目录配在环境变量里。  </p>
+<blockquote>
+<p>*方式一： </p>
+</blockquote>
+<p>1.打开CMD，运行monkeyrunner</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/kGrFSW2dK4VYEqH.png" alt="1232840-20190724141816019-389109459.png"></p>
+<p>2.进入monkeyrunner的shell命令交互模式后，逐条输入以下命令</p>
+<pre><code>1 from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice, MonkeyImage
+2 device = MonkeyRunner.waitForConnection()
+3 device.removePackage(&#39;com.taobao.taobao&#39;)
+4 device.installPackage(&#39;C:\\Users\\DELL\\Desktop\\702757.apk&#39;)</code></pre><p>（1）输入命令前的夜神模拟器：</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/Nh7wLIrX6y8Yx5f.png" alt="1232840-20190724141633810-995857666.png"></p>
+<p>（2）输入第三行命令后的夜神模拟器</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/rBlFKZ9ENWQg8fb.png" alt="1232840-20190724141949951-477522064.png"> </p>
+<p>（3）输入第四行的夜神模拟器</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/MzJaXb8NdRfOo9u.png" alt="1232840-20190724142237858-1376009324.png"></p>
+<p>注：每条命令的作用，请见方法二中的注解</p>
+<p>实操如图：</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/NH9yunqAjeDtw8G.png" alt="1232840-20190724142405241-1106331487.png"></p>
+<p>c.检查手机app是否已更新 </p>
+<blockquote>
+<p>*方式二：</p>
+</blockquote>
+<p>a. 编写Python测试代码</p>
+<pre><code> 1 # File:   Test1.py
+ 2 # Vision: V1.0
+ 3 # Author: hongge  QQ群：707699217
+ 4 # 引入本程序所用到的模块
+ 5 from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice, MonkeyImage
+ 6 
+ 7 # 连接手机设备
+ 8 device = MonkeyRunner.waitForConnection()
+ 9 
+10 # 截图
+11 result = device.takeSnapshot()
+12 # 将截图保存到文件 
+13 result.writeToFile(&#39;E:\\JAVA\\monkeyrunner\\Test1\\Test1_001.png&#39;,&#39;png&#39;)
+14 
+15 # 卸载APP
+16 device.removePackage(&#39;cn.richinfo.thinkdrive&#39;)
+17 print (&#39;Uninstall Success!&#39;)
+18 
+19 # 暂停5秒
+20 MonkeyRunner.sleep(5)
+21 
+22 # 截图
+23 result = device.takeSnapshot()
+24 result.writeToFile(&#39;E:\\JAVA\\monkeyrunner\\Test1\\Test1_002.png&#39;,&#39;png&#39;)
+25 
+26 # 安装新的APP
+27 device.installPackage(&#39;E:\\JAVA\\monkeyrunner\\Test1\\ThinkDrive_new.apk&#39;)
+28 print (&#39;Install Success!&#39;)
+29 
+30 # 截图
+31 result = device.takeSnapshot()
+32 result.writeToFile(&#39;E:\\JAVA\\monkeyrunner\\Test1\\Test1_003.png&#39;,&#39;png&#39;)</code></pre><p>注：拷贝运行时请去掉中文注释；或者在开头加入 #coding=utf-8 </p>
+<p>b.执行Test1.py脚本</p>
+<p>Monkeyrunner C:\Users\DELL\Desktop\test.py</p>
+<p>实操如图：</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/VHDT8NytXPd7RzU.png" alt="1232840-20190724143612597-1937846247.png"></p>
+<p>c.检查手机app是否已更新</p>
+<p>d.查看截图文件夹，截图和上边逐条输入命令，宏哥截得模拟器一模一样的。</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/aB6otJxbe97zfMT.png" alt="1232840-20190724145203353-1716925033.png"></p>
+<p>e.注意如果截图不一样自己加个等待时间，就会一样，参考代码：</p>
+<pre><code> 1 #coding=utf-8 
+ 2 # File:   Test1.py
+ 3 
+ 4 # Vision: V1.0
+ 5 
+ 6 # Author: hongge  QQ群：707699217
+ 7 
+ 8 # 引入本程序所用到的模块
+ 9 
+10 from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice, MonkeyImage
+11 
+12 
+13 
+14 # 连接手机设备
+15 
+16 device = MonkeyRunner.waitForConnection()
+17 
+18 
+19 
+20 # 截图
+21 
+22 result = device.takeSnapshot()
+23 
+24 # 将截图保存到文件 
+25 
+26 result.writeToFile(&#39;C:\\Users\\DELL\\Desktop\\test\\Test1_001.png&#39;,&#39;png&#39;)
+27 
+28 
+29 
+30 # 卸载APP
+31 
+32 device.removePackage(&#39;com.taobao.taobao&#39;)
+33 
+34 print (&#39;Uninstall Success!&#39;)
+35 
+36 
+37 
+38 # 暂停5秒
+39 
+40 MonkeyRunner.sleep(5)
+41 
+42 
+43 
+44 # 截图
+45 
+46 result = device.takeSnapshot()
+47 
+48 result.writeToFile(&#39;C:\\Users\\DELL\\Desktop\\test\\Test1_002.png&#39;,&#39;png&#39;)
+49 
+50 
+51 # 暂停5秒
+52 
+53 MonkeyRunner.sleep(5)
+54 
+55 
+56 # 安装新的APP
+57 
+58 device.installPackage(&#39;C:\\Users\\DELL\\Desktop\\702757.apk&#39;)
+59 
+60 print (&#39;Install Success!&#39;)
+61 
+62 # 暂停5秒
+63 
+64 MonkeyRunner.sleep(5)
+65 
+66 # 截图
+67 
+68 result = device.takeSnapshot()
+69 
+70 result.writeToFile(&#39;C:\\Users\\DELL\\Desktop\\test\\Test1_003.png&#39;,&#39;png&#39;)</code></pre><h4 id="6-monkeyrunner内置帮助"><a href="#6-monkeyrunner内置帮助" class="headerlink" title="6.monkeyrunner内置帮助"></a>6.monkeyrunner内置帮助</h4><p>您可以通过运行以下命令为monkeyrunner生成API参考：</p>
+<pre><code>1 monkeyrunner help.py &lt;format&gt; &lt;outfile&gt;</code></pre><p>论点是：</p>
+<p><format>或者是text纯文本的输出或html用于HTML输出。<br><outfile> 是输出文件的路径限定名称。</outfile></format></p>
+<h4 id="7-使用插件扩展monkeyrunner"><a href="#7-使用插件扩展monkeyrunner" class="headerlink" title="7.使用插件扩展monkeyrunner"></a>7.使用插件扩展monkeyrunner</h4><p>您可以使用Java编程语言编写的类扩展monkeyrunner API，并将其构建为一个或多个.jar文件。您可以使用此功能使用您自己的类扩展monkeyrunner API或扩展现有类。您还可以使用此功能初始化monkeyrunner环境。</p>
+<p>要为monkeyrunner提供插件，请monkeyrunner使用表1中-plugin <plugin_jar>描述的参数 调用该命令 。</plugin_jar></p>
+<p>在你的插件代码，你可以导入和扩展的主要monkeyrunner类 MonkeyDevice，MonkeyImage和MonkeyRunner在com.android.monkeyrunner（见的monkeyrunner API）。</p>
+<p>请注意，插件不允许您访问Android SDK。您无法导入包等com.android.app。这是因为monkeyrunner与框架API级别下的设备或模拟器交互。</p>
+<h5 id="插件启动类"><a href="#插件启动类" class="headerlink" title="插件启动类"></a>插件启动类</h5><p>.jar插件 的文件可以指定在脚本处理开始之前实例化的类。要指定此类，请将密钥添加 MonkeyRunnerStartupRunner到.jar文件的清单中。该值应该是启动时要运行的类的名称。以下代码段显示了如何在ant构建脚本中执行此操作：</p>
+<pre><code>1 &lt;jar jarfile=&quot;myplugin&quot; basedir=&quot;${build.dir}&quot;&gt;
+2 &lt;manifest&gt;
+3 &lt;attribute name=&quot;MonkeyRunnerStartupRunner&quot; value=&quot;com.myapp.myplugin&quot;/&gt;
+4 &lt;/manifest&gt;
+5 &lt;/jar&gt;</code></pre><p>要访问monkeyrunner的运行时环境，启动类可以实现 com.google.common.base.Predicate<pythoninterpreter>。例如，此类在默认命名空间中设置一些变量：</pythoninterpreter></p>
+<pre><code> 1 package com.android.example;
+ 2 
+ 3 import com.google.common.base.Predicate;
+ 4 import org.python.util.PythonInterpreter;
+ 5 
+ 6 public class Main implements Predicate&lt;PythonInterpreter&gt; {
+ 7     @Override
+ 8     public boolean apply(PythonInterpreter anInterpreter) {
+ 9 
+10         /*
+11         * Examples of creating and initializing variables in the monkeyrunner environment&#39;s
+12         * namespace. During execution, the monkeyrunner program can refer to the variables &quot;newtest&quot;
+13         * and &quot;use_emulator&quot;
+14         *
+15         */
+16         anInterpreter.set(&quot;newtest&quot;, &quot;enabled&quot;);
+17         anInterpreter.set(&quot;use_emulator&quot;, 1);
+18 
+19         return true;
+20     }</code></pre><h4 id="8-monkeyrunner环境搭建"><a href="#8-monkeyrunner环境搭建" class="headerlink" title="8.monkeyrunner环境搭建"></a>8.monkeyrunner环境搭建</h4><p>1.安装并配置好jdk环境</p>
+<p>2.安装android sdk</p>
+<p>3.安装python </p>
+<p>4.monkeyrunner环境变量配置： {Path}\Andriod_SDK\tools</p>
+<h4 id="9-安装结果检测"><a href="#9-安装结果检测" class="headerlink" title="9.安装结果检测"></a>9.安装结果检测</h4><p>在docs命令控制台输入命令：monkeyrunner出现如下显示内容则说明安装成功</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/rTayuw6HfFlSUt2.png" alt="1232840-20190723141619119-1204423009.png"></p>
+<p>Tips：退出monkeyrunner命令行模式可以 使用快捷键 ctrl+D退出。</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/sCanqGv9iTeRUIo.png" alt="1232840-20190723141713371-101370164.png"></p>
+<h4 id="10-小结"><a href="#10-小结" class="headerlink" title="10.小结"></a>10.小结</h4><p>(1)在方式二运行monkeyrunner报错</p>
+<pre><code>（190724 14:33:20.837:S [main] [com.android.monkeyrunner.MonkeyRunnerOptions] Script terminated due to an exception）</code></pre><p>(2)解决方法，报出该错误是使用的notepad++编码格式问题，notepad++默认编码格式是ansi，我们使用的monkeyrunner脚本格式是utf-8，因此有冲突</p>
+<p>修改方法如下</p>
+<p>1.首先，看我们的脚本编码格式是什么，我这里的是utf-8，因此不用再做修改</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/CsqWrI92HDMUh5p.png" alt="1232840-20190724144045351-1660297025.png"></p>
+<p>2.如果编码格式不是utf-8的，就要对它进行修改了，点击格式，选择utf-8，再保存，也可选择无BOM格式的</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/QWru2sOnYeEXy8Z.png" alt="1232840-20190724144158830-1423340720.png"></p>
+<p>3.再来运行一下，这次成功了</p>
+<p><img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/10/VHDT8NytXPd7RzU.png" alt="1232840-20190724143612597-1937846247.png"></p>
+<p>(3)monkeyrunner常用的知识点</p>
+<pre><code>#引入程序所用的模块
+1 from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice, MonkeyImage 
+
+
+#引入程序所用的模块，使用别名
+
+1 from com.android.monkeyrunner import MonkeyRunner as mr
+2 from com.android.monkeyrunner import MonkeyDevice as md
+3 from com.android.monkeyrunner import MonkeyImage as mi
+4 #如果给导入的模块起了别名，就必须使用别名，否则会出现错误。
+5 #比如连接设备或模拟器，起了以上别名后，命令应该如下：
+6 device=mr.waitForConnection()
+
+
+#连接到设备或模拟器
+
+1 #参数1：超时时间，单位秒，浮点数。默认是无限期地等待。
+2 #参数2：串deviceid，指定的设备名称。默认为当前设备（手机优先，比如手机通过USB线连接到PC、其次为模拟器）。
+3 #默认连接：
+4 device = MonkeyRunner.waitForConnection()
+5 #参数连接：
+6 device = MonkeyRunner.waitForConnection(1.0,&#39;4df74b8XXXXXXX&#39;) 
+
+
+#向设备或模拟器安装APK 
+
+1 #以下两种方式都是对的
+2 device.installPackage(&#39;E:/JAVA/monkeyrunner/Test1/ThinkDrive_new.apk&#39;)
+3 device.installPackage(&#39;E:\\JAVA\\monkeyrunner\\Test1\\ThinkDrive_new.apk&#39;)
+4 #参数可以为绝对路径，也可为相对路径
+
+
+#卸载设备或模拟器中的APK 
+
+1 #参数为APK包名
+2 device.removePackage(&#39;cn.richinfo.thinkdrive&#39;) 
+
+
+#启动任意的Activity
+1 #device.startActivity(component=&quot;包名/启动Activity&quot;)
+2 #以下两种都OK
+3 device.startActivity(component=&quot;cn.richinfo.thinkdrive/cn.richinfo.thinkdrive.ui.activities.NavigateActivity&quot;)
+4 device.startActivity(component=&quot;cn.richinfo.thinkdrive/.ui.activities.NavigateActivity&quot;)
+
+
+
+#手机截图 
+
+1 #获取设备的屏蔽缓冲区，产生了整个显示器的屏蔽捕获。（截图）
+2 result=device.takeSnapshot()
+3 #返回一个MonkeyImage对象（点阵图包装），我们可以用以下命令将图保存到文件
+4 result.writeToFile(&#39;E:\\JAVA\\monkeyrunner\\Test1\\Test1_001.png&#39;,&#39;png&#39;)
+
+
+#暂停 
+
+1 #暂停目前正在运行的程序指定的秒数
+2 #MonkeyRunner.sleep(秒数，浮点数) 
+3 MonkeyRunner.sleep(5)
+
+
+#字符串发送到键盘 
+1 #device.type(&#39;字符串&#39;)
+2 device.type(&#39;hongge&#39;)
+
+
+#唤醒设备屏幕
+1 #锁屏后,屏幕关闭，可以用下命令唤醒
+2 device.wake()
+
+#重起手机
+
+1 device.reboot()
+
+
+#模拟滑动
+
+1 #device.drag(X,Y,D,S)
+2 #X 开始坐标
+3 #Y 结束坐标
+4 #D 拖动持续时间(以秒为单位)，默认1.0秒
+5 #S 插值点时要采取的步骤。默认值是10
+6 device.drag((100,1053),(520,1053),0.1,10)
+
+
+#在指定位置发送触摸事件 
+
+1 #device.touch(x,y,触摸事件类型)
+2 #x,y的单位为像素
+3 #触摸事件类型，请见下文中Findyou对device.press描述
+4 
+5 device.touch(520,520,&#39;DOWN_AND_UP&#39;)
+
+
+#发送指定类型指定键码的事件
+
+ 1 #device.press(参数1:键码,参数2:触摸事件类型)
+ 2 #参数1：见android.view.KeyEvent
+ 3 #参数2，如有TouchPressType()返回的类型－触摸事件类型，有三种。
+ 4 #1、DOWN 发送一个DOWN事件。指定DOWN事件类型发送到设备，对应的按一个键或触摸屏幕上。
+ 5 #2、UP 发送一个UP事件。指定UP事件类型发送到设备，对应释放一个键或从屏幕上抬起。
+ 6 #3、DOWN_AND_UP 发送一个DOWN事件，然后一个UP事件。对应于输入键或点击屏幕。
+ 7 以上三种事件做为press()参数或touch()参数
+ 8 
+ 9 #按下HOME键
+10 device.press(&#39;KEYCODE_HOME&#39;,MonkeyDevice.DOWN_AND_UP) 
+11 #按下BACK键
+12 device.press(&#39;KEYCODE_BACK&#39;,MonkeyDevice.DOWN_AND_UP) 
+13 #按下下导航键
+14 device.press(&#39;KEYCODE_DPAD_DOWN&#39;,MonkeyDevice.DOWN_AND_UP) 
+15 #按下上导航键
+16 device.press(&#39;KEYCODE_DPAD_UP&#39;,MonkeyDevice.DOWN_AND_UP) 
+17 #按下OK键
+18 device.press(&#39;KEYCODE_DPAD_CENTER&#39;,MonkeyDevice.DOWN_AND_UP) </code></pre><p> 好了时间也不早了，今天就啰嗦、水到这里吧，哈哈！晚安。好梦！！！</p>
+
+            </div>
+			
+            <hr/>
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">博主不易，靠赏过日！！！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/images/loading.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/images/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+			<style>
+				.reprint {
+					margin: 2em 0 0;
+					padding: 0.5em 1em;
+					border-left: 3px solid #FF1700;
+					background-color: #F9F9F9;
+					list-style: none;
+				}
+
+				.reprint li {
+					line-height: 30px;
+				}
+			</style>
+            <div class="reprint">
+                <!--<p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="https://hongduhong.github.io" class="b-link-green">北京-宏哥</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2016/04/18/appium/" class="b-link-green">python+appium自动化测试23</a>
+                </p>-->
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>作者:  </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>文章链接:  </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>版权声明:   </strong>
+					本网志所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					许可协议。转载请注明出处!
+				  </li>
+				</ul>
+            </div>
+			<style>
+				.article-end-text-wrap-gzh {
+					margin: 5px 0;
+				}
+					
+				.article-end-text-gzh {
+					font-family: "微软雅黑";
+					font-weight: bold;
+					color: red;
+					font-size: 50px;
+					line-height: 1.6em;
+					text-align:center;
+					padding: 1em 2em;
+					background: color-widget-background;
+					box-shadow: 1px 2px 3px color-border;
+					border: 1px solid color-widget-border;
+					border-radius: 3px;
+				}  
+			</style>
+			<div class="article-end-text-wrap-gzh">
+			  <div class="article-end-text-gzh">
+				<p>扫码关注公众号，更多干货秒得到</p>
+				<img src="/images/loading.gif" data-original="https://i.loli.net/2020/08/26/4hCH391xM65ENtu.png" width="200">
+			  </div>
+			</div>
+			<!--<div>
+				<ul class="post-copyright">
+				  <li class="post-copyright-author">
+				  <strong>copyright.author </strong>北京-宏哥</a>
+				  </li>
+				  <li class="post-copyright-link">
+				  <strong>copyright.link </strong>
+				  <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+				  </li>
+				  <li class="post-copyright-license">
+					<strong>copyright.license_title  </strong>
+					copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+					copyright.right_license_content
+				  </li>
+				</ul>
+			<div>
+			<div>
+				 <style>
+.reprint {
+    margin: 2em 0 0;
+    padding: 0.5em 1em;
+    border-left: 3px solid #FF1700;
+    background-color: #F9F9F9;
+    list-style: none;
+}
+
+.reprint li {
+    line-height: 30px;
+}
+</style>
+<div>
+	<ul class="reprint">
+		<li class="reprint-author">
+          <strong>copyright.author </strong>北京-宏哥</a>
+          </li>
+          <li class="reprint-link">
+          <strong>copyright.link </strong>
+          <a href="/" target="_blank" title="北京-宏哥">https://hongduhong.github.io/</a>
+        </li>
+        <li class="reprint-license">
+            <strong>copyright.license_title  </strong>
+            copyright.left_license_content<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+            copyright.right_license_content
+        </li>
+	</ul>
+<div>
+
+			</div>-->
+
+        </div>
+		
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'f198ff3418cff1b4beb1',
+        clientSecret: '4381fdcb7742eb697e6214ca4ccacbbc78620722',
+        repo: 'hongduhong.github.io',
+        owner: 'hongduhong',
+        admin: "hongduhong",
+        id: '2016-04-18T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+	.v .txt-right{ display: none;}
+
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+ <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'QTjhAL7gTPGjIK1RQM2TlxDR-gzGzoHsz',
+        appKey: 'aBlfRinOLK3x6GKoYWr02qWj',
+        notify: 'true' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '留下你足迹吧O(∩_∩)O\n各位站长也留下你的交友申请 \n(申请格式：网站链接 + 一句话简介站点;)\n(如：five-great.coding.me + 互联网爱好者,撸代码,技术交流。)\n( ╯□╰ )建议不要匿名评论,建议填写邮箱便于接收回复信息'
+    });
+</script>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2016/04/19/appium/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/21.jpg" class="responsive-img" alt="python+appium自动化测试24">
+                        
+                        <span class="card-title">python+appium自动化测试24</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">🔥 Appium+python自动化（二十四）- 白素贞千年等一回许仙 - 元素等待（超详解）
+1.简介　　许仙小时候</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2016-04-19
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                    Python
+                                </a>
+                            
+                            <a href="/categories/Python/Appium/" class="post-category" target="_blank">
+                                    Appium
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/Appium/" target="_blank">
+                        <span class="chip bg-color">Appium</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2016/04/17/appium/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/images/loading.gif" data-original="/medias/featureimages/19.jpg" class="responsive-img" alt="python+appium自动化测试22">
+                        
+                        <span class="card-title">python+appium自动化测试22</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">🔥 Appium+python自动化（二十二）- 三个臭皮匠助你成就一番霸业-控件坐标获取（超详解）
+1.简介　　有些</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-04-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                    Python
+                                </a>
+                            
+                            <a href="/categories/Python/Appium/" class="post-category" target="_blank">
+                                    Appium
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/Appium/" target="_blank">
+                        <span class="chip bg-color">Appium</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 北京-宏哥<br />'
+            + '作者: 北京-宏哥<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h4, h5, h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h4, h5, h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<!--<script type="text/javascript" src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(function() {  
+		//对所有 img 标签进行懒加载        
+        $("img").lazyload({
+			//设置占位图，我这里选用了一个 loading 的加载动画
+			placeholder:"/images/loading.gif",
+            //加载效果
+              effect:"fadeIn"
+        });
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  if(window.outerHeight <500&&window.outerWidth<400){
+  $("#p1").hide();
+ 
+   }else{
+  $("#p1").show();
+  
+  }
+});
+</script>
+<footer class="page-footer bg-color">
+	<div  style="text-align: center;">
+	<li class="col s12 m8 l8 copy-right">
+  友链：
+         
+            
+                
+                
+				
+             <a href="https://www.jianshu.com/u/c6e85b30966e" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 简书
+               </a>
+                
+                
+				
+             <a href="https://www.cnblogs.com/du-hong" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 博客园
+               </a>
+                
+                
+				
+             <a href="https://www.zhihu.com/people/bei-jing-hong-ge" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 知乎
+               </a>
+                
+                
+				
+             <a href="https://cloud.tencent.com/developer/user/5695339" target="_blank">
+                         &nbsp;&nbsp;<i class="fa fa-link fa-lg"></i> 腾讯云
+               </a>
+                
+              		  
+		<span id="busuanzi_container_site_uv" style="float:right"> 
+			恭喜您成为第 
+			<span id="busuanzi_value_site_uv" class="white-color">
+			</span>
+			位访客&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>
+	  </li>
+	</div>
+	<div class="container row center-align">
+		<div class="col s12 m8 l8 copy-right">  
+         <span id ="p1">&nbsp;&nbsp;&nbsp;</span>
+            
+			
+                
+                
+                <span id="busuanzi_container_site_pv">
+                       <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color">1212112121</span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次&nbsp;
+                </span>
+                
+              
+			
+			
+                <i class="fa fa-area-chart"></i>站点总字数:
+                <span class="white-color">292.3k</span>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			本站由&copy;<a href="https://hongduhong.github.io" target="_blank">北京-宏哥</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 搭建.
+			
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hongduhong/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1918991791@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1918991791" class="tooltipped" data-tooltip="QQ联系我: 1918991791" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+
+
+</div>
+    </div>
+</footer>
+<script type="text/javascript">
+
+        //获取输入框的文本
+        function getdata(){
+        var i=document.getElementById('page__date');
+        
+        
+         var a=new Date();var b=new Date('2019-8-20');var count_s=parseInt((a.getTime()-b)/(1000 * 3600 * 24));
+      
+         }
+        setTimeout("getdata()","2000");
+
+</script>
+<div class="progress-bar"></div>
+<script src="//code.tidio.co/nrzrwmino0xirhbbord6owqnmk7duacv.js" async></script>
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+
+<div id="backTop" class="top-scroll">
+<a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.staticfile.org/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script src="https://cdn.staticfile.org/masonry/4.0.0/masonry.pkgd.js"></script>
+<script src="https://cdn.staticfile.org/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.staticfile.org/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+<script src="https://cdn.staticfile.org/lightgallery/1.6.12/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+	<script type="text/javascript">
+		$("#loading").fadeOut(5000);
+	</script>
+</html>
